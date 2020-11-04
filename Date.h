@@ -10,6 +10,7 @@ class Date{
 private:    
     int month, day, year; //month is an int from 1-12, day is an int from 1-31, year is an int>0
 public:
+    Date();
     Date(int, int, int);
     ~Date();
     int getMonth();

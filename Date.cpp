@@ -62,5 +62,5 @@ Month (Written Out), Day, Year: February 28, 2019
 */
 string Date::getStr(){
     //#TODO: [COMPSCI3307F2020GROUP32-21] implement this
-    r
+    return "hi"; //dummy
 }

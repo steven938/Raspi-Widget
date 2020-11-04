@@ -8,9 +8,10 @@ Date: 2020-11-04
 #include <string>
 #include "Date.h"
 #include "Record.h"
+#include "CategoryADT.h"
 class NewsRecord: public Record{
     private:
-        Date date;              //the date of the news story
+        Date date;  //the date of the news story
         std::string subject;    //the subject of the news story
         std::string title;      //the title of the news story
         std::string sector;     //the sector (i.e. tech, finance) of the news story
@@ -18,7 +19,7 @@ class NewsRecord: public Record{
         std::string source;     //the source (i.e. CNN) of the news story
         std::string url;        //the URL to locate the news story online.
     public:
-        NewsRecord();
+        NewsRecord(CategoryADT* parent);
         ~NewsRecord();
         std::string getSubject();
         Date getDate();
@@ -26,6 +27,7 @@ class NewsRecord: public Record{
         std::string getSector();
         std::string getLocation();
         std::string getSource();
+        std::string getURL();
 
 };
 #endif

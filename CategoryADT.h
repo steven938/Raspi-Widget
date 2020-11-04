@@ -6,7 +6,7 @@
 public:
 private: //hello
 
-	vector<Record> records;
+//	vector<Record> records;
 	
 	};
 #endif 
