@@ -1,2 +1,4 @@
 #ifndef DATE_H
-#define DATE _h
+#define DATE_H
+class Date
+#endif
