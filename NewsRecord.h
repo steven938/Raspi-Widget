@@ -8,15 +8,15 @@ Date: 2020-11-04
 #include <string>
 #include "Date.h"
 #include "Record.h"
-class NewsRecord:: public Record{
+class NewsRecord: public Record{
     private:
-        Date date;
-        std::string subject;
-        std::string title;
-        std::string sector;     
+        Date date;              //the date of the news story
+        std::string subject;    //the subject of the news story
+        std::string title;      //the title of the news story
+        std::string sector;     //the sector (i.e. tech, finance) of the news story
         std::string location;   //the location that the news is from (i.e. a city)
-        std::string source;
-        std::string url;
+        std::string source;     //the source (i.e. CNN) of the news story
+        std::string url;        //the URL to locate the news story online.
     public:
         NewsRecord();
         ~NewsRecord();
