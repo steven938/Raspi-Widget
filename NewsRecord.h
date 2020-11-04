@@ -7,6 +7,7 @@ Date: 2020-11-04
 #define NEWS_RECORD_H
 #include <string>
 #include "Date.h"
+#include "Record.h"
 class NewsRecord:: public Record{
     private:
         Date date;
