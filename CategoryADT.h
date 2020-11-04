@@ -3,7 +3,8 @@
 #define CATEGORY_ADT_H
 public class CategoryADT {
 public:
-private:
+private: //hello
+
 	vector<Record> records;
 	};
 #endif 
