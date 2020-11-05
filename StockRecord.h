@@ -25,10 +25,10 @@ public:
 	~StockRecord();
 private:
 	std::string ticker; // 4 letter ticker
-	std::companyName; // company name
+	std::string companyName; // company name
 	std::string maretCap; 
 	std::string exchange;
 	std::vector<DailyStock> days; // vector of information on stock price on several dates
-}
+};
 
 #endif

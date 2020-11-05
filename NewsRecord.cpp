@@ -13,10 +13,10 @@ Parameter Descriptions:
 Return Description: 
 */
 NewsRecord::NewsRecord(CategoryADT* parent){
-    date = Date(1,2,3);
+    date = Date(1,2,3); //dummy
     
 }
-/*
+/* 
 Name: Destructor
 Description: Destroys the object
 Parameter Descriptions: N/A
