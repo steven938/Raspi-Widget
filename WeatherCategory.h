@@ -6,9 +6,9 @@ Date: 2020-11-04
 #ifndef WEATHER_CATEGORY_H
 #define WEATHER_CATEGORY_H
 #include <string>
+#include <vector>
 #include "WeatherRecord.h"
 #include "CategoryADT.h"
-#include "vector.h"
 class WeatherCategory: public CategoryADT{
     private:
         vector<WeatherRecord> records; // A vector to store all the weather records

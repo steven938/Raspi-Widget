@@ -57,6 +57,6 @@ Description: display the the records on the screen
 Parameter Descriptions: N/A
 Return Description: N/A
 */
-void WeatherCategory::displayRecords(){
+void WeatherCategory::displayRecords(vector<WeatherRecord> toDisplay){
     // code to display records on screen
 }

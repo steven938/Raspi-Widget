@@ -57,6 +57,6 @@ Description: display the the records on the screen
 Parameter Descriptions: N/A
 Return Description: N/A
 */
-void StockCategory::displayRecords(){
+void StockCategory::displayRecords(vector<StockRecord> toDisplay){
     // code to display records on screen
 }

@@ -27,7 +27,7 @@ Parameter Descriptions: get the ticker name of the stock
 Return Description: ticker
 */
 string StockRecord::getTicker(){
-
+    return ticker;
 }
 
 /*
@@ -37,7 +37,7 @@ Parameter Descriptions:
 Return Description: company name
 */
 string StockRecord::getCompanyName(){
-
+    return companyName;
 }
 
 /*
@@ -47,7 +47,7 @@ Parameter Descriptions:
 Return Description:
 */
 string StockRecord::getExchange(){
-
+    return exchange;
 }
 
 /*
