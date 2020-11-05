@@ -6,9 +6,9 @@ Date: 2020-11-04
 #ifndef STOCK_CATEGORY_H
 #define STOCK_CATEGORY_H
 #include <string>
+#include <vector>
 #include "StockRecord.h"
 #include "CategoryADT.h"
-#include "vector.h"
 class StockCategory: public CategoryADT{
     private:
         vector<StockRecord> records; // A vector to store all the weather records
