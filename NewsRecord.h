@@ -20,7 +20,7 @@ class NewsRecord: public Record{
         std::string url;        //the URL to locate the news story online.
     public:
         NewsRecord(CategoryADT* parent);
-        ~NewsRecord();
+        ~NewsRecord(); //example comment
         std::string getSubject();
         Date getDate();
         std::string getTitle();
