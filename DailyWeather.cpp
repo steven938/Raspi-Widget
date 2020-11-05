@@ -12,7 +12,7 @@ Description: Constructs the daily weather record with information on temperature
 Parameter Descriptions: temperature in Fahrenheit and Celsius, and the description/date of the forecast
 Return Description:
 */
-DailyWeather::DailyWeather(float tempFaren, float tempCelsius, const std::string description, const Date date) {
+DailyWeather::DailyWeather(float tempFaren, float tempCelsius, std::string description, Date date) {
 
 }
 
@@ -63,5 +63,5 @@ Parameter Descriptions:
 Return Description: the date of the forecast
 */
 Date DailyWeather::getDate() {
-    return nullptr;
+    return date;
 }
