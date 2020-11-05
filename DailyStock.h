@@ -1,15 +1,18 @@
-#ifndef STOCKRECORD_H
-#define STOCKRECORD_H
+#ifndef DAILYSTOCK_H
+#define DAILYSTOCK_H
+
+#include "Date.h"
 
 class DailyStock{
 private:
-	float open;
-	float low;
-	float high;
-	float close;
-	float volume;
-	float date;
+	float open; // open price on that date
+	float low; // low price on that date
+ 	float high; // high price on that date
+	float close; // closing price on that date
+	long long int volume; // volume of tradeson that date
+	Date date; // the date
 public:
+	DailyStock(float open, float close, float high, float low, long long int volume, string date);
 	float getOpen();
 	float getClose();
 	float getHigh();

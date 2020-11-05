@@ -1,3 +1,8 @@
+/*
+Author: Steven Chen
+Description: Header file for StockRecord representing information about a single stock/company
+Date: 2020-11-04
+*/
 #ifndef STOCKRECORD_H
 #define STOCKRECORD_H
 
@@ -19,12 +24,11 @@ public:
 	long long int getVolume(int daysAgo);
 	~StockRecord();
 private:
-	Category parent;
-	std::string ticker;
-	std::companyName;
-	std::string maretCap;
+	std::string ticker; // 4 letter ticker
+	std::companyName; // company name
+	std::string maretCap; 
 	std::string exchange;
-	std::vector<DailyStock> days;
+	std::vector<DailyStock> days; // vector of information on stock price on several dates
 }
 
 #endif
