@@ -11,10 +11,10 @@ Date: 2020-11-04
 #include "CategoryADT.h"
 class WeatherCategory: public CategoryADT{
     private:
-        vector<WeatherRecord> records; // A vector to store all the weather records
+        std::vector<WeatherRecord> records; // A vector to store all the weather records
 
         // Print the specified records to the screen
-        void displayRecords(vector<WeatherRecord> toDisplay);
+        void displayRecords(std::vector<WeatherRecord> toDisplay);
         
     public:
     
@@ -25,7 +25,7 @@ class WeatherCategory: public CategoryADT{
         ~WeatherCategory();
 
         // Function to get the records of the class 
-        vector<WeatherRecord> getRecords();
+        std::vector<WeatherRecord> getRecords();
 
         // Function to find a record of a specific location (specified by searchString)
         WeatherRecord search(std::string searchString);
