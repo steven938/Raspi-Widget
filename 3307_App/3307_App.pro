@@ -18,7 +18,8 @@ SOURCES += \
     ../WeatherCategory.cpp \
     ../WeatherRecord.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    weatherwindow.cpp
 
 HEADERS += \
     ../CategoryADT.h \
@@ -31,10 +32,12 @@ HEADERS += \
     ../StockRecord.h \
     ../WeatherCategory.h \
     ../WeatherRecord.h \
-    mainwindow.h
+    mainwindow.h \
+    weatherwindow.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    weatherwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

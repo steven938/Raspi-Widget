@@ -13,3 +13,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_stockButton_clicked(){
+    ui->stockButton->setVisible(false);
+
+}
+
+void MainWindow::on_weatherButton_clicked(){}
+void MainWindow::on_newsButton_clicked(){}
+

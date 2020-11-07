@@ -26,9 +26,9 @@ public:
     QWidget *centralwidget;
     QLabel *label;
     QLabel *label_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *stockButton;
+    QPushButton *weatherButton;
+    QPushButton *newsButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -36,7 +36,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(443, 286);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
@@ -45,19 +45,19 @@ public:
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(100, 90, 331, 16));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(50, 160, 80, 22));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(180, 160, 80, 22));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(300, 160, 80, 22));
+        stockButton = new QPushButton(centralwidget);
+        stockButton->setObjectName(QString::fromUtf8("stockButton"));
+        stockButton->setGeometry(QRect(50, 160, 80, 22));
+        weatherButton = new QPushButton(centralwidget);
+        weatherButton->setObjectName(QString::fromUtf8("weatherButton"));
+        weatherButton->setGeometry(QRect(180, 160, 80, 22));
+        newsButton = new QPushButton(centralwidget);
+        newsButton->setObjectName(QString::fromUtf8("newsButton"));
+        newsButton->setGeometry(QRect(310, 160, 80, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 443, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -73,9 +73,9 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Welcome to Habari!", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "What kind of information would you like to see today?", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Stocks", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Weather", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "News", nullptr));
+        stockButton->setText(QCoreApplication::translate("MainWindow", "Stocks", nullptr));
+        weatherButton->setText(QCoreApplication::translate("MainWindow", "Weather", nullptr));
+        newsButton->setText(QCoreApplication::translate("MainWindow", "News", nullptr));
     } // retranslateUi
 
 };

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>443</width>
+    <height>286</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@
      <string>What kind of information would you like to see today?</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="stockButton">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -53,7 +53,7 @@
      <string>Stocks</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="weatherButton">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -66,10 +66,10 @@
      <string>Weather</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="newsButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>310</x>
       <y>160</y>
       <width>80</width>
       <height>22</height>
@@ -85,7 +85,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>443</width>
      <height>21</height>
     </rect>
    </property>

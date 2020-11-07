@@ -39,6 +39,9 @@ Date::Date(int day, int month, int year) {
     this->month = month;
     this->year = year;
 }
+Date::Date(){
+
+}
 /*
 Name: Destructor 
 Description: Destroys the date object

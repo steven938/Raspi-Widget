@@ -15,7 +15,7 @@ Return Description:
 */
 NewsRecord::NewsRecord(CategoryADT* parent){
     date = Date(1,2,3); //dummy
-    parent(parent);
+
     
 }
 /* 
