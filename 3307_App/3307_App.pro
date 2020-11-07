@@ -17,7 +17,6 @@ SOURCES += \
     ../StockRecord.cpp \
     ../WeatherCategory.cpp \
     ../WeatherRecord.cpp \
-    ../main.cpp \
     main.cpp \
     mainwindow.cpp
 

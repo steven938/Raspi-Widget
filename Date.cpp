@@ -16,23 +16,23 @@ Return Description: N/A
 Date::Date(int day, int month, int year) {
     // check that days, month, and year are not too small and that months is not greater than 12
     if (year < 0 || month < 1 || day < 1 || month > 12)
-        throw exception("Invalid date");
+        throw "Invalid date";
 
     // check days in January, March, May, July, August, October, December are not greater than 31
     if (day > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12))
-        throw exception("Invalid date");
+        throw "Invalid date";
 
     // check days in April, June, September, November are not greater than 30
     if (day > 30 && (month == 4 || month == 6 || month == 9 || month == 11))
-        throw exception("Invalid date");
+        throw "Invalid date";
 
     // check that days in february are not greater than 29 on leap years
     if (day > 29 && month == 2 && year % 4 == 0)
-        throw exception("Invalid date");
+        throw "Invalid date";
 
     // check that days in february are not greater 28 on common years
     if (day > 28 && month == 2 && year % 4 != 0) {
-        throw exception("Invalid date");
+        throw "Invalid date";
     }
 
     this->day = day;
