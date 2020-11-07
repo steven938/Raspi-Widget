@@ -4,6 +4,8 @@ Description: Code file that define an individual stock category
 Date: 2020-11-04
 */
 #include "StockCategory.h"
+#include <vector>
+
 using namespace std;
 /*
 Name: StockCategory
