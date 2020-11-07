@@ -7,6 +7,5 @@ release/StockRecord.o
 release/WeatherCategory.o
 release/WeatherRecord.o
 release/main.o
-release/main.o
 release/mainwindow.o
 release/moc_mainwindow.o

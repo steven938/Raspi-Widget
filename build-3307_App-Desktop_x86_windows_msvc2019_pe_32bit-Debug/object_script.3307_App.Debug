@@ -7,6 +7,5 @@ debug/StockRecord.o
 debug/WeatherCategory.o
 debug/WeatherRecord.o
 debug/main.o
-debug/main.o
 debug/mainwindow.o
 debug/moc_mainwindow.o

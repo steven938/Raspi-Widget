@@ -5,7 +5,7 @@ Date: 2020-11-04
 */
 
 #include "DailyWeather.h"
-
+#include "Date.h"
 /*
 Name: constructor
 Description: Constructs the daily weather record with information on temperature, description, and date
