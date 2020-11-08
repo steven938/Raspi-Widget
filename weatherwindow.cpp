@@ -7,6 +7,7 @@ WeatherWindow::WeatherWindow(QWidget *parent) :
     ui(new Ui::WeatherWindow)
 {
     ui->setupUi(this);
+
 }
 
 WeatherWindow::~WeatherWindow()

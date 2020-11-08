@@ -16,13 +16,24 @@
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>FreeSans</family>
+      </font>
+     </property>
      <property name="text">
       <string>What location's weather would you like to see?</string>
      </property>
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="searchBar"/>
+    <widget class="QLineEdit" name="searchBar">
+     <property name="font">
+      <font>
+       <family>FreeSans</family>
+      </font>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

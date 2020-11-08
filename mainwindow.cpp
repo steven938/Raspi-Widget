@@ -21,6 +21,8 @@ void MainWindow::on_stockButton_clicked(){
 
 void MainWindow::on_weatherButton_clicked(){
     WeatherWindow* w = new WeatherWindow();
+    QFont font = QFont("FreeSans",10,1);
+    w->setFont(font);
     w->show();
 
 
