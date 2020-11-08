@@ -12,7 +12,7 @@ Date: 2020-11-04
 
 class StockRecord{
 public:
-	StockRecord();
+	StockRecord(std::string ticker);
 	std::string getTicker();
 	std::string getCompanyName();
 	std::string getExchange();
