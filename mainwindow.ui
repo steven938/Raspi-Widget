@@ -23,6 +23,11 @@
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
      <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
       <property name="text">
        <string>Welcome to Habari!</string>
       </property>
@@ -30,6 +35,11 @@
     </item>
     <item row="1" column="0" colspan="2">
      <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
       <property name="text">
        <string>What kind of information would you like to see today?</string>
       </property>
@@ -43,6 +53,11 @@
         <height>22</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
       <property name="text">
        <string>Weather</string>
       </property>
@@ -50,6 +65,11 @@
     </item>
     <item row="5" column="1">
      <widget class="QPushButton" name="newsButton">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
       <property name="text">
        <string>News</string>
       </property>
@@ -62,6 +82,11 @@
         <width>91</width>
         <height>0</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
       </property>
       <property name="text">
        <string>Stocks</string>

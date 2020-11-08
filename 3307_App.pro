@@ -9,29 +9,29 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    ../DailyStock.cpp \
-    ../DailyWeather.cpp \
-    ../Date.cpp \
-    ../NewsRecord.cpp \
-    ../StockCategory.cpp \
-    ../StockRecord.cpp \
-    ../WeatherCategory.cpp \
-    ../WeatherRecord.cpp \
+    DailyStock.cpp \
+    DailyWeather.cpp \
+    Date.cpp \
+    NewsRecord.cpp \
+    StockCategory.cpp \
+    StockRecord.cpp \
+    WeatherCategory.cpp \
+    WeatherRecord.cpp \
     main.cpp \
     mainwindow.cpp \
     weatherwindow.cpp
 
 HEADERS += \
-    ../CategoryADT.h \
-    ../DailyStock.h \
-    ../DailyWeather.h \
-    ../Date.h \
-    ../NewsRecord.h \
-    ../Record.h \
-    ../StockCategory.h \
-    ../StockRecord.h \
-    ../WeatherCategory.h \
-    ../WeatherRecord.h \
+    CategoryADT.h \
+    DailyStock.h \
+    DailyWeather.h \
+    Date.h \
+    NewsRecord.h \
+    Record.h \
+    StockCategory.h \
+    StockRecord.h \
+    WeatherCategory.h \
+    WeatherRecord.h \
     mainwindow.h \
     weatherwindow.h
 
@@ -48,3 +48,6 @@ DISTFILES += \
     ../.gitignore \
     ../.vscode/settings.json \
     .gitignore
+
+RESOURCES += \
+    fonts.qrc

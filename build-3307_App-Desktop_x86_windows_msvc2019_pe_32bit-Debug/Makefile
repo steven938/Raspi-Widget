@@ -252,7 +252,8 @@ Makefile: ../3307_App.pro C:/Qt/5.15.0/mingw81_64/mkspecs/win32-g++/qmake.conf C
 		C:/Qt/5.15.0/mingw81_64/lib/Qt5Core.prl \
 		C:/Qt/5.15.0/mingw81_64/lib/qtmain.prl \
 		.qmake.stash \
-		C:/Qt/5.15.0/mingw81_64/mkspecs/features/build_pass.prf
+		C:/Qt/5.15.0/mingw81_64/mkspecs/features/build_pass.prf \
+		../fonts.qrc
 	$(QMAKE) -o Makefile ..\3307_App.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/5.15.0/mingw81_64/mkspecs/features/spec_pre.prf:
 C:/Qt/5.15.0/mingw81_64/mkspecs/qdevice.pri:
@@ -437,6 +438,7 @@ C:/Qt/5.15.0/mingw81_64/lib/Qt5Core.prl:
 C:/Qt/5.15.0/mingw81_64/lib/qtmain.prl:
 .qmake.stash:
 C:/Qt/5.15.0/mingw81_64/mkspecs/features/build_pass.prf:
+../fonts.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\3307_App.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

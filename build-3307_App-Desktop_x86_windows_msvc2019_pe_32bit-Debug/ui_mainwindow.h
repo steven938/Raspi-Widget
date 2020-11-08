@@ -46,28 +46,35 @@ public:
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("FreeSans"));
+        label->setFont(font);
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         formLayout->setWidget(1, QFormLayout::SpanningRole, label_2);
 
         weatherButton = new QPushButton(centralwidget);
         weatherButton->setObjectName(QString::fromUtf8("weatherButton"));
         weatherButton->setMinimumSize(QSize(80, 22));
+        weatherButton->setFont(font);
 
         formLayout->setWidget(4, QFormLayout::FieldRole, weatherButton);
 
         newsButton = new QPushButton(centralwidget);
         newsButton->setObjectName(QString::fromUtf8("newsButton"));
+        newsButton->setFont(font);
 
         formLayout->setWidget(5, QFormLayout::FieldRole, newsButton);
 
         stockButton = new QPushButton(centralwidget);
         stockButton->setObjectName(QString::fromUtf8("stockButton"));
         stockButton->setMinimumSize(QSize(91, 0));
+        stockButton->setFont(font);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, stockButton);
 
