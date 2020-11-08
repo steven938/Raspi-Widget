@@ -2,7 +2,7 @@
 #define WEATHERWINDOW_H
 
 #include <QWidget>
-
+#include "WeatherCategory.h"
 namespace Ui {
 class WeatherWindow;
 }
@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::WeatherWindow *ui;
+    WeatherCategory category;
+
+private slots:
+    void on_searchBar_returnPressed();
 };
 
 #endif // WEATHERWINDOW_H

@@ -1,7 +1,7 @@
 #include "weatherwindow.h"
 #include "ui_weatherwindow.h"
 #include "WeatherCategory.h"
-WeatherCategory category;
+
 WeatherWindow::WeatherWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WeatherWindow)
@@ -12,4 +12,8 @@ WeatherWindow::WeatherWindow(QWidget *parent) :
 WeatherWindow::~WeatherWindow()
 {
     delete ui;
+}
+
+void WeatherWindow::on_searchBar_returnPressed(){
+    category.search(ui->searchBar->text().toStdString());
 }

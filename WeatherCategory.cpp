@@ -4,6 +4,7 @@ Description: Code file that define an individual weather category
 Date: 2020-11-04
 */
 #include "WeatherCategory.h"
+#include <iostream>
 using namespace std;
 /*
 Name: WeatherCategory
@@ -13,7 +14,7 @@ Return Description: N/A
 */
 WeatherCategory::WeatherCategory(){
     
-    
+
 }
 /*
 Name: Destructor
@@ -41,6 +42,7 @@ Return Description: A WeatherRecord object or 0 if not found
 */
 WeatherRecord WeatherCategory::search(string searchString){
     // code to find and return the desired record
+    cout<<searchString<<endl;
 }
 /*
 Name: sort 

@@ -13,16 +13,18 @@
   <property name="windowTitle">
    <string>Habari | Weather</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>80</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>What location's weather would you like to see?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="searchBar"/>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
