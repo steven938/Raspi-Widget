@@ -1,6 +1,7 @@
 #include "weatherwindow.h"
 #include "ui_weatherwindow.h"
-
+#include "WeatherCategory.h"
+WeatherCategory category;
 WeatherWindow::WeatherWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WeatherWindow)
