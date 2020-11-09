@@ -56,8 +56,8 @@ Description: gets market capitalization of the stock
 Parameter Descriptions: 
 Return Description: market cap
 */
-float StockRecord::getMarketCap(){
-
+string StockRecord::getMarketCap(){
+    return this->marketCap;
 }
 
 /*
@@ -67,7 +67,7 @@ Parameter Descriptions: the number days to look back
 Return Description: open price
 */
 float StockRecord::getOpen(int daysAgo){
-
+    return days[daysAgo].getOpen();
 }
 
 /*
@@ -77,7 +77,7 @@ Parameter Descriptions: the number days to look back
 Return Description: low price
 */
 float StockRecord::getLow(int daysAgo){
-
+    return days[daysAgo].getLow();
 }
 
 /*
@@ -87,7 +87,7 @@ Parameter Descriptions: the number days to look back
 Return Description: high price
 */
 float StockRecord::getHigh(int daysAgo){
-
+    return days[daysAgo].getHigh();
 }
 
 /*
@@ -97,7 +97,7 @@ Parameter Descriptions: the number days to look back
 Return Description: closing price
 */
 float StockRecord::getClose(int daysAgo){
-
+    return days[daysAgo].getClose();
 }
 
 /*
@@ -107,7 +107,7 @@ Parameter Descriptions: the number days to look back
 Return Description: the volume of trades
 */
 long long int StockRecord::getVolume(int daysAgo){
-
+    return days[daysAgo].getVolume();
 }
 
 
@@ -118,7 +118,7 @@ Parameter Descriptions:
 Return Description: open price
 */
 StockRecord::~StockRecord(){
-
+    ;
 }
 
 

@@ -16,7 +16,7 @@ public:
 	std::string getTicker();
 	std::string getCompanyName();
 	std::string getExchange();
-	float getMarketCap();
+	std::string getMarketCap();
 	float getOpen(int daysAgo);
 	float getLow(int daysAgo);
 	float getHigh(int daysAgo);
@@ -26,7 +26,7 @@ public:
 private:
 	std::string ticker; // 4 letter ticker
 	std::string companyName; // company name
-	std::string maretCap; 
+	std::string marketCap; 
 	std::string exchange;
 	std::vector<DailyStock> days; // vector of information on stock price on several dates
 };

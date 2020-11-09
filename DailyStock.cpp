@@ -16,7 +16,12 @@ Parameter Descriptions: open price, closing price, high price, low price, trade 
 Return Description: N/A
 */
 DailyStock::DailyStock(float open, float close, float high, float low, long long int volume, string date){
-
+	this->open = open;
+	this->close = close;
+	this->high = high;
+	this->low = low;
+	this->volume = volume;
+	// To do: set date
 }
 
 /*
@@ -26,7 +31,7 @@ Parameter Descriptions:
 Return Description: opening price
 */
 float DailyStock::getOpen(){
-
+	return this->open;
 }
 
 
@@ -37,7 +42,7 @@ Parameter Descriptions:
 Return Description: 
 */
 float DailyStock::getClose(){
-
+	return this->close;
 }
 
 /*
@@ -47,7 +52,7 @@ Parameter Descriptions:
 Return Description: 
 */
 float DailyStock::getHigh(){
-
+	return this->high;
 }
 
 /*
@@ -57,7 +62,7 @@ Parameter Descriptions:
 Return Description: 
 */
 float DailyStock::getLow(){
-
+	return this->low;
 }
 
 /*
@@ -67,7 +72,7 @@ Parameter Descriptions:
 Return Description: volume
 */
 long long int DailyStock::getVolume(){
-
+	return this->volume;
 }
 
 /*
@@ -77,5 +82,5 @@ Parameter Descriptions:
 Return Description: 
 */
 DailyStock::~DailyStock(){
-
+	;
 }
