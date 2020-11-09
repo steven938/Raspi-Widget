@@ -16,8 +16,8 @@ Description: initializes query to the stock API to initialize stock information
 Parameter Descriptions: 
 Return Description: 
 */
-StockRecord::StockRecord(){
-
+StockRecord::StockRecord(string ticker){
+    this->ticker = ticker;
 }
 
 /*

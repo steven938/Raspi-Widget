@@ -4,6 +4,7 @@ Description: Code file that define an individual record of the news (one news st
 Date: 2020-11-04
 */
 #include "NewsRecord.h"
+#include "Date.h"
 using namespace std;
 /*
 I'm not going to fill this comment out, because i suspect that this will change - ADAM
@@ -14,6 +15,7 @@ Return Description:
 */
 NewsRecord::NewsRecord(CategoryADT* parent){
     date = Date(1,2,3); //dummy
+
     
 }
 /* 

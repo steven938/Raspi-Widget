@@ -5,6 +5,9 @@ Date: 2020-11-04
 */
 #include "DailyStock.h"
 #include "Date.h"
+#include <string>
+
+using namespace std;
 
 /*
 Name: Constructor
@@ -22,7 +25,7 @@ Description: gets the opening price of stock on this date
 Parameter Descriptions: 
 Return Description: opening price
 */
-DailyStock::getOpen(){
+float DailyStock::getOpen(){
 
 }
 
@@ -33,7 +36,7 @@ Description: gets the closing price of stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-DailyStock::getClose(){
+float DailyStock::getClose(){
 
 }
 
@@ -43,7 +46,7 @@ Description: gets the high price of stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-DailyStock::getHigh(){
+float DailyStock::getHigh(){
 
 }
 
@@ -53,7 +56,7 @@ Description: gets the low price of the stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-DailyStock::getLow(){
+float DailyStock::getLow(){
 
 }
 
@@ -63,7 +66,7 @@ Description: gets the volume of trades for the stock on this date
 Parameter Descriptions:
 Return Description: volume
 */
-DailyStock::getVolume(){
+long long int DailyStock::getVolume(){
 
 }
 
