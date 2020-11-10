@@ -12,7 +12,6 @@ Date: 2020-11-04
 class Record;
 class CategoryADT {
 	public:
-		virtual std::vector<Record> getRecords() = 0;
         virtual Record search(std::string) = 0;
         virtual void sort(int type, bool ascend) = 0;
 	private: 

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "WeatherCategory.h"
+#include <vector>
 namespace Ui {
 class WeatherWindow;
 }
@@ -18,6 +19,7 @@ public:
 private:
     Ui::WeatherWindow *ui;
     WeatherCategory category;
+    std::vector<WeatherRecord> records;
 
 private slots:
     void on_searchBar_returnPressed();

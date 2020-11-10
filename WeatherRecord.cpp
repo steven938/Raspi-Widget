@@ -17,7 +17,19 @@ Parameter Descriptions: location user wishes to know forecast for
 Return Description:
 */
 WeatherRecord::WeatherRecord(std::string location) {
+    this->location = location;
+    //API CALL GOES HERE. Dummy data for now.
+    for (int i = 0 ; i < 7 ; i++){
+        int r = rand()%2;
+        string desc;
+        if (r == 0){
+            desc = "Cloudy";
+        }else desc = "Sunny";
+        Date d(i+1,1,2020);
+        DailyWeather dw(32, 0, desc, d);
+    days.push_back(dw);
 
+    }
 }
 
 /*
@@ -28,6 +40,10 @@ Return Description:
 */
 WeatherRecord::~WeatherRecord() {
 
+}
+
+std::vector<DailyWeather> WeatherRecord::getDays() {
+    return days;
 }
 
 /*

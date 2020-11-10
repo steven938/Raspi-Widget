@@ -10,11 +10,13 @@ Date: 2020-11-04
 #include "string"
 #include "vector"
 #include "DailyWeather.h"
+#include "Record.h"
 
-class WeatherRecord {
+class WeatherRecord :public Record {
 public:
     WeatherRecord(std::string location);
     ~WeatherRecord();
+    std::vector<DailyWeather> getDays();
     std::string getDescription();
     std::string getLocation();
     float getTempFahren(int index);
