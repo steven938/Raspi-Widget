@@ -32,8 +32,8 @@ Description: Getter for the vector of records
 Parameter Descriptions: N/A
 Return Description: records, the vector holding stock records
 */
-vector<StockRecord> StockCategory::getRecords(){
-    return records;
+vector<Record> StockCategory::getRecords(){
+   // return this->records;
 }
 /*
 Name: search 
@@ -41,7 +41,7 @@ Description: Returns a desired stock record
 Parameter Descriptions: N/A
 Return Description: A StockRecord object or 0 if not found
 */
-StockRecord StockCategory::search(string searchString){
+Record StockCategory::search(string searchString){
     // code to find and return the desired record
 }
 /*

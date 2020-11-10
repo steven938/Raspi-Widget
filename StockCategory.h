@@ -25,10 +25,10 @@ class StockCategory: public CategoryADT{
         ~StockCategory();
 
         // Function to get the records of the class 
-        std::vector<StockRecord> getRecords();
+        std::vector<Record> getRecords();
 
         // Function to find a record of a specific company (specified by searchString)
-        StockRecord search(std::string searchString);
+        Record search(std::string searchString);
 
         // Sort the weather records currently stored in the private vector
         void sort(int type, bool ascend);

@@ -25,10 +25,10 @@ class WeatherCategory: public CategoryADT{
         ~WeatherCategory();
 
         // Function to get the records of the class 
-        std::vector<WeatherRecord> getRecords();
+        std::vector<Record> getRecords();
 
         // Function to find a record of a specific location (specified by searchString)
-        WeatherRecord search(std::string searchString);
+        Record search(std::string searchString);
 
         // Sort the weather records currently stored in the private vector
         void sort(int type, bool ascend);

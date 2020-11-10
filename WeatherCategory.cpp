@@ -31,8 +31,8 @@ Description: Getter for the vector of records
 Parameter Descriptions: N/A
 Return Description: records, the vector holding weather records
 */
-vector<WeatherRecord> WeatherCategory::getRecords(){
-    return records;
+vector<Record> WeatherCategory::getRecords(){
+   // return records;
 }
 /*
 Name: search 
@@ -40,7 +40,7 @@ Description: Returns a desired weather record
 Parameter Descriptions: N/A
 Return Description: A WeatherRecord object or 0 if not found
 */
-WeatherRecord WeatherCategory::search(string searchString){
+Record WeatherCategory::search(string searchString){
     // code to find and return the desired record
     cout<<searchString<<endl;
 }

@@ -39,7 +39,7 @@ Description: Searches articles related to the requested search
 Parameter Descriptions: Topic to search 
 Return Description: NewsRecords related to the search
 */
-vector<Record> NewsCategory::search(string searchString){
+Record NewsCategory::search(string searchString){
 
 }
 

@@ -21,7 +21,7 @@ class NewsCategory: public CategoryADT{
         ~NewsCategory(); 
         //It is only letting me set the vector to Record and not NewsRecord because of the ADT
         std::vector<Record> getRecords();
-        std::vector<Record> search(std::string);
+        Record search(std::string);
         void sort(int, bool);
         // I can change the vector type to NewsRecord here, but it makes sense to leave it as a Record now
         std::vector<Record> changeTime(int);

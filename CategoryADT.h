@@ -13,8 +13,8 @@ class Record;
 class CategoryADT {
 	public:
 		virtual std::vector<Record> getRecords() = 0;
-		virtual std::vector<Record> search(std::string) = 0;
-		virtual void sort(int) = 0;
+        virtual Record search(std::string) = 0;
+        virtual void sort(int type, bool ascend) = 0;
 	private: 
 		std::vector<Record> records; 
 };

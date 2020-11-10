@@ -12,6 +12,7 @@ SOURCES += \
     DailyStock.cpp \
     DailyWeather.cpp \
     Date.cpp \
+    NewsCategory.cpp \
     NewsRecord.cpp \
     StockCategory.cpp \
     StockRecord.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     DailyStock.h \
     DailyWeather.h \
     Date.h \
+    NewsCategory.h \
     NewsRecord.h \
     Record.h \
     StockCategory.h \
