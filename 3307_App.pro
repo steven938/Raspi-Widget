@@ -20,6 +20,8 @@ SOURCES += \
     WeatherRecord.cpp \
     main.cpp \
     mainwindow.cpp \
+    newswindow.cpp \
+    stockwindow.cpp \
     weatherwindow.cpp
 
 HEADERS += \
@@ -35,10 +37,14 @@ HEADERS += \
     WeatherCategory.h \
     WeatherRecord.h \
     mainwindow.h \
+    newswindow.h \
+    stockwindow.h \
     weatherwindow.h
 
 FORMS += \
     mainwindow.ui \
+    newswindow.ui \
+    stockwindow.ui \
     weatherwindow.ui
 
 # Default rules for deployment.

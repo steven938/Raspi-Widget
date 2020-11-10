@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "weatherwindow.h"
 #include "ui_weatherwindow.h"
+#include "stockwindow.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -15,8 +16,10 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_stockButton_clicked(){
-   // ui->stockButton->setVisible(false);
-
+    stockWindow * w = new stockWindow();
+    QFont font = QFont("FreeSans",10,1);
+    w->setFont(font);
+    w->show();
 }
 
 void MainWindow::on_weatherButton_clicked(){

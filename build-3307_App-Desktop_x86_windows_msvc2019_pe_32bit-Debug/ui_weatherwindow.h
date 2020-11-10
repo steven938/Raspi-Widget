@@ -14,6 +14,7 @@
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,8 +23,9 @@ class Ui_WeatherWindow
 {
 public:
     QFormLayout *formLayout;
-    QLabel *label;
     QLineEdit *searchBar;
+    QLabel *label;
+    QPushButton *BackButton;
 
     void setupUi(QWidget *WeatherWindow)
     {
@@ -32,19 +34,24 @@ public:
         WeatherWindow->resize(400, 300);
         formLayout = new QFormLayout(WeatherWindow);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        label = new QLabel(WeatherWindow);
-        label->setObjectName(QString::fromUtf8("label"));
-        QFont font;
-        font.setFamily(QString::fromUtf8("FreeSans"));
-        label->setFont(font);
-
-        formLayout->setWidget(0, QFormLayout::LabelRole, label);
-
         searchBar = new QLineEdit(WeatherWindow);
         searchBar->setObjectName(QString::fromUtf8("searchBar"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("FreeSans"));
         searchBar->setFont(font);
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, searchBar);
+        formLayout->setWidget(1, QFormLayout::FieldRole, searchBar);
+
+        label = new QLabel(WeatherWindow);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, label);
+
+        BackButton = new QPushButton(WeatherWindow);
+        BackButton->setObjectName(QString::fromUtf8("BackButton"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, BackButton);
 
 
         retranslateUi(WeatherWindow);
@@ -56,6 +63,7 @@ public:
     {
         WeatherWindow->setWindowTitle(QCoreApplication::translate("WeatherWindow", "Habari | Weather", nullptr));
         label->setText(QCoreApplication::translate("WeatherWindow", "What location's weather would you like to see?", nullptr));
+        BackButton->setText(QCoreApplication::translate("WeatherWindow", "Back", nullptr));
     } // retranslateUi
 
 };

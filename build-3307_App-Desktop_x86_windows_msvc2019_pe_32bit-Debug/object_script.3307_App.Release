@@ -9,7 +9,9 @@ release/WeatherCategory.o
 release/WeatherRecord.o
 release/main.o
 release/mainwindow.o
+release/stockwindow.o
 release/weatherwindow.o
 release/qrc_fonts.o
 release/moc_mainwindow.o
+release/moc_stockwindow.o
 release/moc_weatherwindow.o

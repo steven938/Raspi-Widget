@@ -18,3 +18,7 @@ WeatherWindow::~WeatherWindow()
 void WeatherWindow::on_searchBar_returnPressed(){
     category.search(ui->searchBar->text().toStdString());
 }
+void WeatherWindow::on_BackButton_clicked(){
+    close();
+
+}

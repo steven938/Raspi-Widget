@@ -10,6 +10,6 @@ int main(int argc, char *argv[])
     QFont font = QFont("FreeSans",10,1);
     MainWindow w;
     w.setFont(font);
-    w.showMaximized();
+    w.showMaximized(); //hello
     return a.exec();
 }

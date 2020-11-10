@@ -21,6 +21,7 @@ private:
 
 private slots:
     void on_searchBar_returnPressed();
+    void on_BackButton_clicked();
 };
 
 #endif // WEATHERWINDOW_H

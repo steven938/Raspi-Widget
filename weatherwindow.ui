@@ -14,7 +14,16 @@
    <string>Habari | Weather</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
-   <item row="0" column="0">
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="searchBar">
+     <property name="font">
+      <font>
+       <family>FreeSans</family>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
@@ -26,12 +35,10 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1">
-    <widget class="QLineEdit" name="searchBar">
-     <property name="font">
-      <font>
-       <family>FreeSans</family>
-      </font>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="BackButton">
+     <property name="text">
+      <string>Back</string>
      </property>
     </widget>
    </item>
