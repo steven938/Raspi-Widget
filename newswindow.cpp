@@ -12,3 +12,8 @@ NewsWindow::~NewsWindow()
 {
     delete ui;
 }
+
+void NewsWindow::on_BackButton_clicked(){
+    close();
+
+}

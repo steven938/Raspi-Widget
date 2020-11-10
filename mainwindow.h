@@ -18,6 +18,7 @@ private slots:
    void on_stockButton_clicked();
    void on_weatherButton_clicked();
    void on_newsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

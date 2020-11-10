@@ -15,5 +15,4 @@ stockWindow::~stockWindow()
 
 void stockWindow::on_BackButton_clicked(){
     close();
-
 }

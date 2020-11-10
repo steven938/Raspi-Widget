@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -19,6 +20,7 @@ QT_BEGIN_NAMESPACE
 class Ui_stockWindow
 {
 public:
+    QGridLayout *gridLayout;
     QPushButton *BackButton;
 
     void setupUi(QWidget *stockWindow)
@@ -26,9 +28,13 @@ public:
         if (stockWindow->objectName().isEmpty())
             stockWindow->setObjectName(QString::fromUtf8("stockWindow"));
         stockWindow->resize(400, 300);
+        gridLayout = new QGridLayout(stockWindow);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         BackButton = new QPushButton(stockWindow);
         BackButton->setObjectName(QString::fromUtf8("BackButton"));
-        BackButton->setGeometry(QRect(0, 0, 80, 22));
+
+        gridLayout->addWidget(BackButton, 0, 0, 1, 1);
+
 
         retranslateUi(stockWindow);
 

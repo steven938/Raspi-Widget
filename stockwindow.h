@@ -2,7 +2,7 @@
 #define STOCKWINDOW_H
 
 #include <QWidget>
-
+#include "StockCategory.h"
 namespace Ui {
 class stockWindow;
 }
@@ -14,8 +14,11 @@ class stockWindow : public QWidget
 public:
     explicit stockWindow(QWidget *parent = nullptr);
     ~stockWindow();
+    StockCategory category;
 private slots:
     void on_BackButton_clicked();
+
+
 private:
     Ui::stockWindow *ui;
 };
