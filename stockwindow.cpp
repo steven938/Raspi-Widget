@@ -19,10 +19,19 @@ stockWindow::stockWindow(QWidget *parent) :
     series->append(10, 5);
 
     QChart *chart = new QChart();
-    //chart->legend()->hide();
     chart->addSeries(series);
     chart->createDefaultAxes();
     chart->setTitle("Line Chart Example");
+
+    QCategoryAxis *axisX = new QCategoryAxis();
+    axisX->append("1986",0);
+    axisX->append("1987",1);
+    axisX->append("1988",2);
+    axisX->append("1989",3);
+    axisX->append("1990",4);
+    axisX->append("1991",5);
+    axisX->append("1992",6);
+    chart->setAxisX(axisX, series);
 
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);

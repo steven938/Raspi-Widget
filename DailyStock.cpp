@@ -15,7 +15,7 @@ Description: Constructs the daily stock record with information on stock price, 
 Parameter Descriptions: open price, closing price, high price, low price, trade volume, string representing the date 
 Return Description: N/A
 */
-DailyStock::DailyStock(float open, float close, float high, float low, long long int volume, string date){
+DailyStock::DailyStock(float open, float close, float high, float low, long long int volume, Date date){
 	this->open = open;
 	this->close = close;
 	this->high = high;
@@ -74,6 +74,17 @@ Return Description: volume
 long long int DailyStock::getVolume(){
 	return this->volume;
 }
+
+/*
+Name: getDate
+Description: gets the volume of trades for the stock on this date
+Parameter Descriptions:
+Return Description: volume
+*/
+string DailyStock::getDate(){
+    return this->date.getStr2();
+}
+
 
 /*
 Name: Destructor

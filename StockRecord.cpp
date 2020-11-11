@@ -18,6 +18,12 @@ Return Description:
 */
 StockRecord::StockRecord(string ticker){
     this->ticker = ticker;
+    // API Call goes here, dummy data for now
+    this->companyName = "Apple";
+    this->exchange = "NASDAQ";
+    this->marketCap = "2.03T";
+
+
 }
 
 /*
