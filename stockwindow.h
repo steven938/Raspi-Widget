@@ -14,7 +14,6 @@ class stockWindow : public QWidget
 public:
     explicit stockWindow(QWidget *parent = nullptr);
     ~stockWindow();
-    StockCategory category;
 private slots:
     void on_BackButton_clicked();
 

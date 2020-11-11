@@ -15,10 +15,10 @@ class NewsWindow : public QWidget
 public:
     explicit NewsWindow(QWidget *parent = nullptr);
     ~NewsWindow();
-    NewsCategory category;
 
 private slots:
     void on_BackButton_clicked();
+    NewsCategory category;
 
 private:
     Ui::NewsWindow *ui;
