@@ -3,6 +3,11 @@
 
 #include <QWidget>
 #include "StockCategory.h"
+
+#include <QtCharts>
+#include <QChartView>
+#include <QLineSeries>
+
 namespace Ui {
 class stockWindow;
 }

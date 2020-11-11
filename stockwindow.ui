@@ -21,6 +21,11 @@
      </property>
     </widget>
    </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="horizontalFrame">
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
