@@ -18,10 +18,11 @@ public:
 
 private slots:
     void on_BackButton_clicked();
-    NewsCategory category;
 
 private:
     Ui::NewsWindow *ui;
+    NewsCategory category;
+
 };
 
 #endif // NEWSWINDOW_H

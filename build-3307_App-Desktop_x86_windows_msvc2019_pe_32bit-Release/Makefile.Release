@@ -1182,11 +1182,9 @@ release/stockwindow.o: ../stockwindow.cpp ../stockwindow.h \
 		ui_stockwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\stockwindow.o ..\stockwindow.cpp
 
-release/weatherwindow.o: ../weatherwindow.cpp ../weatherwindow.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QWidget \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtguiglobal.h \
+release/weatherwindow.o: ../weatherwindow.cpp C:/Qt/5.15.0/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstring.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qchar.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qglobal.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qconfig.h \
@@ -1208,23 +1206,26 @@ release/weatherwindow.o: ../weatherwindow.cpp ../weatherwindow.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qmutex.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qnumeric.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qversiontagging.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtgui-config.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobjectdefs.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qnamespace.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobject.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstring.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qchar.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qbytearray.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qrefcount.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qnamespace.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qarraydata.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstringliteral.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstringalgorithms.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstringview.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qstringbuilder.h \
+		../weatherwindow.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QWidget \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtgui-config.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qobject.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qlist.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qalgorithms.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qiterator.h \
@@ -1292,8 +1293,7 @@ release/weatherwindow.o: ../weatherwindow.cpp ../weatherwindow.h \
 		../Date.h \
 		../Record.h \
 		../CategoryADT.h \
-		ui_weatherwindow.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtDebug
+		ui_weatherwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\weatherwindow.o ..\weatherwindow.cpp
 
 release/qrc_fonts.o: release/qrc_fonts.cpp 

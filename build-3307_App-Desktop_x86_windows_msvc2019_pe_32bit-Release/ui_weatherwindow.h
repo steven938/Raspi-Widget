@@ -30,21 +30,22 @@ public:
     QHBoxLayout *horizontalLayout;
     QGridLayout *gridLayout_2;
     QLabel *label_4;
-    QLabel *label;
     QPushButton *BackButton;
-    QLCDNumber *humidity;
-    QLCDNumber *windSpeed;
-    QPushButton *torontoButton;
-    QLabel *label_2;
-    QPushButton *beijingButton;
-    QPushButton *parisButton;
+    QPushButton *prevButton;
+    QLabel *label;
     QLabel *label_3;
     QLineEdit *searchBar;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *celcButton;
+    QRadioButton *farenButton;
+    QPushButton *nextButton;
+    QLabel *label_2;
+    QLabel *label_5;
     QLCDNumber *temp;
+    QLabel *locationLabel;
+    QLabel *descLabel;
+    QLabel *dateLabel;
 
     void setupUi(QWidget *WeatherWindow)
     {
@@ -62,7 +63,17 @@ public:
         label_4 = new QLabel(WeatherWindow);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
-        gridLayout_2->addWidget(label_4, 9, 0, 1, 1);
+        gridLayout_2->addWidget(label_4, 6, 0, 1, 1);
+
+        BackButton = new QPushButton(WeatherWindow);
+        BackButton->setObjectName(QString::fromUtf8("BackButton"));
+
+        gridLayout_2->addWidget(BackButton, 0, 0, 1, 1);
+
+        prevButton = new QPushButton(WeatherWindow);
+        prevButton->setObjectName(QString::fromUtf8("prevButton"));
+
+        gridLayout_2->addWidget(prevButton, 8, 1, 1, 1);
 
         label = new QLabel(WeatherWindow);
         label->setObjectName(QString::fromUtf8("label"));
@@ -72,53 +83,10 @@ public:
 
         gridLayout_2->addWidget(label, 1, 0, 1, 1);
 
-        BackButton = new QPushButton(WeatherWindow);
-        BackButton->setObjectName(QString::fromUtf8("BackButton"));
-
-        gridLayout_2->addWidget(BackButton, 0, 0, 1, 1);
-
-        humidity = new QLCDNumber(WeatherWindow);
-        humidity->setObjectName(QString::fromUtf8("humidity"));
-        humidity->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
-"    color: rgb(255, 89, 242);    \n"
-"    background-color: rgb(0, 85, 0);\n"
-"}"));
-
-        gridLayout_2->addWidget(humidity, 8, 0, 1, 1, Qt::AlignLeft);
-
-        windSpeed = new QLCDNumber(WeatherWindow);
-        windSpeed->setObjectName(QString::fromUtf8("windSpeed"));
-        windSpeed->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
-"    color: rgb(255, 89, 242);    \n"
-"    background-color: rgb(0, 85, 0);\n"
-"}"));
-
-        gridLayout_2->addWidget(windSpeed, 10, 0, 1, 1, Qt::AlignLeft);
-
-        torontoButton = new QPushButton(WeatherWindow);
-        torontoButton->setObjectName(QString::fromUtf8("torontoButton"));
-
-        gridLayout_2->addWidget(torontoButton, 2, 1, 1, 1);
-
-        label_2 = new QLabel(WeatherWindow);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        gridLayout_2->addWidget(label_2, 5, 0, 1, 1);
-
-        beijingButton = new QPushButton(WeatherWindow);
-        beijingButton->setObjectName(QString::fromUtf8("beijingButton"));
-
-        gridLayout_2->addWidget(beijingButton, 5, 1, 1, 1);
-
-        parisButton = new QPushButton(WeatherWindow);
-        parisButton->setObjectName(QString::fromUtf8("parisButton"));
-
-        gridLayout_2->addWidget(parisButton, 4, 1, 1, 1);
-
         label_3 = new QLabel(WeatherWindow);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
-        gridLayout_2->addWidget(label_3, 7, 0, 1, 1);
+        gridLayout_2->addWidget(label_3, 5, 0, 1, 1);
 
         searchBar = new QLineEdit(WeatherWindow);
         searchBar->setObjectName(QString::fromUtf8("searchBar"));
@@ -130,18 +98,35 @@ public:
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         gridLayout = new QGridLayout(groupBox);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        radioButton = new QRadioButton(groupBox);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        celcButton = new QRadioButton(groupBox);
+        celcButton->setObjectName(QString::fromUtf8("celcButton"));
+        celcButton->setChecked(false);
 
-        gridLayout->addWidget(radioButton, 0, 0, 1, 1);
+        gridLayout->addWidget(celcButton, 0, 0, 1, 1);
 
-        radioButton_2 = new QRadioButton(groupBox);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        farenButton = new QRadioButton(groupBox);
+        farenButton->setObjectName(QString::fromUtf8("farenButton"));
+        farenButton->setChecked(true);
 
-        gridLayout->addWidget(radioButton_2, 1, 0, 1, 1);
+        gridLayout->addWidget(farenButton, 1, 0, 1, 1);
 
 
         gridLayout_2->addWidget(groupBox, 2, 0, 1, 1);
+
+        nextButton = new QPushButton(WeatherWindow);
+        nextButton->setObjectName(QString::fromUtf8("nextButton"));
+
+        gridLayout_2->addWidget(nextButton, 8, 2, 1, 1);
+
+        label_2 = new QLabel(WeatherWindow);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout_2->addWidget(label_2, 4, 0, 1, 1);
+
+        label_5 = new QLabel(WeatherWindow);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        gridLayout_2->addWidget(label_5, 7, 0, 1, 1);
 
         temp = new QLCDNumber(WeatherWindow);
         temp->setObjectName(QString::fromUtf8("temp"));
@@ -152,7 +137,22 @@ public:
 "    background-color: rgb(0, 85, 0);\n"
 "}"));
 
-        gridLayout_2->addWidget(temp, 6, 0, 1, 1, Qt::AlignLeft);
+        gridLayout_2->addWidget(temp, 5, 1, 1, 1);
+
+        locationLabel = new QLabel(WeatherWindow);
+        locationLabel->setObjectName(QString::fromUtf8("locationLabel"));
+
+        gridLayout_2->addWidget(locationLabel, 4, 1, 1, 1);
+
+        descLabel = new QLabel(WeatherWindow);
+        descLabel->setObjectName(QString::fromUtf8("descLabel"));
+
+        gridLayout_2->addWidget(descLabel, 6, 1, 1, 1);
+
+        dateLabel = new QLabel(WeatherWindow);
+        dateLabel->setObjectName(QString::fromUtf8("dateLabel"));
+
+        gridLayout_2->addWidget(dateLabel, 7, 1, 1, 1);
 
 
         retranslateUi(WeatherWindow);
@@ -163,17 +163,20 @@ public:
     void retranslateUi(QWidget *WeatherWindow)
     {
         WeatherWindow->setWindowTitle(QCoreApplication::translate("WeatherWindow", "Habari | Weather", nullptr));
-        label_4->setText(QCoreApplication::translate("WeatherWindow", "Wind Speed", nullptr));
-        label->setText(QCoreApplication::translate("WeatherWindow", "What location's weather would you like to see?", nullptr));
+        label_4->setText(QCoreApplication::translate("WeatherWindow", "Description", nullptr));
         BackButton->setText(QCoreApplication::translate("WeatherWindow", "Back", nullptr));
-        torontoButton->setText(QCoreApplication::translate("WeatherWindow", "Toronto, Canada", nullptr));
-        label_2->setText(QCoreApplication::translate("WeatherWindow", "Temperature", nullptr));
-        beijingButton->setText(QCoreApplication::translate("WeatherWindow", "Beijing, China", nullptr));
-        parisButton->setText(QCoreApplication::translate("WeatherWindow", "Paris, France", nullptr));
-        label_3->setText(QCoreApplication::translate("WeatherWindow", "Humidity", nullptr));
+        prevButton->setText(QCoreApplication::translate("WeatherWindow", "Previous Day", nullptr));
+        label->setText(QCoreApplication::translate("WeatherWindow", "What location's weather would you like to see?", nullptr));
+        label_3->setText(QCoreApplication::translate("WeatherWindow", "Temperature", nullptr));
         groupBox->setTitle(QCoreApplication::translate("WeatherWindow", "Temperature Selection", nullptr));
-        radioButton->setText(QCoreApplication::translate("WeatherWindow", "Celcius", nullptr));
-        radioButton_2->setText(QCoreApplication::translate("WeatherWindow", "Farenheit", nullptr));
+        celcButton->setText(QCoreApplication::translate("WeatherWindow", "Celcius", nullptr));
+        farenButton->setText(QCoreApplication::translate("WeatherWindow", "Farenheit", nullptr));
+        nextButton->setText(QCoreApplication::translate("WeatherWindow", "Next Day", nullptr));
+        label_2->setText(QCoreApplication::translate("WeatherWindow", "Location", nullptr));
+        label_5->setText(QCoreApplication::translate("WeatherWindow", "Date", nullptr));
+        locationLabel->setText(QString());
+        descLabel->setText(QString());
+        dateLabel->setText(QString());
     } // retranslateUi
 
 };
