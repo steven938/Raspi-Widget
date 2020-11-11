@@ -32,7 +32,9 @@ Parameter Descriptions: N/A
 Return Description: records, the vector holding weather records
 */
 vector<WeatherRecord> WeatherCategory::getRecords(){
-   // return records;
+    cerr<<"in weatherRecord getRecords"<<endl;
+    cerr<<records[0].getDays()[0].getTempCelsius()<<endl;
+    return records;
 }
 /*
 Name: search 
@@ -42,9 +44,10 @@ Return Description: A WeatherRecord object or 0 if not found
 */
 Record WeatherCategory::search(string searchString){
     // code to find and return the desired record
-    cout<<searchString<<endl;
+    cerr<<searchString<<endl;
     WeatherRecord * r = new WeatherRecord(searchString);
     records.push_back(*r);
+    cerr << "end search method"<<endl;
     return *r;
 
 }

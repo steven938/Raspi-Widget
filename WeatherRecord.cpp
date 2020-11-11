@@ -7,7 +7,7 @@ Date: 2020-11-04
 #include "WeatherRecord.h"
 #include "Date.h"
 #include <string.h>
-
+#include <iostream>
 using namespace std;
 
 /*
@@ -30,8 +30,12 @@ WeatherRecord::WeatherRecord(std::string location) {
     days.push_back(dw);
 
     }
+    cerr<<"End WeatherRecord Constructor"<<endl;
 }
 
+WeatherRecord::WeatherRecord(const WeatherRecord &wr2){
+    this->location = wr2.location;
+}
 /*
 Name: destructor
 Description:
@@ -43,6 +47,7 @@ WeatherRecord::~WeatherRecord() {
 }
 
 std::vector<DailyWeather> WeatherRecord::getDays() {
+
     return days;
 }
 

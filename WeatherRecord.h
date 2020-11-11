@@ -15,6 +15,8 @@ Date: 2020-11-04
 class WeatherRecord :public Record {
 public:
     WeatherRecord(std::string location);
+    WeatherRecord(const WeatherRecord &wr2);
+
     ~WeatherRecord();
     std::vector<DailyWeather> getDays();
     std::string getDescription();

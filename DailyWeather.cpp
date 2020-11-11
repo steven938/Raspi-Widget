@@ -6,6 +6,8 @@ Date: 2020-11-04
 
 #include "DailyWeather.h"
 #include "Date.h"
+#include <iostream>
+using namespace std;
 /*
 Name: constructor
 Description: Constructs the daily weather record with information on temperature, description, and date
@@ -13,9 +15,28 @@ Parameter Descriptions: temperature in Fahrenheit and Celsius, and the descripti
 Return Description:
 */
 DailyWeather::DailyWeather(float tempFaren, float tempCelsius, std::string description, Date date) {
-
+        this->tempFaren = tempFaren;
+        this->tempCelsius = tempCelsius;
+        this-> description = description;
+        this->date = date;
+    cerr<<"From DailyWeather constructor"<<endl;
 }
 
+//copy constrtuctor
+/*DailyWeather::DailyWeather(const DailyWeather &dw2){
+    cerr <<"From DW Copy Constructor before"<<endl;
+    this->tempFaren = dw2.tempFaren;
+    cerr <<"From DW Copy Constructor 1"<<endl;
+
+    tempCelsius = dw2.tempCelsius;
+    cerr <<"From DW Copy Constructor 2"<<endl;
+
+    description = dw2.description;
+    cerr <<"From DW Copy Constructor 3"<<endl;
+
+    date = dw2.date;
+    cerr <<"From DW Copy Constructor"<<endl;
+*/
 /*
 Name: destructor
 Description:
@@ -33,7 +54,7 @@ Parameter Descriptions:
 Return Description: the temperature for that day in Fahrenheit
 */
 float DailyWeather::getTempFaren() {
-    return 0;
+    return tempFaren;
 }
 
 /*
@@ -43,7 +64,7 @@ Parameter Descriptions:
 Return Description: the temperature for that day in Celsius
 */
 float DailyWeather::getTempCelsius() {
-    return 0;
+    return tempCelsius;
 }
 
 /*
@@ -53,7 +74,7 @@ Parameter Descriptions:
 Return Description: the description of the forecast
 */
 std::string DailyWeather::getDescription() {
-    return std::string();
+    return description;
 }
 
 /*

@@ -17,6 +17,8 @@ private:
     Date date; // the date // date of the weather
 public:
     DailyWeather(float tempCelsius,float tempFaren,std::string description, Date date);
+  //  DailyWeather(const DailyWeather &dw2);
+
     ~DailyWeather();
     float getTempFaren();
     float getTempCelsius();
