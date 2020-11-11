@@ -27,14 +27,19 @@ WeatherRecord::WeatherRecord(std::string location) {
         }else desc = "Sunny";
         Date d(i+1,1,2020);
         DailyWeather dw(32, 0, desc, d);
-    days.push_back(dw);
+        days.push_back(dw);
 
     }
-    cerr<<"End WeatherRecord Constructor"<<endl;
+   // DailyWeather dw(32,0,"Cloudy",Date(1,1,2020));
+  //  days.push_back(dw);
+  //  cerr<<days[0].getDate().getStr();
+ //   cerr<<"is the problem here"<<endl;
+ //   cerr<<"End WeatherRecord Constructor"<<endl;
 }
 
 WeatherRecord::WeatherRecord(const WeatherRecord &wr2){
     this->location = wr2.location;
+    this->days = wr2.days;
 }
 /*
 Name: destructor
@@ -47,7 +52,6 @@ WeatherRecord::~WeatherRecord() {
 }
 
 std::vector<DailyWeather> WeatherRecord::getDays() {
-
     return days;
 }
 

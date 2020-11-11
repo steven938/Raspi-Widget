@@ -19,7 +19,6 @@ public:
 private slots:
     void on_BackButton_clicked();
 
-
 private:
     Ui::NewsWindow *ui;
     NewsCategory category;

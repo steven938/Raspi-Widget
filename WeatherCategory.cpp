@@ -34,6 +34,8 @@ Return Description: records, the vector holding weather records
 vector<WeatherRecord> WeatherCategory::getRecords(){
     cerr<<"in weatherRecord getRecords"<<endl;
     cerr<<records[0].getDays()[0].getTempCelsius()<<endl;
+    cerr<<"in weatherRecord getRecords"<<endl;
+
     return records;
 }
 /*
