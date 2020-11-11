@@ -27,8 +27,6 @@ WeatherWindow::~WeatherWindow()
 void WeatherWindow::on_searchBar_returnPressed(){
     category.search(ui->searchBar->text().toStdString());
     r = new WeatherRecord(category.getRecords()[0]);
-    //cerr <<"r initialization complete"<<endl;
-   // cerr<<typeid(r->getDays()[0]).name();//.getDate();//.getStr();
     updateDisplay();
 
 
