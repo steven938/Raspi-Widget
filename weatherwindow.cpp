@@ -17,14 +17,29 @@ WeatherWindow::~WeatherWindow()
 
 void WeatherWindow::on_searchBar_returnPressed(){
     category.search(ui->searchBar->text().toStdString());
-
-   // records = category.getRecords();
-  //  DailyWeather cd = records[0].getDays()[0];
- //   ui->DescLabel->setText(QString::fromStdString(cd.getDescription()));
-    ui->locationLabel->setText(ui->searchBar->text());
 }
 void WeatherWindow::on_BackButton_clicked(){
     close();
 
 }
 
+void WeatherWindow::on_torontoButton_clicked(){
+    ui->temp->display(15);
+    ui->humidity->display(10);
+    ui->windSpeed->display(30);
+
+}
+
+void WeatherWindow::on_parisButton_clicked(){
+    ui->temp->display(20);
+    ui->humidity->display(35);
+    ui->windSpeed->display(5);
+
+}
+
+void WeatherWindow::on_beijingButton_clicked(){
+    ui->temp->display(13);
+    ui->humidity->display(23);
+    ui->windSpeed->display(10);
+
+}
