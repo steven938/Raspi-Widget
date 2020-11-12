@@ -1,3 +1,9 @@
+/*
+Author: Dhyey Patel
+Description: Header for newsWindow, the window that displays information about the news
+Date: 2020-11-11
+*/
+
 #ifndef NEWSWINDOW_H
 #define NEWSWINDOW_H
 

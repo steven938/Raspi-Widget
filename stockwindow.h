@@ -1,3 +1,9 @@
+/*
+Author: Dhyey Patel
+Description: Header for stockWindow, the window that displays information about the stocks
+Date: 2020-11-11
+*/
+
 #ifndef STOCKWINDOW_H
 #define STOCKWINDOW_H
 
