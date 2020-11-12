@@ -1,3 +1,8 @@
+/*
+Author: Adam Miller
+Description: Header file that represents the main window of the application, where users can choose between stocks, weather, and news
+Date: 2020-11-11
+*/
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -20,6 +25,6 @@ private slots:
    void on_newsButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui;                     //a qt object that represents the window itself
 };
 #endif // MAINWINDOW_H
