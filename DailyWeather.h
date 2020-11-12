@@ -14,10 +14,9 @@ private:
     float tempFaren; // temperature in Fahrenheit
     float tempCelsius; // temperature in Celsius
     std::string description; // verbal description of the weather (i.e. cloudy)
-    Date  date; // the date // date of the weather
+    Date  date;  // date that the Daily Weather describes
 public:
     DailyWeather(float tempCelsius,float tempFaren,std::string description, Date date);
-  //  DailyWeather(const DailyWeather &dw2);
 
     ~DailyWeather();
     float getTempFaren();

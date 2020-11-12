@@ -1,3 +1,9 @@
+/*
+Author: Adam Miller
+Description: Header for WeatherWindow, the window that displays information about the weather
+Date: 2020-11-11
+*/
+
 #ifndef WEATHERWINDOW_H
 #define WEATHERWINDOW_H
 
@@ -17,13 +23,13 @@ public:
     ~WeatherWindow();
 
 private:
-    Ui::WeatherWindow *ui;
-    WeatherCategory category;
-    WeatherRecord *r ;
-    MainWindow * parentWindow;
-    DailyWeather *dw ;
-    int dayCounter;
-    int cORf;
+    Ui::WeatherWindow *ui;          //a qt-created pointer that represents the window itself
+    WeatherCategory category;       //the weather category (singleton) that is being used
+    WeatherRecord *r ;              //the weather record that is currently being used
+    MainWindow * parentWindow;      //the window that created this window
+    DailyWeather *dw ;              //the dailyweather that is being displayed at a given time on the screen
+    int dayCounter;                 //a counter that indicates which day in the day array we are currently dealing with
+    int cORf;                       //indicates whether the current temperature is celcius or farenheit; 0 = farenheit, 1 = celcius
     void updateDisplay();
 private slots:
     void on_searchBar_returnPressed();

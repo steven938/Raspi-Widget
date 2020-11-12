@@ -12,39 +12,23 @@ using namespace std;
 Name: constructor
 Description: Constructs the daily weather record with information on temperature, description, and date
 Parameter Descriptions: temperature in Fahrenheit and Celsius, and the description/date of the forecast
-Return Description:
+Return Description: N/A
 */
 DailyWeather::DailyWeather(float tempFaren, float tempCelsius, std::string description, Date dateIn) {
         this->tempFaren = tempFaren;
         this->tempCelsius = tempCelsius;
-        this-> description = description;
+        this->description = description;
         date = dateIn;
-    cerr<<"From DailyWeather constructor"<<endl;
 }
 
-//copy constrtuctor
-/*DailyWeather::DailyWeather(const DailyWeather &dw2){
-    cerr <<"From DW Copy Constructor before"<<endl;
-    this->tempFaren = dw2.tempFaren;
-    cerr <<"From DW Copy Constructor 1"<<endl;
-
-    tempCelsius = dw2.tempCelsius;
-    cerr <<"From DW Copy Constructor 2"<<endl;
-
-    description = dw2.description;
-    cerr <<"From DW Copy Constructor 3"<<endl;
-
-    date = dw2.date;
-    cerr <<"From DW Copy Constructor"<<endl;
-*/
 /*
 Name: destructor
-Description:
-Parameter Descriptions:
-Return Description:
+Description: deallocated dynamically allocated memory
+Parameter Descriptions: N/A
+Return Description: N/A
 */
 DailyWeather::~DailyWeather() {
-
+    //TO BE IMPLEMENTED
 }
 
 /*
@@ -84,6 +68,5 @@ Parameter Descriptions:
 Return Description: the date of the forecast
 */
 Date DailyWeather::getDate() {
-    cerr<<"in getDate"<<endl;
     return date;
 }

@@ -17,8 +17,8 @@ Parameter Descriptions: location user wishes to know forecast for
 Return Description:
 */
 WeatherRecord::WeatherRecord(std::string location) {
-    this->location = location;
-    //API CALL GOES HERE. Dummy data for now.
+    this->location = location;                      //initializes location
+    //API call will go here in future stage. The for loop generates dummy data.
     for (int i = 0 ; i < 7 ; i++){
         int r = rand()%2;
         string desc;
@@ -29,10 +29,26 @@ WeatherRecord::WeatherRecord(std::string location) {
         int tempFaren =  rand()%50+32;
         DailyWeather dw(tempFaren, convertTemp(tempFaren,'f') , desc, d);
         days.push_back(dw);
-
     }
-
 }
+/*
+Name: Copy constructor
+Description: Constructs a WeatherRecord that references the days and location of the original WeatherRecord. This is a shallow copy.
+Parameter Descriptions: wr2: the weather record being copied
+Return Description: N/A
+*/
+WeatherRecord::WeatherRecord(const WeatherRecord &WR2){
+    this->location = WR2.location;
+    this->days = WR2.days;
+}
+
+/*
+Name: converTempt
+Description: Helper function that converts a temperature from celcius to farenheit
+Parameter Descriptions: temp: the input temperature; from: a character representing the unit of the "temp" input: f for farenheit, c for celcius
+Return Description: The temperature converted to the other format
+*/
+
 float WeatherRecord::convertTemp(float temp, char from){
     if (from == 'f'){
         return (temp-32)*5.0/9;
@@ -41,20 +57,22 @@ float WeatherRecord::convertTemp(float temp, char from){
    return -1;
 
 }
-WeatherRecord::WeatherRecord(const WeatherRecord &wr2){
-    this->location = wr2.location;
-    this->days = wr2.days;
-}
+
 /*
 Name: destructor
-Description:
-Parameter Descriptions:
-Return Description:
+Description: Deallocates memory allocated to the weather record
+Parameter Descriptions: n/a
+Return Description: n/a
 */
 WeatherRecord::~WeatherRecord() {
-
+    //TO BE IMPLEMENTED
 }
-
+/*
+Name: getDays
+Description: returns the days vector
+Parameter Descriptions: N/A
+Return Description: the days vector
+*/
 std::vector<DailyWeather> WeatherRecord::getDays() {
     return days;
 }
@@ -66,17 +84,18 @@ Parameter Descriptions:
 Return Description: the description of the forecast
 */
 std::string WeatherRecord::getDescription() {
-    return std::string();
+    //TO BE IMPLEMENTED;
+    return "description";
 }
 
 /*
 Name: getLocation
 Description: returns location of the forecast
-Parameter Descriptions:
+Parameter Descriptions: n/a
 Return Description: the name of the location
 */
 std::string WeatherRecord::getLocation() {
-    return std::string();
+    return location;
 }
 
 /*
@@ -86,6 +105,7 @@ Parameter Descriptions: an index representing which day the user wants the tempe
 Return Description: the temperature for that day in Fahrenheit
 */
 float WeatherRecord::getTempFahren(int index) {
+    //TO BE IMPLEMENTED
     return 0;
 }
 
@@ -96,5 +116,6 @@ Parameter Descriptions: an index representing which day the user wants the tempe
 Return Description: the temperature for that day in Celsius
 */
 float WeatherRecord::getTempCelsius(int index) {
+    //TO BE IMPLEMENTED
     return 0;
 }

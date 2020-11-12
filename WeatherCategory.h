@@ -1,6 +1,6 @@
 /*
 Author: Leland Conn
-Description: Header file that defines a weather category, which holds weather records for each location and can act on that set of data
+Description: Header file that defines a weather category, which holds weather records for each location and can act on that set of data. Singleton.
 Date: 2020-11-04
 */
 #ifndef WEATHER_CATEGORY_H
@@ -13,8 +13,8 @@ class WeatherCategory: public CategoryADT{
     private:
         std::vector<WeatherRecord> records; // A vector to store all the weather records
 
-        // Print the specified records to the screen
-        void displayRecords(std::vector<WeatherRecord> toDisplay);
+        void displayRecords(std::vector<WeatherRecord> toDisplay); // Print the specified records to the screen
+
         
     public:
     
