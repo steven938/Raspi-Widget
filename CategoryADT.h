@@ -12,9 +12,9 @@ Date: 2020-11-04
 class Record;
 class CategoryADT {
 	public:
-        virtual Record search(std::string) = 0;
-        virtual void sort(int type, bool ascend) = 0;
+        virtual Record search(std::string) = 0; // Function to find a record
+        virtual void sort(int type, bool ascend) = 0;  // Function to store the stored records
 	private: 
-		std::vector<Record> records; 
+        std::vector<Record> records; // A vector to store all the records
 };
 #endif 

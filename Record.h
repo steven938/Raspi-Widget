@@ -5,6 +5,6 @@
 class CategoryADT;
 class Record{
     private:
-        CategoryADT *parent;
+        CategoryADT *parent; // the parent variable that holds all the other records
 };
 #endif
