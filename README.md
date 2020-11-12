@@ -7,7 +7,8 @@ For this stage, we emphasized getting the overall structure of the app finished,
 We changed the number of story points for several of our user stories, as we found that implementing a GUI in QT and similar tasks took longer than expected, and others took shorter than expected. 
 We also made the following changes to user stories
 - Added a story giving a SPIKE to figuring out charting in QT - this is essential for displaying stock information
-- Merged our stories on navigating to the home back and navigating the previous page into one: we found that these are essentially identical. 
+- Merged our stories on navigating to the home back and navigating the previous page into one: we found that these are essentially identical. '
+We will focus on implementing APIs next; currently, the Weather Data is "dummy data"
 
 
 
