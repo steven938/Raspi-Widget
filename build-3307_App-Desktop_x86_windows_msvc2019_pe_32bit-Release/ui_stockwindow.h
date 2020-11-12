@@ -11,7 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +24,8 @@ class Ui_stockWindow
 public:
     QGridLayout *gridLayout;
     QPushButton *BackButton;
+    QFrame *horizontalFrame;
+    QHBoxLayout *horizontalLayout;
 
     void setupUi(QWidget *stockWindow)
     {
@@ -34,6 +38,13 @@ public:
         BackButton->setObjectName(QString::fromUtf8("BackButton"));
 
         gridLayout->addWidget(BackButton, 0, 0, 1, 1);
+
+        horizontalFrame = new QFrame(stockWindow);
+        horizontalFrame->setObjectName(QString::fromUtf8("horizontalFrame"));
+        horizontalLayout = new QHBoxLayout(horizontalFrame);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+
+        gridLayout->addWidget(horizontalFrame, 1, 0, 1, 1);
 
 
         retranslateUi(stockWindow);

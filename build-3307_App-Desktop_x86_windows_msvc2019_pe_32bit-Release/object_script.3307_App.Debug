@@ -7,12 +7,14 @@ debug/StockCategory.o
 debug/StockRecord.o
 debug/WeatherCategory.o
 debug/WeatherRecord.o
+debug/errorbox.o
 debug/main.o
 debug/mainwindow.o
 debug/newswindow.o
 debug/stockwindow.o
 debug/weatherwindow.o
 debug/qrc_fonts.o
+debug/moc_errorbox.o
 debug/moc_mainwindow.o
 debug/moc_newswindow.o
 debug/moc_stockwindow.o

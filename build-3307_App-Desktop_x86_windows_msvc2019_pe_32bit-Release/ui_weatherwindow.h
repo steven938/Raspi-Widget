@@ -72,6 +72,7 @@ public:
 
         prevButton = new QPushButton(WeatherWindow);
         prevButton->setObjectName(QString::fromUtf8("prevButton"));
+        prevButton->setCheckable(false);
 
         gridLayout_2->addWidget(prevButton, 8, 1, 1, 1);
 

@@ -26,17 +26,21 @@ WeatherRecord::WeatherRecord(std::string location) {
             desc = "Cloudy";
         }else desc = "Sunny";
         Date d(i+1,1,2020);
-        DailyWeather dw(32, 0, desc, d);
+        int tempFaren =  rand()%50+32;
+        DailyWeather dw(tempFaren, convertTemp(tempFaren,'f') , desc, d);
         days.push_back(dw);
 
     }
-   // DailyWeather dw(32,0,"Cloudy",Date(1,1,2020));
-  //  days.push_back(dw);
-  //  cerr<<days[0].getDate().getStr();
- //   cerr<<"is the problem here"<<endl;
- //   cerr<<"End WeatherRecord Constructor"<<endl;
-}
 
+}
+float WeatherRecord::convertTemp(float temp, char from){
+    if (from == 'f'){
+        return (temp-32)*5.0/9;
+    }  else if (from == 'c') return (from * 9/5.0)+32;
+   throw "Please specify either f or c";
+   return -1;
+
+}
 WeatherRecord::WeatherRecord(const WeatherRecord &wr2){
     this->location = wr2.location;
     this->days = wr2.days;
