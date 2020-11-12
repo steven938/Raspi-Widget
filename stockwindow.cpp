@@ -57,16 +57,21 @@ Return Description: N/A, displays the chart
 */
 void stockWindow::displayChart(vector<StockRecord> toDisplay){
 
+    // Create a line series variable series
     QLineSeries *series = new QLineSeries();
-    cerr << (toDisplay.size()) << endl;
+    
+    // add the data from toDisplay into the line series
     for (int i = static_cast<int>(5 - 1); i >= 0; i --){
-        cerr << i << " " << toDisplay[0].getClose((toDisplay.size() - i)) << endl;
+        //cerr << i << " " << toDisplay[0].getClose((toDisplay.size() - i)) << endl;
         series->append(i,toDisplay[0].getClose((toDisplay.size() - i)));
     }
 
+    // Create a chart, and add the series to the chart
     QChart *chart = new QChart();
     chart->addSeries(series);
     chart->createDefaultAxes();
+
+    // Set the title for the chart
     string title = toDisplay[0].getCompanyName()+" 7-Day Stock Chart";
     QString qtitle = QString::fromStdString(title);
     chart->setTitle(qtitle);
@@ -80,9 +85,11 @@ void stockWindow::displayChart(vector<StockRecord> toDisplay){
     }
     chart->setAxisX(axisX, series);*/
 
+    // Create a legend for the chart
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
 
+    // Create a chartview to display the chart, and dispay the chart in the correct location
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->setParent(ui->horizontalFrame);
