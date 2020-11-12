@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "NewsCategory.h"
+#include "mainwindow.h"
 
 namespace Ui {
 class NewsWindow;
@@ -13,7 +14,7 @@ class NewsWindow : public QWidget
     Q_OBJECT
 
 public:
-    explicit NewsWindow(QWidget *parent = nullptr);
+    explicit NewsWindow(MainWindow * window, QWidget *parent = nullptr);
     ~NewsWindow();
 
 private slots:
@@ -22,6 +23,8 @@ private slots:
 private:
     Ui::NewsWindow *ui;
     NewsCategory category;
+    MainWindow * parentWindow;
+
 };
 
 #endif // NEWSWINDOW_H

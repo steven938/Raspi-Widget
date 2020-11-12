@@ -3,14 +3,18 @@
 #include <iostream>
 
 using namespace std;
-stockWindow::stockWindow(QWidget *parent) :
+
+stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::stockWindow)
 {
     ui->setupUi(this);
+    parentWindow = Window;
+
     vector<StockRecord> records;
     records.push_back(StockRecord("APPL"));
     displayChart(records);
+
 }
 
 stockWindow::~stockWindow()
@@ -19,6 +23,9 @@ stockWindow::~stockWindow()
 }
 
 void stockWindow::on_BackButton_clicked(){
+    parentWindow->close();
+    parentWindow = new MainWindow();
+    parentWindow->show();
     close();
 }
 

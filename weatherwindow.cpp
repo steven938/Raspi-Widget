@@ -8,9 +8,10 @@
 #include "ui_weatherwindow.h"
 #include "WeatherCategory.h"
 #include "errorbox.h"
+#include "mainwindow.h"
 
 using namespace std;
-WeatherWindow::WeatherWindow(QWidget *parent) :
+WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WeatherWindow)
 {
@@ -21,6 +22,7 @@ WeatherWindow::WeatherWindow(QWidget *parent) :
     ui->nextButton->setEnabled(false);
     ui->celcButton->setEnabled(false);
     ui->farenButton->setEnabled((false));
+    parentWindow = Window;
 }
 
 WeatherWindow::~WeatherWindow()
@@ -39,7 +41,11 @@ void WeatherWindow::on_searchBar_returnPressed(){
 
 }
 void WeatherWindow::on_BackButton_clicked(){
+    parentWindow->close();
+    parentWindow = new MainWindow();
+    parentWindow->show();
     close();
+
 }
 
 void WeatherWindow::updateDisplay(){

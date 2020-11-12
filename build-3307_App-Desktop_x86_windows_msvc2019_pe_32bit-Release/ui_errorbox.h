@@ -27,15 +27,15 @@ public:
     {
         if (ErrorBox->objectName().isEmpty())
             ErrorBox->setObjectName(QString::fromUtf8("ErrorBox"));
-        ErrorBox->resize(400, 300);
+        ErrorBox->resize(466, 340);
         buttonBox = new QDialogButtonBox(ErrorBox);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(30, 240, 341, 32));
+        buttonBox->setGeometry(QRect(120, 290, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         errorMessage = new QLabel(ErrorBox);
         errorMessage->setObjectName(QString::fromUtf8("errorMessage"));
-        errorMessage->setGeometry(QRect(40, 90, 271, 111));
+        errorMessage->setGeometry(QRect(40, 90, 371, 171));
 
         retranslateUi(ErrorBox);
         QObject::connect(buttonBox, SIGNAL(accepted()), ErrorBox, SLOT(accept()));
