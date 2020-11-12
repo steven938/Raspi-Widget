@@ -22,6 +22,7 @@ public:
 	float getHigh(int daysAgo);
 	float getClose(int daysAgo);
 	long long int getVolume(int daysAgo);
+    std::string getDate(int daysAgo);
 	~StockRecord();
 private:
 	std::string ticker; // 4 letter ticker

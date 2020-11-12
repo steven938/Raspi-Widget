@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "StockCategory.h"
+#include "Record.h"
 
 #include <QtCharts>
 #include <QChartView>
@@ -25,6 +26,7 @@ private slots:
 
 private:
     Ui::stockWindow *ui;
+    void displayChart(std::vector<StockRecord>);
 };
 
 #endif // STOCKWINDOW_H

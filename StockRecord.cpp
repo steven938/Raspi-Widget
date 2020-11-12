@@ -22,6 +22,16 @@ StockRecord::StockRecord(string ticker){
     this->companyName = "Apple";
     this->exchange = "NASDAQ";
     this->marketCap = "2.03T";
+    DailyStock ds1(117.19,119.63,116.44,119.49,109791495,Date(11,11,2020));
+    DailyStock ds2(115.55,117.59,114.13,115.97,137656000,Date(10,11,2020));
+    DailyStock ds3(120.50,121.99,116.05,116.32,154515300,Date(9,11,2020));
+    DailyStock ds4(118.32,119.20,116.13,118.69,114457900,Date(6,11,2020));
+    DailyStock ds5(117.95,119.62,116.87,119.03,126387100,Date(5,11,2020));
+    this->days.push_back(ds1);
+    this->days.push_back(ds2);
+    this->days.push_back(ds3);
+    this->days.push_back(ds4);
+    this->days.push_back(ds5);
 
 
 }
@@ -116,7 +126,15 @@ long long int StockRecord::getVolume(int daysAgo){
     return days[daysAgo].getVolume();
 }
 
-
+/*
+Name: getDate
+Description: gets the Date on certain day
+Parameter Descriptions: the number days to look back
+Return Description: Date object with the date
+*/
+string StockRecord::getDate(int daysAgo){
+    return this->days[daysAgo].getDate();
+}
 /*
 Name: destructor
 Description:
