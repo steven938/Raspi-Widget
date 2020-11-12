@@ -4,6 +4,12 @@
 
 using namespace std;
 
+/*
+Name: stockWindow
+Description: This is a constructor to create an instance of the stockWindow class
+Parameter Descriptions: It needs a reference to the main window, and needs to get its widgets
+Return Description: N/A
+*/
 stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::stockWindow)
@@ -17,11 +23,25 @@ stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
 
 }
 
+/*
+Name: ~stockWindow
+Description: This is a deconstructor to destroy the instance of the stockWindow class
+Parameter Descriptions: N/A
+Return Description: N/A
+*/
 stockWindow::~stockWindow()
 {
+    // Delete the ui created in the constructor
     delete ui;
 }
 
+
+/*
+Name: on_BackButton_clicked
+Description: Method will execute when the back button is clicked
+Parameter Descriptions: N/A
+Return Description: N/A
+*/
 void stockWindow::on_BackButton_clicked(){
     parentWindow->close();
     parentWindow = new MainWindow();
@@ -29,6 +49,12 @@ void stockWindow::on_BackButton_clicked(){
     close();
 }
 
+/*
+Name: on_BackButton_clicked
+Description: Internal method that will display a stock chart given a vector of stock records (NEED TO FINISH IMPLEMENTATION, JUST CREATED AS PART OF THE SPIKE API TO LEARN ABOUT CHARTS IN QT)
+Parameter Descriptions: vector of stock records that will be displayed 
+Return Description: N/A, displays the chart 
+*/
 void stockWindow::displayChart(vector<StockRecord> toDisplay){
 
     QLineSeries *series = new QLineSeries();
