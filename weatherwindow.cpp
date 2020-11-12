@@ -7,6 +7,7 @@
 #include "weatherwindow.h"
 #include "ui_weatherwindow.h"
 #include "WeatherCategory.h"
+#include "errorbox.h"
 
 using namespace std;
 WeatherWindow::WeatherWindow(QWidget *parent) :
@@ -16,7 +17,10 @@ WeatherWindow::WeatherWindow(QWidget *parent) :
     ui->setupUi(this);
     dayCounter = 0;
     cORf = 0;
-
+    ui->prevButton->setEnabled(false);
+    ui->nextButton->setEnabled(false);
+    ui->celcButton->setEnabled(false);
+    ui->farenButton->setEnabled((false));
 }
 
 WeatherWindow::~WeatherWindow()
@@ -28,8 +32,10 @@ void WeatherWindow::on_searchBar_returnPressed(){
     category.search(ui->searchBar->text().toStdString());
     r = new WeatherRecord(category.getRecords()[0]);
     updateDisplay();
-
-
+    ui->prevButton->setEnabled(true);
+    ui->nextButton->setEnabled(true);
+    ui->celcButton->setEnabled(true);
+    ui->farenButton->setEnabled((true));
 
 }
 void WeatherWindow::on_BackButton_clicked(){
@@ -66,11 +72,13 @@ void WeatherWindow::on_farenButton_clicked()
 void WeatherWindow::on_prevButton_clicked()
 {
     if(dayCounter == 0){
-        QMessageBox messageBox;
+        ErrorBox * error = new ErrorBox();
         QFont font = QFont("FreeSans",10,1);
-        messageBox.setFont(font);
-        messageBox.critical(0,"Error","There is no previous day !");
-        messageBox.setFixedSize(500,200);
+        error->setFont(font);
+        error->setWindowTitle("Error");
+        error->error("There is no previous day!");
+        error->show();
+
         return;
     }
     dayCounter --;
@@ -80,11 +88,12 @@ void WeatherWindow::on_prevButton_clicked()
 void WeatherWindow::on_nextButton_clicked()
 {
     if(dayCounter == r->getDays().size()-1){
-        QMessageBox messageBox;
+        ErrorBox * error = new ErrorBox();
         QFont font = QFont("FreeSans",10,1);
-        messageBox.setFont(font);
-        messageBox.critical(0,"Error","There is no next day !");
-        messageBox.setFixedSize(500,200);
+        error->setFont(font);
+        error->setWindowTitle("Error");
+        error->error("There is no next day!");
+        error->show();
         return;
     }
     dayCounter++;

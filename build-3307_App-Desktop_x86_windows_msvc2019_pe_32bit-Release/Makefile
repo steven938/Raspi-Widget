@@ -116,6 +116,8 @@ Makefile: ../3307_App.pro C:/Qt/5.15.0/mingw81_64/mkspecs/win32-g++/qmake.conf C
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bluetooth.pri \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_charts.pri \
+		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_charts_private.pri \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_concurrent.pri \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_core.pri \
@@ -248,6 +250,7 @@ Makefile: ../3307_App.pro C:/Qt/5.15.0/mingw81_64/mkspecs/win32-g++/qmake.conf C
 		C:/Qt/5.15.0/mingw81_64/mkspecs/features/yacc.prf \
 		C:/Qt/5.15.0/mingw81_64/mkspecs/features/lex.prf \
 		../3307_App.pro \
+		C:/Qt/5.15.0/mingw81_64/lib/Qt5Charts.prl \
 		C:/Qt/5.15.0/mingw81_64/lib/Qt5Widgets.prl \
 		C:/Qt/5.15.0/mingw81_64/lib/Qt5Gui.prl \
 		C:/Qt/5.15.0/mingw81_64/lib/Qt5Core.prl \
@@ -301,6 +304,8 @@ C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_axserver_private.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bluetooth.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
+C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_charts.pri:
+C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_charts_private.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_concurrent.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_concurrent_private.pri:
 C:/Qt/5.15.0/mingw81_64/mkspecs/modules/qt_lib_core.pri:
@@ -433,6 +438,7 @@ C:/Qt/5.15.0/mingw81_64/mkspecs/features/exceptions.prf:
 C:/Qt/5.15.0/mingw81_64/mkspecs/features/yacc.prf:
 C:/Qt/5.15.0/mingw81_64/mkspecs/features/lex.prf:
 ../3307_App.pro:
+C:/Qt/5.15.0/mingw81_64/lib/Qt5Charts.prl:
 C:/Qt/5.15.0/mingw81_64/lib/Qt5Widgets.prl:
 C:/Qt/5.15.0/mingw81_64/lib/Qt5Gui.prl:
 C:/Qt/5.15.0/mingw81_64/lib/Qt5Core.prl:

@@ -23,6 +23,7 @@ public:
     std::string getLocation();
     float getTempFahren(int index);
     float getTempCelsius(int index);
+    float convertTemp(float temp, char from);
 
 private:
     std::string location; // name of the location

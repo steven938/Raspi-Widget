@@ -17,6 +17,7 @@ SOURCES += \
     StockRecord.cpp \
     WeatherCategory.cpp \
     WeatherRecord.cpp \
+    errorbox.cpp \
     main.cpp \
     mainwindow.cpp \
     newswindow.cpp \
@@ -35,12 +36,14 @@ HEADERS += \
     StockRecord.h \
     WeatherCategory.h \
     WeatherRecord.h \
+    errorbox.h \
     mainwindow.h \
     newswindow.h \
     stockwindow.h \
     weatherwindow.h
 
 FORMS += \
+    errorbox.ui \
     mainwindow.ui \
     newswindow.ui \
     stockwindow.ui \
