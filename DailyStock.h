@@ -11,11 +11,12 @@ private:
     long long int volume; // volume of trades on that date
 	Date date; // the date
 public:
-	DailyStock(float open, float close, float high, float low, long long int volume, std::string date);
+    DailyStock(float open, float close, float high, float low, long long int volume, Date date);
 	float getOpen();
 	float getClose();
 	float getHigh();
 	float getLow();
+    std::string getDate();
 	long long int getVolume();
 	~DailyStock();
 };

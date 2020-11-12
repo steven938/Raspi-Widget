@@ -88,3 +88,15 @@ Month (Written Out), Day, Year: February 28, 2019
 string Date::getStr(){
     return this->monthName[this->month] + '/' + to_string(this->day) + ", " + to_string(this->year); //dummy
 }
+
+
+/*
+Name: getStr2
+Description: allows the representation of the date as a string, with the Format "DD/MM/YYYY" , e.g. 01/01/2020
+Parameter Descriptions: N/A
+Return Description: Returns the Date as a String in the format:
+Month (Written Out), Day, Year: February 28, 2019
+*/
+string Date::getStr2(){
+    return to_string(this->day) + "/" + to_string(this->month)+ "/" +  to_string(this->year); //dummy
+}

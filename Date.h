@@ -20,5 +20,6 @@ public:
     int getDay();
     int getYear();
     std::string getStr();
+    std::string getStr2();
 };
 #endif
