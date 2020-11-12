@@ -1,3 +1,8 @@
+/*
+Author: Dhyey Patel
+Description: CPP for stockWindow, the window that displays information about the stocks
+Date: 2020-11-11
+*/
 #include "stockwindow.h"
 #include "ui_stockwindow.h"
 #include <iostream>
@@ -61,9 +66,9 @@ void stockWindow::displayChart(vector<StockRecord> toDisplay){
     QLineSeries *series = new QLineSeries();
     
     // add the data from toDisplay into the line series
-    for (int i = static_cast<int>(5 - 1); i >= 0; i --){
+    for (int i = 4; i >= 0; i --){
         //cerr << i << " " << toDisplay[0].getClose((toDisplay.size() - i)) << endl;
-        series->append(i,toDisplay[0].getClose((toDisplay.size() - i)));
+        series->append(i,toDisplay[0].getClose((5 - i)));
     }
 
     // Create a chart, and add the series to the chart

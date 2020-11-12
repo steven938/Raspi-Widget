@@ -1,3 +1,8 @@
+/*
+Author: Dhyey Patel
+Description: CPP for NewsWindow, the window that displays information about the news
+Date: 2020-11-11
+*/
 #include "newswindow.h"
 #include "ui_newswindow.h"
 
