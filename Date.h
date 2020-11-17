@@ -22,5 +22,6 @@ public:
     std::string getStr() const;
     std::string getStr2() const;
     bool operator==(const Date& other);
+    bool operator!=(const Date& other);
 };
 #endif

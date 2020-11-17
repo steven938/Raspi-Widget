@@ -104,3 +104,7 @@ string Date::getStr2() const{
 bool Date::operator==(const Date& other){
     return this->year == other.getYear() && this->month == other.getMonth() && this->day == other.getDay();
 }
+
+bool Date::operator!=(const Date& other){
+    return this->year != other.getYear() || this->month != other.getMonth() || this->day != other.getDay();
+}
