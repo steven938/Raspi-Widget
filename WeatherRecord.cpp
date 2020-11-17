@@ -1,3 +1,7 @@
+// TO FIX:
+// Handling invalid location input or API bad responses
+// Restructure the API request code: const for the API key for example
+
 /*
 Author: Abdul Rehman Zafar
 Description: Cpp file for WeatherRecord representing weather information for a location
@@ -8,6 +12,16 @@ Date: 2020-11-04
 #include "Date.h"
 #include <string.h>
 #include <iostream>
+#include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QtNetwork/QNetworkRequest>
+#include <QtNetwork/QSslConfiguration>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkReply>
+#include <QApplication>
+
 using namespace std;
 
 /*
@@ -18,18 +32,77 @@ Return Description:
 */
 WeatherRecord::WeatherRecord(std::string location) {
     this->location = location;                      //initializes location
-    //API call will go here in future stage. The for loop generates dummy data.
-    for (int i = 0 ; i < 7 ; i++){
-        int r = rand()%2;
-        string desc;
-        if (r == 0){
-            desc = "Cloudy";
-        }else desc = "Sunny";
-        Date d(i+1,1,2020);
-        int tempFaren =  rand()%50+32;
-        DailyWeather dw(tempFaren, convertTemp(tempFaren,'f') , desc, d);
-        days.push_back(dw);
+
+    qDebug() << QSslSocket::supportsSsl() << QSslSocket::sslLibraryBuildVersionString() << QSslSocket::sslLibraryVersionString();
+    QNetworkRequest request;
+    QString endpoint = "https://api.openweathermap.org/data/2.5/forecast?cnt=40&units=imperial&q=" + QString::fromStdString(location) + "&appid=26387a928cb676aab24801bcc3d40f69";
+
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setSslConfiguration(QSslConfiguration::defaultConfiguration());
+    request.setUrl(QUrl(endpoint));
+
+    QJsonObject json;
+    QNetworkAccessManager nam;
+    QNetworkReply *reply = nam.get(request);
+    while(!reply->isFinished())
+    {
+        qApp->processEvents();
     }
+
+    if (reply->error() == QNetworkReply::NoError)
+    {
+        QByteArray response_data = reply->readAll();
+        QJsonDocument document = QJsonDocument::fromJson(response_data);
+        QJsonObject object = document.object();
+        qDebug() << "Json Response Loaded : " << endpoint;
+        QJsonObject obj = document.object();
+
+        QJsonArray weatherReports = obj["list"].toArray();
+
+        Date prevDate;
+        int tempSum = 0;
+        int count = 0;
+        QString description;
+
+        for(int i=0;i<40;i++){
+            QJsonObject report = weatherReports.at(i).toObject();
+            string dateText = report["dt_txt"].toString().toStdString();
+
+            int year = stoi(dateText.substr(0, 4));
+            int month = stoi(dateText.substr(5, 2));
+            int day = stoi(dateText.substr(8, 2));
+
+            Date curDate(day, month, year);
+            description = report["weather"].toArray().at(0).toObject()["description"].toString();
+
+            if(i==0){
+                prevDate = curDate;
+            }
+
+            if(prevDate != curDate){
+                float avgTemp = tempSum/count;
+
+                days.emplace_back(avgTemp, convertTemp(avgTemp,'f'), description.toStdString(), prevDate);
+
+                tempSum = 0;
+                count = 0;
+                prevDate = curDate;
+            }
+
+            double tempFaren = report["main"].toObject()["temp"].toDouble();
+            tempSum += tempFaren;
+            count += 1;
+        }
+        float avgTemp = tempSum/count;
+        days.emplace_back(avgTemp, convertTemp(avgTemp,'f'), description.toStdString(), prevDate);
+
+    }
+    else // something went wrong
+    {
+        qDebug() << "Json File Failed to Parse : " << endpoint;
+        qDebug() << "Error : " << reply->errorString();
+    }
+    reply->deleteLater();
 }
 /*
 Name: Copy constructor
