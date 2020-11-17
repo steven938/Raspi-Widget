@@ -16,10 +16,11 @@ public:
     Date();
     Date(int, int, int);
     ~Date();
-    int getMonth();
-    int getDay();
-    int getYear();
-    std::string getStr();
-    std::string getStr2();
+    int getMonth() const;
+    int getDay() const;
+    int getYear() const;
+    std::string getStr() const;
+    std::string getStr2() const;
+    bool operator==(const Date& other);
 };
 #endif

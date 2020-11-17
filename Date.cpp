@@ -57,7 +57,7 @@ Description: getter for month
 Parameter Descriptions: N/A
 Return Description: month; the Month of the Date
 */
-int Date::getMonth(){
+int Date::getMonth() const{
     return this->month;
 }
 /*
@@ -66,7 +66,7 @@ Description: getter for day
 Parameter Descriptions: N/A
 Return Description: day, the Day of the Date
 */
-int Date::getDay(){
+int Date::getDay() const{
     return this->day;
 }
 /* 
@@ -75,7 +75,7 @@ Description: getter for Year
 Parameter Descriptions: N/A
 Return Description: year; the year of the Date
 */
-int Date::getYear(){
+int Date::getYear() const{
     return this->year;
 }
 /*
@@ -85,7 +85,7 @@ Parameter Descriptions: N/A
 Return Description: Returns the Date as a String in the format:
 Month (Written Out), Day, Year: February 28, 2019
 */
-string Date::getStr(){
+string Date::getStr() const{
     return this->monthName[this->month] + '/' + to_string(this->day) + ", " + to_string(this->year); //dummy
 }
 
@@ -97,6 +97,10 @@ Parameter Descriptions: N/A
 Return Description: Returns the Date as a String in the format:
 Month (Written Out), Day, Year: February 28, 2019
 */
-string Date::getStr2(){
+string Date::getStr2() const{
     return to_string(this->day) + "/" + to_string(this->month)+ "/" +  to_string(this->year); //dummy
+}
+
+bool Date::operator==(const Date& other){
+    return this->year == other.getYear() && this->month == other.getMonth() && this->day == other.getDay();
 }
