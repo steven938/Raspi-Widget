@@ -30,6 +30,7 @@ private:
     DailyWeather *dw ;              //the dailyweather that is being displayed at a given time on the screen
     int dayCounter;                 //a counter that indicates which day in the day array we are currently dealing with
     int cORf;                       //indicates whether the current temperature is celcius or farenheit; 0 = farenheit, 1 = celcius
+    int cityIndex;
     void updateDisplay();
 private slots:
     void on_searchBar_returnPressed();
@@ -38,6 +39,7 @@ private slots:
     void on_farenButton_clicked();
     void on_prevButton_clicked();
     void on_nextButton_clicked();
+    void on_citiesBox_currentIndexChanged(int index);
 };
 
 #endif // WEATHERWINDOW_H

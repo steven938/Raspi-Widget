@@ -34,6 +34,7 @@ WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
     ui->nextButton->setEnabled(false);
     ui->celcButton->setEnabled(false);
     ui->farenButton->setEnabled((false));
+    ui->citiesBox->setEnabled(false);
     parentWindow = Window;                  //this sets up the pointer to the window that created this.
 }
 /*
@@ -64,7 +65,10 @@ void WeatherWindow::on_searchBar_returnPressed(){
     ui->nextButton->setEnabled(true);
     ui->celcButton->setEnabled(true);
     ui->farenButton->setEnabled((true));
-
+    ui->citiesBox->setEnabled(true);
+    ui->citiesBox->addItem(ui->searchBar->text());
+    cityIndex = category.getRecords().size()-1;
+    ui->citiesBox->setCurrentIndex(cityIndex);
 }
 /*
 Name: on_BackButton_clicked()
@@ -76,7 +80,10 @@ void WeatherWindow::on_BackButton_clicked(){
     parentWindow->close();                      //these three lines create a new parent window, to ensure that in the case
                                                 //that the parent window was closed while the weather window was open
                                                 //we can return to a parent window
+
     parentWindow = new MainWindow();
+    QFont font = QFont("FreeSans",10,1);
+    parentWindow->setFont(font);
     parentWindow->show();
     close();                                    //closes the weather window
 
@@ -95,8 +102,9 @@ void WeatherWindow::updateDisplay(){
         temp = r->getDays()[dayCounter].getTempCelsius();
     }
     ui->temp->display(temp);
+    ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
+    cerr<<r->getLocation()<<endl;
     //displays location, date, and description for current DailyWeather.
-    ui->locationLabel->setText((ui->searchBar->text()));
     ui->dateLabel->setText(QString::fromStdString(r->getDays()[dayCounter].getDate().getStr()));
     ui->descLabel->setText(QString::fromStdString(r->getDays()[dayCounter].getDescription()));
 }
@@ -165,4 +173,11 @@ void WeatherWindow::on_nextButton_clicked()
     }
     dayCounter++;
     updateDisplay() ;
+}
+
+
+void WeatherWindow::on_citiesBox_currentIndexChanged(int index)
+{
+    *r = category.getRecords()[index];
+    updateDisplay();
 }

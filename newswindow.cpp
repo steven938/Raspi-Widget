@@ -42,6 +42,9 @@ Return Description: N/A
 void NewsWindow::on_BackButton_clicked(){
     parentWindow->close();
     parentWindow = new MainWindow();
+    QFont font = QFont("FreeSans",10,1);
+    parentWindow->setFont(font);
+    parentWindow->show();
     parentWindow->show();
     close();
 
