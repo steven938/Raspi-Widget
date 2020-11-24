@@ -23,7 +23,7 @@ stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
     parentWindow = Window;
 
     vector<StockRecord> records;
-    records.push_back(StockRecord("APPL"));
+    records.push_back(StockRecord("AAPL"));
     displayChart(records);
 
 }

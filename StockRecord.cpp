@@ -7,7 +7,15 @@ Date: 2020-11-04
 #include "StockRecord.h"
 #include "Date.h"
 #include <string.h>
-
+#include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QtNetwork/QNetworkRequest>
+#include <QtNetwork/QSslConfiguration>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkReply>
+#include <QApplication>
 using namespace std;
 
 /*
@@ -18,22 +26,101 @@ Return Description:
 */
 StockRecord::StockRecord(string ticker){
     this->ticker = ticker;
-    // API Call goes here, dummy data for now
-    this->companyName = "Apple";
-    this->exchange = "NASDAQ";
-    this->marketCap = "2.03T";
-    DailyStock ds1(117.19,119.63,116.44,119.49,109791495,Date(11,11,2020));
-    DailyStock ds2(115.55,117.59,114.13,115.97,137656000,Date(10,11,2020));
-    DailyStock ds3(120.50,121.99,116.05,116.32,154515300,Date(9,11,2020));
-    DailyStock ds4(118.32,119.20,116.13,118.69,114457900,Date(6,11,2020));
-    DailyStock ds5(117.95,119.62,116.87,119.03,126387100,Date(5,11,2020));
-    this->days.push_back(ds1);
-    this->days.push_back(ds2);
-    this->days.push_back(ds3);
-    this->days.push_back(ds4);
-    this->days.push_back(ds5);
+
+    // API CALL 1: Get Stock Price Information
+    // NOTE: Limit of 5 API requests per minute
+
+    QNetworkRequest request;
+    QString endpoint = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + QString::fromStdString(ticker) + "&apikey=AI83R8IOLM46LIP2";
+
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setSslConfiguration(QSslConfiguration::defaultConfiguration());
+    request.setUrl(QUrl(endpoint));
+
+    QJsonObject json;
+    QNetworkAccessManager nam;
+    QNetworkReply *reply = nam.get(request);
+    while(!reply->isFinished())
+    {
+        qApp->processEvents();
+    }
+
+    if (reply->error() == QNetworkReply::NoError)
+    {
+        QByteArray response_data = reply->readAll();
+        QJsonDocument document = QJsonDocument::fromJson(response_data);
+        qDebug() << "Json Response Loaded : " << endpoint;
+        QJsonObject obj = document.object();
+        QJsonObject stockData = obj["Time Series (Daily)"].toObject();
+
+        foreach(const QString& dateText, stockData.keys()){
+            int year = stoi(dateText.toStdString().substr(0, 4));
+            int month = stoi(dateText.toStdString().substr(5, 2));
+            int day = stoi(dateText.toStdString().substr(8, 2));
+            Date curDate(day, month, year);
+
+            QJsonObject dailyData = stockData[dateText].toObject();
+
+            float open = dailyData["1. open"].toString().toFloat();
+            float high = dailyData["2. high"].toString().toFloat();
+            float low = dailyData["3. low"].toString().toFloat();
+            float close = dailyData["4. close"].toString().toFloat();
+            long long int volume = dailyData["5. volume"].toString().toInt();
 
 
+            this->days.emplace_back(open, close, high, low, volume, curDate);
+        }
+        // reverse array since dates are read in reverse order
+        reverse(this->days.begin(), this->days.end());
+
+    }
+    else // something went wrong
+    {
+        qDebug() << "Json File Failed to Parse : " << endpoint;
+        qDebug() << "Error : " << reply->errorString();
+    }
+    reply->deleteLater();
+
+
+
+
+    // API CALL 2: Get Company Information
+
+    QNetworkRequest request2;
+    QString endpoint2 = "https://finnhub.io/api/v1/stock/profile2?symbol=" + QString::fromStdString(ticker) + "&token=bulhelv48v6p4m01r9jg";
+
+    request2.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request2.setSslConfiguration(QSslConfiguration::defaultConfiguration());
+    request2.setUrl(QUrl(endpoint2));
+
+    QJsonObject json2;
+    QNetworkAccessManager nam2;
+    QNetworkReply *reply2 = nam2.get(request2);
+    while(!reply2->isFinished())
+    {
+        qApp->processEvents();
+    }
+
+    if (reply2->error() == QNetworkReply::NoError)
+    {
+        QByteArray response_data2 = reply2->readAll();
+        QJsonDocument document2 = QJsonDocument::fromJson(response_data2);
+        qDebug() << "Json Response Loaded : " << endpoint2;
+        QJsonObject obj2 = document2.object();
+        this->companyName = obj2["name"].toString().toStdString();
+        this->exchange = obj2["exchange"].toString().toStdString();
+        double marketCapMillion = obj2["marketCapitalization"].toDouble() * 1000000;
+        QString marketCapStr = QString::number(marketCapMillion);
+        this->marketCap = marketCapStr.toStdString();
+
+        qDebug() << QString::fromStdString(this->companyName) << " " << QString::fromStdString(this->exchange) << QString::fromStdString(this->marketCap);
+    }
+    else // something went wrong
+    {
+        qDebug() << "Json File Failed to Parse : " << endpoint2;
+        qDebug() << "Error : " << reply2->errorString();
+    }
+    reply2->deleteLater();
 }
 
 /*
