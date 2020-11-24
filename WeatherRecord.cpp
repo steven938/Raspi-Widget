@@ -53,7 +53,7 @@ WeatherRecord::WeatherRecord(std::string location) {
     {
         QByteArray response_data = reply->readAll();
         QJsonDocument document = QJsonDocument::fromJson(response_data);
-        QJsonObject object = document.object();
+//        QJsonObject object = document.object();
         qDebug() << "Json Response Loaded : " << endpoint;
         QJsonObject obj = document.object();
 
