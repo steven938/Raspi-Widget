@@ -12,20 +12,19 @@ Date: 2020-11-04
 class NewsRecord: public Record{
     private:
         Date date;  //the date of the news story
-        std::string subject;    //the subject of the news story
+        std::string author;     // author of story
         std::string title;      //the title of the news story
-        std::string sector;     //the sector (i.e. tech, finance) of the news story
-        std::string location;   //the location that the news is from (i.e. a city)
+        std::string description;//description of news article
         std::string source;     //the source (i.e. CNN) of the news story
         std::string url;        //the URL to locate the news story online.
     public:
-        NewsRecord(CategoryADT* parent);
-        ~NewsRecord();      
+        NewsRecord(Date date, std::string author, std::string title, std::string description, std::string source, std::string url);
+        ~NewsRecord();
+        std::string getAuthor();
         std::string getSubject();
         Date getDate();
         std::string getTitle();
-        std::string getSector();
-        std::string getLocation();
+        std::string getDescription();
         std::string getSource();
         std::string getURL();
 

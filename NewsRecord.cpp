@@ -13,10 +13,13 @@ Description:
 Parameter Descriptions:
 Return Description: 
 */
-NewsRecord::NewsRecord(CategoryADT* parent){
-    date = Date(1,2,3); //dummy
-
-    
+NewsRecord::NewsRecord(Date date, string author, string title, string description, string source, string url){
+    this->date = date;
+    this->author = author;
+    this->title = title;
+    this->description = description;
+    this->source = source;
+    this->url = url;
 }
 /* 
 Name: Destructor
@@ -27,15 +30,13 @@ Return Description: N/A
 NewsRecord::~NewsRecord(){
 
 }
-/*
-Name: getSubject 
-Description: Getter for subject
-Parameter Descriptions: N/A
-Return Description: subject, the subject of the NewsRecord 
-*/
-string NewsRecord::getSubject(){
-    return subject;
+
+
+string NewsRecord::getAuthor(){
+    return this->author;
 }
+
+
 /*
 Name: getDate 
 Description: Returns the Date of the NewsRecord
@@ -55,22 +56,10 @@ string NewsRecord::getTitle(){
     return title;
 }
 /*
-Name: getSector 
-Description: getter for sector
-Parameter Descriptions: N/A
-Return Description: the sector of the NewsRecord
+
 */
-string NewsRecord::getSector(){
-    return sector;
-}
-/*
-Name: getLocation 
-Description: getter for Location
-Parameter Descriptions: N/A
-Return Description: the location of the NewsRecord
-*/
-string NewsRecord::getLocation(){
-    return location;
+string NewsRecord::getDescription(){
+    return description;
 }
 /*
 Name: getSource 

@@ -33,7 +33,6 @@ Return Description:
 WeatherRecord::WeatherRecord(std::string location) {
     this->location = location;                      //initializes location
 
-    qDebug() << QSslSocket::supportsSsl() << QSslSocket::sslLibraryBuildVersionString() << QSslSocket::sslLibraryVersionString();
     QNetworkRequest request;
     QString endpoint = "https://api.openweathermap.org/data/2.5/forecast?cnt=40&units=imperial&q=" + QString::fromStdString(location) + "&appid=26387a928cb676aab24801bcc3d40f69";
 
@@ -53,7 +52,6 @@ WeatherRecord::WeatherRecord(std::string location) {
     {
         QByteArray response_data = reply->readAll();
         QJsonDocument document = QJsonDocument::fromJson(response_data);
-//        QJsonObject object = document.object();
         qDebug() << "Json Response Loaded : " << endpoint;
         QJsonObject obj = document.object();
 
@@ -99,6 +97,7 @@ WeatherRecord::WeatherRecord(std::string location) {
     }
     else // something went wrong
     {
+        // ADD Error Box
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
     }

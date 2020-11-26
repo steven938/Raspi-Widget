@@ -13,6 +13,8 @@ Description: The main function, setups up a mainwindow. Most "driving" of the co
 Parameter Descriptions: argc, argv unused
 Return Description: N/A
 */
+#include "NewsCategory.h"
+
 int main(int argc, char *argv[])
 {
     QFontDatabase::addApplicationFont(":/FreeSans.ttf");    //sets up the font for the app - required to ensure fonts display across platforms
