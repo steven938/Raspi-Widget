@@ -178,7 +178,7 @@ Return Description: the temperature for that day in Fahrenheit
 */
 float WeatherRecord::getTempFahren(int index) {
     //TO BE IMPLEMENTED
-    return 0;
+    return getDays()[index].getTempFaren();
 }
 
 /*
@@ -189,5 +189,18 @@ Return Description: the temperature for that day in Celsius
 */
 float WeatherRecord::getTempCelsius(int index) {
     //TO BE IMPLEMENTED
-    return 0;
+    return getDays()[index].getTempCelsius();
+}
+
+Date WeatherRecord::getDate(int index) {
+    //TO BE IMPLEMENTED
+    return getDays()[index].getDate();
+}
+
+string WeatherRecord::getDescription(int index){
+    return getDays()[index].getDescription();
+}
+
+int WeatherRecord::getNumDays(){
+        return getDays().size();
 }

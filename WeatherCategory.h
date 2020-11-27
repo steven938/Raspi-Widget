@@ -9,10 +9,16 @@ Date: 2020-11-04
 #include <vector>
 #include "WeatherRecord.h"
 #include "CategoryADT.h"
+/*!
+ * \brief The WeatherCategory class holds weather records for each location.
+ *
+ * The WeatherCategory class is a singleton that holds weather records for each location and can act on that set of data.
+ *
+ * @author Leland Conn
+*/
 class WeatherCategory: public CategoryADT{
     private:
-        std::vector<WeatherRecord> records; // A vector to store all the weather records
-
+        std::vector<WeatherRecord> records; /*!< A vector to store all the weather records*/
         void displayRecords(std::vector<WeatherRecord> toDisplay); // Print the specified records to the screen
 
         

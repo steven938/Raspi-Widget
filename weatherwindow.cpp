@@ -97,16 +97,16 @@ Return Description:
 void WeatherWindow::updateDisplay(){
     double temp;                                            //first, determines whether to display temperature in farenheit or celcius
     if (cORf == 0){
-        temp = r->getDays()[dayCounter].getTempFaren();
+        temp = r->getTempFahren(dayCounter);
     } else {
-        temp = r->getDays()[dayCounter].getTempCelsius();
+        temp = r->getTempCelsius(dayCounter);
     }
     ui->temp->display(temp);
     ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
     cerr<<r->getLocation()<<endl;
     //displays location, date, and description for current DailyWeather.
-    ui->dateLabel->setText(QString::fromStdString(r->getDays()[dayCounter].getDate().getStr()));
-    ui->descLabel->setText(QString::fromStdString(r->getDays()[dayCounter].getDescription()));
+    ui->dateLabel->setText(QString::fromStdString(r->getDate(dayCounter).getStr()));
+    ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
 }
 
 /*
@@ -162,7 +162,7 @@ Return Description:
 */
 void WeatherWindow::on_nextButton_clicked()
 {
-    if(dayCounter == r->getDays().size()-1){   //error checking to prevent out-of-bounds error
+    if(dayCounter == r->getNumDays()-1){   //error checking to prevent out-of-bounds error
         ErrorBox * error = new ErrorBox();
         QFont font = QFont("FreeSans",10,1);
         error->setFont(font);

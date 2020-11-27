@@ -1,0 +1,117 @@
+\hypertarget{classNewsCategory}{}\doxysection{News\+Category Class Reference}
+\label{classNewsCategory}\index{NewsCategory@{NewsCategory}}
+
+
+Inheritance diagram for News\+Category\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classNewsCategory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for News\+Category\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classNewsCategory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}\label{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}} 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries get\+Records} ()
+\item 
+\mbox{\Hypertarget{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}\label{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}} 
+\mbox{\hyperlink{classRecord}{Record}} {\bfseries search} (std\+::string)
+\item 
+\mbox{\Hypertarget{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}\label{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}} 
+void {\bfseries sort} (int, bool)
+\item 
+\mbox{\Hypertarget{classNewsCategory_a280e21d2971df18daff29b630ea6e097}\label{classNewsCategory_a280e21d2971df18daff29b630ea6e097}} 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+Time} (int)
+\item 
+\mbox{\Hypertarget{classNewsCategory_a7571dc6e4675c9eb0f936bd8bc1905a2}\label{classNewsCategory_a7571dc6e4675c9eb0f936bd8bc1905a2}} 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+Topic} (int)
+\item 
+\mbox{\Hypertarget{classNewsCategory_a10c45e51c3f4c04c442c22d9fbde7047}\label{classNewsCategory_a10c45e51c3f4c04c442c22d9fbde7047}} 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+News\+Source} (int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNewsCategory_ab698c6e80d4de3202cfeaa82a658202c}\label{classNewsCategory_ab698c6e80d4de3202cfeaa82a658202c}} 
+void {\bfseries display\+Records} (std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$)
+\item 
+void \mbox{\hyperlink{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}{request\+Articles\+By\+Sector}} (std\+::string sector)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}{News\+Category\+::request\+Articles\+By\+Sector}} function takes in a string representing a sector/category and retreives articles from A\+PI. The articles are loaded into this-\/$>$record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}{request\+Articles}} (std\+::string search\+String)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}{News\+Category\+::request\+Articles}} function takes in a search\+String and generates an A\+PI request to find articles related to the string. \mbox{\hyperlink{classNewsRecord}{News\+Record}} objects are instatiated for each news article resulting from the search. Then \mbox{\hyperlink{classNewsRecord}{News\+Record}} Objects are loaded into this-\/$>$records vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}{parse\+Articles}} (Q\+Json\+Array \&, int num\+Articles)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}{News\+Category\+::parse\+Articles}} helper function for parsing news articles in J\+S\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNewsCategory_a255e0c553f668aca40954663a9475efd}\label{classNewsCategory_a255e0c553f668aca40954663a9475efd}} 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries records}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}\label{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}} 
+\index{NewsCategory@{NewsCategory}!parseArticles@{parseArticles}}
+\index{parseArticles@{parseArticles}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{parseArticles()}{parseArticles()}}
+{\footnotesize\ttfamily void News\+Category\+::parse\+Articles (\begin{DoxyParamCaption}\item[{Q\+Json\+Array \&}]{articles,  }\item[{int}]{num\+Articles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}{News\+Category\+::parse\+Articles}} helper function for parsing news articles in J\+S\+ON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em articles} & Q\+J\+Son\+Array that holds multiple news articles in json object form \\
+\hline
+{\em num\+Articles} & the max number of articles found \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}\label{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}} 
+\index{NewsCategory@{NewsCategory}!requestArticles@{requestArticles}}
+\index{requestArticles@{requestArticles}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{requestArticles()}{requestArticles()}}
+{\footnotesize\ttfamily void News\+Category\+::request\+Articles (\begin{DoxyParamCaption}\item[{std\+::string}]{search\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}{News\+Category\+::request\+Articles}} function takes in a search\+String and generates an A\+PI request to find articles related to the string. \mbox{\hyperlink{classNewsRecord}{News\+Record}} objects are instatiated for each news article resulting from the search. Then \mbox{\hyperlink{classNewsRecord}{News\+Record}} Objects are loaded into this-\/$>$records vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+String} & can contain subject of interest (eg. \char`\"{}\+Trump\char`\"{}, \char`\"{}covid-\/19\char`\"{}) A\+N\+D/\+OR the Source (eg. \char`\"{}\+C\+B\+C\char`\"{}, \char`\"{}\+Trump C\+N\+N\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}\label{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}} 
+\index{NewsCategory@{NewsCategory}!requestArticlesBySector@{requestArticlesBySector}}
+\index{requestArticlesBySector@{requestArticlesBySector}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{requestArticlesBySector()}{requestArticlesBySector()}}
+{\footnotesize\ttfamily void News\+Category\+::request\+Articles\+By\+Sector (\begin{DoxyParamCaption}\item[{std\+::string}]{sector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}{News\+Category\+::request\+Articles\+By\+Sector}} function takes in a string representing a sector/category and retreives articles from A\+PI. The articles are loaded into this-\/$>$record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & M\+U\+ST BE O\+NE F\+O\+L\+L\+O\+W\+I\+NG\+: \char`\"{}business\char`\"{}, \char`\"{}entertainment\char`\"{}, \char`\"{}general\char`\"{}, \char`\"{}health\char`\"{}, \char`\"{}science\char`\"{}, \char`\"{}sports\char`\"{}, or \char`\"{}technology\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+News\+Category.\+h\item 
+News\+Category.\+cpp\end{DoxyCompactItemize}

@@ -27,7 +27,6 @@ private:
     WeatherCategory category;       //the weather category (singleton) that is being used
     WeatherRecord *r ;              //the weather record that is currently being used
     MainWindow * parentWindow;      //the window that created this window
-    DailyWeather *dw ;              //the dailyweather that is being displayed at a given time on the screen
     int dayCounter;                 //a counter that indicates which day in the day array we are currently dealing with
     int cORf;                       //indicates whether the current temperature is celcius or farenheit; 0 = farenheit, 1 = celcius
     int cityIndex;

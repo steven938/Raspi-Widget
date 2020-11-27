@@ -24,6 +24,9 @@ public:
     float getTempFahren(int index);
     float getTempCelsius(int index);
     float convertTemp(float temp, char from);
+    Date getDate(int index);
+    std::string getDescription(int index);
+    int getNumDays();
 
 private:
     std::string location; // name of the location

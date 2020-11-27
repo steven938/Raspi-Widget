@@ -1,0 +1,21 @@
+Widget for weather, stocks, and news. Made with passion using QT and C++.\hypertarget{md_README_autotoc_md1}{}\doxysection{Project Update -\/ Stage 3}\label{md_README_autotoc_md1}
+For this stage, we emphasized getting the overall structure of the app finished, as well as implementing functionality for viewing Weather data. We changed the number of story points for several of our user stories, as we found that implementing a G\+UI in QT and similar tasks took longer than expected, and others took shorter than expected. We also made the following changes to user stories
+\begin{DoxyItemize}
+\item Added a story giving a S\+P\+I\+KE to figuring out charting in QT -\/ this is essential for displaying stock information
+\item Merged our stories on navigating to the home back and navigating the previous page into one\+: we found that these are essentially identical. \textquotesingle{} We will focus on implementing A\+P\+Is next; currently, the Weather Data is \char`\"{}dummy data\char`\"{}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{Building}\label{md_README_autotoc_md2}
+\hypertarget{md_README_autotoc_md3}{}\doxysubsubsection{Raspberry Pi}\label{md_README_autotoc_md3}
+To build this application, please run the following commands. We have included an executable file, but in the case that it does not work (generally due to hardware non-\/compatibility) the following commands will build our app from source\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get update}
+\DoxyCodeLine{sudo apt-\/get install qt5-\/default}
+\DoxyCodeLine{sudo apt install libqt5charts5 libqt5charts5-\/dev}
+\DoxyCodeLine{qmake}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{Running}\label{md_README_autotoc_md4}
+To run our app, run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./3307\_App}
+\end{DoxyCode}
+ 

@@ -6,38 +6,40 @@ Date: 2020-11-04
 #include <iostream>
 #include "WeatherCategory.h"
 using namespace std;
-/*
-Name: WeatherCategory
-Description: This is a constructor to create an instance of the WeatherCategory class
-Parameter Descriptions: TBD
-Return Description: N/A
-*/
+
+/*!
+ * \brief WeatherCategory::WeatherCategory constructor
+ *
+ * This is a constructor to create an instance of the WeatherCategory class
+ */
 WeatherCategory::WeatherCategory(){
     //TO BE IMPLEMENTED
 }
-/*
-Name: Destructor
-Description: Destroys the object, deallocating memory
-Parameter Descriptions: N/A
-Return Description: N/A
+/*!
+ *  \brief a destructor
+ *
+ * Destroys the object
+ *
 */
 WeatherCategory::~WeatherCategory(){
     //TO BE IMPLEMENTED
 }
-/*
-Name: getRecords 
-Description: Getter for the vector of records
-Parameter Descriptions: N/A
-Return Description: records, the vector holding weather records
+/*!
+* \brief getRecords, getter for the vector of records
+*
+* returns the records vector
+*  @return records, the vector holding weather records
 */
 vector<WeatherRecord> WeatherCategory::getRecords(){
     return records;
 }
-/*
-Name: search 
-Description: Returns a desired weather record
-Parameter Descriptions: N/A
-Return Description: A WeatherRecord object or 0 if not found
+/*!
+* \brief search: returns a desired weather record representing weather in a given city
+*
+* Creates a weather record, passing the search string from the search bar to the new weather record. This will call the weather API and find information for a given city
+*@param searchString a string that represents the city being searched for
+* @return a weather record with the weather for the searched-for city
+*
 */
 Record WeatherCategory::search(string searchString){
     WeatherRecord * r = new WeatherRecord(searchString); //constructs a weather record, which calls the API
@@ -45,6 +47,7 @@ Record WeatherCategory::search(string searchString){
     return *r;
 
 }
+//--------considering deleting the below
 /*
 Name: sort 
 Description: sort the weather records stored in vector records
