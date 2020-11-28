@@ -2,8 +2,16 @@
 \label{classWeatherWindow}\index{WeatherWindow@{WeatherWindow}}
 
 
-Inheritance diagram for Weather\+Window\+:
-\nopagebreak
+The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class displays weather data.  
+
+
+
+
+{\ttfamily \#include $<$weatherwindow.\+h$>$}
+
+
+
+Inheritance diagram for Weather\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +20,7 @@ Inheritance diagram for Weather\+Window\+:
 \end{figure}
 
 
-Collaboration diagram for Weather\+Window\+:
-\nopagebreak
+Collaboration diagram for Weather\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,18 +30,17 @@ Collaboration diagram for Weather\+Window\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}\label{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}} 
-{\bfseries Weather\+Window} (\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$window, Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}{Weather\+Window}} (\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$window, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}{Weather\+Window\+::\+Weather\+Window}} initializes the \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherWindow_a43dc7d671eb0005219fa5962b23d7c1b}{$\sim$\+Weather\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a43dc7d671eb0005219fa5962b23d7c1b}{Weather\+Window\+::$\sim$\+Weather\+Window}} destorys the \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}\label{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}} 
-void {\bfseries on\+\_\+search\+Bar\+\_\+return\+Pressed} ()
-\item 
-\mbox{\Hypertarget{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}\label{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}} 
-void {\bfseries on\+\_\+\+Back\+Button\+\_\+clicked} ()
-\item 
+void \mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{on\+\_\+search\+Bar\+\_\+return\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{Weather\+Window\+::on\+\_\+search\+Bar\+\_\+return\+Pressed}} Sets up the window to display information for a given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{on\+\_\+\+Back\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{Weather\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} is called when the back button is clicked. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}\label{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}} 
 void {\bfseries on\+\_\+celc\+Button\+\_\+clicked} ()
 \item 
@@ -47,43 +53,163 @@ void {\bfseries on\+\_\+prev\+Button\+\_\+clicked} ()
 \mbox{\Hypertarget{classWeatherWindow_af0e2459f9e29a676521390861535a118}\label{classWeatherWindow_af0e2459f9e29a676521390861535a118}} 
 void {\bfseries on\+\_\+next\+Button\+\_\+clicked} ()
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}\label{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}} 
-void {\bfseries on\+\_\+cities\+Box\+\_\+current\+Index\+Changed} (int index)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}\label{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}} 
-void {\bfseries update\+Display} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{update\+Display}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display}} Updates the display to give the weather for the current day. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a97319b1ad6f05009d0fdd5bd468fe915}\label{classWeatherWindow_a97319b1ad6f05009d0fdd5bd468fe915}} 
-Ui\+::\+Weather\+Window $\ast$ {\bfseries ui}
+Ui\+::\+Weather\+Window $\ast$ \mbox{\hyperlink{classWeatherWindow_a97319b1ad6f05009d0fdd5bd468fe915}{ui}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a20b1dee71e2a4ac199e02ae4057170cb}\label{classWeatherWindow_a20b1dee71e2a4ac199e02ae4057170cb}} 
-\mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} {\bfseries category}
+\mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} \mbox{\hyperlink{classWeatherWindow_a20b1dee71e2a4ac199e02ae4057170cb}{category}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a9d299ab70df147c0e4023645725da649}\label{classWeatherWindow_a9d299ab70df147c0e4023645725da649}} 
-\mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $\ast$ {\bfseries r}
+\mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $\ast$ \mbox{\hyperlink{classWeatherWindow_a9d299ab70df147c0e4023645725da649}{r}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_abef91658d33f01bd70f2716918dee7a4}\label{classWeatherWindow_abef91658d33f01bd70f2716918dee7a4}} 
-\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$ {\bfseries parent\+Window}
+\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$ \mbox{\hyperlink{classWeatherWindow_abef91658d33f01bd70f2716918dee7a4}{parent\+Window}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_ae5f5b6e94cd4f9b5e37e1ffc82c72ef5}\label{classWeatherWindow_ae5f5b6e94cd4f9b5e37e1ffc82c72ef5}} 
-\mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $\ast$ {\bfseries dw}
+int \mbox{\hyperlink{classWeatherWindow_adb307a411b7ca1495ad8474e24ae7a19}{day\+Counter}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_adb307a411b7ca1495ad8474e24ae7a19}\label{classWeatherWindow_adb307a411b7ca1495ad8474e24ae7a19}} 
-int {\bfseries day\+Counter}
+int \mbox{\hyperlink{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}{c\+O\+Rf}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}\label{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}} 
-int {\bfseries c\+O\+Rf}
-\item 
-\mbox{\Hypertarget{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}\label{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}} 
-int {\bfseries city\+Index}
+int \mbox{\hyperlink{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}{city\+Index}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class displays weather data. 
+
+The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class interacts with \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} to present weather data. It takes in input from the user and presents output back to them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}\label{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}} 
+\index{WeatherWindow@{WeatherWindow}!WeatherWindow@{WeatherWindow}}
+\index{WeatherWindow@{WeatherWindow}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{WeatherWindow()}{WeatherWindow()}}
+{\footnotesize\ttfamily Weather\+Window\+::\+Weather\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$}]{Window,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}{Weather\+Window\+::\+Weather\+Window}} initializes the \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. 
+
+Initializes the weather window, and sets all buttons to disabled to prevent user from being able to perform data operations prior to A\+PI call
+
+
+\begin{DoxyParams}{Parameters}
+{\em Window} & pointer to the window that created this weather window \\
+\hline
+{\em parent} & a nullptr, required by qt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWeatherWindow_a43dc7d671eb0005219fa5962b23d7c1b}\label{classWeatherWindow_a43dc7d671eb0005219fa5962b23d7c1b}} 
+\index{WeatherWindow@{WeatherWindow}!````~WeatherWindow@{$\sim$WeatherWindow}}
+\index{````~WeatherWindow@{$\sim$WeatherWindow}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$WeatherWindow()}{~WeatherWindow()}}
+{\footnotesize\ttfamily Weather\+Window\+::$\sim$\+Weather\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a43dc7d671eb0005219fa5962b23d7c1b}{Weather\+Window\+::$\sim$\+Weather\+Window}} destorys the \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. 
+
+Deallocates dynamically allocated memory, destroying the object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}\label{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}} 
+\index{WeatherWindow@{WeatherWindow}!on\_BackButton\_clicked@{on\_BackButton\_clicked}}
+\index{on\_BackButton\_clicked@{on\_BackButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_BackButton\_clicked}{on\_BackButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{Weather\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} is called when the back button is clicked. 
+
+Called when the back buttin is clicked. Closes the window and returns to the main window \mbox{\Hypertarget{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}\label{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}} 
+\index{WeatherWindow@{WeatherWindow}!on\_citiesBox\_currentIndexChanged@{on\_citiesBox\_currentIndexChanged}}
+\index{on\_citiesBox\_currentIndexChanged@{on\_citiesBox\_currentIndexChanged}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_citiesBox\_currentIndexChanged}{on\_citiesBox\_currentIndexChanged}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. 
+
+This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display()}} to update the display
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}\label{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}} 
+\index{WeatherWindow@{WeatherWindow}!on\_searchBar\_returnPressed@{on\_searchBar\_returnPressed}}
+\index{on\_searchBar\_returnPressed@{on\_searchBar\_returnPressed}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_searchBar\_returnPressed}{on\_searchBar\_returnPressed}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+search\+Bar\+\_\+return\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{Weather\+Window\+::on\+\_\+search\+Bar\+\_\+return\+Pressed}} Sets up the window to display information for a given location. 
+
+Called when the enter key is hit on the search bar. Uses the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} search mechanism to receive a weather record from a search; enables buttons that were previously disabled, as there is now data for the user to interact with \mbox{\Hypertarget{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}\label{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}} 
+\index{WeatherWindow@{WeatherWindow}!updateDisplay@{updateDisplay}}
+\index{updateDisplay@{updateDisplay}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{updateDisplay()}{updateDisplay()}}
+{\footnotesize\ttfamily void Weather\+Window\+::update\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display}} Updates the display to give the weather for the current day. 
+
+Uses c\+O\+Rf and day\+Counter to determine what the current \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} is and what the correct unit of measurement is, then updates the display accordingly 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWeatherWindow_a20b1dee71e2a4ac199e02ae4057170cb}\label{classWeatherWindow_a20b1dee71e2a4ac199e02ae4057170cb}} 
+\index{WeatherWindow@{WeatherWindow}!category@{category}}
+\index{category@{category}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} Weather\+Window\+::category\hspace{0.3cm}{\ttfamily [private]}}
+
+the weather category (singleton) that is being used \mbox{\Hypertarget{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}\label{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}} 
+\index{WeatherWindow@{WeatherWindow}!cityIndex@{cityIndex}}
+\index{cityIndex@{cityIndex}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{cityIndex}{cityIndex}}
+{\footnotesize\ttfamily int Weather\+Window\+::city\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+indicates which city is currently being displayed \mbox{\Hypertarget{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}\label{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}} 
+\index{WeatherWindow@{WeatherWindow}!cORf@{cORf}}
+\index{cORf@{cORf}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{cORf}{cORf}}
+{\footnotesize\ttfamily int Weather\+Window\+::c\+O\+Rf\hspace{0.3cm}{\ttfamily [private]}}
+
+indicates whether the current temperature is celcius or farenheit; 0 = farenheit, 1 = celcius \mbox{\Hypertarget{classWeatherWindow_adb307a411b7ca1495ad8474e24ae7a19}\label{classWeatherWindow_adb307a411b7ca1495ad8474e24ae7a19}} 
+\index{WeatherWindow@{WeatherWindow}!dayCounter@{dayCounter}}
+\index{dayCounter@{dayCounter}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{dayCounter}{dayCounter}}
+{\footnotesize\ttfamily int Weather\+Window\+::day\+Counter\hspace{0.3cm}{\ttfamily [private]}}
+
+a counter that indicates which day in the day array we are currently dealing with \mbox{\Hypertarget{classWeatherWindow_abef91658d33f01bd70f2716918dee7a4}\label{classWeatherWindow_abef91658d33f01bd70f2716918dee7a4}} 
+\index{WeatherWindow@{WeatherWindow}!parentWindow@{parentWindow}}
+\index{parentWindow@{parentWindow}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{parentWindow}{parentWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMainWindow}{Main\+Window}}$\ast$ Weather\+Window\+::parent\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+the window that created this window \mbox{\Hypertarget{classWeatherWindow_a9d299ab70df147c0e4023645725da649}\label{classWeatherWindow_a9d299ab70df147c0e4023645725da649}} 
+\index{WeatherWindow@{WeatherWindow}!r@{r}}
+\index{r@{r}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}}$\ast$ Weather\+Window\+::r\hspace{0.3cm}{\ttfamily [private]}}
+
+the weather record that is currently being used \mbox{\Hypertarget{classWeatherWindow_a97319b1ad6f05009d0fdd5bd468fe915}\label{classWeatherWindow_a97319b1ad6f05009d0fdd5bd468fe915}} 
+\index{WeatherWindow@{WeatherWindow}!ui@{ui}}
+\index{ui@{ui}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Weather\+Window$\ast$ Weather\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+a qt-\/created pointer that represents the window itself 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

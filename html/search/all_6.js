@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['parsearticles_11',['parseArticles',['../classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1',1,'NewsCategory']]]
+  ['newscategory_14',['NewsCategory',['../classNewsCategory.html',1,'']]],
+  ['newsrecord_15',['NewsRecord',['../classNewsRecord.html',1,'']]],
+  ['newswindow_16',['NewsWindow',['../classNewsWindow.html',1,'']]]
 ];

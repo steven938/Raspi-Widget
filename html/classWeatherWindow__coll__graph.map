@@ -1,12 +1,10 @@
 <map id="WeatherWindow" name="WeatherWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="214,285,342,312"/>
+<area shape="rect" id="node1" title="The WeatherWindow class displays weather data." alt="" coords="186,285,314,312"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,196,84,223"/>
-<area shape="rect" id="node3" href="$classWeatherRecord.html" title=" " alt="" coords="108,196,229,223"/>
-<area shape="rect" id="node4" href="$classRecord.html" title=" " alt="" coords="149,95,215,121"/>
-<area shape="rect" id="node5" href="$classCategoryADT.html" title=" " alt="" coords="167,5,275,32"/>
-<area shape="rect" id="node8" href="$classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location." alt="" coords="200,145,335,172"/>
-<area shape="rect" id="node6" href="$classDailyWeather.html" title=" " alt="" coords="364,196,475,223"/>
-<area shape="rect" id="node7" href="$classDate.html" title=" " alt="" coords="393,95,446,121"/>
-<area shape="rect" id="node9" href="$classMainWindow.html" title=" " alt="" coords="499,196,606,223"/>
-<area shape="rect" id="node10" title=" " alt="" coords="495,95,611,121"/>
+<area shape="rect" id="node3" href="$classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city." alt="" coords="108,196,229,223"/>
+<area shape="rect" id="node4" href="$classRecord.html" title=" " alt="" coords="147,95,214,121"/>
+<area shape="rect" id="node5" href="$classCategoryADT.html" title=" " alt="" coords="165,5,273,32"/>
+<area shape="rect" id="node6" href="$classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location." alt="" coords="200,145,335,172"/>
+<area shape="rect" id="node7" href="$classMainWindow.html" title=" " alt="" coords="363,196,470,223"/>
+<area shape="rect" id="node8" title=" " alt="" coords="359,95,475,121"/>
 </map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['search_44',['search',['../classWeatherCategory.html#a7d802002f7665efdaff54ca6808ed3ec',1,'WeatherCategory']]]
+  ['requestarticles_59',['requestArticles',['../classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149',1,'NewsCategory']]],
+  ['requestarticlesbysector_60',['requestArticlesBySector',['../classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476',1,'NewsCategory']]]
 ];

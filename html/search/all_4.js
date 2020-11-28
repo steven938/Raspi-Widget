@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_7',['MainWindow',['../classMainWindow.html',1,'']]]
+  ['location_12',['location',['../classWeatherRecord.html#af81fb45b0ad190d4ef7bc6abfe337856',1,'WeatherRecord']]]
 ];

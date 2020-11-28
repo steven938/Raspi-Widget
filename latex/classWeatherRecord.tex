@@ -2,8 +2,16 @@
 \label{classWeatherRecord}\index{WeatherRecord@{WeatherRecord}}
 
 
-Inheritance diagram for Weather\+Record\+:
-\nopagebreak
+The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather data for one city.  
+
+
+
+
+{\ttfamily \#include $<$Weather\+Record.\+h$>$}
+
+
+
+Inheritance diagram for Weather\+Record\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +20,7 @@ Inheritance diagram for Weather\+Record\+:
 \end{figure}
 
 
-Collaboration diagram for Weather\+Record\+:
-\nopagebreak
+Collaboration diagram for Weather\+Record\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,7 +31,7 @@ Collaboration diagram for Weather\+Record\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classWeatherRecord_a4f5d66fc8e2928c921e7c285f64c1a18}\label{classWeatherRecord_a4f5d66fc8e2928c921e7c285f64c1a18}} 
-{\bfseries Weather\+Record} (std\+::string location)
+{\bfseries Weather\+Record} (std\+::string \mbox{\hyperlink{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}{location}})
 \item 
 \mbox{\Hypertarget{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}\label{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}} 
 {\bfseries Weather\+Record} (const \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} \&wr2)
@@ -46,17 +53,47 @@ float {\bfseries get\+Temp\+Celsius} (int index)
 \item 
 \mbox{\Hypertarget{classWeatherRecord_a96e592cdee25861ef8656b550f58b442}\label{classWeatherRecord_a96e592cdee25861ef8656b550f58b442}} 
 float {\bfseries convert\+Temp} (float temp, char from)
+\item 
+\mbox{\Hypertarget{classWeatherRecord_a6c87a714b10d866afb57d047eee3b420}\label{classWeatherRecord_a6c87a714b10d866afb57d047eee3b420}} 
+\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+Date} (int index)
+\item 
+\mbox{\Hypertarget{classWeatherRecord_a0a03fbd645ab545abb3359c64e7945bb}\label{classWeatherRecord_a0a03fbd645ab545abb3359c64e7945bb}} 
+std\+::string {\bfseries get\+Description} (int index)
+\item 
+\mbox{\Hypertarget{classWeatherRecord_aea2865ecc2686dcbee85bf59a06377f8}\label{classWeatherRecord_aea2865ecc2686dcbee85bf59a06377f8}} 
+int {\bfseries get\+Num\+Days} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}\label{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}} 
-std\+::string {\bfseries location}
+std\+::string \mbox{\hyperlink{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}{location}}
 \item 
-\mbox{\Hypertarget{classWeatherRecord_a598ae862c4d0196c16ae34cd2443a1a5}\label{classWeatherRecord_a598ae862c4d0196c16ae34cd2443a1a5}} 
-std\+::vector$<$ \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $>$ {\bfseries days}
+std\+::vector$<$ \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $>$ \mbox{\hyperlink{classWeatherRecord_a598ae862c4d0196c16ae34cd2443a1a5}{days}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather data for one city. 
+
+The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather data in the form of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} for one city. It is also an interface for classes like \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} and \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} to interact with \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} data without needed to know the underlying implementaation of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} \begin{DoxyAuthor}{Author}
+Adam Miller 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWeatherRecord_a598ae862c4d0196c16ae34cd2443a1a5}\label{classWeatherRecord_a598ae862c4d0196c16ae34cd2443a1a5}} 
+\index{WeatherRecord@{WeatherRecord}!days@{days}}
+\index{days@{days}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{days}{days}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}$>$ Weather\+Record\+::days\hspace{0.3cm}{\ttfamily [private]}}
+
+vector of information on weather for several days \mbox{\Hypertarget{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}\label{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}} 
+\index{WeatherRecord@{WeatherRecord}!location@{location}}
+\index{location@{location}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily std\+::string Weather\+Record\+::location\hspace{0.3cm}{\ttfamily [private]}}
+
+Name of the location that the weather record corresponds to 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

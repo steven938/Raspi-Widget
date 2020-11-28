@@ -16,12 +16,15 @@ Date: 2020-11-11
 #include "mainwindow.h"
 
 using namespace std;
-/*
-Name: constructor
-Description: Initializes the weather window, and sets all buttons to disabled to prevent user from being able to perform data operations prior to API call
-Parameter Descriptions: Window: pointer to the window that created this weather window; parent: a nullptr, required by qt;
-Return Description:
-*/
+
+/*!
+ * \brief WeatherWindow::WeatherWindow initializes the WeatherWindow
+ *
+ * Initializes the weather window, and sets all buttons to disabled to prevent user from being able to perform data operations prior to API call
+
+ * \param Window pointer to the window that created this weather window
+ * \param parent a nullptr, required by qt
+ */
 WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WeatherWindow)
@@ -37,23 +40,23 @@ WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
     ui->citiesBox->setEnabled(false);
     parentWindow = Window;                  //this sets up the pointer to the window that created this.
 }
-/*
-Name: desctructor
-Description: deallocates dynamically allocated memory, destroying the object
-Parameter Descriptions:
-Return Description:
-*/
+
+/*!
+ * \brief WeatherWindow::~WeatherWindow destorys the WeatherWindow
+ *
+ * Deallocates dynamically allocated memory, destroying the object
+ */
 WeatherWindow::~WeatherWindow()
 {
     //TO BE IMPLEMENTED - INCOMPLETE
     delete ui;
 }
-/*
-Name: on_searchBar_returnPressed
-Description: Called when the enter key is hit on the search bar. Sets up the window to display information for the location
-Parameter Descriptions:
-Return Description:
-*/
+/*!
+ * \brief WeatherWindow::on_searchBar_returnPressed Sets up the window to display information for a given location
+ *
+ * Called when the enter key is hit on the search bar. Uses the WeatherCategory search mechanism to receive a weather record from a search; enables buttons that were previously disabled, as there is now data for the user to interact with
+ *
+ */
 void WeatherWindow::on_searchBar_returnPressed(){
     category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
     r = new WeatherRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
@@ -70,12 +73,12 @@ void WeatherWindow::on_searchBar_returnPressed(){
     cityIndex = category.getRecords().size()-1;
     ui->citiesBox->setCurrentIndex(cityIndex);
 }
-/*
-Name: on_BackButton_clicked()
-Description: Called when the back buttin is clicked. Closes the window and returns to the main window
-Parameter Descriptions:
-Return Description:
-*/
+
+/*!
+ * \brief WeatherWindow::on_BackButton_clicked is called when the back button is clicked
+ *
+ * Called when the back buttin is clicked. Closes the window and returns to the main window
+ */
 void WeatherWindow::on_BackButton_clicked(){
     parentWindow->close();                      //these three lines create a new parent window, to ensure that in the case
                                                 //that the parent window was closed while the weather window was open
@@ -90,10 +93,15 @@ void WeatherWindow::on_BackButton_clicked(){
 }
 /*
 Name: updateDisplay()
-Description:Updates the display to give the weather for the current day
+Description:
 Parameter Descriptions:
 Return Description:
 */
+/*!
+ * \brief WeatherWindow::updateDisplay Updates the display to give the weather for the current day
+ *
+ * Uses cORf and dayCounter to determine what the current DailyWeather is and what the correct unit of measurement is, then updates the display accordingly
+ */
 void WeatherWindow::updateDisplay(){
     double temp;                                            //first, determines whether to display temperature in farenheit or celcius
     if (cORf == 0){
@@ -175,7 +183,13 @@ void WeatherWindow::on_nextButton_clicked()
     updateDisplay() ;
 }
 
-
+/*!
+ * \brief WeatherWindow::on_citiesBox_currentIndexChanged switches the city displayed
+ *
+ * This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles WeatherWindow::updateDisplay() to update the display
+ *
+ * \param index the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the WeatherCategory class.
+ */
 void WeatherWindow::on_citiesBox_currentIndexChanged(int index)
 {
     *r = category.getRecords()[index];

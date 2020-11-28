@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eweathercategory_46',['~WeatherCategory',['../classWeatherCategory.html#ab6edfb7e09dc1ac4ec2478594f06b00e',1,'WeatherCategory']]]
+  ['updatedisplay_62',['updateDisplay',['../classWeatherWindow.html#a8ef6627a2919021621af477fbb113c48',1,'WeatherWindow']]]
 ];

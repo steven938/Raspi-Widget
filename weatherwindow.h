@@ -13,7 +13,11 @@ Date: 2020-11-11
 namespace Ui {
 class WeatherWindow;
 }
-
+/*!
+ * \brief The WeatherWindow class displays weather data
+ *
+ * The WeatherWindow class interacts with WeatherCategory to present weather data. It takes in input from the user and presents output back to them.
+ */
 class WeatherWindow : public QWidget
 {
     Q_OBJECT

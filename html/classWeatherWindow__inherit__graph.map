@@ -1,4 +1,4 @@
 <map id="WeatherWindow" name="WeatherWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,133,107"/>
+<area shape="rect" id="node1" title="The WeatherWindow class displays weather data." alt="" coords="5,80,133,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="30,5,109,32"/>
 </map>

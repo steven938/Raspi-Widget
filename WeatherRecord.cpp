@@ -177,7 +177,6 @@ Parameter Descriptions: an index representing which day the user wants the tempe
 Return Description: the temperature for that day in Fahrenheit
 */
 float WeatherRecord::getTempFahren(int index) {
-    //TO BE IMPLEMENTED
     return getDays()[index].getTempFaren();
 }
 
