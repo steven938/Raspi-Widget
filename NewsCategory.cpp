@@ -22,9 +22,9 @@ Parameter Descriptions: N/A
 Return Description: N/A
 */
 NewsCategory::NewsCategory(){
-    NewsCategory::requestArticlesBySector("business"); // sample request articles by sector
-    NewsCategory::requestArticles("Covid vaccine"); // sample request articles by subject
-    NewsCategory::requestArticles("Trump CNN"); // sample request articles by topic and source
+    //NewsCategory::requestArticlesBySector("business"); // sample request articles by sector
+    //NewsCategory::requestArticles("Covid vaccine"); // sample request articles by subject
+    //NewsCategory::requestArticles("Trump CNN"); // sample request articles by topic and source
 }
 /*
 Name: Destructor

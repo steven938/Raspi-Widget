@@ -58,18 +58,24 @@ void NewsWindow::on_SubmitButton_clicked(){
     std::string category = (ui->category->text()).toStdString();
     newsCat->requestArticlesBySector(category);
 
-    QString qstr1 = QString::fromStdString(newsCat->getRecords()[0].getURL());
-    ui->url1->setText(qstr1);
+    std::vector<NewsRecord> tempRec;
+    tempRec = newsCat->getRecords();
 
-    QString qstr2 = QString::fromStdString(newsCat->getRecords()[1].getURL());
-    ui->url2->setText(qstr2);
+    int y = 0;
+    std::string source = (ui->source->text()).toStdString();
+    QLabel *url;
 
-    QString qstr3 = QString::fromStdString(newsCat->getRecords()[2].getURL());
-    ui->url3->setText(qstr3);
-
-    QString qstr4 = QString::fromStdString(newsCat->getRecords()[3].getURL());
-    ui->url4->setText(qstr4);
-
-    QString qstr5 = QString::fromStdString(newsCat->getRecords()[4].getURL());
-    ui->url5->setText(qstr5);
+    for (int i = 0; i < tempRec.size(); i++) {
+        if (tempRec[i].getSource() == source) {
+            url = new QLabel(this);
+            url->move(10, 200 + y);
+            url->setMinimumWidth(100);
+            QString urlStr = QString::fromStdString(newsCat->getRecords()[i].getURL());
+            url->setText(urlStr);
+            url->setObjectName("url");
+            url->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+            url->show();
+            y += 20;
+         }
+    }
 }

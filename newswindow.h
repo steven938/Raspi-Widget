@@ -29,7 +29,6 @@ private slots:
     void on_BackButton_clicked();
     void on_SubmitButton_clicked();
 
-
 private:
     Ui::NewsWindow *ui;
     NewsCategory category;
