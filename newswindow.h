@@ -27,6 +27,7 @@ public:
 // Private slots are associated to buttons on the ui, and there is currently onle one button (more to come later)
 private slots:
     void on_BackButton_clicked();
+    void on_SubmitButton_clicked();
 
 
 private:

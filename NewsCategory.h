@@ -18,7 +18,6 @@ class NewsCategory: public CategoryADT{
         std::vector<NewsRecord> records;                    //Store the records
         void displayRecords(std::vector<Record>);
 
-        void requestArticlesBySector(std::string sector);
         void requestArticles(std::string searchString);
         void parseArticles(QJsonArray&, int numArticles);
     public:
@@ -32,5 +31,7 @@ class NewsCategory: public CategoryADT{
         std::vector<NewsRecord> changeTime(int);
         std::vector<NewsRecord> changeTopic(int);
         std::vector<NewsRecord> changeNewsSource(int);
+
+        void requestArticlesBySector(std::string sector);
 };
 #endif
