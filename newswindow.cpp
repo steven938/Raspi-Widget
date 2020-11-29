@@ -52,30 +52,60 @@ void NewsWindow::on_BackButton_clicked(){
 
 }
 
+void NewsWindow::clearResults() {
+    QList<QLabel*> list = this->findChildren<QLabel *>();
+    foreach(QLabel *w, list) {
+        if (w->text()[0] == '<' && w->text()[1] == 'a' && w->text()[2] == ' ') {
+            w->setText("");
+        }
+    }
+}
 
-void NewsWindow::on_SubmitButton_clicked(){
+void NewsWindow::displayArticles(std::vector<NewsRecord> records, NewsCategory *newsCategory) {
+    int y = 0;
+    QLabel *url;
+
+    for (int i = 0; i < records.size(); i++) {
+        url = new QLabel(this);
+        url->move(10, 220 + y);
+        url->setMinimumWidth(100);
+
+        // Make the string for the QLabel be an active hyperlink
+        QString urlStr = QString::fromStdString(newsCategory->getRecords()[i].getURL());
+        url->setTextInteractionFlags(Qt::TextBrowserInteraction);
+        url->setOpenExternalLinks(true);
+        url->setTextFormat(Qt::RichText);
+        QString s = "<a href=\"" + urlStr + "\">" + urlStr + "</a>";
+        url->setText(s);
+
+        url->setObjectName("url");
+        url->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+
+        url->show();
+        y += 20;
+    }
+}
+
+void NewsWindow::on_SearchByWordButton_clicked(){
+    clearResults();
     NewsCategory *newsCat = new NewsCategory();
-    std::string category = (ui->category->text()).toStdString();
-    newsCat->requestArticlesBySector(category);
+    std::string wordInput = (ui->wordInput->text()).toStdString();
+    newsCat->requestArticles(wordInput);
 
     std::vector<NewsRecord> tempRec;
     tempRec = newsCat->getRecords();
 
-    int y = 0;
-    std::string source = (ui->source->text()).toStdString();
-    QLabel *url;
+    displayArticles(tempRec, newsCat);
+}
 
-    for (int i = 0; i < tempRec.size(); i++) {
-        if (tempRec[i].getSource() == source) {
-            url = new QLabel(this);
-            url->move(10, 200 + y);
-            url->setMinimumWidth(100);
-            QString urlStr = QString::fromStdString(newsCat->getRecords()[i].getURL());
-            url->setText(urlStr);
-            url->setObjectName("url");
-            url->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-            url->show();
-            y += 20;
-         }
-    }
+void NewsWindow::on_SearchByTopicButton_clicked(){
+    clearResults();
+    NewsCategory *newsCat = new NewsCategory();
+    std::string topic = (ui->topic->currentText()).toStdString();
+    newsCat->requestArticlesBySector(topic);
+
+    std::vector<NewsRecord> tempRec;
+    tempRec = newsCat->getRecords();
+
+    displayArticles(tempRec, newsCat);
 }
