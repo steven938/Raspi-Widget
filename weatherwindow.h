@@ -42,7 +42,7 @@ private slots:
     void on_farenButton_clicked();
     void on_prevButton_clicked();
     void on_nextButton_clicked();
-    void on_citiesBox_currentIndexChanged(int index);
+    void on_citiesBox_currentIndexChanged(const int INDEX);
 };
 
 #endif // WEATHERWINDOW_H

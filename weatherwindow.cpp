@@ -50,6 +50,8 @@ WeatherWindow::~WeatherWindow()
 {
     //TO BE IMPLEMENTED - INCOMPLETE
     delete ui;
+    delete parentWindow;
+    delete r;
 }
 /*!
  * \brief WeatherWindow::on_searchBar_returnPressed Sets up the window to display information for a given location
@@ -58,27 +60,29 @@ WeatherWindow::~WeatherWindow()
  *
  */
 void WeatherWindow::on_searchBar_returnPressed(){
-   try{ category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
-    r = new WeatherRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
-                                                            //For the next stage, this will be implemented so that we can access any of
-                                                            //the searches - currently, only the first search can be accessed
-    updateDisplay();                                        //Updates the data on display
-    //the next four lines enable the buttons that the user uses to interract with data
-    ui->prevButton->setEnabled(true);
-    ui->nextButton->setEnabled(true);
-    ui->celcButton->setEnabled(true);
-    ui->farenButton->setEnabled((true));
-    ui->citiesBox->setEnabled(true);
-    ui->citiesBox->addItem(ui->searchBar->text());
-    cityIndex = category.getRecords().size()-1;
-    ui->citiesBox->setCurrentIndex(cityIndex);
-     }catch(...){
-        //cerr<<"didn't work"<<endl;
+    try{                                                        //incased in try/catch because category.search can throw an exception
+        category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
+        delete r;
+        r = new WeatherRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
+        //For the next stage, this will be implemented so that we can access any of
+        //the searches - currently, only the first search can be accessed
+        updateDisplay();                                        //Updates the data on display
+        //the next four lines enable the buttons that the user uses to interract with data
+        ui->prevButton->setEnabled(true);
+        ui->nextButton->setEnabled(true);
+        ui->celcButton->setEnabled(true);
+        ui->farenButton->setEnabled((true));
+        ui->citiesBox->setEnabled(true);
+        ui->citiesBox->addItem(ui->searchBar->text());
+        cityIndex = category.getRecords().size()-1;
+        ui->citiesBox->setCurrentIndex(cityIndex);
+    }catch(...){                                                //in case the search string is an invalid city
         ErrorBox * error = new ErrorBox();
         QFont font = QFont("FreeSans",10,1);
         error->setFont(font);
         error->setWindowTitle("Error");
         error->error(ui->searchBar->text().toStdString()+" is not a valid city!");
+        error->setAttribute(Qt::WA_DeleteOnClose,true);
         error->show();
     }
 
@@ -91,8 +95,8 @@ void WeatherWindow::on_searchBar_returnPressed(){
  */
 void WeatherWindow::on_BackButton_clicked(){
     parentWindow->close();                      //these three lines create a new parent window, to ensure that in the case
-                                                //that the parent window was closed while the weather window was open
-                                                //we can return to a parent window
+    //that the parent window was closed while the weather window was open
+    //we can return to a parent window
 
     parentWindow = new MainWindow();
     QFont font = QFont("FreeSans",10,1);
@@ -101,12 +105,6 @@ void WeatherWindow::on_BackButton_clicked(){
     close();                                    //closes the weather window
 
 }
-/*
-Name: updateDisplay()
-Description:
-Parameter Descriptions:
-Return Description:
-*/
 /*!
  * \brief WeatherWindow::updateDisplay Updates the display to give the weather for the current day
  *
@@ -127,36 +125,37 @@ void WeatherWindow::updateDisplay(){
     ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
 }
 
-/*
-Name: on_celcButton_clicked()
-Description: Called when the celcius radio button is clicked. Updates display so that data is in celcius
-Parameter Descriptions:
-Return Description:
-*/
+/*!
+ * \brief WeatherWindow::on_celcButton_clicked changes display to celcius
+ *
+ *  Called when the celcius radio button is clicked. Updates display so that data is in celcius; does this by updating CorF
+*
+ */
 void WeatherWindow::on_celcButton_clicked()
 {
     cORf = 1;
     updateDisplay();
 }
 
-/*
-Name: on_farenButton_clicked()
-Description: Called when the celcius radio button is clicked. Updates display so that data is in farenheit
-Parameter Descriptions:
-Return Description:
-*/
+/*!
+ * \brief WeatherWindow::on_farenButton_clicked changes display to fahrenheit
+ *
+ * Called when the Fahrenheit radio button is clicked. Updates display so that data is in farenheit
+
+ */
 void WeatherWindow::on_farenButton_clicked()
 {
     cORf = 0;
     updateDisplay();
 }
 
-/*
-Name: on_prevButton_clicked()
-Description: Called when the previous day button is clicked. Decrements dayCounter to show the previous day's data
-Parameter Descriptions:
-Return Description:
-*/
+
+/*!
+ * \brief WeatherWindow::on_prevButton_clicked shows the previous day
+ *
+ * Called when the previous day button is clicked. Decrements dayCounter to show the previous day's data
+ *
+ */
 void WeatherWindow::on_prevButton_clicked()
 {
     if(dayCounter == 0){                        //error checking to prevent out-of-bounds error
@@ -165,18 +164,23 @@ void WeatherWindow::on_prevButton_clicked()
         error->setFont(font);
         error->setWindowTitle("Error");
         error->error("There is no previous day!");
+         error->setAttribute(Qt::WA_DeleteOnClose,true);
         error->show();
         return;
     }
     dayCounter --;
     updateDisplay();
 }
-/*
-Name: on_nextButton_clicked()
-Description: Called when the next day button is clicked. Increments dayCounter to show the next day's data
-Parameter Descriptions:
-Return Description:
-*/
+
+/*!
+ * \brief WeatherWindow::on_nextButton_clicked shows the previous day
+ *
+ * Called when the next day button is clicked. Increments dayCounter to show the next day's data
+ *
+ */
+/*!
+ * \brief WeatherWindow::on_nextButton_clicked
+ */
 void WeatherWindow::on_nextButton_clicked()
 {
     if(dayCounter == r->getNumDays()-1){   //error checking to prevent out-of-bounds error
@@ -185,6 +189,7 @@ void WeatherWindow::on_nextButton_clicked()
         error->setFont(font);
         error->setWindowTitle("Error");
         error->error("There is no next day!");
+         error->setAttribute(Qt::WA_DeleteOnClose,true);
         error->show();
         return;
     }
@@ -193,14 +198,14 @@ void WeatherWindow::on_nextButton_clicked()
 }
 
 /*!
- * \brief WeatherWindow::on_citiesBox_currentIndexChanged switches the city displayed
+ * \brief WeatherWindow::on_citiesBox_currentIndex Changed switches the city displayed
  *
  * This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles WeatherWindow::updateDisplay() to update the display
  *
  * \param index the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the WeatherCategory class.
  */
-void WeatherWindow::on_citiesBox_currentIndexChanged(int index)
+void WeatherWindow::on_citiesBox_currentIndexChanged(const int INDEX)
 {
-    *r = category.getRecords()[index];
+    *r = category.getRecords()[INDEX];
     updateDisplay();
 }
