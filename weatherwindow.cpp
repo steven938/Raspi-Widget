@@ -58,7 +58,7 @@ WeatherWindow::~WeatherWindow()
  *
  */
 void WeatherWindow::on_searchBar_returnPressed(){
-    category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
+   try{ category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
     r = new WeatherRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
                                                             //For the next stage, this will be implemented so that we can access any of
                                                             //the searches - currently, only the first search can be accessed
@@ -72,6 +72,16 @@ void WeatherWindow::on_searchBar_returnPressed(){
     ui->citiesBox->addItem(ui->searchBar->text());
     cityIndex = category.getRecords().size()-1;
     ui->citiesBox->setCurrentIndex(cityIndex);
+     }catch(...){
+        //cerr<<"didn't work"<<endl;
+        ErrorBox * error = new ErrorBox();
+        QFont font = QFont("FreeSans",10,1);
+        error->setFont(font);
+        error->setWindowTitle("Error");
+        error->error(ui->searchBar->text().toStdString()+" is not a valid city!");
+        error->show();
+    }
+
 }
 
 /*!
@@ -156,7 +166,6 @@ void WeatherWindow::on_prevButton_clicked()
         error->setWindowTitle("Error");
         error->error("There is no previous day!");
         error->show();
-
         return;
     }
     dayCounter --;

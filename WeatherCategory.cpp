@@ -42,7 +42,7 @@ vector<WeatherRecord> WeatherCategory::getRecords(){
 *
 */
 Record WeatherCategory::search(string searchString){
-    WeatherRecord * r = new WeatherRecord(searchString); //constructs a weather record, which calls the API
+    WeatherRecord * r = new WeatherRecord(searchString); //constructs a weather record, which calls the API; just make this return a record, not a pointer.
     records.push_back(*r);                               //adds the record to the records vector
     return *r;
 

@@ -100,6 +100,7 @@ WeatherRecord::WeatherRecord(std::string location) {
         // ADD Error Box
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
+        throw "Didn't work dude";
     }
     reply->deleteLater();
 }
