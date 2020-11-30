@@ -26,26 +26,26 @@
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="SubmitButton">
+  <widget class="QPushButton" name="SearchByWordButton">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>170</y>
+     <x>290</x>
+     <y>90</y>
      <width>113</width>
-     <height>32</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>Submit</string>
+    <string>Search</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="category">
+  <widget class="QLineEdit" name="wordInput">
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>60</y>
+     <y>90</y>
      <width>113</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
@@ -53,49 +53,116 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>60</y>
+     <y>90</y>
      <width>150</width>
-     <height>16</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Enter news category:</string>
+    <string>Enter word(s):</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
-     <width>150</width>
-     <height>16</height>
+     <y>170</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Enter source:</string>
+    <string>Choose a topic:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="source">
+  <widget class="QPushButton" name="SearchByTopicButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>100</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
+     <x>290</x>
      <y>170</y>
      <width>113</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="topic">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>170</y>
+     <width>131</width>
      <height>32</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>general</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>business</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>entertainment</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>technology</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>sports</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>health</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>science</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>201</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24pt &quot;.SF NS Text&quot;;</string>
+   </property>
    <property name="text">
-    <string>Clear Results</string>
+    <string>Search by word:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>129</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24pt &quot;.SF NS Text&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Search by topic:</string>
    </property>
   </widget>
  </widget>
