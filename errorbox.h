@@ -19,7 +19,7 @@ class ErrorBox : public QDialog
 public:
     explicit ErrorBox(QWidget *parent = nullptr); // Constructor
     ~ErrorBox(); // Destructor
-    void error(std::string message); // Function to return a message to the user on the error that was thrown
+    void error(const std::string MESSAGE); // Function to return a message to the user on the error that was thrown
 
 private:
     Ui::ErrorBox *ui; /*!< The user interface for error box to interact with */
