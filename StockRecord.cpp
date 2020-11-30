@@ -211,7 +211,6 @@ void StockRecord::requestStockPrices(){
             float close = dailyData["4. close"].toString().toFloat();
             long long int volume = dailyData["5. volume"].toString().toInt();
 
-
             this->days.emplace_back(open, close, high, low, volume, curDate);
         }
         // reverse array since dates are read in reverse order
