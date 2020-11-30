@@ -55,7 +55,7 @@ void NewsWindow::on_BackButton_clicked(){
 void NewsWindow::clearResults() {
     QList<QLabel*> list = this->findChildren<QLabel *>();
     foreach(QLabel *w, list) {
-        if (w->text()[0] == '<' && w->text()[1] == 'a' && w->text()[2] == ' ') {
+        if (w->objectName() == "url" || w->objectName() == "author" || w->objectName() == "source") {
             w->setText("");
         }
     }
@@ -64,24 +64,50 @@ void NewsWindow::clearResults() {
 void NewsWindow::displayArticles(std::vector<NewsRecord> records, NewsCategory *newsCategory) {
     int y = 0;
     QLabel *url;
+    QLabel *author;
+    QLabel *source;
 
     for (int i = 0; i < records.size(); i++) {
         url = new QLabel(this);
-        url->move(10, 220 + y);
-        url->setMinimumWidth(100);
+        url->move(10, 240 + y);
+        url->setMaximumWidth(300);
+
+        NewsRecord record = newsCategory->getRecords()[i];
 
         // Make the string for the QLabel be an active hyperlink
-        QString urlStr = QString::fromStdString(newsCategory->getRecords()[i].getURL());
+        QString urlStr = QString::fromStdString(record.getURL());
+        QString titleStr = QString::fromStdString(record.getTitle());
         url->setTextInteractionFlags(Qt::TextBrowserInteraction);
         url->setOpenExternalLinks(true);
         url->setTextFormat(Qt::RichText);
-        QString s = "<a href=\"" + urlStr + "\">" + urlStr + "</a>";
+        QString s = "<a href=\"" + urlStr + "\">" + titleStr + "</a>";
         url->setText(s);
 
         url->setObjectName("url");
         url->setAlignment(Qt::AlignBottom | Qt::AlignRight);
 
         url->show();
+
+        author = new QLabel(this);
+        author->move(350, 240 + y);
+        author->setMaximumWidth(120);
+        QString authorStr = QString::fromStdString(record.getAuthor());
+        author->setText(authorStr);
+        author->setObjectName("author");
+
+
+        author->show();
+
+        source = new QLabel(this);
+        source->move(500, 240 + y);
+        source->setMaximumWidth(150);
+        QString sourceStr = QString::fromStdString(record.getSource());
+        source->setText(sourceStr);
+        source->setObjectName("source");
+
+
+        source->show();
+
         y += 20;
     }
 }
