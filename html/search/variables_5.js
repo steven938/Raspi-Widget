@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ui_115',['ui',['../classMainWindow.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow::ui()'],['../classWeatherWindow.html#a97319b1ad6f05009d0fdd5bd468fe915',1,'WeatherWindow::ui()']]]
+  ['r_146',['r',['../classWeatherWindow.html#a9d299ab70df147c0e4023645725da649',1,'WeatherWindow']]],
+  ['records_147',['records',['../classCategoryADT.html#a11504f4f26098803fed3c42a8f24c57e',1,'CategoryADT::records()'],['../classWeatherCategory.html#a08f7eeea9f8a2c388fb09e4b45d797c6',1,'WeatherCategory::records()']]]
 ];

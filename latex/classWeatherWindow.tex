@@ -20,8 +20,7 @@ Inheritance diagram for Weather\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Weather\+Window\+:
-\nopagebreak
+Collaboration diagram for Weather\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,16 +50,11 @@ void \mbox{\hyperlink{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}{on\+
 void \mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{on\+\_\+next\+Button\+\_\+clicked}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{Weather\+Window\+::on\+\_\+next\+Button\+\_\+clicked}} shows the previous day. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}{on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} (const int I\+N\+D\+EX)
-\begin{DoxyCompactList}\small\item\em Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index Changed switches the city displayed. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWeatherWindow_a595f8e8a82aa5c503ce3a8e274b1337c}\label{classWeatherWindow_a595f8e8a82aa5c503ce3a8e274b1337c}} 
-void {\bfseries on\+\_\+date\+Edit\+\_\+user\+Date\+Changed} (const Q\+Date \&date)
-\item 
-\mbox{\Hypertarget{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}\label{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}} 
-void {\bfseries on\+\_\+week\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}\label{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}} 
-void {\bfseries on\+\_\+daily\+Button\+\_\+clicked} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}{on\+\_\+week\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}{Weather\+Window\+::on\+\_\+week\+Button\+\_\+clicked}} switches the display from daily view to timeline view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}{on\+\_\+daily\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}{Weather\+Window\+::on\+\_\+daily\+Button\+\_\+clicked}} switches the display from timeline view to daily view. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -91,7 +85,15 @@ int {\bfseries week\+Or\+Day}
 \doxysubsection{Detailed Description}
 The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class displays weather data. 
 
-The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class interacts with \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} to present weather data. It takes in input from the user and presents output back to them. 
+The \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} class interacts with \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} to present weather data. It takes in input from the user and presents output back to them.
+
+\begin{DoxyAuthor}{Author}
+Adam Miller 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/11-\/11 
+\end{DoxyDate}
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}\label{classWeatherWindow_a989cfd8d59594b2718d5bf98377998c6}} 
@@ -154,7 +156,7 @@ Called when the celcius radio button is clicked. Updates display so that data is
 
 
 
-Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index Changed switches the city displayed. 
+\mbox{\hyperlink{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. 
 
 This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display()}} to update the display
 
@@ -163,7 +165,17 @@ This function is called when the user clicks on a city in the visual cities list
 {\em index} & the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}\label{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}} 
+\mbox{\Hypertarget{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}\label{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}} 
+\index{WeatherWindow@{WeatherWindow}!on\_dailyButton\_clicked@{on\_dailyButton\_clicked}}
+\index{on\_dailyButton\_clicked@{on\_dailyButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_dailyButton\_clicked}{on\_dailyButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+daily\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}{Weather\+Window\+::on\+\_\+daily\+Button\+\_\+clicked}} switches the display from timeline view to daily view. 
+
+Updates week\+Or\+Day and runs \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display}} to switch to timeline view \mbox{\Hypertarget{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}\label{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}} 
 \index{WeatherWindow@{WeatherWindow}!on\_farenButton\_clicked@{on\_farenButton\_clicked}}
 \index{on\_farenButton\_clicked@{on\_farenButton\_clicked}!WeatherWindow@{WeatherWindow}}
 \doxysubsubsection{\texorpdfstring{on\_farenButton\_clicked}{on\_farenButton\_clicked}}
@@ -205,7 +217,17 @@ Called when the previous day button is clicked. Decrements day\+Counter to show 
 
 \mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{Weather\+Window\+::on\+\_\+search\+Bar\+\_\+return\+Pressed}} Sets up the window to display information for a given location. 
 
-Called when the enter key is hit on the search bar. Uses the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} search mechanism to receive a weather record from a search; enables buttons that were previously disabled, as there is now data for the user to interact with \mbox{\Hypertarget{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}\label{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}} 
+Called when the enter key is hit on the search bar. Uses the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} search mechanism to receive a weather record from a search; enables buttons that were previously disabled, as there is now data for the user to interact with \mbox{\Hypertarget{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}\label{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}} 
+\index{WeatherWindow@{WeatherWindow}!on\_weekButton\_clicked@{on\_weekButton\_clicked}}
+\index{on\_weekButton\_clicked@{on\_weekButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_weekButton\_clicked}{on\_weekButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+week\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a342ea67c95b8db74207f25a8227d4be4}{Weather\+Window\+::on\+\_\+week\+Button\+\_\+clicked}} switches the display from daily view to timeline view. 
+
+Updates week\+Or\+Day and runs \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display()}} to switch to timeline view \mbox{\Hypertarget{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}\label{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}} 
 \index{WeatherWindow@{WeatherWindow}!updateDisplay@{updateDisplay}}
 \index{updateDisplay@{updateDisplay}!WeatherWindow@{WeatherWindow}}
 \doxysubsubsection{\texorpdfstring{updateDisplay()}{updateDisplay()}}

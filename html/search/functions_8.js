@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updatedisplay_97',['updateDisplay',['../classWeatherWindow.html#a8ef6627a2919021621af477fbb113c48',1,'WeatherWindow']]]
+  ['updatedisplay_125',['updateDisplay',['../classWeatherWindow.html#a8ef6627a2919021621af477fbb113c48',1,'WeatherWindow']]]
 ];

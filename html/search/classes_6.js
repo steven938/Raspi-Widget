@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['stockcategory_66',['StockCategory',['../classStockCategory.html',1,'']]],
-  ['stockrecord_67',['StockRecord',['../classStockRecord.html',1,'']]],
-  ['stockwindow_68',['stockWindow',['../classstockWindow.html',1,'']]]
+  ['stockcategory_83',['StockCategory',['../classStockCategory.html',1,'']]],
+  ['stockrecord_84',['StockRecord',['../classStockRecord.html',1,'']]],
+  ['stockwindow_85',['stockWindow',['../classstockWindow.html',1,'']]]
 ];

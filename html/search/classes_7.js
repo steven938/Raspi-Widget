@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['weathercategory_69',['WeatherCategory',['../classWeatherCategory.html',1,'']]],
-  ['weatherrecord_70',['WeatherRecord',['../classWeatherRecord.html',1,'']]],
-  ['weatherwindow_71',['WeatherWindow',['../classWeatherWindow.html',1,'']]]
+  ['weathercategory_86',['WeatherCategory',['../classWeatherCategory.html',1,'']]],
+  ['weatherrecord_87',['WeatherRecord',['../classWeatherRecord.html',1,'']]],
+  ['weatherwindow_88',['WeatherWindow',['../classWeatherWindow.html',1,'']]]
 ];

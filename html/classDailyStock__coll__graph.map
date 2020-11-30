@@ -1,4 +1,4 @@
 <map id="DailyStock" name="DailyStock">
 <area shape="rect" id="node1" title=" " alt="" coords="5,95,97,121"/>
-<area shape="rect" id="node2" href="$classDate.html" title=" " alt="" coords="25,5,78,32"/>
+<area shape="rect" id="node2" href="$classDate.html" title="The Date class describes a Date." alt="" coords="25,5,78,32"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ui_46',['ui',['../classMainWindow.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow::ui()'],['../classWeatherWindow.html#a97319b1ad6f05009d0fdd5bd468fe915',1,'WeatherWindow::ui()']]],
-  ['updatedisplay_47',['updateDisplay',['../classWeatherWindow.html#a8ef6627a2919021621af477fbb113c48',1,'WeatherWindow']]]
+  ['tempcelsius_59',['tempCelsius',['../classDailyWeather.html#a21e4e2bece27e85ef1c356eab21c7ecf',1,'DailyWeather']]],
+  ['tempfaren_60',['tempFaren',['../classDailyWeather.html#a9993e2015eb9cbef4cd406707e9c3583',1,'DailyWeather']]]
 ];
