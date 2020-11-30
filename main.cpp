@@ -7,14 +7,25 @@ Date: 2020-11-11
 
 #include <QApplication>
 #include <QFontDatabase>
-/*
+
+#include "NewsCategory.h"
+/*!
+ *
+ **
 Name: main
 Description: The main function, setups up a mainwindow. Most "driving" of the code is done by user input
 Parameter Descriptions: argc, argv unused
 Return Description: N/A
-*/
-#include "NewsCategory.h"
 
+ *
+ * \brief qMain the main function of the  code
+ *
+ *  The main function. Sets up a MainWindow. Most "driving" of the code is done by user input in GUI
+ *
+ * \param argc unused
+ * \param argv unused
+ * \return 0 if program execution is successful
+ */
 int main(int argc, char *argv[])
 {
     QFontDatabase::addApplicationFont(":/FreeSans.ttf");    //sets up the font for the app - required to ensure fonts display across platforms
