@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parsearticles_66',['parseArticles',['../classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1',1,'NewsCategory']]]
+  ['mainwindow_76',['MainWindow',['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]]
 ];

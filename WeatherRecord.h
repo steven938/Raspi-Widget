@@ -19,22 +19,22 @@ Date: 2020-11-04
  */
 class WeatherRecord :public Record {
 public:
-    WeatherRecord(std::string location);
+    WeatherRecord(const std::string LOCATION);
     WeatherRecord(const WeatherRecord &wr2);
     ~WeatherRecord();
-    std::vector<DailyWeather> getDays();
-    std::string getDescription();
-    std::string getLocation();
-    float getTempFahren(int index);
-    float getTempCelsius(int index);
-    float convertTemp(float temp, char from);
-    Date getDate(int index);
-    std::string getDescription(int index);
-    int getNumDays();
+    std::vector<DailyWeather> getDays() const;
+    std::string getLocation() const;
+    float getTempFahren(const int INDEX) const;
+    float getTempCelsius(const int INDEX) const;
+    Date getDate(const int INDEX) const;
+    std::string getDescription(const int INDEX) const;
+    int getNumDays() const;
 
 private:
     std::string location; /*!<Name of the location that the weather record corresponds to*/
     std::vector<DailyWeather> days; /*!< vector of information on weather for several days*/
+    float convertTemp(const float TEMP, const char FROM) const;
+
 };
 
 

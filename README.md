@@ -6,6 +6,7 @@ Widget for weather, stocks, and news. Made with passion using QT and C++.
 
 We also made the following changes to user stories
 - One feature, the display of 24-hour weather, was not implemented because we were unable to get the API to work with both daily and hourly weather. 
+- The user story for Weather that involved selecting a specific time period to view was modified because the Weather API only allows us to get 5 days of data after the present 
 
 
 

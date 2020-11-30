@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getrecords_58',['getRecords',['../classWeatherCategory.html#af0ec4a2264a775f552539c4fb42ddef3',1,'WeatherCategory']]]
+  ['converttemp_69',['convertTemp',['../classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0',1,'WeatherRecord']]]
 ];

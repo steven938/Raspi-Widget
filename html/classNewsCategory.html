@@ -113,15 +113,15 @@ std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt;&#1
 <tr class="memitem:a76dea2a28fe339ac39c41b4cfad6b476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476">requestArticlesBySector</a> (std::string sector)</td></tr>
 <tr class="memdesc:a76dea2a28fe339ac39c41b4cfad6b476"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476" title="NewsCategory::requestArticlesBySector function takes in a string representing a sector/category and r...">NewsCategory::requestArticlesBySector</a> function takes in a string representing a sector/category and retreives articles from API. The articles are loaded into this-&gt;record.  <a href="classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476">More...</a><br /></td></tr>
 <tr class="separator:a76dea2a28fe339ac39c41b4cfad6b476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4df241e4ebb78c1a4529278fc15149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149">requestArticles</a> (std::string searchString)</td></tr>
+<tr class="memdesc:aaf4df241e4ebb78c1a4529278fc15149"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149" title="NewsCategory::requestArticles function takes in a searchString and generates an API request to find a...">NewsCategory::requestArticles</a> function takes in a searchString and generates an API request to find articles related to the string. <a class="el" href="classNewsRecord.html">NewsRecord</a> objects are instatiated for each news article resulting from the search. Then <a class="el" href="classNewsRecord.html">NewsRecord</a> Objects are loaded into this-&gt;records vector.  <a href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149">More...</a><br /></td></tr>
+<tr class="separator:aaf4df241e4ebb78c1a4529278fc15149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ab698c6e80d4de3202cfeaa82a658202c"><td class="memItemLeft" align="right" valign="top"><a id="ab698c6e80d4de3202cfeaa82a658202c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>displayRecords</b> (std::vector&lt; <a class="el" href="classRecord.html">Record</a> &gt;)</td></tr>
 <tr class="separator:ab698c6e80d4de3202cfeaa82a658202c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4df241e4ebb78c1a4529278fc15149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149">requestArticles</a> (std::string searchString)</td></tr>
-<tr class="memdesc:aaf4df241e4ebb78c1a4529278fc15149"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149" title="NewsCategory::requestArticles function takes in a searchString and generates an API request to find a...">NewsCategory::requestArticles</a> function takes in a searchString and generates an API request to find articles related to the string. <a class="el" href="classNewsRecord.html">NewsRecord</a> objects are instatiated for each news article resulting from the search. Then <a class="el" href="classNewsRecord.html">NewsRecord</a> Objects are loaded into this-&gt;records vector.  <a href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149">More...</a><br /></td></tr>
-<tr class="separator:aaf4df241e4ebb78c1a4529278fc15149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ea0ba788979996cd4956d51e90adb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1">parseArticles</a> (QJsonArray &amp;, int numArticles)</td></tr>
 <tr class="memdesc:aa8ea0ba788979996cd4956d51e90adb1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1" title="NewsCategory::parseArticles helper function for parsing news articles in JSON.">NewsCategory::parseArticles</a> helper function for parsing news articles in JSON.  <a href="classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1">More...</a><br /></td></tr>
 <tr class="separator:aa8ea0ba788979996cd4956d51e90adb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,9 +183,6 @@ std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt;&#1
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void NewsCategory::requestArticles </td>
@@ -195,11 +192,6 @@ std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt;&#1
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p><a class="el" href="classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149" title="NewsCategory::requestArticles function takes in a searchString and generates an API request to find a...">NewsCategory::requestArticles</a> function takes in a searchString and generates an API request to find articles related to the string. <a class="el" href="classNewsRecord.html">NewsRecord</a> objects are instatiated for each news article resulting from the search. Then <a class="el" href="classNewsRecord.html">NewsRecord</a> Objects are loaded into this-&gt;records vector. </p>

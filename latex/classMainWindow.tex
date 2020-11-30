@@ -2,7 +2,17 @@
 \label{classMainWindow}\index{MainWindow@{MainWindow}}
 
 
-Inheritance diagram for Main\+Window\+:\nopagebreak
+The \mbox{\hyperlink{classMainWindow}{Main\+Window}} class is the primary window of the application.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Main\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Main\+Window\+:\nopagebreak
+Collaboration diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,28 +32,99 @@ Collaboration diagram for Main\+Window\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
-{\bfseries Main\+Window} (Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window\+::\+Main\+Window}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{Main\+Window\+::$\sim$\+Main\+Window}} a destructor Deallocates dynamically allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}\label{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}} 
-void {\bfseries on\+\_\+stock\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}\label{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}} 
-void {\bfseries on\+\_\+weather\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}\label{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}} 
-void {\bfseries on\+\_\+news\+Button\+\_\+clicked} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}{on\+\_\+stock\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}{Main\+Window\+::on\+\_\+stock\+Button\+\_\+clicked}} Opens a Stock\+Window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}{on\+\_\+weather\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}{Main\+Window\+::on\+\_\+weather\+Button\+\_\+clicked}} Opens a \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}{on\+\_\+news\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}{Main\+Window\+::on\+\_\+news\+Button\+\_\+clicked}} Opens a \mbox{\hyperlink{classNewsWindow}{News\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5}} 
-Ui\+::\+Main\+Window $\ast$ {\bfseries ui}
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classMainWindow}{Main\+Window}} class is the primary window of the application. 
+
+The \mbox{\hyperlink{classMainWindow}{Main\+Window}} is the priamry window the application, and provides the user the ability to access Stock\+Window, \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}, and \mbox{\hyperlink{classNewsWindow}{News\+Window}}
+
+\begin{DoxyAuthor}{Author}
+Adam Miller 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/11-\/29 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window\+::\+Main\+Window}} constructor. 
+
+Creates a \mbox{\hyperlink{classMainWindow}{Main\+Window}}, and (somewhat humourously) chooses a random title for the window 
+\begin{DoxyParams}{Parameters}
+{\em parent} & required by qt, always a nullptr \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}\label{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}} 
+\index{MainWindow@{MainWindow}!on\_newsButton\_clicked@{on\_newsButton\_clicked}}
+\index{on\_newsButton\_clicked@{on\_newsButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_newsButton\_clicked}{on\_newsButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+news\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classMainWindow_a216b91ef3d74736dbad4c1d035a3d780}{Main\+Window\+::on\+\_\+news\+Button\+\_\+clicked}} Opens a \mbox{\hyperlink{classNewsWindow}{News\+Window}}. 
+
+Called when the user clicks the news button. Opens a \mbox{\hyperlink{classNewsWindow}{News\+Window}} \mbox{\Hypertarget{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}\label{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}} 
+\index{MainWindow@{MainWindow}!on\_stockButton\_clicked@{on\_stockButton\_clicked}}
+\index{on\_stockButton\_clicked@{on\_stockButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_stockButton\_clicked}{on\_stockButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+stock\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classMainWindow_ac62ca491115d97f4ee6e5bd6f64abe18}{Main\+Window\+::on\+\_\+stock\+Button\+\_\+clicked}} Opens a Stock\+Window. 
+
+Called when the user clicks the stock button. Opens a Stock\+Window \mbox{\Hypertarget{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}\label{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}} 
+\index{MainWindow@{MainWindow}!on\_weatherButton\_clicked@{on\_weatherButton\_clicked}}
+\index{on\_weatherButton\_clicked@{on\_weatherButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_weatherButton\_clicked}{on\_weatherButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+weather\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classMainWindow_ad0b354c95e345cee8e2dc8ba42261328}{Main\+Window\+::on\+\_\+weather\+Button\+\_\+clicked}} Opens a \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}}. 
+
+Called when the user clicks the weather button. Opens a \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+a qt object that represents the window itself 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

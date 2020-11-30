@@ -38,6 +38,12 @@ WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
     ui->celcButton->setEnabled(false);
     ui->farenButton->setEnabled((false));
     ui->citiesBox->setEnabled(false);
+    ui->dailyButton->setEnabled(false);
+    ui->weekButton->setEnabled(false);
+    ui->weatherByWeek->hide();
+
+
+    weekOrDay = 0;
     parentWindow = Window;                  //this sets up the pointer to the window that created this.
 }
 
@@ -73,6 +79,8 @@ void WeatherWindow::on_searchBar_returnPressed(){
         ui->celcButton->setEnabled(true);
         ui->farenButton->setEnabled((true));
         ui->citiesBox->setEnabled(true);
+        ui->dailyButton->setEnabled(true);
+        ui->weekButton->setEnabled(true);
         ui->citiesBox->addItem(ui->searchBar->text());
         cityIndex = category.getRecords().size()-1;
         ui->citiesBox->setCurrentIndex(cityIndex);
@@ -117,13 +125,22 @@ void WeatherWindow::updateDisplay(){
     } else {
         temp = r->getTempCelsius(dayCounter);
     }
+    if (weekOrDay == 0){
     ui->temp->display(temp);
     ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
     cerr<<r->getLocation()<<endl;
     //displays location, date, and description for current DailyWeather.
     ui->dateLabel->setText(QString::fromStdString(r->getDate(dayCounter).getStr()));
     ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
-}
+    } else if (weekOrDay == 1){
+        ui->desc_day1->setText(QString::fromStdString(r->getDescription(0)));
+        ui->desc_day2->setText(QString::fromStdString(r->getDescription(1)));
+        ui->desc_day3->setText(QString::fromStdString(r->getDescription(2)));
+        ui->desc_day4->setText(QString::fromStdString(r->getDescription(3)));
+        ui->desc_day5->setText(QString::fromStdString(r->getDescription(4)));
+    }
+
+    }
 
 /*!
  * \brief WeatherWindow::on_celcButton_clicked changes display to celcius
@@ -219,12 +236,18 @@ void WeatherWindow::on_weekButton_clicked()
 {
     ui->weatherByDay->hide();
     ui->weatherByWeek->show();
+    weekOrDay = 1;
+    updateDisplay();
+
 
 
 }
 
 void WeatherWindow::on_dailyButton_clicked()
 {
+    weekOrDay = 0;
     ui->weatherByDay->show();
     ui->weatherByWeek->hide();
+     updateDisplay();
 }
+

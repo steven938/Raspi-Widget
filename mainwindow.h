@@ -1,8 +1,4 @@
-/*
-Author: Adam Miller
-Description: Header file that represents the main window of the application, where users can choose between stocks, weather, and news
-Date: 2020-11-11
-*/
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -11,7 +7,14 @@ Date: 2020-11-11
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
+/*!
+ * \brief The MainWindow class is the primary window of the application.
+ *
+ * The MainWindow is the priamry window the application, and provides the user the ability to access StockWindow, WeatherWindow, and NewsWindow
+ *
+ * @author Adam Miller
+ * @date 2020-11-29
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -25,6 +28,6 @@ private slots:
    void on_newsButton_clicked();
 
 private:
-    Ui::MainWindow *ui;                     //a qt object that represents the window itself
+    Ui::MainWindow *ui;                     /*!<a qt object that represents the window itself*/
 };
 #endif // MAINWINDOW_H

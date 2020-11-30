@@ -30,39 +30,33 @@ Collaboration diagram for Weather\+Record\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classWeatherRecord_a4f5d66fc8e2928c921e7c285f64c1a18}\label{classWeatherRecord_a4f5d66fc8e2928c921e7c285f64c1a18}} 
-{\bfseries Weather\+Record} (std\+::string \mbox{\hyperlink{classWeatherRecord_af81fb45b0ad190d4ef7bc6abfe337856}{location}})
+\mbox{\hyperlink{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}{Weather\+Record}} (const std\+::string L\+O\+C\+A\+T\+I\+ON)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}{Weather\+Record\+::\+Weather\+Record}} creates a \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} for a given city. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}{Weather\+Record}} (const \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} \&wr2)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}{Weather\+Record\+::\+Weather\+Record}} Shallow Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherRecord_acebb4605cd7521efa06ede637c7db50a}{$\sim$\+Weather\+Record}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_acebb4605cd7521efa06ede637c7db50a}{Weather\+Record\+::$\sim$\+Weather\+Record}} destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $>$ \mbox{\hyperlink{classWeatherRecord_ac49bcd7ec05035cfdbd000eb8b79c501}{get\+Days}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_ac49bcd7ec05035cfdbd000eb8b79c501}{Weather\+Record\+::get\+Days}} getter for days. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}{Weather\+Record\+::get\+Location}} getter for location. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWeatherRecord_aca5710a7269ae795ba5e92e112ace85d}{get\+Temp\+Fahren}} (const int I\+N\+D\+EX) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_aca5710a7269ae795ba5e92e112ace85d}{Weather\+Record\+::get\+Temp\+Fahren}} getter for the temperature in farenheit of a specific day. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}{get\+Temp\+Celsius}} (const int I\+N\+D\+EX) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}{Weather\+Record\+::get\+Temp\+Celsius}} getter for the temperature in celsius of a specific day. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}{get\+Date}} (const int I\+N\+D\+EX) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}{Weather\+Record\+::get\+Date}} returns the date of a specific \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWeatherRecord_a25b43302178fdbabed686d789142669d}\label{classWeatherRecord_a25b43302178fdbabed686d789142669d}} 
+std\+::string {\bfseries get\+Description} (const int I\+N\+D\+EX) const
 \item 
-\mbox{\Hypertarget{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}\label{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}} 
-{\bfseries Weather\+Record} (const \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} \&wr2)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_aa54eed97bc3f8ff4b83f84d1a7bda8ac}\label{classWeatherRecord_aa54eed97bc3f8ff4b83f84d1a7bda8ac}} 
-std\+::vector$<$ \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $>$ {\bfseries get\+Days} ()
-\item 
-\mbox{\Hypertarget{classWeatherRecord_aef6eff6d2c47dba4608b5f1fd9d65623}\label{classWeatherRecord_aef6eff6d2c47dba4608b5f1fd9d65623}} 
-std\+::string {\bfseries get\+Description} ()
-\item 
-\mbox{\Hypertarget{classWeatherRecord_a844ec08839250ba1794615b82e28f7c5}\label{classWeatherRecord_a844ec08839250ba1794615b82e28f7c5}} 
-std\+::string {\bfseries get\+Location} ()
-\item 
-\mbox{\Hypertarget{classWeatherRecord_acf682e35129d6b7104331bfe2cf0ad06}\label{classWeatherRecord_acf682e35129d6b7104331bfe2cf0ad06}} 
-float {\bfseries get\+Temp\+Fahren} (int index)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_ad77edb2a845b109ec0ea1c51a2025d41}\label{classWeatherRecord_ad77edb2a845b109ec0ea1c51a2025d41}} 
-float {\bfseries get\+Temp\+Celsius} (int index)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_a96e592cdee25861ef8656b550f58b442}\label{classWeatherRecord_a96e592cdee25861ef8656b550f58b442}} 
-float {\bfseries convert\+Temp} (float temp, char from)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_a6c87a714b10d866afb57d047eee3b420}\label{classWeatherRecord_a6c87a714b10d866afb57d047eee3b420}} 
-\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+Date} (int index)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_a0a03fbd645ab545abb3359c64e7945bb}\label{classWeatherRecord_a0a03fbd645ab545abb3359c64e7945bb}} 
-std\+::string {\bfseries get\+Description} (int index)
-\item 
-\mbox{\Hypertarget{classWeatherRecord_aea2865ecc2686dcbee85bf59a06377f8}\label{classWeatherRecord_aea2865ecc2686dcbee85bf59a06377f8}} 
-int {\bfseries get\+Num\+Days} ()
+\mbox{\Hypertarget{classWeatherRecord_ad76b6ca602e5e7851086201db37b77f8}\label{classWeatherRecord_ad76b6ca602e5e7851086201db37b77f8}} 
+int {\bfseries get\+Num\+Days} () const
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classWeatherRecord_aac603868abb540c69bfb38288d28d1a0}{convert\+Temp}} (const float T\+E\+MP, const char F\+R\+OM) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_aac603868abb540c69bfb38288d28d1a0}{Weather\+Record\+::convert\+Temp}} convertes temperatures from celsius to fahrenheit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,6 +72,156 @@ The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather d
 The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather data in the form of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} for one city. It is also an interface for classes like \mbox{\hyperlink{classWeatherWindow}{Weather\+Window}} and \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} to interact with \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} data without needed to know the underlying implementaation of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} \begin{DoxyAuthor}{Author}
 Adam Miller 
 \end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}\label{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}} 
+\index{WeatherRecord@{WeatherRecord}!WeatherRecord@{WeatherRecord}}
+\index{WeatherRecord@{WeatherRecord}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{WeatherRecord()}{WeatherRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Weather\+Record\+::\+Weather\+Record (\begin{DoxyParamCaption}\item[{const std\+::string}]{L\+O\+C\+A\+T\+I\+ON }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}{Weather\+Record\+::\+Weather\+Record}} creates a \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} for a given city. 
+
+Initializes query to the weather A\+PI to initialize weather for requested location, creates a \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} with 5 days of Weather data (in the form of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}) for that day 
+\begin{DoxyParams}{Parameters}
+{\em location} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}\label{classWeatherRecord_a183ae5f50ab14a86f3e6cd61407021fb}} 
+\index{WeatherRecord@{WeatherRecord}!WeatherRecord@{WeatherRecord}}
+\index{WeatherRecord@{WeatherRecord}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{WeatherRecord()}{WeatherRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Weather\+Record\+::\+Weather\+Record (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} \&}]{W\+R2 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_aa7421eed3fd4f8620a39d7ac35a7cc12}{Weather\+Record\+::\+Weather\+Record}} Shallow Copy constructor. 
+
+Constructs a \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} that references the days and location of the original \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}}. This is a shallow copy. 
+\begin{DoxyParams}{Parameters}
+{\em W\+R2} & the \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} that is being copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWeatherRecord_acebb4605cd7521efa06ede637c7db50a}\label{classWeatherRecord_acebb4605cd7521efa06ede637c7db50a}} 
+\index{WeatherRecord@{WeatherRecord}!````~WeatherRecord@{$\sim$WeatherRecord}}
+\index{````~WeatherRecord@{$\sim$WeatherRecord}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{$\sim$WeatherRecord()}{~WeatherRecord()}}
+{\footnotesize\ttfamily Weather\+Record\+::$\sim$\+Weather\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_acebb4605cd7521efa06ede637c7db50a}{Weather\+Record\+::$\sim$\+Weather\+Record}} destructor. 
+
+\mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} has no dynamic memory to deallocate, so nothing is done here. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeatherRecord_aac603868abb540c69bfb38288d28d1a0}\label{classWeatherRecord_aac603868abb540c69bfb38288d28d1a0}} 
+\index{WeatherRecord@{WeatherRecord}!convertTemp@{convertTemp}}
+\index{convertTemp@{convertTemp}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{convertTemp()}{convertTemp()}}
+{\footnotesize\ttfamily float Weather\+Record\+::convert\+Temp (\begin{DoxyParamCaption}\item[{const float}]{T\+E\+MP,  }\item[{const char}]{F\+R\+OM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_aac603868abb540c69bfb38288d28d1a0}{Weather\+Record\+::convert\+Temp}} convertes temperatures from celsius to fahrenheit. 
+
+Private Helper function that converts a temperature from celcius to farenheit 
+\begin{DoxyParams}{Parameters}
+{\em T\+E\+MP} & const, the temperature being converted \\
+\hline
+{\em F\+R\+OM} & const, \textquotesingle{}f\textquotesingle{} if T\+E\+MP is in fahrenheit, \textquotesingle{}c\textquotesingle{} if T\+E\+M\+PT is in celcius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted temperature on success, -\/1 on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}\label{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}} 
+\index{WeatherRecord@{WeatherRecord}!getDate@{getDate}}
+\index{getDate@{getDate}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDate}{Date}} Weather\+Record\+::get\+Date (\begin{DoxyParamCaption}\item[{const int}]{I\+N\+D\+EX }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}{Weather\+Record\+::get\+Date}} returns the date of a specific \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+N\+D\+EX} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_ac49bcd7ec05035cfdbd000eb8b79c501}\label{classWeatherRecord_ac49bcd7ec05035cfdbd000eb8b79c501}} 
+\index{WeatherRecord@{WeatherRecord}!getDays@{getDays}}
+\index{getDays@{getDays}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getDays()}{getDays()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} $>$ Weather\+Record\+::get\+Days (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_ac49bcd7ec05035cfdbd000eb8b79c501}{Weather\+Record\+::get\+Days}} getter for days. 
+
+\begin{DoxyReturn}{Returns}
+days, the days vector of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}\label{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}} 
+\index{WeatherRecord@{WeatherRecord}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily std\+::string Weather\+Record\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}{Weather\+Record\+::get\+Location}} getter for location. 
+
+\begin{DoxyReturn}{Returns}
+location, the city that the \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} describes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}\label{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}} 
+\index{WeatherRecord@{WeatherRecord}!getTempCelsius@{getTempCelsius}}
+\index{getTempCelsius@{getTempCelsius}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getTempCelsius()}{getTempCelsius()}}
+{\footnotesize\ttfamily float Weather\+Record\+::get\+Temp\+Celsius (\begin{DoxyParamCaption}\item[{const int}]{I\+N\+D\+EX }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}{Weather\+Record\+::get\+Temp\+Celsius}} getter for the temperature in celsius of a specific day. 
+
+Getter for the celsius temperature of a specific day, specified by I\+N\+D\+EX,
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+N\+D\+EX} & const, the index of the day that is being returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the celsius temperature of the day specificed by I\+N\+D\+EX 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_aca5710a7269ae795ba5e92e112ace85d}\label{classWeatherRecord_aca5710a7269ae795ba5e92e112ace85d}} 
+\index{WeatherRecord@{WeatherRecord}!getTempFahren@{getTempFahren}}
+\index{getTempFahren@{getTempFahren}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getTempFahren()}{getTempFahren()}}
+{\footnotesize\ttfamily float Weather\+Record\+::get\+Temp\+Fahren (\begin{DoxyParamCaption}\item[{const int}]{I\+N\+D\+EX }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_aca5710a7269ae795ba5e92e112ace85d}{Weather\+Record\+::get\+Temp\+Fahren}} getter for the temperature in farenheit of a specific day. 
+
+Getter for the fahrenheit temperature of a specific day, specified by I\+N\+D\+EX,
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+N\+D\+EX} & const, the index of the day that is being returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the fahrenheit temperature of the day specificed by I\+N\+D\+EX 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}

@@ -10,63 +10,75 @@ Date: 2020-11-11
 #include "ui_weatherwindow.h"
 #include "stockwindow.h"
 #include "newswindow.h"
-/*
-Name: Constructor
-Description: Creates a mainwindow
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+/*!
+ * \brief MainWindow::MainWindow constructor
+ *
+ * Creates a MainWindow, and (somewhat humourously) chooses a random title for the window
+ * \param parent required by qt, always a nullptr
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    int choice = rand()%3;                      //chooses a random title for the window
+    switch(choice){
+    case 0:
+        setWindowTitle("Habari: Your source for Stocks, Weather, and News");
+        break;
+    case 1:
+        setWindowTitle("Habari: Not your grandpa's Bloomberg Terminal");
+        break;
+    case 2:
+        setWindowTitle("Habari: Better than Google!");
+        break;
+    }
 }
-/*
-Name: Destructor
-Description: Deallocates dynamically allocated memories
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+\
+/*!
+ * \brief MainWindow::~MainWindow a destructor
+ * Deallocates dynamically allocated memory
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-/*
-Name: on_stockButton_clicked()
-Description: Called when the user clicks the stock button. Opens a stock window
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+/*!
+ * \brief MainWindow::on_stockButton_clicked Opens a StockWindow
+ *
+ * Called when the user clicks the stock button. Opens a StockWindow
+ */
 void MainWindow::on_stockButton_clicked(){
     stockWindow * w = new stockWindow(this,nullptr);        //initializes the stock window
-    QFont font = QFont("FreeSans",10,1);
+    QFont font = QFont("FreeSans",10,1);                    //embeds the font into the window
     w->setFont(font);
     w->show();
 }
-/*
-Name: on_weatherButton_clicked()
-Description: Called when the user clicks the weather button. Opens a weather window
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+/*!
+ * \brief MainWindow::on_weatherButton_clicked Opens a WeatherWindow
+ *
+ * Called when the user clicks the weather button. Opens a WeatherWindow
+ */
 void MainWindow::on_weatherButton_clicked(){
-    WeatherWindow* w = new WeatherWindow(this,nullptr);
-    QFont font = QFont("FreeSans",10,1);
+    WeatherWindow* w = new WeatherWindow(this,nullptr); //initializes the weather window
+    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
     w->setFont(font);
     w->show();
 
 
 }
-/*
-Name: on_newsButton_clicked()
-Description: Called when the user clicks the news button. Opens a news window
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+/*!
+ * \brief MainWindow::on_newsButton_clicked Opens a NewsWindow
+ *
+ * Called when the user clicks the news button. Opens a NewsWindow
+ */
 void MainWindow::on_newsButton_clicked(){
-    NewsWindow* w = new NewsWindow(this,nullptr);
-    QFont font = QFont("FreeSans",10,1);
+    NewsWindow* w = new NewsWindow(this,nullptr);       //initializes the newswindow
+    QFont font = QFont("FreeSans",10,1);                //embeds the font into the window
     w->setFont(font);
     w->show();
 }

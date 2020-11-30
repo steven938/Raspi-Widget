@@ -19,24 +19,19 @@ Date: 2020-11-04
 class WeatherCategory: public CategoryADT{
     private:
         std::vector<WeatherRecord> records; /*!< A vector to store all the weather records*/
-        void displayRecords(std::vector<WeatherRecord> toDisplay); // Print the specified records to the screen
 
-        
     public:
-    
-        // Constructor to make instances of WeatherCategory class
+            // Constructor to make instances of WeatherCategory class
         WeatherCategory();
 
         // Destructor
         ~WeatherCategory();
 
         // Function to get the records of the class 
-        std::vector<WeatherRecord> getRecords();
+        std::vector<WeatherRecord> getRecords() const;
 
         // Function to find a record of a specific location (specified by searchString)
-        Record search(std::string searchString);
+        Record search(const std::string SEARCH_STRING);
 
-        // Sort the weather records currently stored in the private vector
-        void sort(int type, bool ascend);
 };
 #endif

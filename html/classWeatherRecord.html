@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classWeatherRecord-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -97,39 +98,42 @@ Collaboration diagram for WeatherRecord:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f5d66fc8e2928c921e7c285f64c1a18"><td class="memItemLeft" align="right" valign="top"><a id="a4f5d66fc8e2928c921e7c285f64c1a18"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WeatherRecord</b> (std::string <a class="el" href="classWeatherRecord.html#af81fb45b0ad190d4ef7bc6abfe337856">location</a>)</td></tr>
-<tr class="separator:a4f5d66fc8e2928c921e7c285f64c1a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a183ae5f50ab14a86f3e6cd61407021fb"><td class="memItemLeft" align="right" valign="top"><a id="a183ae5f50ab14a86f3e6cd61407021fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WeatherRecord</b> (const <a class="el" href="classWeatherRecord.html">WeatherRecord</a> &amp;wr2)</td></tr>
+<tr class="memitem:aa7421eed3fd4f8620a39d7ac35a7cc12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12">WeatherRecord</a> (const std::string LOCATION)</td></tr>
+<tr class="memdesc:aa7421eed3fd4f8620a39d7ac35a7cc12"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12" title="WeatherRecord::WeatherRecord creates a WeatherRecord for a given city.">WeatherRecord::WeatherRecord</a> creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> for a given city.  <a href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12">More...</a><br /></td></tr>
+<tr class="separator:aa7421eed3fd4f8620a39d7ac35a7cc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183ae5f50ab14a86f3e6cd61407021fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#a183ae5f50ab14a86f3e6cd61407021fb">WeatherRecord</a> (const <a class="el" href="classWeatherRecord.html">WeatherRecord</a> &amp;wr2)</td></tr>
+<tr class="memdesc:a183ae5f50ab14a86f3e6cd61407021fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12" title="WeatherRecord::WeatherRecord creates a WeatherRecord for a given city.">WeatherRecord::WeatherRecord</a> Shallow Copy constructor.  <a href="classWeatherRecord.html#a183ae5f50ab14a86f3e6cd61407021fb">More...</a><br /></td></tr>
 <tr class="separator:a183ae5f50ab14a86f3e6cd61407021fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa54eed97bc3f8ff4b83f84d1a7bda8ac"><td class="memItemLeft" align="right" valign="top"><a id="aa54eed97bc3f8ff4b83f84d1a7bda8ac"></a>
-std::vector&lt; <a class="el" href="classDailyWeather.html">DailyWeather</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDays</b> ()</td></tr>
-<tr class="separator:aa54eed97bc3f8ff4b83f84d1a7bda8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6eff6d2c47dba4608b5f1fd9d65623"><td class="memItemLeft" align="right" valign="top"><a id="aef6eff6d2c47dba4608b5f1fd9d65623"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> ()</td></tr>
-<tr class="separator:aef6eff6d2c47dba4608b5f1fd9d65623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a844ec08839250ba1794615b82e28f7c5"><td class="memItemLeft" align="right" valign="top"><a id="a844ec08839250ba1794615b82e28f7c5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getLocation</b> ()</td></tr>
-<tr class="separator:a844ec08839250ba1794615b82e28f7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf682e35129d6b7104331bfe2cf0ad06"><td class="memItemLeft" align="right" valign="top"><a id="acf682e35129d6b7104331bfe2cf0ad06"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getTempFahren</b> (int index)</td></tr>
-<tr class="separator:acf682e35129d6b7104331bfe2cf0ad06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77edb2a845b109ec0ea1c51a2025d41"><td class="memItemLeft" align="right" valign="top"><a id="ad77edb2a845b109ec0ea1c51a2025d41"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getTempCelsius</b> (int index)</td></tr>
-<tr class="separator:ad77edb2a845b109ec0ea1c51a2025d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96e592cdee25861ef8656b550f58b442"><td class="memItemLeft" align="right" valign="top"><a id="a96e592cdee25861ef8656b550f58b442"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>convertTemp</b> (float temp, char from)</td></tr>
-<tr class="separator:a96e592cdee25861ef8656b550f58b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c87a714b10d866afb57d047eee3b420"><td class="memItemLeft" align="right" valign="top"><a id="a6c87a714b10d866afb57d047eee3b420"></a>
-<a class="el" href="classDate.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDate</b> (int index)</td></tr>
-<tr class="separator:a6c87a714b10d866afb57d047eee3b420"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a03fbd645ab545abb3359c64e7945bb"><td class="memItemLeft" align="right" valign="top"><a id="a0a03fbd645ab545abb3359c64e7945bb"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> (int index)</td></tr>
-<tr class="separator:a0a03fbd645ab545abb3359c64e7945bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2865ecc2686dcbee85bf59a06377f8"><td class="memItemLeft" align="right" valign="top"><a id="aea2865ecc2686dcbee85bf59a06377f8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumDays</b> ()</td></tr>
-<tr class="separator:aea2865ecc2686dcbee85bf59a06377f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebb4605cd7521efa06ede637c7db50a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#acebb4605cd7521efa06ede637c7db50a">~WeatherRecord</a> ()</td></tr>
+<tr class="memdesc:acebb4605cd7521efa06ede637c7db50a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#acebb4605cd7521efa06ede637c7db50a" title="WeatherRecord::~WeatherRecord destructor.">WeatherRecord::~WeatherRecord</a> destructor.  <a href="classWeatherRecord.html#acebb4605cd7521efa06ede637c7db50a">More...</a><br /></td></tr>
+<tr class="separator:acebb4605cd7521efa06ede637c7db50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49bcd7ec05035cfdbd000eb8b79c501"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classDailyWeather.html">DailyWeather</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501">getDays</a> () const</td></tr>
+<tr class="memdesc:ac49bcd7ec05035cfdbd000eb8b79c501"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501" title="WeatherRecord::getDays getter for days.">WeatherRecord::getDays</a> getter for days.  <a href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501">More...</a><br /></td></tr>
+<tr class="separator:ac49bcd7ec05035cfdbd000eb8b79c501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e76e8336ee905d7c343a21083081af"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#a81e76e8336ee905d7c343a21083081af">getLocation</a> () const</td></tr>
+<tr class="memdesc:a81e76e8336ee905d7c343a21083081af"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#a81e76e8336ee905d7c343a21083081af" title="WeatherRecord::getLocation getter for location.">WeatherRecord::getLocation</a> getter for location.  <a href="classWeatherRecord.html#a81e76e8336ee905d7c343a21083081af">More...</a><br /></td></tr>
+<tr class="separator:a81e76e8336ee905d7c343a21083081af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5710a7269ae795ba5e92e112ace85d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#aca5710a7269ae795ba5e92e112ace85d">getTempFahren</a> (const int INDEX) const</td></tr>
+<tr class="memdesc:aca5710a7269ae795ba5e92e112ace85d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#aca5710a7269ae795ba5e92e112ace85d" title="WeatherRecord::getTempFahren getter for the temperature in farenheit of a specific day.">WeatherRecord::getTempFahren</a> getter for the temperature in farenheit of a specific day.  <a href="classWeatherRecord.html#aca5710a7269ae795ba5e92e112ace85d">More...</a><br /></td></tr>
+<tr class="separator:aca5710a7269ae795ba5e92e112ace85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134ab93e23897b8627b6c4ea527923e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1">getTempCelsius</a> (const int INDEX) const</td></tr>
+<tr class="memdesc:a134ab93e23897b8627b6c4ea527923e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1" title="WeatherRecord::getTempCelsius getter for the temperature in celsius of a specific day.">WeatherRecord::getTempCelsius</a> getter for the temperature in celsius of a specific day.  <a href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1">More...</a><br /></td></tr>
+<tr class="separator:a134ab93e23897b8627b6c4ea527923e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fe535971b9875c8788469c498dc899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDate.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">getDate</a> (const int INDEX) const</td></tr>
+<tr class="memdesc:ab3fe535971b9875c8788469c498dc899"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the date of a specific <a class="el" href="classDailyWeather.html">DailyWeather</a>.  <a href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">More...</a><br /></td></tr>
+<tr class="separator:ab3fe535971b9875c8788469c498dc899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b43302178fdbabed686d789142669d"><td class="memItemLeft" align="right" valign="top"><a id="a25b43302178fdbabed686d789142669d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> (const int INDEX) const</td></tr>
+<tr class="separator:a25b43302178fdbabed686d789142669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76b6ca602e5e7851086201db37b77f8"><td class="memItemLeft" align="right" valign="top"><a id="ad76b6ca602e5e7851086201db37b77f8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumDays</b> () const</td></tr>
+<tr class="separator:ad76b6ca602e5e7851086201db37b77f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aac603868abb540c69bfb38288d28d1a0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0">convertTemp</a> (const float TEMP, const char FROM) const</td></tr>
+<tr class="memdesc:aac603868abb540c69bfb38288d28d1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0" title="WeatherRecord::convertTemp convertes temperatures from celsius to fahrenheit.">WeatherRecord::convertTemp</a> convertes temperatures from celsius to fahrenheit.  <a href="classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0">More...</a><br /></td></tr>
+<tr class="separator:aac603868abb540c69bfb38288d28d1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -141,7 +145,250 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> class holds weather data for one city. </p>
 <p>The <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> class holds weather data in the form of <a class="el" href="classDailyWeather.html">DailyWeather</a> for one city. It is also an interface for classes like <a class="el" href="classWeatherWindow.html" title="The WeatherWindow class displays weather data.">WeatherWindow</a> and <a class="el" href="classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location.">WeatherCategory</a> to interact with <a class="el" href="classDailyWeather.html">DailyWeather</a> data without needed to know the underlying implementaation of <a class="el" href="classDailyWeather.html">DailyWeather</a> </p><dl class="section author"><dt>Author</dt><dd>Adam Miller </dd></dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa7421eed3fd4f8620a39d7ac35a7cc12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7421eed3fd4f8620a39d7ac35a7cc12">&#9670;&nbsp;</a></span>WeatherRecord() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherRecord::WeatherRecord </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>LOCATION</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12" title="WeatherRecord::WeatherRecord creates a WeatherRecord for a given city.">WeatherRecord::WeatherRecord</a> creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> for a given city. </p>
+<p>Initializes query to the weather API to initialize weather for requested location, creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> with 5 days of Weather data (in the form of <a class="el" href="classDailyWeather.html">DailyWeather</a>) for that day </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a183ae5f50ab14a86f3e6cd61407021fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183ae5f50ab14a86f3e6cd61407021fb">&#9670;&nbsp;</a></span>WeatherRecord() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherRecord::WeatherRecord </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWeatherRecord.html">WeatherRecord</a> &amp;&#160;</td>
+          <td class="paramname"><em>WR2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12" title="WeatherRecord::WeatherRecord creates a WeatherRecord for a given city.">WeatherRecord::WeatherRecord</a> Shallow Copy constructor. </p>
+<p>Constructs a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> that references the days and location of the original <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a>. This is a shallow copy. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WR2</td><td>the <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> that is being copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acebb4605cd7521efa06ede637c7db50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebb4605cd7521efa06ede637c7db50a">&#9670;&nbsp;</a></span>~WeatherRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherRecord::~WeatherRecord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#acebb4605cd7521efa06ede637c7db50a" title="WeatherRecord::~WeatherRecord destructor.">WeatherRecord::~WeatherRecord</a> destructor. </p>
+<p><a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> has no dynamic memory to deallocate, so nothing is done here. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aac603868abb540c69bfb38288d28d1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac603868abb540c69bfb38288d28d1a0">&#9670;&nbsp;</a></span>convertTemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WeatherRecord::convertTemp </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>TEMP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>FROM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0" title="WeatherRecord::convertTemp convertes temperatures from celsius to fahrenheit.">WeatherRecord::convertTemp</a> convertes temperatures from celsius to fahrenheit. </p>
+<p>Private Helper function that converts a temperature from celcius to farenheit </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TEMP</td><td>const, the temperature being converted </td></tr>
+    <tr><td class="paramname">FROM</td><td>const, 'f' if TEMP is in fahrenheit, 'c' if TEMPT is in celcius </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the converted temperature on success, -1 on failure </dd></dl>
+
+</div>
+</div>
+<a id="ab3fe535971b9875c8788469c498dc899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fe535971b9875c8788469c498dc899">&#9670;&nbsp;</a></span>getDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDate.html">Date</a> WeatherRecord::getDate </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>INDEX</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the date of a specific <a class="el" href="classDailyWeather.html">DailyWeather</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">INDEX</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ac49bcd7ec05035cfdbd000eb8b79c501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac49bcd7ec05035cfdbd000eb8b79c501">&#9670;&nbsp;</a></span>getDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classDailyWeather.html">DailyWeather</a> &gt; WeatherRecord::getDays </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501" title="WeatherRecord::getDays getter for days.">WeatherRecord::getDays</a> getter for days. </p>
+<dl class="section return"><dt>Returns</dt><dd>days, the days vector of <a class="el" href="classDailyWeather.html">DailyWeather</a> </dd></dl>
+
+</div>
+</div>
+<a id="a81e76e8336ee905d7c343a21083081af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e76e8336ee905d7c343a21083081af">&#9670;&nbsp;</a></span>getLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string WeatherRecord::getLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#a81e76e8336ee905d7c343a21083081af" title="WeatherRecord::getLocation getter for location.">WeatherRecord::getLocation</a> getter for location. </p>
+<dl class="section return"><dt>Returns</dt><dd>location, the city that the <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> describes </dd></dl>
+
+</div>
+</div>
+<a id="a134ab93e23897b8627b6c4ea527923e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a134ab93e23897b8627b6c4ea527923e1">&#9670;&nbsp;</a></span>getTempCelsius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WeatherRecord::getTempCelsius </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>INDEX</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1" title="WeatherRecord::getTempCelsius getter for the temperature in celsius of a specific day.">WeatherRecord::getTempCelsius</a> getter for the temperature in celsius of a specific day. </p>
+<p>Getter for the celsius temperature of a specific day, specified by INDEX,</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">INDEX</td><td>const, the index of the day that is being returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the celsius temperature of the day specificed by INDEX </dd></dl>
+
+</div>
+</div>
+<a id="aca5710a7269ae795ba5e92e112ace85d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5710a7269ae795ba5e92e112ace85d">&#9670;&nbsp;</a></span>getTempFahren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WeatherRecord::getTempFahren </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>INDEX</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#aca5710a7269ae795ba5e92e112ace85d" title="WeatherRecord::getTempFahren getter for the temperature in farenheit of a specific day.">WeatherRecord::getTempFahren</a> getter for the temperature in farenheit of a specific day. </p>
+<p>Getter for the fahrenheit temperature of a specific day, specified by INDEX,</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">INDEX</td><td>const, the index of the day that is being returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the fahrenheit temperature of the day specificed by INDEX </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a598ae862c4d0196c16ae34cd2443a1a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a598ae862c4d0196c16ae34cd2443a1a5">&#9670;&nbsp;</a></span>days</h2>
 

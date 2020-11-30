@@ -2,12 +2,6 @@
 // Handling invalid location input or API bad responses
 // Restructure the API request code: const for the API key for example
 
-/*
-Author: Abdul Rehman Zafar
-Description: Cpp file for WeatherRecord representing weather information for a location
-Date: 2020-11-04
-*/
-
 #include "WeatherRecord.h"
 #include "Date.h"
 #include <string.h>
@@ -24,14 +18,14 @@ Date: 2020-11-04
 
 using namespace std;
 
-/*
-Name: constructor
-Description: initializes query to the weather API to initialize weather for requested location
-Parameter Descriptions: location user wishes to know forecast for
-Return Description:
-*/
-WeatherRecord::WeatherRecord(std::string location) {
-    this->location = location;                      //initializes location
+/*!
+ * \brief WeatherRecord::WeatherRecord creates a WeatherRecord for a given city
+ *
+ *  Initializes query to the weather API to initialize weather for requested location, creates a WeatherRecord with 5 days of Weather data (in the form of DailyWeather) for that day
+ * \param location
+ */
+WeatherRecord::WeatherRecord(const std::string LOCATION) {
+    this->location = LOCATION;                      //initializes location
 
     QNetworkRequest request;
     QString endpoint = "https://api.openweathermap.org/data/2.5/forecast?cnt=40&units=imperial&q=" + QString::fromStdString(location) + "&appid=26387a928cb676aab24801bcc3d40f69";
@@ -100,74 +94,61 @@ WeatherRecord::WeatherRecord(std::string location) {
         // ADD Error Box
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
-        throw "Didn't work dude";
+        throw "API Request Failed";
     }
     reply->deleteLater();
 }
-/*
-Name: Copy constructor
-Description: Constructs a WeatherRecord that references the days and location of the original WeatherRecord. This is a shallow copy.
-Parameter Descriptions: wr2: the weather record being copied
-Return Description: N/A
-*/
+
+/*!
+ * \brief WeatherRecord::WeatherRecord Shallow Copy constructor
+ *
+ * Constructs a WeatherRecord that references the days and location of the original WeatherRecord. This is a shallow copy.
+ * \param WR2 the WeatherRecord that is being copied
+ */
 WeatherRecord::WeatherRecord(const WeatherRecord &WR2){
     this->location = WR2.location;
     this->days = WR2.days;
 }
 
-/*
-Name: converTempt
-Description: Helper function that converts a temperature from celcius to farenheit
-Parameter Descriptions: temp: the input temperature; from: a character representing the unit of the "temp" input: f for farenheit, c for celcius
-Return Description: The temperature converted to the other format
-*/
-
-float WeatherRecord::convertTemp(float temp, char from){
-    if (from == 'f'){
-        return (temp-32)*5.0/9;
-    }  else if (from == 'c') return (from * 9/5.0)+32;
-   throw "Please specify either f or c";
-   return -1;
+/*!
+ * \brief WeatherRecord::convertTemp convertes temperatures from celsius to fahrenheit
+ *
+ * Private Helper function that converts a temperature from celcius to farenheit
+ * \param TEMP const, the temperature being converted
+ * \param FROM const, 'f' if TEMP is in fahrenheit, 'c' if TEMPT is in celcius
+ * \return the converted temperature on success, -1 on failure
+ */
+float  WeatherRecord::convertTemp(const float TEMP, const char FROM) const{
+    if (FROM == 'f'){
+        return (TEMP-32)*5.0/9;
+    }  else if (FROM == 'c') return (FROM * 9/5.0)+32;
+    throw "Please specify either f or c";
+    return -1;
 
 }
 
-/*
-Name: destructor
-Description: Deallocates memory allocated to the weather record
-Parameter Descriptions: n/a
-Return Description: n/a
-*/
+/*!
+ * \brief WeatherRecord::~WeatherRecord destructor
+ *
+ * WeatherRecord has no dynamic memory to deallocate, so nothing is done here.
+ */
 WeatherRecord::~WeatherRecord() {
-    //TO BE IMPLEMENTED
+
 }
-/*
-Name: getDays
-Description: returns the days vector
-Parameter Descriptions: N/A
-Return Description: the days vector
-*/
-std::vector<DailyWeather> WeatherRecord::getDays() {
+
+/*!
+ * \brief WeatherRecord::getDays getter for days
+ * \return days, the days vector of DailyWeather
+ */
+std::vector<DailyWeather> WeatherRecord::getDays() const {
     return days;
 }
 
-/*
-Name: getDescription
-Description: returns verbal description of the forecast (i.e. cloudy)
-Parameter Descriptions:
-Return Description: the description of the forecast
-*/
-std::string WeatherRecord::getDescription() {
-    //TO BE IMPLEMENTED;
-    return "description";
-}
-
-/*
-Name: getLocation
-Description: returns location of the forecast
-Parameter Descriptions: n/a
-Return Description: the name of the location
-*/
-std::string WeatherRecord::getLocation() {
+/*!
+ * \brief WeatherRecord::getLocation getter for location
+ * \return location, the city that the WeatherRecord describes
+ */
+std::string WeatherRecord::getLocation() const{
     return location;
 }
 
@@ -177,30 +158,52 @@ Description: returns the temperature for a specified day in Fahrenheit
 Parameter Descriptions: an index representing which day the user wants the temperature for
 Return Description: the temperature for that day in Fahrenheit
 */
-float WeatherRecord::getTempFahren(int index) {
-    return getDays()[index].getTempFaren();
+/*!
+ * \brief WeatherRecord::getTempFahren getter for the temperature in farenheit of a specific day
+ *
+ * Getter for the fahrenheit temperature of a specific day, specified by INDEX,
+ *
+ * \param INDEX const, the index of the day that is being returned
+ * \return the fahrenheit temperature of the day specificed by INDEX
+ */
+float WeatherRecord::getTempFahren(const int INDEX) const {
+    return getDays()[INDEX].getTempFaren();
 }
 
-/*
-Name: getTempCelsius
-Description: returns the temperature for a specified day in Celsius
-Parameter Descriptions: an index representing which day the user wants the temperature for
-Return Description: the temperature for that day in Celsius
-*/
-float WeatherRecord::getTempCelsius(int index) {
-    //TO BE IMPLEMENTED
-    return getDays()[index].getTempCelsius();
+/*!
+ * \brief WeatherRecord::getTempCelsius getter for the temperature in celsius of a specific day
+ *
+ * Getter for the celsius temperature of a specific day, specified by INDEX,
+ *
+ * \param INDEX const, the index of the day that is being returned
+ * \return the celsius temperature of the day specificed by INDEX
+ */
+float WeatherRecord::getTempCelsius(const int INDEX) const {
+    return getDays()[INDEX].getTempCelsius();
 }
 
-Date WeatherRecord::getDate(int index) {
-    //TO BE IMPLEMENTED
-    return getDays()[index].getDate();
+/*!
+ * \brief WeatherRecord::getDate returns the Date of a specific DailyWeather
+ *
+ * returns the Date of one DailyWeather, specified by Index
+ *
+ * \param INDEX const, the index of the DailyWeather whose Date is being returned
+ * \return the Date of the specified day (DailyWeather)
+ */
+Date WeatherRecord::getDate(const int INDEX) const {
+    return getDays()[INDEX].getDate();
 }
 
-string WeatherRecord::getDescription(int index){
-    return getDays()[index].getDescription();
+string WeatherRecord::getDescription(const int INDEX) const{
+    return getDays()[INDEX].getDescription();
 }
-
-int WeatherRecord::getNumDays(){
-        return getDays().size();
+/*!
+ * \brief WeatherRecord::getNumDays returns the number of days of data for this location
+ *
+ * Returns the number of DailyWeather of data that is available for this WeatherRecord
+ *
+ * \return the size of the days array
+ */
+int WeatherRecord::getNumDays() const{
+    return getDays().size();
 }
