@@ -7,496 +7,449 @@
     <x>0</x>
     <y>0</y>
     <width>1133</width>
-    <height>1255</height>
+    <height>1351</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="BackButton">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>11</y>
-     <width>1111</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="input">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>46</y>
-     <width>1111</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string/>
-   </property>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>6</x>
-      <y>7</y>
-      <width>311</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>What is the ticker of the stock you would like to see?</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="searchBar">
-    <property name="geometry">
-     <rect>
-      <x>383</x>
-      <y>12</y>
-      <width>271</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="stocksList">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>12</y>
-      <width>211</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="viewOption">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>368</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>View</string>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_8">
-     <item>
-      <widget class="QRadioButton" name="stockView">
-       <property name="text">
-        <string>Stock Chart</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="listView">
-       <property name="text">
-        <string>Stocks List</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="companyView">
-       <property name="text">
-        <string>Company Information</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="chartOptions">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>160</y>
-     <width>1111</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Stock Chart Options</string>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="title">
-       <string>Chart Price Options</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
-       <item>
-        <widget class="QRadioButton" name="openButton">
-         <property name="text">
-          <string>Open</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="closeButton">
-         <property name="text">
-          <string>Close</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="highButton">
-         <property name="text">
-          <string>High</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="lowButton">
-         <property name="text">
-          <string>Low</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_8">
-      <property name="title">
-       <string>Chart Timeline Options</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
-       <item>
-        <widget class="QRadioButton" name="pastMonth">
-         <property name="text">
-          <string>Past Month</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="pastWeek">
-         <property name="text">
-          <string>Past Week</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="pastMonth2">
-         <property name="text">
-          <string>Past 2 Months</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="pastMonth3">
-         <property name="text">
-          <string>Past 3 Months</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="listOptions">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>263</y>
-     <width>1101</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Stock List Options</string>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="title">
-       <string>Sort by Options</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QRadioButton" name="mCapButton">
-         <property name="text">
-          <string>Market Capitalization</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="alphaButton">
-         <property name="text">
-          <string>Alphabetical</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="title">
-       <string>Sort Order Options</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QRadioButton" name="ascdButton">
-         <property name="text">
-          <string>Ascending</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="descButton">
-         <property name="text">
-          <string>Descending</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="chartFrameBox">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>368</y>
-     <width>1111</width>
-     <height>481</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Stock Chart</string>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_10">
-    <item>
-     <widget class="QFrame" name="chartFrame">
-      <layout class="QHBoxLayout" name="horizontalLayout"/>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="compInfo">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>849</y>
-     <width>1111</width>
-     <height>194</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Company Information</string>
-   </property>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>28</y>
-      <width>1081</width>
-      <height>155</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>12</y>
-       <width>99</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Company Name: </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>35</y>
-       <width>124</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Market Capitalization:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>58</y>
-       <width>70</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>EBIT/Share:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>81</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Current Ratio:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>104</y>
-       <width>76</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Payout Ratio:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>127</y>
-       <width>80</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Gross Margin:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="mCap">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>38</y>
-       <width>881</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
       <string/>
      </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="sortStocks">
+        <property name="title">
+         <string>Sorted Stocks (Only searched stocks)</string>
+        </property>
+        <widget class="QLabel" name="sortedStocks">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>1081</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="compInfo">
+        <property name="title">
+         <string>Company Information</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>28</y>
+           <width>1081</width>
+           <height>155</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>12</y>
+            <width>99</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Company Name: </string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>35</y>
+            <width>124</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Market Capitalization:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>58</y>
+            <width>70</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>EBIT/Share:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>81</y>
+            <width>81</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Current Ratio:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>104</y>
+            <width>76</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Payout Ratio:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>127</y>
+            <width>80</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Gross Margin:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="mCap">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>38</y>
+            <width>881</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="ebitShare">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>61</y>
+            <width>911</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currentRatio">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>84</y>
+            <width>911</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="payoutRatio">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>107</y>
+            <width>911</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="grossMargin">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>130</y>
+            <width>921</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="compName">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>15</y>
+            <width>831</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QLabel" name="ebitShare">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>61</y>
-       <width>911</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="title">
       <string/>
      </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QGroupBox" name="input">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>What is the ticker of the stock you would like to see (ex. AAPL)?</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="searchBar"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="stocksList"/>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="viewOption">
+           <property name="title">
+            <string>View</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QRadioButton" name="stockView">
+              <property name="text">
+               <string>Stock Chart</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="listView">
+              <property name="text">
+               <string>Stocks List</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="companyView">
+              <property name="text">
+               <string>Company Information</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="listOptions">
+        <property name="title">
+         <string>Stock List Options</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>Sort by Options</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QRadioButton" name="mCapButton">
+              <property name="text">
+               <string>Market Capitalization</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="alphaButton">
+              <property name="text">
+               <string>Alphabetical</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Sort Order Options</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QRadioButton" name="ascdButton">
+              <property name="text">
+               <string>Ascending</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="descButton">
+              <property name="text">
+               <string>Descending</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="chartOptions">
+        <property name="title">
+         <string>Stock Chart Options</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Chart Price Options</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QRadioButton" name="openButton">
+              <property name="text">
+               <string>Open</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="closeButton">
+              <property name="text">
+               <string>Close</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="highButton">
+              <property name="text">
+               <string>High</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="lowButton">
+              <property name="text">
+               <string>Low</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_8">
+           <property name="title">
+            <string>Chart Timeline Options</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QRadioButton" name="pastWeek">
+              <property name="text">
+               <string>Past Week</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="pastMonth">
+              <property name="text">
+               <string>Past Month</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="pastMonth2">
+              <property name="text">
+               <string>Past 2 Months</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="pastMonth3">
+              <property name="text">
+               <string>Past 3 Months</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QLabel" name="currentRatio">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>84</y>
-       <width>911</width>
-       <height>16</height>
-      </rect>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="chartFrameBox">
+     <property name="title">
+      <string>Stock Chart</string>
      </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <widget class="QFrame" name="chartFrame">
+        <layout class="QHBoxLayout" name="horizontalLayout"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="BackButton">
      <property name="text">
-      <string/>
+      <string>Back</string>
      </property>
     </widget>
-    <widget class="QLabel" name="payoutRatio">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>107</y>
-       <width>911</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="grossMargin">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>130</y>
-       <width>921</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="compName">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>15</y>
-       <width>831</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="sortStocks">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>1050</y>
-     <width>1111</width>
-     <height>194</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Sorted Stocks (Only searched stocks)</string>
-   </property>
-   <widget class="QLabel" name="sortedStocks">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>1081</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-  </widget>
+   </item>
+  </layout>
  </widget>
  <tabstops>
   <tabstop>BackButton</tabstop>
   <tabstop>searchBar</tabstop>
-  <tabstop>stocksList</tabstop>
   <tabstop>openButton</tabstop>
   <tabstop>closeButton</tabstop>
   <tabstop>highButton</tabstop>
   <tabstop>lowButton</tabstop>
-  <tabstop>pastWeek</tabstop>
   <tabstop>pastMonth</tabstop>
+  <tabstop>pastWeek</tabstop>
  </tabstops>
  <resources/>
  <connections/>

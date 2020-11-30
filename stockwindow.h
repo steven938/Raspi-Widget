@@ -50,10 +50,13 @@ private slots:
     void on_listView_clicked();
     void on_companyView_clicked();
 
+    void on_stocksList_currentIndexChanged(int index);
+
 private:
     Ui::stockWindow *ui;            /*!< a qt-created pointer that represents the window itself*/
     MainWindow * parentWindow;      /*!< the window that created this window*/
     StockCategory category;         /*!< the stock category (singleton) that is being used*/
+    std::vector<StockRecord> sorted;/*!< the sorted records vector*/
     StockRecord *r ;                /*!< the stock record that is currently being used*/
     int stockIndex;                 /*!< indicates which stock is currently being displayed*/
     int chartPrice;                 /*!< indicates what the price displayed on the chart should be; 0 = open, 1 = high, 2 = low, 3 = close*/
@@ -65,6 +68,9 @@ private:
 
     void displayChart(StockRecord);
     void updateDisplay();
+
+    static bool sortAlpha(StockRecord,StockRecord);
+    static bool sortMCap(StockRecord,StockRecord);
 };
 
 #endif // STOCKWINDOW_H

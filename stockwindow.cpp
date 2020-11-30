@@ -90,7 +90,50 @@ void stockWindow::on_BackButton_clicked(){
 
 
 void stockWindow::updateDisplay(){
+
+    // Update the chart based on the options
     displayChart(*r);
+
+
+    // Update the company information section
+
+    ui->compName->setText(QString::fromStdString(r->getCompanyName()));
+    ui->mCap->setText(QString::fromStdString(to_string(((long long)r->getMarketCap()))));
+    ui->ebitShare->setText(QString::fromStdString(to_string(r->getEBITShare())));
+    ui->currentRatio->setText(QString::fromStdString(to_string(r->getCurrentRatio())));
+    ui->payoutRatio->setText(QString::fromStdString(to_string(r->getPayoutRatio())));
+    ui->grossMargin->setText(QString::fromStdString(to_string(r->getGrossMargin())));
+
+
+    // Update the sort stocks section
+
+    // Sort the stocks, dont change the order in the StockCategory, so use another variable
+    sorted = category.getRecords();
+    if(this->sortOption == 0){
+        sort(sorted.begin(),sorted.end(),sortAlpha);
+    }
+    else if (this->sortOption == 1){
+        sort(sorted.begin(),sorted.end(),sortMCap);
+    }
+
+    // If the sort order is descending then reverse the vector
+    if(this->sortOrder == 1){
+        reverse(sorted.begin(),sorted.end());
+    }
+
+    // Generate the output string
+    string sortedOutput = "";
+    for (int i = 0; i < static_cast<int>(sorted.size()); i++){
+        if (i == 0){
+            sortedOutput = sortedOutput + sorted[i].getTicker();
+        }
+        else{
+            sortedOutput = sortedOutput + ", " +sorted[i].getTicker();
+        }
+    }
+    // Print the string on the window
+    ui->sortedStocks->setText(QString::fromStdString(sortedOutput));
+
 }
 
 /*
@@ -100,7 +143,9 @@ Parameter Descriptions: vector of stock records that will be displayed
 Return Description: N/A, displays the chart 
 */
 void stockWindow::displayChart(StockRecord toDisplay){
-    int displayDays;
+    qDebug() << "running display chart with...";
+    qDebug() << chartTime;
+    int displayDays = 0;
     if(this->chartTime == 0){
         displayDays = 7;
     }
@@ -118,8 +163,19 @@ void stockWindow::displayChart(StockRecord toDisplay){
     
     // add the data from toDisplay into the line series
     for (int i = displayDays; i >= 0; i --){
-        //cerr << i << " " << toDisplay[0].getClose((toDisplay.size() - i)) << endl;
-        series->append(i,toDisplay.getClose((displayDays+1 - i)));
+        //cerr << i << " " << toDisplay.getClose((displayDays - i)) << endl;
+        if(this->chartPrice == 0){
+            series->append(i,toDisplay.getOpen((displayDays+1 - i)));
+        }
+        else if(this->chartPrice == 1){
+            series->append(i,toDisplay.getHigh((displayDays+1 - i)));
+        }
+        else if(this->chartPrice == 2){
+            series->append(i,toDisplay.getLow((displayDays+1 - i)));
+        }
+        else if(this->chartPrice == 3){
+            series->append(i,toDisplay.getClose((displayDays+1 - i)));
+        }
     }
 
     // Create a chart, and add the series to the chart
@@ -138,26 +194,22 @@ void stockWindow::displayChart(StockRecord toDisplay){
         string date = toDisplay.getDate(i);
         QString qdate = QString::fromStdString(date);
         axisX->append(qdate,displayDays - i - 1);
-        qDebug() << qdate;
-        qDebug() << axisX;
     }
     chart->setAxisX(axisX, series);
 
-    // Create a legend for the chart
-    chart->legend()->setVisible(true);
-    chart->legend()->setAlignment(Qt::AlignBottom);
 
     // Create a chartview to display the chart, and dispay the chart in the correct location
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->setParent(ui->chartFrame);
+    chartView->repaint();
 
 }
 
 void stockWindow::on_searchBar_returnPressed()
 {
     category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
-    r = new StockRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
+    r = new StockRecord(category.getRecords()[category.getRecords().size()-1]);          //Accesses the first weatherrecord in the category's records vector.
     displayChart(*r);
     updateDisplay();                                        //Updates the data on display
 
@@ -285,4 +337,24 @@ void stockWindow::on_companyView_clicked()
     ui->chartFrameBox->hide();
     ui->chartOptions->hide();
     ui->listOptions->hide();
+}
+
+
+bool stockWindow::sortAlpha(StockRecord a,StockRecord b){
+    if(a.getTicker().compare(b.getTicker()) <= 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool stockWindow::sortMCap(StockRecord a,StockRecord b){
+    return a.getMarketCap() < b.getMarketCap();
+}
+
+void stockWindow::on_stocksList_currentIndexChanged(int index)
+{
+    r = new StockRecord(category.getRecords()[index]);
+    updateDisplay();
 }
