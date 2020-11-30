@@ -17,6 +17,9 @@ class WeatherWindow;
  * \brief The WeatherWindow class displays weather data
  *
  * The WeatherWindow class interacts with WeatherCategory to present weather data. It takes in input from the user and presents output back to them.
+ *
+ *@author Adam Miller
+ *@date 2020-11-11
  */
 class WeatherWindow : public QWidget
 {

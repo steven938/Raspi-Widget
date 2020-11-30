@@ -79,7 +79,7 @@ void WeatherWindow::on_searchBar_returnPressed(){
         ui->dailyButton->setEnabled(true);
         ui->weekButton->setEnabled(true);
         ui->citiesBox->addItem(ui->searchBar->text());
-        cityIndex = category.getRecords().size()-1;
+        cityIndex = category.getRecords().size()-1;             //sets the correct cityIndex, meaning that the dropdown displays the correct city
         ui->citiesBox->setCurrentIndex(cityIndex);
     }catch(...){                                                //in case the search string is an invalid city
         ErrorBox * error = new ErrorBox();
@@ -122,20 +122,45 @@ void WeatherWindow::updateDisplay(){
     } else {
         temp = r->getTempCelsius(dayCounter);
     }
-    if (weekOrDay == 0){
+    if (weekOrDay == 0){                                    //this means we are displaying in daily view
         ui->temp->display(temp);
-        ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
-        cerr<<r->getLocation()<<endl;
         //displays location, date, and description for current DailyWeather.
+        ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
         ui->dateLabel->setText(QString::fromStdString(r->getDate(dayCounter).getStr()));
         ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
-    } else if (weekOrDay == 1){
+    } else if (weekOrDay == 1){                              //this means we are displaying in timeline view
+        //sets 5-days of description
         ui->desc_day1->setText(QString::fromStdString(r->getDescription(0)));
         ui->desc_day2->setText(QString::fromStdString(r->getDescription(1)));
         ui->desc_day3->setText(QString::fromStdString(r->getDescription(2)));
         ui->desc_day4->setText(QString::fromStdString(r->getDescription(3)));
         ui->desc_day5->setText(QString::fromStdString(r->getDescription(4)));
-        //ui->dateLabel->setText(QString::fromStdString(r->getDate(0).getStr());
+        //sets 5 days of Dates
+        ui->date_1->setText(QString::fromStdString(r->getDate(0).getStr()));
+        ui->date_2->setText(QString::fromStdString(r->getDate(1).getStr()));
+        ui->date_3->setText(QString::fromStdString(r->getDate(2).getStr()));
+        ui->date_4->setText(QString::fromStdString(r->getDate(3).getStr()));
+        ui->date_5->setText(QString::fromStdString(r->getDate(4).getStr()));
+
+        string title = "Weather by Week: " + r->getLocation();      //sets the title of the box to be for the correct location
+        ui->weatherByWeek->setTitle(QString::fromStdString(title));
+
+        switch (cORf){                                              //sets 5 days of temperature in either celsius or farenheit
+        case 0:
+            ui->temp_1->display(r->getTempFahren(0));
+            ui->temp_2->display(r->getTempFahren(1));
+            ui->temp_3->display(r->getTempFahren(2));
+            ui->temp_4->display(r->getTempFahren(3));
+            ui->temp_5->display(r->getTempFahren(4));
+            break;
+        case 1:
+            ui->temp_1->display(r->getTempCelsius(0));
+            ui->temp_2->display(r->getTempCelsius(1));
+            ui->temp_3->display(r->getTempCelsius(2));
+            ui->temp_4->display(r->getTempCelsius(3));
+            ui->temp_5->display(r->getTempCelsius(4));
+            break;
+        }
     }
 
 }
@@ -213,7 +238,7 @@ void WeatherWindow::on_nextButton_clicked()
 }
 
 /*!
- * \brief WeatherWindow::on_citiesBox_currentIndex Changed switches the city displayed
+ * \brief WeatherWindow::on_citiesBox_currentIndexChanged switches the city displayed
  *
  * This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles WeatherWindow::updateDisplay() to update the display
  *
@@ -226,7 +251,12 @@ void WeatherWindow::on_citiesBox_currentIndexChanged(const int INDEX)
 }
 
 
-
+/*!
+ * \brief WeatherWindow::on_weekButton_clicked switches the display from daily view to timeline view
+ *
+ * Updates weekOrDay and runs WeatherWindow::updateDisplay() to switch to timeline view
+ *
+ */
 void WeatherWindow::on_weekButton_clicked()
 {
     ui->weatherByDay->hide();
@@ -237,7 +267,12 @@ void WeatherWindow::on_weekButton_clicked()
 
 
 }
-
+/*!
+ * \brief WeatherWindow::on_dailyButton_clicked switches the display from timeline view to daily view
+ *
+ * Updates weekOrDay and runs WeatherWindow::updateDisplay to switch to timeline view
+ *
+ */
 void WeatherWindow::on_dailyButton_clicked()
 {
     weekOrDay = 0;
