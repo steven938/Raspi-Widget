@@ -43,6 +43,9 @@ private slots:
     void on_prevButton_clicked();
     void on_nextButton_clicked();
     void on_citiesBox_currentIndexChanged(const int INDEX);
+    void on_dateEdit_userDateChanged(const QDate &date);
+    void on_weekButton_clicked();
+    void on_dailyButton_clicked();
 };
 
 #endif // WEATHERWINDOW_H

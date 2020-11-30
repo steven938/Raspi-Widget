@@ -1,6 +1,10 @@
 var searchData=
 [
   ['on_5fbackbutton_5fclicked_17',['on_BackButton_clicked',['../classWeatherWindow.html#aa6fc21e33c0df542c3d89463dde2f5aa',1,'WeatherWindow']]],
-  ['on_5fcitiesbox_5fcurrentindexchanged_18',['on_citiesBox_currentIndexChanged',['../classWeatherWindow.html#a9d0bb268aedb43fb6d4ac289f1936a95',1,'WeatherWindow']]],
-  ['on_5fsearchbar_5freturnpressed_19',['on_searchBar_returnPressed',['../classWeatherWindow.html#a11a34a20711c55063b8f5cf7aa001687',1,'WeatherWindow']]]
+  ['on_5fcelcbutton_5fclicked_18',['on_celcButton_clicked',['../classWeatherWindow.html#ac6c762f3f4702ad7c58962870ab6f7af',1,'WeatherWindow']]],
+  ['on_5fcitiesbox_5fcurrentindexchanged_19',['on_citiesBox_currentIndexChanged',['../classWeatherWindow.html#a87962d906aceabc6cc911353a9341bed',1,'WeatherWindow']]],
+  ['on_5ffarenbutton_5fclicked_20',['on_farenButton_clicked',['../classWeatherWindow.html#a5b2b7206172886374691bfe2fc18e3a4',1,'WeatherWindow']]],
+  ['on_5fnextbutton_5fclicked_21',['on_nextButton_clicked',['../classWeatherWindow.html#af0e2459f9e29a676521390861535a118',1,'WeatherWindow']]],
+  ['on_5fprevbutton_5fclicked_22',['on_prevButton_clicked',['../classWeatherWindow.html#a8a8b495c39990d43b8cc3b8b38fae247',1,'WeatherWindow']]],
+  ['on_5fsearchbar_5freturnpressed_23',['on_searchBar_returnPressed',['../classWeatherWindow.html#a11a34a20711c55063b8f5cf7aa001687',1,'WeatherWindow']]]
 ];

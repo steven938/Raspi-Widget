@@ -41,20 +41,16 @@ void \mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{on\+
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}{Weather\+Window\+::on\+\_\+search\+Bar\+\_\+return\+Pressed}} Sets up the window to display information for a given location. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{on\+\_\+\+Back\+Button\+\_\+clicked}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{Weather\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} is called when the back button is clicked. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}\label{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}} 
-void {\bfseries on\+\_\+celc\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}\label{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}} 
-void {\bfseries on\+\_\+faren\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}\label{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}} 
-void {\bfseries on\+\_\+prev\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classWeatherWindow_af0e2459f9e29a676521390861535a118}\label{classWeatherWindow_af0e2459f9e29a676521390861535a118}} 
-void {\bfseries on\+\_\+next\+Button\+\_\+clicked} ()
-\item 
-void \mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} (int index)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}{on\+\_\+celc\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}{Weather\+Window\+::on\+\_\+celc\+Button\+\_\+clicked}} changes display to celcius. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}{on\+\_\+faren\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}{Weather\+Window\+::on\+\_\+faren\+Button\+\_\+clicked}} changes display to fahrenheit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}{on\+\_\+prev\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}{Weather\+Window\+::on\+\_\+prev\+Button\+\_\+clicked}} shows the previous day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{on\+\_\+next\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{Weather\+Window\+::on\+\_\+next\+Button\+\_\+clicked}} shows the previous day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}{on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} (const int I\+N\+D\+EX)
+\begin{DoxyCompactList}\small\item\em Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index Changed switches the city displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -127,15 +123,25 @@ Deallocates dynamically allocated memory, destroying the object
 
 \mbox{\hyperlink{classWeatherWindow_aa6fc21e33c0df542c3d89463dde2f5aa}{Weather\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} is called when the back button is clicked. 
 
-Called when the back buttin is clicked. Closes the window and returns to the main window \mbox{\Hypertarget{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}\label{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}} 
+Called when the back buttin is clicked. Closes the window and returns to the main window \mbox{\Hypertarget{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}\label{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}} 
+\index{WeatherWindow@{WeatherWindow}!on\_celcButton\_clicked@{on\_celcButton\_clicked}}
+\index{on\_celcButton\_clicked@{on\_celcButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_celcButton\_clicked}{on\_celcButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+celc\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_ac6c762f3f4702ad7c58962870ab6f7af}{Weather\+Window\+::on\+\_\+celc\+Button\+\_\+clicked}} changes display to celcius. 
+
+Called when the celcius radio button is clicked. Updates display so that data is in celcius; does this by updating CorF \mbox{\Hypertarget{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}\label{classWeatherWindow_a87962d906aceabc6cc911353a9341bed}} 
 \index{WeatherWindow@{WeatherWindow}!on\_citiesBox\_currentIndexChanged@{on\_citiesBox\_currentIndexChanged}}
 \index{on\_citiesBox\_currentIndexChanged@{on\_citiesBox\_currentIndexChanged}!WeatherWindow@{WeatherWindow}}
 \doxysubsubsection{\texorpdfstring{on\_citiesBox\_currentIndexChanged}{on\_citiesBox\_currentIndexChanged}}
-{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{const int}]{I\+N\+D\+EX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
-\mbox{\hyperlink{classWeatherWindow_a9d0bb268aedb43fb6d4ac289f1936a95}{Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index\+Changed}} switches the city displayed. 
+Weather\+Window\+::on\+\_\+cities\+Box\+\_\+current\+Index Changed switches the city displayed. 
 
 This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles \mbox{\hyperlink{classWeatherWindow_a8ef6627a2919021621af477fbb113c48}{Weather\+Window\+::update\+Display()}} to update the display
 
@@ -144,7 +150,39 @@ This function is called when the user clicks on a city in the visual cities list
 {\em index} & the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}\label{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}} 
+\mbox{\Hypertarget{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}\label{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}} 
+\index{WeatherWindow@{WeatherWindow}!on\_farenButton\_clicked@{on\_farenButton\_clicked}}
+\index{on\_farenButton\_clicked@{on\_farenButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_farenButton\_clicked}{on\_farenButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+faren\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a5b2b7206172886374691bfe2fc18e3a4}{Weather\+Window\+::on\+\_\+faren\+Button\+\_\+clicked}} changes display to fahrenheit. 
+
+Called when the Fahrenheit radio button is clicked. Updates display so that data is in farenheit \mbox{\Hypertarget{classWeatherWindow_af0e2459f9e29a676521390861535a118}\label{classWeatherWindow_af0e2459f9e29a676521390861535a118}} 
+\index{WeatherWindow@{WeatherWindow}!on\_nextButton\_clicked@{on\_nextButton\_clicked}}
+\index{on\_nextButton\_clicked@{on\_nextButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_nextButton\_clicked}{on\_nextButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+next\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{Weather\+Window\+::on\+\_\+next\+Button\+\_\+clicked}} shows the previous day. 
+
+Called when the next day button is clicked. Increments day\+Counter to show the next day\textquotesingle{}s data
+
+\mbox{\hyperlink{classWeatherWindow_af0e2459f9e29a676521390861535a118}{Weather\+Window\+::on\+\_\+next\+Button\+\_\+clicked}} \mbox{\Hypertarget{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}\label{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}} 
+\index{WeatherWindow@{WeatherWindow}!on\_prevButton\_clicked@{on\_prevButton\_clicked}}
+\index{on\_prevButton\_clicked@{on\_prevButton\_clicked}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{on\_prevButton\_clicked}{on\_prevButton\_clicked}}
+{\footnotesize\ttfamily void Weather\+Window\+::on\+\_\+prev\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classWeatherWindow_a8a8b495c39990d43b8cc3b8b38fae247}{Weather\+Window\+::on\+\_\+prev\+Button\+\_\+clicked}} shows the previous day. 
+
+Called when the previous day button is clicked. Decrements day\+Counter to show the previous day\textquotesingle{}s data \mbox{\Hypertarget{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}\label{classWeatherWindow_a11a34a20711c55063b8f5cf7aa001687}} 
 \index{WeatherWindow@{WeatherWindow}!on\_searchBar\_returnPressed@{on\_searchBar\_returnPressed}}
 \index{on\_searchBar\_returnPressed@{on\_searchBar\_returnPressed}!WeatherWindow@{WeatherWindow}}
 \doxysubsubsection{\texorpdfstring{on\_searchBar\_returnPressed}{on\_searchBar\_returnPressed}}

@@ -209,3 +209,22 @@ void WeatherWindow::on_citiesBox_currentIndexChanged(const int INDEX)
     *r = category.getRecords()[INDEX];
     updateDisplay();
 }
+
+void WeatherWindow::on_dateEdit_userDateChanged(const QDate &date)
+{
+
+}
+
+void WeatherWindow::on_weekButton_clicked()
+{
+    ui->weatherByDay->hide();
+    ui->weatherByWeek->show();
+
+
+}
+
+void WeatherWindow::on_dailyButton_clicked()
+{
+    ui->weatherByDay->show();
+    ui->weatherByWeek->hide();
+}
