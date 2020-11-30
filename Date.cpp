@@ -7,104 +7,134 @@ Date: 2020-11-04
 #include <string>
 #include <exception>
 using namespace std;
-/*
-Name: Constructor
-Description: Constructs a Date object given a day, month, and year
-Parameter Descriptions: day: a day between 0-31; month: a month betwee 1-12; year a year >0
-Return Description: N/A
-*/
-Date::Date(int day, int month, int year) {
+
+/*!
+ * \brief Date::Date constructor for date
+ *
+ * Constructs a Date object given a day, month, and year. Throws an exception if the date is invalid
+ *
+ * \param day a day between 0-31
+ * \param month a month betwee 1-12;
+ * \param year a year >0
+ */
+Date::Date(const int DAY, const int MONTH, const int YEAR) {
     // check that days, month, and year are not too small and that months is not greater than 12
-    if (year < 0 || month < 1 || day < 1 || month > 12)
+    if (YEAR < 0 || MONTH < 1 || DAY < 1 || MONTH > 12)
         throw "Invalid date";
 
     // check days in January, March, May, July, August, October, December are not greater than 31
-    if (day > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12))
+    if (DAY > 31 && (MONTH == 1 || MONTH == 3 || MONTH == 5 || MONTH == 7 || MONTH == 8 || MONTH == 10 || MONTH == 12))
         throw "Invalid date";
 
     // check days in April, June, September, November are not greater than 30
-    if (day > 30 && (month == 4 || month == 6 || month == 9 || month == 11))
+    if (DAY > 30 && (MONTH == 4 || MONTH == 6 || MONTH == 9 || MONTH == 11))
         throw "Invalid date";
 
     // check that days in february are not greater than 29 on leap years
-    if (day > 29 && month == 2 && year % 4 == 0)
+    if (DAY > 29 && MONTH == 2 && YEAR % 4 == 0)
         throw "Invalid date";
 
     // check that days in february are not greater 28 on common years
-    if (day > 28 && month == 2 && year % 4 != 0) {
+    if (DAY > 28 && MONTH == 2 && YEAR % 4 != 0) {
         throw "Invalid date";
     }
 
-    this->day = day;
-    this->month = month;
-    this->year = year;
+    this->day = DAY;
+    this->month = MONTH;
+    this->year = YEAR;
 }
+/*!
+ * \brief Date::Date constructor
+ *
+ * Default constructor - creates a Date with no member data.
+ */
 Date::Date(){
 
 }
-/*
-Name: Destructor 
-Description: Destroys the date object
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+
+/*!
+ * \brief Date::~Date destructor
+ *
+ * Destroys the date object - doesn't do anything as the Date object has no member data
+ */
 Date::~Date(){
     ;
 }
-/*
-Name: getMonth 
-Description: getter for month
-Parameter Descriptions: N/A
-Return Description: month; the Month of the Date
-*/
+
+/*!
+ * \brief Date::getMonth getter for month
+ *
+ * Gets the month of the Date
+ *
+ * \return an int (1-12) representing the month of the Date
+ */
 int Date::getMonth() const{
     return this->month;
 }
-/*
-Name: getDay 
-Description: getter for day 
-Parameter Descriptions: N/A
-Return Description: day, the Day of the Date
-*/
+
+/*!
+ * \brief Date::getDay getter for day
+ *
+ * returns the day of the Date
+ *
+ * \return an int (1-31) representing the day of the Date
+ */
 int Date::getDay() const{
     return this->day;
 }
-/* 
-Name: getYear 
-Description: getter for Year
-Parameter Descriptions: N/A
-Return Description: year; the year of the Date
-*/
+
+/*!
+ * \brief Date::getYear getter for year
+ *
+ *returns the year of the Date
+ *
+ * \return an int > 0 representing the year of the Date
+ */
 int Date::getYear() const{
     return this->year;
 }
-/*
-Name: getStr
-Description: allows the representation of the date as a string, with the Format "Month, Day, Year", e.g. February 28, 2019 
-Parameter Descriptions: N/A
-Return Description: Returns the Date as a String in the format:
-Month (Written Out), Day, Year: February 28, 2019
-*/
+
+/*!
+ * \brief Date::getStr returns a string representation of the Date
+ *
+ * allows the representation of the date as a string, with the Format "Month Day, Year", e.g. February 28, 2019
+ * \return the Date as a String in the format: Month (Written Out), Day, Year: February 28, 2019
+ */
 string Date::getStr() const{
-    return this->monthName[this->month] + '/' + to_string(this->day) + ", " + to_string(this->year); //dummy
+    return this->monthName[this->month] + ' ' + to_string(this->day) + ", " + to_string(this->year); //dummy
 }
 
 
-/*
-Name: getStr2
-Description: allows the representation of the date as a string, with the Format "DD/MM/YYYY" , e.g. 01/01/2020
-Parameter Descriptions: N/A
-Return Description: Returns the Date as a String in the format:
-Month (Written Out), Day, Year: February 28, 2019
-*/
+/*!
+ * \brief Date::getStr2 returns a string representation of the Date
+ * allows the representation of the date as a string, with the Format "DD/MM/YYYY" , e.g. 01/01/2020
+
+ * \return the Date as a String in the format: "DD/MM/YYYY" e.g. 05/12/1999
+ */
 string Date::getStr2() const{
     return to_string(this->day) + "/" + to_string(this->month)+ "/" +  to_string(this->year); //dummy
 }
-
+/*!
+ * \brief Date::operator == overloaded = operator to determine if two Dates are the same
+ *
+ * Determines if Date s are the same, comapring on Year, Month, and Day
+ *
+ * \param other the Date being compared to
+ * \return true if the Date s are equal, false otherwise
+ */
 bool Date::operator==(const Date& other){
     return this->year == other.getYear() && this->month == other.getMonth() && this->day == other.getDay();
 }
 
+/*!
+ * \brief Date::operator != overloaded != operator to determine if two Dates are not the same
+ *
+ *  Determines if Date s are unequal, comparing on Year, Month, and Day
+ *
+ * \param other the Date being compared to
+ * \return true if the Date s are unequal, false otherwise
+ */
 bool Date::operator!=(const Date& other){
     return this->year != other.getYear() || this->month != other.getMonth() || this->day != other.getDay();
 }

@@ -2,7 +2,17 @@
 \label{classCategoryADT}\index{CategoryADT@{CategoryADT}}
 
 
-Inheritance diagram for Category\+A\+DT\+:\nopagebreak
+The \mbox{\hyperlink{classCategoryADT}{Category\+A\+DT}} class describes a category of information. Abstract class.  
+
+
+
+
+{\ttfamily \#include $<$Category\+A\+D\+T.\+h$>$}
+
+
+
+Inheritance diagram for Category\+A\+DT\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,19 +22,54 @@ Inheritance diagram for Category\+A\+DT\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCategoryADT_ab920abf53526fe6ede5d4c60bed5d2cf}\label{classCategoryADT_ab920abf53526fe6ede5d4c60bed5d2cf}} 
-virtual \mbox{\hyperlink{classRecord}{Record}} {\bfseries search} (std\+::string)=0
-\item 
-\mbox{\Hypertarget{classCategoryADT_ad461a364e071860848cb8f226b9b28e2}\label{classCategoryADT_ad461a364e071860848cb8f226b9b28e2}} 
-virtual void {\bfseries sort} (int type, bool ascend)=0
-\end{DoxyCompactItemize}
+virtual \mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{search}} (const std\+::string)=0
+\begin{DoxyCompactList}\small\item\em search creates and returns a record based on a given search string \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCategoryADT_a11504f4f26098803fed3c42a8f24c57e}\label{classCategoryADT_a11504f4f26098803fed3c42a8f24c57e}} 
-std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$ {\bfseries records}
+std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$ \mbox{\hyperlink{classCategoryADT_a11504f4f26098803fed3c42a8f24c57e}{records}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCategoryADT}{Category\+A\+DT}} class describes a category of information. Abstract class. 
+
+Abstract class for a category, created to set virtual methods needed to be implemented in each category. \begin{DoxyAuthor}{Author}
+Dhyey Patel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/11-\/04 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}\label{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}} 
+\index{CategoryADT@{CategoryADT}!search@{search}}
+\index{search@{search}!CategoryADT@{CategoryADT}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classRecord}{Record}} Category\+A\+D\+T\+::search (\begin{DoxyParamCaption}\item[{const std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+search creates and returns a record based on a given search string 
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{classRecord}{Record}} based on the search string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}{News\+Category}}, \mbox{\hyperlink{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}{Stock\+Category}}, and \mbox{\hyperlink{classWeatherCategory_a28384c696e8755309941260fcfee70b7}{Weather\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCategoryADT_a11504f4f26098803fed3c42a8f24c57e}\label{classCategoryADT_a11504f4f26098803fed3c42a8f24c57e}} 
+\index{CategoryADT@{CategoryADT}!records@{records}}
+\index{records@{records}!CategoryADT@{CategoryADT}}
+\doxysubsubsection{\texorpdfstring{records}{records}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classRecord}{Record}}$>$ Category\+A\+D\+T\+::records\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector to store the records for the given \mbox{\hyperlink{classCategoryADT}{Category\+A\+DT}} 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

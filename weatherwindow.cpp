@@ -54,7 +54,6 @@ WeatherWindow::WeatherWindow(MainWindow *Window, QWidget *parent) :
  */
 WeatherWindow::~WeatherWindow()
 {
-    //TO BE IMPLEMENTED - INCOMPLETE
     delete ui;
     delete parentWindow;
     delete r;
@@ -70,10 +69,8 @@ void WeatherWindow::on_searchBar_returnPressed(){
         category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
         delete r;
         r = new WeatherRecord(category.getRecords()[0]);        //Accesses the first weatherrecord in the category's records vector.
-        //For the next stage, this will be implemented so that we can access any of
-        //the searches - currently, only the first search can be accessed
         updateDisplay();                                        //Updates the data on display
-        //the next four lines enable the buttons that the user uses to interract with data
+        //the next several lines enable the buttons that the user uses to interract with data
         ui->prevButton->setEnabled(true);
         ui->nextButton->setEnabled(true);
         ui->celcButton->setEnabled(true);
@@ -126,21 +123,22 @@ void WeatherWindow::updateDisplay(){
         temp = r->getTempCelsius(dayCounter);
     }
     if (weekOrDay == 0){
-    ui->temp->display(temp);
-    ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
-    cerr<<r->getLocation()<<endl;
-    //displays location, date, and description for current DailyWeather.
-    ui->dateLabel->setText(QString::fromStdString(r->getDate(dayCounter).getStr()));
-    ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
+        ui->temp->display(temp);
+        ui->locationLabel->setText(QString::fromStdString(r->getLocation()));
+        cerr<<r->getLocation()<<endl;
+        //displays location, date, and description for current DailyWeather.
+        ui->dateLabel->setText(QString::fromStdString(r->getDate(dayCounter).getStr()));
+        ui->descLabel->setText(QString::fromStdString(r->getDescription(dayCounter)));
     } else if (weekOrDay == 1){
         ui->desc_day1->setText(QString::fromStdString(r->getDescription(0)));
         ui->desc_day2->setText(QString::fromStdString(r->getDescription(1)));
         ui->desc_day3->setText(QString::fromStdString(r->getDescription(2)));
         ui->desc_day4->setText(QString::fromStdString(r->getDescription(3)));
         ui->desc_day5->setText(QString::fromStdString(r->getDescription(4)));
+        //ui->dateLabel->setText(QString::fromStdString(r->getDate(0).getStr());
     }
 
-    }
+}
 
 /*!
  * \brief WeatherWindow::on_celcButton_clicked changes display to celcius
@@ -181,7 +179,7 @@ void WeatherWindow::on_prevButton_clicked()
         error->setFont(font);
         error->setWindowTitle("Error");
         error->error("There is no previous day!");
-         error->setAttribute(Qt::WA_DeleteOnClose,true);
+        error->setAttribute(Qt::WA_DeleteOnClose,true);
         error->show();
         return;
     }
@@ -206,7 +204,7 @@ void WeatherWindow::on_nextButton_clicked()
         error->setFont(font);
         error->setWindowTitle("Error");
         error->error("There is no next day!");
-         error->setAttribute(Qt::WA_DeleteOnClose,true);
+        error->setAttribute(Qt::WA_DeleteOnClose,true);
         error->show();
         return;
     }
@@ -227,10 +225,7 @@ void WeatherWindow::on_citiesBox_currentIndexChanged(const int INDEX)
     updateDisplay();
 }
 
-void WeatherWindow::on_dateEdit_userDateChanged(const QDate &date)
-{
 
-}
 
 void WeatherWindow::on_weekButton_clicked()
 {
@@ -248,6 +243,6 @@ void WeatherWindow::on_dailyButton_clicked()
     weekOrDay = 0;
     ui->weatherByDay->show();
     ui->weatherByWeek->hide();
-     updateDisplay();
+    updateDisplay();
 }
 

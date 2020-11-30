@@ -1,6 +1,6 @@
 <map id="NewsRecord" name="NewsRecord">
 <area shape="rect" id="node1" title=" " alt="" coords="69,184,172,211"/>
 <area shape="rect" id="node2" href="$classRecord.html" title=" " alt="" coords="26,95,93,121"/>
-<area shape="rect" id="node3" href="$classCategoryADT.html" title=" " alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node3" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="5,5,113,32"/>
 <area shape="rect" id="node4" href="$classDate.html" title=" " alt="" coords="117,95,170,121"/>
 </map>

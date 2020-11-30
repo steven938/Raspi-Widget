@@ -77,7 +77,7 @@ Inheritance diagram for StockCategory:</div>
 <div class="center"><img src="classStockCategory__inherit__graph.png" border="0" usemap="#StockCategory_inherit__map" alt="Inheritance graph"/></div>
 <map name="StockCategory_inherit__map" id="StockCategory_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,80,123,107"/>
-<area shape="rect" href="classCategoryADT.html" title=" " alt="" coords="10,5,118,32"/>
+<area shape="rect" href="classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="10,5,118,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -86,7 +86,7 @@ Collaboration diagram for StockCategory:</div>
 <div class="center"><img src="classStockCategory__coll__graph.png" border="0" usemap="#StockCategory_coll__map" alt="Collaboration graph"/></div>
 <map name="StockCategory_coll__map" id="StockCategory_coll__map">
 <area shape="rect" title=" " alt="" coords="5,80,123,107"/>
-<area shape="rect" href="classCategoryADT.html" title=" " alt="" coords="10,5,118,32"/>
+<area shape="rect" href="classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="10,5,118,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -95,8 +95,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90986c68779c33173c29f8c462281ccc"><td class="memItemLeft" align="right" valign="top"><a id="a90986c68779c33173c29f8c462281ccc"></a>
 std::vector&lt; <a class="el" href="classRecord.html">Record</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRecords</b> ()</td></tr>
 <tr class="separator:a90986c68779c33173c29f8c462281ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a674f9b4e2310c1537d21b42283fe57bf"><td class="memItemLeft" align="right" valign="top"><a id="a674f9b4e2310c1537d21b42283fe57bf"></a>
-<a class="el" href="classRecord.html">Record</a>&#160;</td><td class="memItemRight" valign="bottom"><b>search</b> (std::string searchString)</td></tr>
+<tr class="memitem:a674f9b4e2310c1537d21b42283fe57bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRecord.html">Record</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">search</a> (std::string searchString)</td></tr>
+<tr class="memdesc:a674f9b4e2310c1537d21b42283fe57bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">search creates and returns a record based on a given search string  <a href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">More...</a><br /></td></tr>
 <tr class="separator:a674f9b4e2310c1537d21b42283fe57bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdedf0fead5a4cd607a699627b252987"><td class="memItemLeft" align="right" valign="top"><a id="abdedf0fead5a4cd607a699627b252987"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sort</b> (int type, bool ascend)</td></tr>
@@ -114,6 +114,38 @@ Private Attributes</h2></td></tr>
 std::vector&lt; <a class="el" href="classStockRecord.html">StockRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>records</b></td></tr>
 <tr class="separator:a154576449721d3739f073b09faa6c586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a674f9b4e2310c1537d21b42283fe57bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674f9b4e2310c1537d21b42283fe57bf">&#9670;&nbsp;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRecord.html">Record</a> StockCategory::search </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>search creates and returns a record based on a given search string </p>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classRecord.html">Record</a> based on the search string </dd></dl>
+
+<p>Implements <a class="el" href="classCategoryADT.html#ad8cc5206c724e932fc8b7dc31e95e4a3">CategoryADT</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="StockCategory_8h_source.html">StockCategory.h</a></li>
 <li>StockCategory.cpp</li>

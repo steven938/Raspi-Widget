@@ -31,7 +31,7 @@ public:
     int getNumDays() const;
 
 private:
-    std::string location; /*!<Name of the location that the weather record corresponds to*/
+    std::string location;           /*!< Name of the location that the weather record corresponds to*/
     std::vector<DailyWeather> days; /*!< vector of information on weather for several days*/
     float convertTemp(const float TEMP, const char FROM) const;
 

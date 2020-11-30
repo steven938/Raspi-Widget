@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['_7emainwindow_95',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7eweathercategory_96',['~WeatherCategory',['../classWeatherCategory.html#ab6edfb7e09dc1ac4ec2478594f06b00e',1,'WeatherCategory']]],
-  ['_7eweatherrecord_97',['~WeatherRecord',['../classWeatherRecord.html#acebb4605cd7521efa06ede637c7db50a',1,'WeatherRecord']]],
-  ['_7eweatherwindow_98',['~WeatherWindow',['../classWeatherWindow.html#a43dc7d671eb0005219fa5962b23d7c1b',1,'WeatherWindow']]]
+  ['weathercategory_98',['WeatherCategory',['../classWeatherCategory.html#a657269d23858c937ce084638d9e86f96',1,'WeatherCategory']]],
+  ['weatherrecord_99',['WeatherRecord',['../classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12',1,'WeatherRecord::WeatherRecord(const std::string LOCATION)'],['../classWeatherRecord.html#a183ae5f50ab14a86f3e6cd61407021fb',1,'WeatherRecord::WeatherRecord(const WeatherRecord &amp;wr2)']]],
+  ['weatherwindow_100',['WeatherWindow',['../classWeatherWindow.html#a989cfd8d59594b2718d5bf98377998c6',1,'WeatherWindow']]]
 ];

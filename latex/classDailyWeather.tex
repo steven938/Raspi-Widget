@@ -2,7 +2,17 @@
 \label{classDailyWeather}\index{DailyWeather@{DailyWeather}}
 
 
-Collaboration diagram for Daily\+Weather\+:\nopagebreak
+The \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} class describes the weather in a given location on a single day.  
+
+
+
+
+{\ttfamily \#include $<$Daily\+Weather.\+h$>$}
+
+
+
+Collaboration diagram for Daily\+Weather\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,20 +22,20 @@ Collaboration diagram for Daily\+Weather\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDailyWeather_a58356481f53bd1b82252911ff4ed5fd3}\label{classDailyWeather_a58356481f53bd1b82252911ff4ed5fd3}} 
-{\bfseries Daily\+Weather} (float temp\+Celsius, float temp\+Faren, std\+::string description, \mbox{\hyperlink{classDate}{Date}} date)
+\mbox{\hyperlink{classDailyWeather_a74287bf60b74409e13cd4953d1fb4d13}{Daily\+Weather}} (const float T\+E\+M\+P\+F\+A\+R\+EN, const float T\+E\+M\+P\+C\+E\+L\+S\+I\+US, const std\+::string D\+E\+S\+C\+R\+I\+P\+T\+I\+ON, const \mbox{\hyperlink{classDate}{Date}} D\+A\+T\+E\+IN)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyWeather_a74287bf60b74409e13cd4953d1fb4d13}{Daily\+Weather\+::\+Daily\+Weather}} constructs a \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDailyWeather_a6e48747ff1d99f5e1ed6c2d0d8fb927d}{$\sim$\+Daily\+Weather}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyWeather_a6e48747ff1d99f5e1ed6c2d0d8fb927d}{Daily\+Weather\+::$\sim$\+Daily\+Weather}} destructor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDailyWeather_a6e464e99f25e833e68e15435a38aa7d4}{get\+Temp\+Faren}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyWeather_a6e464e99f25e833e68e15435a38aa7d4}{Daily\+Weather\+::get\+Temp\+Faren}} getter for temp\+Faren. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDailyWeather_a8cef4af97313ee7c1160be8c2b4ed13a}\label{classDailyWeather_a8cef4af97313ee7c1160be8c2b4ed13a}} 
+float {\bfseries get\+Temp\+Celsius} () const
 \item 
-\mbox{\Hypertarget{classDailyWeather_abfcb8338f33d5163533203a9129b44d8}\label{classDailyWeather_abfcb8338f33d5163533203a9129b44d8}} 
-float {\bfseries get\+Temp\+Faren} ()
+\mbox{\Hypertarget{classDailyWeather_a94635e6c9db2d2a7b10043ab256c8261}\label{classDailyWeather_a94635e6c9db2d2a7b10043ab256c8261}} 
+std\+::string {\bfseries get\+Description} () const
 \item 
-\mbox{\Hypertarget{classDailyWeather_ac81c76c24a5e9d1e9685cb4131acb54f}\label{classDailyWeather_ac81c76c24a5e9d1e9685cb4131acb54f}} 
-float {\bfseries get\+Temp\+Celsius} ()
-\item 
-\mbox{\Hypertarget{classDailyWeather_a42e6d24500818a0b398f526dcbefe995}\label{classDailyWeather_a42e6d24500818a0b398f526dcbefe995}} 
-std\+::string {\bfseries get\+Description} ()
-\item 
-\mbox{\Hypertarget{classDailyWeather_a3240802b7cb7320e26d828c580793cf9}\label{classDailyWeather_a3240802b7cb7320e26d828c580793cf9}} 
-\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+Date} ()
+\mbox{\Hypertarget{classDailyWeather_a6316215921a5e3175ea4700c2cace2a8}\label{classDailyWeather_a6316215921a5e3175ea4700c2cace2a8}} 
+\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+Date} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -42,6 +52,65 @@ std\+::string {\bfseries description}
 \mbox{\Hypertarget{classDailyWeather_a377bf6919c9471de16bf49e45a36846e}\label{classDailyWeather_a377bf6919c9471de16bf49e45a36846e}} 
 \mbox{\hyperlink{classDate}{Date}} {\bfseries date}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} class describes the weather in a given location on a single day. 
+
+\mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} describes the weather forecast for a given location on a single day, including temperature in farenheit and celsius and description. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDailyWeather_a74287bf60b74409e13cd4953d1fb4d13}\label{classDailyWeather_a74287bf60b74409e13cd4953d1fb4d13}} 
+\index{DailyWeather@{DailyWeather}!DailyWeather@{DailyWeather}}
+\index{DailyWeather@{DailyWeather}!DailyWeather@{DailyWeather}}
+\doxysubsubsection{\texorpdfstring{DailyWeather()}{DailyWeather()}}
+{\footnotesize\ttfamily Daily\+Weather\+::\+Daily\+Weather (\begin{DoxyParamCaption}\item[{const float}]{T\+E\+M\+P\+F\+A\+R\+EN,  }\item[{const float}]{T\+E\+M\+P\+C\+E\+L\+S\+I\+US,  }\item[{const std\+::string}]{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON,  }\item[{const \mbox{\hyperlink{classDate}{Date}}}]{D\+A\+T\+E\+IN }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDailyWeather_a74287bf60b74409e13cd4953d1fb4d13}{Daily\+Weather\+::\+Daily\+Weather}} constructs a \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. 
+
+Constructs a \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} with temperatures in Fahrenheit and Celsius, \mbox{\hyperlink{classDate}{Date}}, and Description
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+E\+M\+P\+F\+A\+R\+EN} & const, the temperature in fahrenheit on this day for the location \\
+\hline
+{\em T\+E\+M\+P\+C\+E\+L\+S\+I\+US} & const, the temperature in celsius on this day for the location \\
+\hline
+{\em D\+E\+S\+C\+R\+I\+P\+T\+I\+ON} & const, the description of the weather (i.\+e. cloudy" for the day for the location \\
+\hline
+{\em D\+A\+T\+E\+IN} & const, the \mbox{\hyperlink{classDate}{Date}} of the \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDailyWeather_a6e48747ff1d99f5e1ed6c2d0d8fb927d}\label{classDailyWeather_a6e48747ff1d99f5e1ed6c2d0d8fb927d}} 
+\index{DailyWeather@{DailyWeather}!````~DailyWeather@{$\sim$DailyWeather}}
+\index{````~DailyWeather@{$\sim$DailyWeather}!DailyWeather@{DailyWeather}}
+\doxysubsubsection{\texorpdfstring{$\sim$DailyWeather()}{~DailyWeather()}}
+{\footnotesize\ttfamily Daily\+Weather\+::$\sim$\+Daily\+Weather (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDailyWeather_a6e48747ff1d99f5e1ed6c2d0d8fb927d}{Daily\+Weather\+::$\sim$\+Daily\+Weather}} destructor. 
+
+Destructor for \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. Does not do anything, as there is no dynamically allocated memory to free 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDailyWeather_a6e464e99f25e833e68e15435a38aa7d4}\label{classDailyWeather_a6e464e99f25e833e68e15435a38aa7d4}} 
+\index{DailyWeather@{DailyWeather}!getTempFaren@{getTempFaren}}
+\index{getTempFaren@{getTempFaren}!DailyWeather@{DailyWeather}}
+\doxysubsubsection{\texorpdfstring{getTempFaren()}{getTempFaren()}}
+{\footnotesize\ttfamily float Daily\+Weather\+::get\+Temp\+Faren (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyWeather_a6e464e99f25e833e68e15435a38aa7d4}{Daily\+Weather\+::get\+Temp\+Faren}} getter for temp\+Faren. 
+
+returns the temperature for the \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} in Fahrenheit
+
+\begin{DoxyReturn}{Returns}
+the temperature for the day in Fahrenheit 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

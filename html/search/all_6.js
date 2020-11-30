@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['newscategory_20',['NewsCategory',['../classNewsCategory.html',1,'']]],
-  ['newsrecord_21',['NewsRecord',['../classNewsRecord.html',1,'']]],
-  ['newswindow_22',['NewsWindow',['../classNewsWindow.html',1,'']]]
+  ['newscategory_22',['NewsCategory',['../classNewsCategory.html',1,'']]],
+  ['newsrecord_23',['NewsRecord',['../classNewsRecord.html',1,'']]],
+  ['newswindow_24',['NewsWindow',['../classNewsWindow.html',1,'']]]
 ];

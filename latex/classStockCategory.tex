@@ -2,7 +2,8 @@
 \label{classStockCategory}\index{StockCategory@{StockCategory}}
 
 
-Inheritance diagram for Stock\+Category\+:\nopagebreak
+Inheritance diagram for Stock\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +12,8 @@ Inheritance diagram for Stock\+Category\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Stock\+Category\+:\nopagebreak
+Collaboration diagram for Stock\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,9 +26,8 @@ Collaboration diagram for Stock\+Category\+:\nopagebreak
 \mbox{\Hypertarget{classStockCategory_a90986c68779c33173c29f8c462281ccc}\label{classStockCategory_a90986c68779c33173c29f8c462281ccc}} 
 std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$ {\bfseries get\+Records} ()
 \item 
-\mbox{\Hypertarget{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}\label{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}} 
-\mbox{\hyperlink{classRecord}{Record}} {\bfseries search} (std\+::string search\+String)
-\item 
+\mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}{search}} (std\+::string search\+String)
+\begin{DoxyCompactList}\small\item\em search creates and returns a record based on a given search string \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classStockCategory_abdedf0fead5a4cd607a699627b252987}\label{classStockCategory_abdedf0fead5a4cd607a699627b252987}} 
 void {\bfseries sort} (int type, bool ascend)
 \end{DoxyCompactItemize}
@@ -42,6 +43,26 @@ void {\bfseries display\+Records} (std\+::vector$<$ \mbox{\hyperlink{classStockR
 \mbox{\Hypertarget{classStockCategory_a154576449721d3739f073b09faa6c586}\label{classStockCategory_a154576449721d3739f073b09faa6c586}} 
 std\+::vector$<$ \mbox{\hyperlink{classStockRecord}{Stock\+Record}} $>$ {\bfseries records}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}\label{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}} 
+\index{StockCategory@{StockCategory}!search@{search}}
+\index{search@{search}!StockCategory@{StockCategory}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} Stock\+Category\+::search (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+search creates and returns a record based on a given search string 
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{classRecord}{Record}} based on the search string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{Category\+A\+DT}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

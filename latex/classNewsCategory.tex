@@ -2,7 +2,8 @@
 \label{classNewsCategory}\index{NewsCategory@{NewsCategory}}
 
 
-Inheritance diagram for News\+Category\+:\nopagebreak
+Inheritance diagram for News\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +12,8 @@ Inheritance diagram for News\+Category\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for News\+Category\+:\nopagebreak
+Collaboration diagram for News\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,9 +26,8 @@ Collaboration diagram for News\+Category\+:\nopagebreak
 \mbox{\Hypertarget{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}\label{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}} 
 std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries get\+Records} ()
 \item 
-\mbox{\Hypertarget{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}\label{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}} 
-\mbox{\hyperlink{classRecord}{Record}} {\bfseries search} (std\+::string)
-\item 
+\mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}{search}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em search creates and returns a record based on a given search string \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}\label{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}} 
 void {\bfseries sort} (int, bool)
 \item 
@@ -107,6 +108,23 @@ std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries
 {\em sector} & M\+U\+ST BE O\+NE F\+O\+L\+L\+O\+W\+I\+NG\+: \char`\"{}business\char`\"{}, \char`\"{}entertainment\char`\"{}, \char`\"{}general\char`\"{}, \char`\"{}health\char`\"{}, \char`\"{}science\char`\"{}, \char`\"{}sports\char`\"{}, or \char`\"{}technology\char`\"{} \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}\label{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}} 
+\index{NewsCategory@{NewsCategory}!search@{search}}
+\index{search@{search}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} News\+Category\+::search (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+search creates and returns a record based on a given search string 
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{classRecord}{Record}} based on the search string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{Category\+A\+DT}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

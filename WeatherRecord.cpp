@@ -1,6 +1,4 @@
-// TO FIX:
-// Handling invalid location input or API bad responses
-// Restructure the API request code: const for the API key for example
+
 
 #include "WeatherRecord.h"
 #include "Date.h"
@@ -26,7 +24,8 @@ using namespace std;
  */
 WeatherRecord::WeatherRecord(const std::string LOCATION) {
     this->location = LOCATION;                      //initializes location
-
+    // TO FIX:
+    // Restructure the API request code: const for the API key for example
     QNetworkRequest request;
     QString endpoint = "https://api.openweathermap.org/data/2.5/forecast?cnt=40&units=imperial&q=" + QString::fromStdString(location) + "&appid=26387a928cb676aab24801bcc3d40f69";
 
@@ -152,12 +151,7 @@ std::string WeatherRecord::getLocation() const{
     return location;
 }
 
-/*
-Name: getTempFahren
-Description: returns the temperature for a specified day in Fahrenheit
-Parameter Descriptions: an index representing which day the user wants the temperature for
-Return Description: the temperature for that day in Fahrenheit
-*/
+
 /*!
  * \brief WeatherRecord::getTempFahren getter for the temperature in farenheit of a specific day
  *

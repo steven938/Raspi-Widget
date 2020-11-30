@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['requestarticles_88',['requestArticles',['../classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149',1,'NewsCategory']]],
-  ['requestarticlesbysector_89',['requestArticlesBySector',['../classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476',1,'NewsCategory']]]
+  ['parsearticles_93',['parseArticles',['../classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1',1,'NewsCategory']]]
 ];

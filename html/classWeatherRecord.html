@@ -92,7 +92,7 @@ Collaboration diagram for WeatherRecord:</div>
 <map name="WeatherRecord_coll__map" id="WeatherRecord_coll__map">
 <area shape="rect" title="The WeatherRecord class holds weather data for one city." alt="" coords="5,171,127,197"/>
 <area shape="rect" href="classRecord.html" title=" " alt="" coords="33,95,99,121"/>
-<area shape="rect" href="classCategoryADT.html" title=" " alt="" coords="12,5,120,32"/>
+<area shape="rect" href="classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="12,5,120,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -120,13 +120,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a134ab93e23897b8627b6c4ea527923e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1" title="WeatherRecord::getTempCelsius getter for the temperature in celsius of a specific day.">WeatherRecord::getTempCelsius</a> getter for the temperature in celsius of a specific day.  <a href="classWeatherRecord.html#a134ab93e23897b8627b6c4ea527923e1">More...</a><br /></td></tr>
 <tr class="separator:a134ab93e23897b8627b6c4ea527923e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3fe535971b9875c8788469c498dc899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDate.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">getDate</a> (const int INDEX) const</td></tr>
-<tr class="memdesc:ab3fe535971b9875c8788469c498dc899"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the date of a specific <a class="el" href="classDailyWeather.html">DailyWeather</a>.  <a href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">More...</a><br /></td></tr>
+<tr class="memdesc:ab3fe535971b9875c8788469c498dc899"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the Date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the <a class="el" href="classDate.html">Date</a> of a specific <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>.  <a href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">More...</a><br /></td></tr>
 <tr class="separator:ab3fe535971b9875c8788469c498dc899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25b43302178fdbabed686d789142669d"><td class="memItemLeft" align="right" valign="top"><a id="a25b43302178fdbabed686d789142669d"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> (const int INDEX) const</td></tr>
 <tr class="separator:a25b43302178fdbabed686d789142669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad76b6ca602e5e7851086201db37b77f8"><td class="memItemLeft" align="right" valign="top"><a id="ad76b6ca602e5e7851086201db37b77f8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumDays</b> () const</td></tr>
+<tr class="memitem:ad76b6ca602e5e7851086201db37b77f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8">getNumDays</a> () const</td></tr>
+<tr class="memdesc:ad76b6ca602e5e7851086201db37b77f8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8" title="WeatherRecord::getNumDays returns the number of days of data for this location.">WeatherRecord::getNumDays</a> returns the number of days of data for this location.  <a href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8">More...</a><br /></td></tr>
 <tr class="separator:ad76b6ca602e5e7851086201db37b77f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -144,7 +144,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> class holds weather data for one city. </p>
-<p>The <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> class holds weather data in the form of <a class="el" href="classDailyWeather.html">DailyWeather</a> for one city. It is also an interface for classes like <a class="el" href="classWeatherWindow.html" title="The WeatherWindow class displays weather data.">WeatherWindow</a> and <a class="el" href="classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location.">WeatherCategory</a> to interact with <a class="el" href="classDailyWeather.html">DailyWeather</a> data without needed to know the underlying implementaation of <a class="el" href="classDailyWeather.html">DailyWeather</a> </p><dl class="section author"><dt>Author</dt><dd>Adam Miller </dd></dl>
+<p>The <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> class holds weather data in the form of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> for one city. It is also an interface for classes like <a class="el" href="classWeatherWindow.html" title="The WeatherWindow class displays weather data.">WeatherWindow</a> and <a class="el" href="classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location.">WeatherCategory</a> to interact with <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> data without needed to know the underlying implementaation of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> </p><dl class="section author"><dt>Author</dt><dd>Adam Miller </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa7421eed3fd4f8620a39d7ac35a7cc12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7421eed3fd4f8620a39d7ac35a7cc12">&#9670;&nbsp;</a></span>WeatherRecord() <span class="overload">[1/2]</span></h2>
@@ -163,7 +163,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classWeatherRecord.html#aa7421eed3fd4f8620a39d7ac35a7cc12" title="WeatherRecord::WeatherRecord creates a WeatherRecord for a given city.">WeatherRecord::WeatherRecord</a> creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> for a given city. </p>
-<p>Initializes query to the weather API to initialize weather for requested location, creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> with 5 days of Weather data (in the form of <a class="el" href="classDailyWeather.html">DailyWeather</a>) for that day </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Initializes query to the weather API to initialize weather for requested location, creates a <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> with 5 days of Weather data (in the form of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>) for that day </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">location</td><td></td></tr>
   </table>
@@ -281,14 +281,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the date of a specific <a class="el" href="classDailyWeather.html">DailyWeather</a>. </p>
+<p><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the Date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the <a class="el" href="classDate.html">Date</a> of a specific <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>. </p>
+<p>returns the <a class="el" href="classDate.html">Date</a> of one <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>, specified by Index</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">INDEX</td><td></td></tr>
+    <tr><td class="paramname">INDEX</td><td>const, the index of the <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> whose <a class="el" href="classDate.html">Date</a> is being returned </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classDate.html">Date</a> of the specified day (<a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>) </dd></dl>
 
 </div>
 </div>
@@ -308,7 +309,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501" title="WeatherRecord::getDays getter for days.">WeatherRecord::getDays</a> getter for days. </p>
-<dl class="section return"><dt>Returns</dt><dd>days, the days vector of <a class="el" href="classDailyWeather.html">DailyWeather</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>days, the days vector of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> </dd></dl>
 
 </div>
 </div>
@@ -329,6 +330,27 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classWeatherRecord.html#a81e76e8336ee905d7c343a21083081af" title="WeatherRecord::getLocation getter for location.">WeatherRecord::getLocation</a> getter for location. </p>
 <dl class="section return"><dt>Returns</dt><dd>location, the city that the <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a> describes </dd></dl>
+
+</div>
+</div>
+<a id="ad76b6ca602e5e7851086201db37b77f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76b6ca602e5e7851086201db37b77f8">&#9670;&nbsp;</a></span>getNumDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WeatherRecord::getNumDays </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8" title="WeatherRecord::getNumDays returns the number of days of data for this location.">WeatherRecord::getNumDays</a> returns the number of days of data for this location. </p>
+<p>Returns the number of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> of data that is available for this <a class="el" href="classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city.">WeatherRecord</a></p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the days array </dd></dl>
 
 </div>
 </div>

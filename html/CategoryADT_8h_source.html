@@ -78,16 +78,17 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Record.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classRecord.html">Record</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classCategoryADT.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCategoryADT.html">CategoryADT</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRecord.html">Record</a> search(std::string) = 0; <span class="comment">// Function to find a record</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sort(<span class="keywordtype">int</span> type, <span class="keywordtype">bool</span> ascend) = 0;  <span class="comment">// Function to store the stored records</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>: </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::vector&lt;Record&gt; records; <span class="comment">// A vector to store all the records</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classCategoryADT.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCategoryADT.html">CategoryADT</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRecord.html">Record</a> <a class="code" href="classCategoryADT.html#ad8cc5206c724e932fc8b7dc31e95e4a3">search</a>(<span class="keyword">const</span> std::string) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCategoryADT.html#a11504f4f26098803fed3c42a8f24c57e">   28</a></span>&#160;        std::vector&lt;Record&gt; <a class="code" href="classCategoryADT.html#a11504f4f26098803fed3c42a8f24c57e">records</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassCategoryADT_html"><div class="ttname"><a href="classCategoryADT.html">CategoryADT</a></div><div class="ttdef"><b>Definition:</b> CategoryADT.h:13</div></div>
+<div class="ttc" id="aclassCategoryADT_html_ad8cc5206c724e932fc8b7dc31e95e4a3"><div class="ttname"><a href="classCategoryADT.html#ad8cc5206c724e932fc8b7dc31e95e4a3">CategoryADT::search</a></div><div class="ttdeci">virtual Record search(const std::string)=0</div><div class="ttdoc">search creates and returns a record based on a given search string</div></div>
+<div class="ttc" id="aclassCategoryADT_html"><div class="ttname"><a href="classCategoryADT.html">CategoryADT</a></div><div class="ttdoc">The CategoryADT class describes a category of information. Abstract class.</div><div class="ttdef"><b>Definition:</b> CategoryADT.h:20</div></div>
+<div class="ttc" id="aclassCategoryADT_html_a11504f4f26098803fed3c42a8f24c57e"><div class="ttname"><a href="classCategoryADT.html#a11504f4f26098803fed3c42a8f24c57e">CategoryADT::records</a></div><div class="ttdeci">std::vector&lt; Record &gt; records</div><div class="ttdef"><b>Definition:</b> CategoryADT.h:28</div></div>
 <div class="ttc" id="aclassRecord_html"><div class="ttname"><a href="classRecord.html">Record</a></div><div class="ttdef"><b>Definition:</b> Record.h:6</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

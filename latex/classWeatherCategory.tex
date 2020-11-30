@@ -11,7 +11,8 @@ The \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class holds weath
 
 
 
-Inheritance diagram for Weather\+Category\+:\nopagebreak
+Inheritance diagram for Weather\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Weather\+Category\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Weather\+Category\+:\nopagebreak
+Collaboration diagram for Weather\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,22 +33,13 @@ Collaboration diagram for Weather\+Category\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classWeatherCategory_a657269d23858c937ce084638d9e86f96}{Weather\+Category}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherCategory_a657269d23858c937ce084638d9e86f96}{Weather\+Category\+::\+Weather\+Category}} constructor. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherCategory_a657269d23858c937ce084638d9e86f96}{Weather\+Category\+::\+Weather\+Category}} constructor creates a \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}{$\sim$\+Weather\+Category}} ()
-\begin{DoxyCompactList}\small\item\em a destructor \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $>$ \mbox{\hyperlink{classWeatherCategory_af0ec4a2264a775f552539c4fb42ddef3}{get\+Records}} ()
-\begin{DoxyCompactList}\small\item\em get\+Records, getter for the vector of records \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classWeatherCategory_a7d802002f7665efdaff54ca6808ed3ec}{search}} (std\+::string search\+String)
-\begin{DoxyCompactList}\small\item\em search\+: returns a desired weather record representing weather in a given city \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWeatherCategory_a04ba4408c1bf98c791fe3e0acc55924b}\label{classWeatherCategory_a04ba4408c1bf98c791fe3e0acc55924b}} 
-void {\bfseries sort} (int type, bool ascend)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classWeatherCategory_aca7cb4f5c91ae423b68fc8e7a3b354fa}\label{classWeatherCategory_aca7cb4f5c91ae423b68fc8e7a3b354fa}} 
-void {\bfseries display\+Records} (std\+::vector$<$ \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $>$ to\+Display)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}{Weather\+Category\+::$\sim$\+Weather\+Category}} destructor destroys a \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $>$ \mbox{\hyperlink{classWeatherCategory_ae7886c8f21557a07734d1de9f1fb222c}{get\+Records}} () const
+\begin{DoxyCompactList}\small\item\em get\+Records, getter for the vector of \mbox{\hyperlink{classRecord}{Record}} s \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classWeatherCategory_a28384c696e8755309941260fcfee70b7}{search}} (const std\+::string S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+R\+I\+NG)
+\begin{DoxyCompactList}\small\item\em search\+: returns a desired weather record representing weather in a given city \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,9 +66,9 @@ Leland Conn
 
 
 
-\mbox{\hyperlink{classWeatherCategory_a657269d23858c937ce084638d9e86f96}{Weather\+Category\+::\+Weather\+Category}} constructor. 
+\mbox{\hyperlink{classWeatherCategory_a657269d23858c937ce084638d9e86f96}{Weather\+Category\+::\+Weather\+Category}} constructor creates a \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} object. 
 
-This is a constructor to create an instance of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class \mbox{\Hypertarget{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}\label{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}} 
+This is a constructor to create an instance of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. Included for completeness, does not perform operations \mbox{\Hypertarget{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}\label{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}} 
 \index{WeatherCategory@{WeatherCategory}!````~WeatherCategory@{$\sim$WeatherCategory}}
 \index{````~WeatherCategory@{$\sim$WeatherCategory}!WeatherCategory@{WeatherCategory}}
 \doxysubsubsection{\texorpdfstring{$\sim$WeatherCategory()}{~WeatherCategory()}}
@@ -83,29 +76,29 @@ This is a constructor to create an instance of the \mbox{\hyperlink{classWeather
 
 
 
-a destructor 
+\mbox{\hyperlink{classWeatherCategory_ab6edfb7e09dc1ac4ec2478594f06b00e}{Weather\+Category\+::$\sim$\+Weather\+Category}} destructor destroys a \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} object. 
 
-Destroys the object 
+Since \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} has no dynamically allocated memory, this does not do anything. Included for completeness. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classWeatherCategory_af0ec4a2264a775f552539c4fb42ddef3}\label{classWeatherCategory_af0ec4a2264a775f552539c4fb42ddef3}} 
+\mbox{\Hypertarget{classWeatherCategory_ae7886c8f21557a07734d1de9f1fb222c}\label{classWeatherCategory_ae7886c8f21557a07734d1de9f1fb222c}} 
 \index{WeatherCategory@{WeatherCategory}!getRecords@{getRecords}}
 \index{getRecords@{getRecords}!WeatherCategory@{WeatherCategory}}
 \doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
-{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $>$ Weather\+Category\+::get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} $>$ Weather\+Category\+::get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-get\+Records, getter for the vector of records 
+get\+Records, getter for the vector of \mbox{\hyperlink{classRecord}{Record}} s 
 
 returns the records vector \begin{DoxyReturn}{Returns}
-records, the vector holding weather records 
+records, the vector holding \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} s 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classWeatherCategory_a7d802002f7665efdaff54ca6808ed3ec}\label{classWeatherCategory_a7d802002f7665efdaff54ca6808ed3ec}} 
+\mbox{\Hypertarget{classWeatherCategory_a28384c696e8755309941260fcfee70b7}\label{classWeatherCategory_a28384c696e8755309941260fcfee70b7}} 
 \index{WeatherCategory@{WeatherCategory}!search@{search}}
 \index{search@{search}!WeatherCategory@{WeatherCategory}}
 \doxysubsubsection{\texorpdfstring{search()}{search()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} Weather\+Category\+::search (\begin{DoxyParamCaption}\item[{std\+::string}]{search\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} Weather\+Category\+::search (\begin{DoxyParamCaption}\item[{const std\+::string}]{S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+R\+I\+NG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -121,7 +114,7 @@ a weather record with the weather for the searched-\/for city
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classCategoryADT}{Category\+A\+DT}}.
+Implements \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{Category\+A\+DT}}.
 
 
 
