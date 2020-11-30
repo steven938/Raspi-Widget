@@ -30,6 +30,9 @@ public:
     std::string getDate(int daysAgo);
 	~StockRecord();
 private:
+    void requestStockPrices();
+    void requestCompanyInfo();
+    void requestFinancials();
 	std::string ticker; // 4 letter ticker
 	std::string companyName; // company name
 	std::string marketCap; 
