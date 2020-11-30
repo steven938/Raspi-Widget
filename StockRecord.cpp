@@ -68,7 +68,7 @@ Description: gets market capitalization of the stock
 Parameter Descriptions: 
 Return Description: market cap
 */
-string StockRecord::getMarketCap(){
+double StockRecord::getMarketCap(){
     return this->marketCap;
 }
 
@@ -249,10 +249,8 @@ void StockRecord::requestCompanyInfo(){
         QJsonObject obj = document.object();
         this->companyName = obj["name"].toString().toStdString();
         this->exchange = obj["exchange"].toString().toStdString();
-        double marketCapMillion = obj["marketCapitalization"].toDouble() * 1000000;
-        QString marketCapStr = QString::number(marketCapMillion);
-        this->marketCap = marketCapStr.toStdString();
-        qDebug() << QString::fromStdString(this->companyName) << " " << QString::fromStdString(this->exchange) << QString::fromStdString(this->marketCap);
+        this->marketCap = obj["marketCapitalization"].toDouble() * 1000000;
+        qDebug() << QString::fromStdString(this->companyName) << " " << QString::fromStdString(this->exchange) << " " << this->marketCap;
     }
     else // something went wrong
     {

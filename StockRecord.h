@@ -17,7 +17,7 @@ public:
 	std::string getTicker();
 	std::string getCompanyName();
 	std::string getExchange();
-	std::string getMarketCap();
+    double getMarketCap();
 	float getOpen(int daysAgo);
 	float getLow(int daysAgo);
 	float getHigh(int daysAgo);
@@ -35,7 +35,7 @@ private:
     void requestFinancials();
 	std::string ticker; // 4 letter ticker
 	std::string companyName; // company name
-	std::string marketCap; 
+    double marketCap;
 	std::string exchange;
     float ebitShare;
     float payoutRatio;
