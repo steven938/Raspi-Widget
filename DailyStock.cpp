@@ -21,9 +21,8 @@ DailyStock::DailyStock(float open, float close, float high, float low, long long
 	this->high = high;
 	this->low = low;
 	this->volume = volume;
-	// To do: set date
+	this->date = date;
 }
-
 /*
 Name: getOpen
 Description: gets the opening price of stock on this date

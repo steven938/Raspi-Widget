@@ -11,7 +11,7 @@ Date: 2020-11-04
 #include "CategoryADT.h"
 class StockCategory: public CategoryADT{
     private:
-        std::vector<StockRecord> records; // A vector to store all the weather records
+        std::vector<StockRecord> records; // A vector to store all the stock records
 
         // Print the specified records to the screen
         void displayRecords(std::vector<StockRecord> toDisplay);
@@ -25,7 +25,7 @@ class StockCategory: public CategoryADT{
         ~StockCategory();
 
         // Function to get the records of the class 
-        std::vector<Record> getRecords();
+        std::vector<StockRecord> getRecords();
 
         // Function to find a record of a specific company (specified by searchString)
         Record search(std::string searchString);

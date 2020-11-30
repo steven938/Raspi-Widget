@@ -16,6 +16,7 @@ Date: 2020-11-04
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkReply>
 #include <QApplication>
+#include <iostream>
 using namespace std;
 
 /*
@@ -222,6 +223,47 @@ Return Description: Date object with the date
 string StockRecord::getDate(int daysAgo){
     return this->days[daysAgo].getDate();
 }
+
+/*
+Name: getEBITShare
+Description: gets EBIT/Share of the stock
+Parameter Descriptions:
+Return Description: EBIT/Share
+*/
+float StockRecord::getEBITShare(){
+    return this->ebitShare;
+}
+
+/*
+Name: getPayoutRatio
+Description: gets Payout Ratio of the stock
+Parameter Descriptions:
+Return Description: Payout Ratio
+*/
+float StockRecord::getPayoutRatio(){
+    return this->payoutRatio;
+}
+
+/*
+Name: getCurrentRatio
+Description: gets Current Ratio of the stock
+Parameter Descriptions:
+Return Description: Current Ratio
+*/
+float StockRecord::getCurrentRatio(){
+    return this->currentRatio;
+}
+
+/*
+Name: getGrossMargin
+Description: gets Gross Margin of the stock
+Parameter Descriptions:
+Return Description: Gross Margin
+*/
+float StockRecord::getGrossMargin(){
+    return this->grossMargin;
+}
+
 /*
 Name: destructor
 Description:

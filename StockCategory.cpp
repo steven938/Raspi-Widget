@@ -3,6 +3,8 @@ Author: Leland Conn
 Description: Code file that define an individual stock category
 Date: 2020-11-04
 */
+
+#include <iostream>
 #include "StockCategory.h"
 #include <vector>
 
@@ -26,24 +28,32 @@ Return Description: N/A
 StockCategory::~StockCategory(){
 
 }
+
+
 /*
 Name: getRecords 
 Description: Getter for the vector of records
 Parameter Descriptions: N/A
 Return Description: records, the vector holding stock records
 */
-vector<Record> StockCategory::getRecords(){
-   // return this->records;
+vector<StockRecord> StockCategory::getRecords(){
+   return this->records;
 }
+
+
 /*
 Name: search 
 Description: Returns a desired stock record
 Parameter Descriptions: N/A
 Return Description: A StockRecord object or 0 if not found
 */
-Record StockCategory::search(string searchString){
-    // code to find and return the desired record
+Record StockCategory::search(const string SEARCH_STRING){
+    StockRecord *r = new StockRecord(SEARCH_STRING);
+    records.push_back(*r);
+    return *r;
 }
+
+
 /*
 Name: sort 
 Description: sort the stock records stored in vector records
@@ -53,12 +63,4 @@ Return Description: N/A
 void StockCategory::sort(int type, bool ascending){
     // code to sort the records
 }
-/*
-Name: displayRecords 
-Description: display the the records on the screen
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
-void StockCategory::displayRecords(vector<StockRecord> toDisplay){
-    // code to display records on screen
-}
+

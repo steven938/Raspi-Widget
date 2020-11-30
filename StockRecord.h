@@ -9,8 +9,9 @@ Date: 2020-11-04
 #include "string"
 #include "vector"
 #include "DailyStock.h"
+#include "Record.h"
 
-class StockRecord{
+class StockRecord: public Record{
 public:
 	StockRecord(std::string ticker);
 	std::string getTicker();
@@ -21,6 +22,10 @@ public:
 	float getLow(int daysAgo);
 	float getHigh(int daysAgo);
 	float getClose(int daysAgo);
+    float getEBITShare();
+    float getPayoutRatio();
+    float getCurrentRatio();
+    float getGrossMargin();
 	long long int getVolume(int daysAgo);
     std::string getDate(int daysAgo);
 	~StockRecord();
@@ -29,6 +34,10 @@ private:
 	std::string companyName; // company name
 	std::string marketCap; 
 	std::string exchange;
+    float ebitShare;
+    float payoutRatio;
+    float currentRatio;
+    float grossMargin;
 	std::vector<DailyStock> days; // vector of information on stock price on several dates
 };
 
