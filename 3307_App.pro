@@ -21,6 +21,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     newswindow.cpp \
+    stockchart.cpp \
     stockwindow.cpp \
     weatherwindow.cpp
 
@@ -39,6 +40,7 @@ HEADERS += \
     errorbox.h \
     mainwindow.h \
     newswindow.h \
+    stockchart.h \
     stockwindow.h \
     weatherwindow.h
 
@@ -46,6 +48,7 @@ FORMS += \
     errorbox.ui \
     mainwindow.ui \
     newswindow.ui \
+    stockchart.ui \
     stockwindow.ui \
     weatherwindow.ui
 
