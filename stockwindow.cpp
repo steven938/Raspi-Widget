@@ -3,10 +3,15 @@ Author: Dhyey Patel
 Description: CPP for stockWindow, the window that displays information about the stocks
 Date: 2020-11-11
 */
+
+#include <iostream>
+
+
 #include "stockwindow.h"
 #include "ui_stockwindow.h"
 #include "stockchart.h"
-#include <iostream>
+#include "errorbox.h"
+
 
 using namespace std;
 
@@ -197,7 +202,7 @@ void stockWindow::updateChart(StockRecord toDisplay){
 
 void stockWindow::on_searchBar_returnPressed()
 {
-    category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
+    try{category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
     r = new StockRecord(category.getRecords()[category.getRecords().size()-1]);          //Accesses the first weatherrecord in the category's records vector.
     updateChart(*r);
     updateDisplay();                                        //Updates the data on display
@@ -221,6 +226,16 @@ void stockWindow::on_searchBar_returnPressed()
     ui->stocksList->addItem(ui->searchBar->text());
     stockIndex = category.getRecords().size()-1;    // sets the correct stock index, meaning that the dropdown displays the correct city
     ui->stocksList->setCurrentIndex(stockIndex);
+    }
+    catch(...){
+        ErrorBox * error = new ErrorBox();
+        QFont font = QFont("FreeSans",10,1);
+        error->setFont(font);
+        error->setWindowTitle("Error");
+        error->error(ui->searchBar->text().toStdString()+" is not a valid stock!");
+        error->setAttribute(Qt::WA_DeleteOnClose,true);
+        error->show();
+    }
 }
 
 
