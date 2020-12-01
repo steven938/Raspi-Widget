@@ -2,8 +2,16 @@
 \label{classStockChart}\index{StockChart@{StockChart}}
 
 
-Inheritance diagram for Stock\+Chart\+:
-\nopagebreak
+The \mbox{\hyperlink{classStockChart}{Stock\+Chart}} class displays a stock chart for a given stock.  
+
+
+
+
+{\ttfamily \#include $<$stockchart.\+h$>$}
+
+
+
+Inheritance diagram for Stock\+Chart\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +20,7 @@ Inheritance diagram for Stock\+Chart\+:
 \end{figure}
 
 
-Collaboration diagram for Stock\+Chart\+:
-\nopagebreak
+Collaboration diagram for Stock\+Chart\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,14 +31,20 @@ Collaboration diagram for Stock\+Chart\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classStockChart_a8280c90b688cd89e8d72456b6b50a89a}{Stock\+Chart}} (Q\+Widget $\ast$parent=nullptr, Q\+Chart\+View $\ast$chart\+View=nullptr)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockChart_a8280c90b688cd89e8d72456b6b50a89a}{Stock\+Chart\+::\+Stock\+Chart}} displays a stock chart. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockChart_a8280c90b688cd89e8d72456b6b50a89a}{Stock\+Chart\+::\+Stock\+Chart}} displays a stock chart. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStockChart_a693f8acf4eda3f7099f3da58e284cb93}{$\sim$\+Stock\+Chart}} ()
+\begin{DoxyCompactList}\small\item\em stock\+Window\+::$\sim$\+Stock\+Chart \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockChart_ad86c65a41c074218e5669416c0d5b872}\label{classStockChart_ad86c65a41c074218e5669416c0d5b872}} 
-Ui\+::\+Stock\+Chart $\ast$ {\bfseries ui}
+Ui\+::\+Stock\+Chart $\ast$ \mbox{\hyperlink{classStockChart_ad86c65a41c074218e5669416c0d5b872}{ui}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classStockChart}{Stock\+Chart}} class displays a stock chart for a given stock. 
+
+Uses a Q\+Chart\+View to display a stock chart for a given stock 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classStockChart_a8280c90b688cd89e8d72456b6b50a89a}\label{classStockChart_a8280c90b688cd89e8d72456b6b50a89a}} 
@@ -55,7 +68,26 @@ Dhyey Patel
 \begin{DoxyDate}{Date}
 2020-\/11-\/30 
 \end{DoxyDate}
+\mbox{\Hypertarget{classStockChart_a693f8acf4eda3f7099f3da58e284cb93}\label{classStockChart_a693f8acf4eda3f7099f3da58e284cb93}} 
+\index{StockChart@{StockChart}!````~StockChart@{$\sim$StockChart}}
+\index{````~StockChart@{$\sim$StockChart}!StockChart@{StockChart}}
+\doxysubsubsection{\texorpdfstring{$\sim$StockChart()}{~StockChart()}}
+{\footnotesize\ttfamily Stock\+Chart\+::$\sim$\+Stock\+Chart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+stock\+Window\+::$\sim$\+Stock\+Chart 
+
+Deallocates dynamically allocated memory, destroying the object 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classStockChart_ad86c65a41c074218e5669416c0d5b872}\label{classStockChart_ad86c65a41c074218e5669416c0d5b872}} 
+\index{StockChart@{StockChart}!ui@{ui}}
+\index{ui@{ui}!StockChart@{StockChart}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Stock\+Chart$\ast$ Stock\+Chart\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+a qt-\/created pointer that represents the window itself 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

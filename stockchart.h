@@ -15,7 +15,12 @@ Date: 2020-11-04
 namespace Ui {
 class StockChart;
 }
-
+/*!
+ * \brief The StockChart class displays a stock chart for a given stock
+ *
+ * Uses a QChartView to display a stock chart for a given stock
+ *
+ */
 class StockChart : public QDialog
 {
     Q_OBJECT

@@ -20,17 +20,23 @@ Date: 2020-11-04
 namespace Ui {
 class stockWindow;
 }
-
+/*!
+ * \brief The stockWindow class displays information on stocks
+ *
+ * Controller and view for stock data -can display stock charts, search for stocks, and look up financial information
+ *
+ * @author Dhyey Patel
+ * @date 2020-11-04
+ *
+ */
 class stockWindow : public QWidget
 {
     Q_OBJECT
 
-// The public methods are just the constructor and deconstructors
 public:
     explicit stockWindow(MainWindow * window, QWidget *parent = nullptr);
     ~stockWindow();
 
-// Private slots are associated to buttons on the ui, and there is currently onle one button (more to come later)
 private slots:
     void on_BackButton_clicked();
     void on_searchBar_returnPressed();

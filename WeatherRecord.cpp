@@ -187,7 +187,14 @@ float WeatherRecord::getTempCelsius(const int INDEX) const {
 Date WeatherRecord::getDate(const int INDEX) const {
     return getDays()[INDEX].getDate();
 }
-
+/*!
+ * \brief WeatherRecord::getDescription returns the description of a specific DailyWeather
+ *
+ * returns the description of one DailyWeather, specified by INDEX
+ *
+ * \param INDEX const, the index of the DailyWeather whose description is being returned
+ * \return the description of the specified day (DailyWeather)
+ */
 string WeatherRecord::getDescription(const int INDEX) const{
     return getDays()[INDEX].getDescription();
 }

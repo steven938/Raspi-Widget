@@ -121,8 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3fe535971b9875c8788469c498dc899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDate.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">getDate</a> (const int INDEX) const</td></tr>
 <tr class="memdesc:ab3fe535971b9875c8788469c498dc899"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899" title="WeatherRecord::getDate returns the Date of a specific DailyWeather.">WeatherRecord::getDate</a> returns the <a class="el" href="classDate.html" title="The Date class describes a Date.">Date</a> of a specific <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>.  <a href="classWeatherRecord.html#ab3fe535971b9875c8788469c498dc899">More...</a><br /></td></tr>
 <tr class="separator:ab3fe535971b9875c8788469c498dc899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25b43302178fdbabed686d789142669d"><td class="memItemLeft" align="right" valign="top"><a id="a25b43302178fdbabed686d789142669d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> (const int INDEX) const</td></tr>
+<tr class="memitem:a25b43302178fdbabed686d789142669d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#a25b43302178fdbabed686d789142669d">getDescription</a> (const int INDEX) const</td></tr>
+<tr class="memdesc:a25b43302178fdbabed686d789142669d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#a25b43302178fdbabed686d789142669d" title="WeatherRecord::getDescription returns the description of a specific DailyWeather.">WeatherRecord::getDescription</a> returns the description of a specific <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>.  <a href="classWeatherRecord.html#a25b43302178fdbabed686d789142669d">More...</a><br /></td></tr>
 <tr class="separator:a25b43302178fdbabed686d789142669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad76b6ca602e5e7851086201db37b77f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8">getNumDays</a> () const</td></tr>
 <tr class="memdesc:ad76b6ca602e5e7851086201db37b77f8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8" title="WeatherRecord::getNumDays returns the number of days of data for this location.">WeatherRecord::getNumDays</a> returns the number of days of data for this location.  <a href="classWeatherRecord.html#ad76b6ca602e5e7851086201db37b77f8">More...</a><br /></td></tr>
@@ -309,6 +309,34 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classWeatherRecord.html#ac49bcd7ec05035cfdbd000eb8b79c501" title="WeatherRecord::getDays getter for days.">WeatherRecord::getDays</a> getter for days. </p>
 <dl class="section return"><dt>Returns</dt><dd>days, the days vector of <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> </dd></dl>
+
+</div>
+</div>
+<a id="a25b43302178fdbabed686d789142669d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25b43302178fdbabed686d789142669d">&#9670;&nbsp;</a></span>getDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string WeatherRecord::getDescription </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>INDEX</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWeatherRecord.html#a25b43302178fdbabed686d789142669d" title="WeatherRecord::getDescription returns the description of a specific DailyWeather.">WeatherRecord::getDescription</a> returns the description of a specific <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>. </p>
+<p>returns the description of one <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>, specified by INDEX</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">INDEX</td><td>const, the index of the <a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a> whose description is being returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the description of the specified day (<a class="el" href="classDailyWeather.html" title="The DailyWeather class describes the weather in a given location on a single day.">DailyWeather</a>) </dd></dl>
 
 </div>
 </div>

@@ -31,7 +31,7 @@ ErrorBox::~ErrorBox()
  *
  * Displays an error message. Should be called BEFORE the show() method is called!
  *
- * \param message A message to the user on the error that was thrown
+ * \param MESSAGE const, A message to the user on the error that was thrown
  */
 void ErrorBox::error(const std::string MESSAGE){
     ui->errorMessage->setText(QString::fromStdString((MESSAGE)));

@@ -37,8 +37,7 @@ bool \mbox{\hyperlink{classDate_a2d9cc2faa8fedf1cc29d078c8c330424}{operator!=}} 
 \item 
 int \mbox{\hyperlink{classDate_a533843e07c6ac8d19fee9b16f5336ba2}{month}}
 \item 
-\mbox{\Hypertarget{classDate_a5b192adcabf2b2871e3f0b76c1ec1601}\label{classDate_a5b192adcabf2b2871e3f0b76c1ec1601}} 
-int {\bfseries day}
+int \mbox{\hyperlink{classDate_a5b192adcabf2b2871e3f0b76c1ec1601}{day}}
 \item 
 int \mbox{\hyperlink{classDate_a3eeced2ed56bc95d56782b9e738db8ea}{year}}
 \item 
@@ -82,11 +81,11 @@ Constructs a \mbox{\hyperlink{classDate}{Date}} object given a day, month, and y
 
 
 \begin{DoxyParams}{Parameters}
-{\em day} & a day between 0-\/31 \\
+{\em D\+AY} & a day between 0-\/31 \\
 \hline
-{\em month} & a month betwee 1-\/12; \\
+{\em M\+O\+N\+TH} & a month betwee 1-\/12; \\
 \hline
-{\em year} & a year $>$0 \\
+{\em Y\+E\+AR} & a year $>$0 \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classDate_ade4b469433b7966cc034cbcc6799233b}\label{classDate_ade4b469433b7966cc034cbcc6799233b}} 
@@ -177,7 +176,7 @@ an int $>$ 0 representing the year of the \mbox{\hyperlink{classDate}{Date}}
 \index{Date@{Date}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Date@{Date}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
-{\footnotesize\ttfamily bool Date\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{other }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Date\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{O\+T\+H\+ER }\end{DoxyParamCaption})}
 
 
 
@@ -187,7 +186,7 @@ Determines if \mbox{\hyperlink{classDate}{Date}} s are unequal, comparing on Yea
 
 
 \begin{DoxyParams}{Parameters}
-{\em other} & the \mbox{\hyperlink{classDate}{Date}} being compared to \\
+{\em O\+T\+H\+ER} & the \mbox{\hyperlink{classDate}{Date}} being compared to \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -197,7 +196,7 @@ true if the \mbox{\hyperlink{classDate}{Date}} s are unequal, false otherwise
 \index{Date@{Date}!operator==@{operator==}}
 \index{operator==@{operator==}!Date@{Date}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool Date\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{other }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Date\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{O\+T\+H\+ER }\end{DoxyParamCaption})}
 
 
 
@@ -207,7 +206,7 @@ Determines if \mbox{\hyperlink{classDate}{Date}} s are the same, comapring on Ye
 
 
 \begin{DoxyParams}{Parameters}
-{\em other} & the \mbox{\hyperlink{classDate}{Date}} being compared to \\
+{\em O\+T\+H\+ER} & the \mbox{\hyperlink{classDate}{Date}} being compared to \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -216,7 +215,13 @@ true if the \mbox{\hyperlink{classDate}{Date}} s are equal, false otherwise
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classDate_a533843e07c6ac8d19fee9b16f5336ba2}\label{classDate_a533843e07c6ac8d19fee9b16f5336ba2}} 
+\mbox{\Hypertarget{classDate_a5b192adcabf2b2871e3f0b76c1ec1601}\label{classDate_a5b192adcabf2b2871e3f0b76c1ec1601}} 
+\index{Date@{Date}!day@{day}}
+\index{day@{day}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int Date\+::day\hspace{0.3cm}{\ttfamily [private]}}
+
+day is an int from 1-\/31 \mbox{\Hypertarget{classDate_a533843e07c6ac8d19fee9b16f5336ba2}\label{classDate_a533843e07c6ac8d19fee9b16f5336ba2}} 
 \index{Date@{Date}!month@{month}}
 \index{month@{month}!Date@{Date}}
 \doxysubsubsection{\texorpdfstring{month}{month}}
@@ -234,7 +239,7 @@ Vector representing the names of each month \mbox{\Hypertarget{classDate_a3eeced
 \doxysubsubsection{\texorpdfstring{year}{year}}
 {\footnotesize\ttfamily int Date\+::year\hspace{0.3cm}{\ttfamily [private]}}
 
-day is an int from 1-\/31 year is an int$>$0 
+year is an int$>$0 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -1,6 +1,6 @@
 <map id="Record" name="Record">
 <area shape="rect" id="node1" title="The Record class represents one record in any data category." alt="" coords="150,5,217,32"/>
-<area shape="rect" id="node2" href="$classNewsRecord.html" title=" " alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node2" href="$classNewsRecord.html" title="The NewsRecord class represents one news story." alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$classStockRecord.html" title="The StockRecord class describes an individual stock." alt="" coords="132,80,235,107"/>
 <area shape="rect" id="node4" href="$classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city." alt="" coords="259,80,380,107"/>
 </map>

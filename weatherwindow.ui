@@ -21,6 +21,12 @@
        <family>FreeSans</family>
       </font>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For cities that share names (e.g. London Canada vs London England), use the country code for the &amp;quot;less significant city&amp;quot; (e.g. London, CA)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For cities that share names (e.g. London Canada vs London England), use the country code for the &amp;quot;less significant city&amp;quot; (e.g. London, CA)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="text">
       <string>What location's weather would you like to see?</string>
      </property>

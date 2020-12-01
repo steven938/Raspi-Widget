@@ -17,7 +17,7 @@ Date: 2020-11-04
 class Date{
 private:    
     int month; /*!< month is an int from 1-12*/
-    int day; /*! day is an int from 1-31 */
+    int day; /*!< day is an int from 1-31 */
     int year; /*!< year is an int>0 */
     std::vector<std::string> monthName = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}; /*!< Vector representing the names of each month*/
 public:

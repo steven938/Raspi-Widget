@@ -11,8 +11,7 @@ The \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} class holds weather d
 
 
 
-Inheritance diagram for Weather\+Record\+:
-\nopagebreak
+Inheritance diagram for Weather\+Record\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Weather\+Record\+:
 \end{figure}
 
 
-Collaboration diagram for Weather\+Record\+:
-\nopagebreak
+Collaboration diagram for Weather\+Record\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -48,9 +46,8 @@ float \mbox{\hyperlink{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}{get
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_a134ab93e23897b8627b6c4ea527923e1}{Weather\+Record\+::get\+Temp\+Celsius}} getter for the temperature in celsius of a specific day. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}{get\+Date}} (const int I\+N\+D\+EX) const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_ab3fe535971b9875c8788469c498dc899}{Weather\+Record\+::get\+Date}} returns the \mbox{\hyperlink{classDate}{Date}} of a specific \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWeatherRecord_a25b43302178fdbabed686d789142669d}\label{classWeatherRecord_a25b43302178fdbabed686d789142669d}} 
-std\+::string {\bfseries get\+Description} (const int I\+N\+D\+EX) const
-\item 
+std\+::string \mbox{\hyperlink{classWeatherRecord_a25b43302178fdbabed686d789142669d}{get\+Description}} (const int I\+N\+D\+EX) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_a25b43302178fdbabed686d789142669d}{Weather\+Record\+::get\+Description}} returns the description of a specific \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classWeatherRecord_ad76b6ca602e5e7851086201db37b77f8}{get\+Num\+Days}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWeatherRecord_ad76b6ca602e5e7851086201db37b77f8}{Weather\+Record\+::get\+Num\+Days}} returns the number of days of data for this location. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
@@ -171,6 +168,26 @@ the \mbox{\hyperlink{classDate}{Date}} of the specified day (\mbox{\hyperlink{cl
 
 \begin{DoxyReturn}{Returns}
 days, the days vector of \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRecord_a25b43302178fdbabed686d789142669d}\label{classWeatherRecord_a25b43302178fdbabed686d789142669d}} 
+\index{WeatherRecord@{WeatherRecord}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!WeatherRecord@{WeatherRecord}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily string Weather\+Record\+::get\+Description (\begin{DoxyParamCaption}\item[{const int}]{I\+N\+D\+EX }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWeatherRecord_a25b43302178fdbabed686d789142669d}{Weather\+Record\+::get\+Description}} returns the description of a specific \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}. 
+
+returns the description of one \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}, specified by I\+N\+D\+EX
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+N\+D\+EX} & const, the index of the \mbox{\hyperlink{classDailyWeather}{Daily\+Weather}} whose description is being returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the description of the specified day (\mbox{\hyperlink{classDailyWeather}{Daily\+Weather}}) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}\label{classWeatherRecord_a81e76e8336ee905d7c343a21083081af}} 
 \index{WeatherRecord@{WeatherRecord}!getLocation@{getLocation}}

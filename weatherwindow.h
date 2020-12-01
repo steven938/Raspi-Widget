@@ -37,7 +37,7 @@ private:
     int dayCounter;                 /*!< a counter that indicates which day in the day array we are currently dealing with*/
     int cORf;                       /*!< indicates whether the current temperature is celcius or farenheit; 0 = farenheit, 1 = celcius*/
     int cityIndex;                  /*!< indicates which city is currently being displayed*/
-    int weekOrDay;
+    int weekOrDay;                  /*!< indicates whether a the current view is Daily or Weekly: 0 = day, 1 = week*/
     void updateDisplay();
 private slots:
     void on_searchBar_returnPressed();

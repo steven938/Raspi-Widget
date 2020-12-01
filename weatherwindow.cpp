@@ -242,7 +242,7 @@ void WeatherWindow::on_nextButton_clicked()
  *
  * This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles WeatherWindow::updateDisplay() to update the display
  *
- * \param index the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the WeatherCategory class.
+ * \param INDEX the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the WeatherCategory class.
  */
 void WeatherWindow::on_citiesBox_currentIndexChanged(const int INDEX)
 {

@@ -21,8 +21,7 @@ Date: 2020-11-04
 class StockCategory: public CategoryADT{
     private:
         std::vector<StockRecord> records; /*!< A vector to store all the stock records*/
-        // Print the specified records to the screen
-        void displayRecords(std::vector<StockRecord> toDisplay);
+
         
     public:
     

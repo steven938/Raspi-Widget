@@ -20,8 +20,7 @@ Inheritance diagram for Weather\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Weather\+Window\+:
-\nopagebreak
+Collaboration diagram for Weather\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -78,8 +77,7 @@ int \mbox{\hyperlink{classWeatherWindow_ab3d351e40ee7e1d84b1f07f608d0e55a}{c\+O\
 \item 
 int \mbox{\hyperlink{classWeatherWindow_a346ad9d86942f88f37c1db2a72b4d285}{city\+Index}}
 \item 
-\mbox{\Hypertarget{classWeatherWindow_a7742f3d9a86e86879805117974e9d48e}\label{classWeatherWindow_a7742f3d9a86e86879805117974e9d48e}} 
-int {\bfseries week\+Or\+Day}
+int \mbox{\hyperlink{classWeatherWindow_a7742f3d9a86e86879805117974e9d48e}{week\+Or\+Day}}
 \end{DoxyCompactItemize}
 
 
@@ -163,7 +161,7 @@ This function is called when the user clicks on a city in the visual cities list
 
 
 \begin{DoxyParams}{Parameters}
-{\em index} & the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. \\
+{\em I\+N\+D\+EX} & the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the \mbox{\hyperlink{classWeatherCategory}{Weather\+Category}} class. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}\label{classWeatherWindow_a011dcad5834b3b59b0a4580e616d45cd}} 
@@ -283,7 +281,13 @@ the weather record that is currently being used \mbox{\Hypertarget{classWeatherW
 \doxysubsubsection{\texorpdfstring{ui}{ui}}
 {\footnotesize\ttfamily Ui\+::\+Weather\+Window$\ast$ Weather\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
 
-a qt-\/created pointer that represents the window itself 
+a qt-\/created pointer that represents the window itself \mbox{\Hypertarget{classWeatherWindow_a7742f3d9a86e86879805117974e9d48e}\label{classWeatherWindow_a7742f3d9a86e86879805117974e9d48e}} 
+\index{WeatherWindow@{WeatherWindow}!weekOrDay@{weekOrDay}}
+\index{weekOrDay@{weekOrDay}!WeatherWindow@{WeatherWindow}}
+\doxysubsubsection{\texorpdfstring{weekOrDay}{weekOrDay}}
+{\footnotesize\ttfamily int Weather\+Window\+::week\+Or\+Day\hspace{0.3cm}{\ttfamily [private]}}
+
+indicates whether a the current view is Daily or Weekly\+: 0 = day, 1 = week 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

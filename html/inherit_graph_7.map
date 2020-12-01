@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classRecord.html" title="The Record class represents one record in any data category." alt="" coords="5,56,72,83"/>
-<area shape="rect" id="node2" href="$classNewsRecord.html" title=" " alt="" coords="129,5,232,32"/>
+<area shape="rect" id="node2" href="$classNewsRecord.html" title="The NewsRecord class represents one news story." alt="" coords="129,5,232,32"/>
 <area shape="rect" id="node3" href="$classStockRecord.html" title="The StockRecord class describes an individual stock." alt="" coords="129,56,232,83"/>
 <area shape="rect" id="node4" href="$classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city." alt="" coords="120,107,241,133"/>
 </map>

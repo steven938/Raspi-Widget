@@ -1,5 +1,5 @@
 <map id="stockWindow" name="stockWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="179,171,289,197"/>
+<area shape="rect" id="node1" title="The stockWindow class displays information on stocks." alt="" coords="179,171,289,197"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,81,84,108"/>
 <area shape="rect" id="node3" href="$classStockCategory.html" title="The StockCategory class is a singleton that creates and accesses records." alt="" coords="109,81,226,108"/>
 <area shape="rect" id="node4" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="113,5,221,32"/>

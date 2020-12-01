@@ -9,6 +9,15 @@ Date: 2020-11-04
 #include "Date.h"
 #include "Record.h"
 #include "CategoryADT.h"
+/*!
+ * \brief The NewsRecord class represents one news story
+ *
+ * Represnts one news story, given an author, title, description, source and url.
+ *
+ * @author Adam Miller
+ * @date 2020-11-04
+ *
+ */
 class NewsRecord: public Record{
     private: /*!< a qt-created pointer that represents the window itself*/
         Date date;                  /*!< the date of the news story */

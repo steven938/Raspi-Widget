@@ -14,17 +14,23 @@ Date: 2020-11-11
 namespace Ui {
 class NewsWindow;
 }
-
+/*!
+ * \brief The NewsWindow class displays and controls News data
+ *
+ * This class is the controller and view for the NewsCategory of data
+ *
+ * \author Dhyey Patel
+ * \date 2020-11-11
+ *
+ */
 class NewsWindow : public QWidget
 {
     Q_OBJECT
 
-// The public methods are just the constructor and deconstructors
 public:
     explicit NewsWindow(MainWindow * window, QWidget *parent = nullptr);
     ~NewsWindow();
 
-// Private slots are associated to buttons on the ui, and there is currently onle one button (more to come later)
 private slots:
     void on_BackButton_clicked();
     void on_SearchByWordButton_clicked();

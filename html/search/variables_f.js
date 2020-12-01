@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['year_273',['year',['../classDate.html#a3eeced2ed56bc95d56782b9e738db8ea',1,'Date']]]
+  ['weekorday_315',['weekOrDay',['../classWeatherWindow.html#a7742f3d9a86e86879805117974e9d48e',1,'WeatherWindow']]]
 ];

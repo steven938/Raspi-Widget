@@ -120,11 +120,11 @@ string Date::getStr2() const{
  *
  * Determines if Date s are the same, comapring on Year, Month, and Day
  *
- * \param other the Date being compared to
+ * \param OTHER the Date being compared to
  * \return true if the Date s are equal, false otherwise
  */
-bool Date::operator==(const Date& other){
-    return this->year == other.getYear() && this->month == other.getMonth() && this->day == other.getDay();
+bool Date::operator==(const Date& OTHER){
+    return this->year == OTHER.getYear() && this->month == OTHER.getMonth() && this->day == OTHER.getDay();
 }
 
 /*!
@@ -132,9 +132,9 @@ bool Date::operator==(const Date& other){
  *
  *  Determines if Date s are unequal, comparing on Year, Month, and Day
  *
- * \param other the Date being compared to
+ * \param OTHER the Date being compared to
  * \return true if the Date s are unequal, false otherwise
  */
-bool Date::operator!=(const Date& other){
-    return this->year != other.getYear() || this->month != other.getMonth() || this->day != other.getDay();
+bool Date::operator!=(const Date& OTHER){
+    return this->year != OTHER.getYear() || this->month != OTHER.getMonth() || this->day != OTHER.getDay();
 }

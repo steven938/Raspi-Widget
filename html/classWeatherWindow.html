@@ -163,8 +163,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab3d351e40ee7e1d84b1f07f608d0e55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a346ad9d86942f88f37c1db2a72b4d285"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherWindow.html#a346ad9d86942f88f37c1db2a72b4d285">cityIndex</a></td></tr>
 <tr class="separator:a346ad9d86942f88f37c1db2a72b4d285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7742f3d9a86e86879805117974e9d48e"><td class="memItemLeft" align="right" valign="top"><a id="a7742f3d9a86e86879805117974e9d48e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>weekOrDay</b></td></tr>
+<tr class="memitem:a7742f3d9a86e86879805117974e9d48e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeatherWindow.html#a7742f3d9a86e86879805117974e9d48e">weekOrDay</a></td></tr>
 <tr class="separator:a7742f3d9a86e86879805117974e9d48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -324,7 +323,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>weekOrDay</b></td></tr
 <p>This function is called when the user clicks on a city in the visual cities list. It updates r to be about the city just clicked, and calles <a class="el" href="classWeatherWindow.html#a8ef6627a2919021621af477fbb113c48" title="WeatherWindow::updateDisplay Updates the display to give the weather for the current day.">WeatherWindow::updateDisplay()</a> to update the display</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the <a class="el" href="classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location.">WeatherCategory</a> class. </td></tr>
+    <tr><td class="paramname">INDEX</td><td>the index number of the city that was clicked on. This corresponds to the index numbers in the records vector of the <a class="el" href="classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location.">WeatherCategory</a> class. </td></tr>
   </table>
   </dd>
 </dl>
@@ -687,6 +686,29 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>weekOrDay</b></td></tr
 </table>
 </div><div class="memdoc">
 <p>a qt-created pointer that represents the window itself </p>
+
+</div>
+</div>
+<a id="a7742f3d9a86e86879805117974e9d48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7742f3d9a86e86879805117974e9d48e">&#9670;&nbsp;</a></span>weekOrDay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WeatherWindow::weekOrDay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates whether a the current view is Daily or Weekly: 0 = day, 1 = week </p>
 
 </div>
 </div>
