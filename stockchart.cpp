@@ -8,14 +8,17 @@
  * \date 2020-11-30
  *
  */
-StockChart::StockChart(QWidget *parent) :
+StockChart::StockChart(QWidget *parent, QChartView *chartView) :
     QDialog(parent),
     ui(new Ui::StockChart)
 {
     ui->setupUi(this);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    chartView->setParent(ui->chartFrame);
 }
 
 StockChart::~StockChart()
 {
     delete ui;
 }
+

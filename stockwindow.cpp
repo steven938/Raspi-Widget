@@ -5,6 +5,7 @@ Date: 2020-11-11
 */
 #include "stockwindow.h"
 #include "ui_stockwindow.h"
+#include "stockchart.h"
 #include <iostream>
 
 using namespace std;
@@ -36,26 +37,18 @@ stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
     ui->pastMonth->setEnabled(false);
     ui->pastMonth2->setEnabled(false);
     ui->pastMonth3->setEnabled(false);
-    ui->sortStocks->hide();
-    ui->compInfo->hide();
-    ui->chartFrameBox->hide();
-    ui->chartOptions->hide();
-    ui->listOptions->hide();
+    ui->viewChart->setEnabled(false);
 
-    //Initalize all the parameters to 0
+    //Initalize all the member variables to 0
     stockIndex = 0;
     chartPrice = 0;
     chartTime = 0;
     sortOption = 0;
     sortOrder = 0;
 
-
-
-
-
     vector<StockRecord> records;
     records.push_back(StockRecord("AAPL"));
-    //displayChart(records);
+    //updateChart(records);
 
 }
 
@@ -91,8 +84,7 @@ void stockWindow::on_BackButton_clicked(){
 
 void stockWindow::updateDisplay(){
 
-    // Update the chart based on the options
-    displayChart(*r);
+
 
 
     // Update the company information section
@@ -142,9 +134,7 @@ Description: Internal method that will display a stock chart given a vector of s
 Parameter Descriptions: vector of stock records that will be displayed 
 Return Description: N/A, displays the chart 
 */
-void stockWindow::displayChart(StockRecord toDisplay){
-    qDebug() << "running display chart with...";
-    qDebug() << chartTime;
+void stockWindow::updateChart(StockRecord toDisplay){
     int displayDays = 0;
     if(this->chartTime == 0){
         displayDays = 7;
@@ -163,7 +153,7 @@ void stockWindow::displayChart(StockRecord toDisplay){
     
     // add the data from toDisplay into the line series
     for (int i = displayDays; i >= 0; i --){
-        //cerr << i << " " << toDisplay.getClose((displayDays - i)) << endl;
+        qDebug() << toDisplay.getClose(displayDays+1 - i);
         if(this->chartPrice == 0){
             series->append(i,toDisplay.getOpen((displayDays+1 - i)));
         }
@@ -188,7 +178,7 @@ void stockWindow::displayChart(StockRecord toDisplay){
     QString qtitle = QString::fromStdString(title);
     chart->setTitle(qtitle);
 
-
+    // Create and set the X axis, which will be all the dates
     QCategoryAxis *axisX = new QCategoryAxis();
     for (int i = displayDays - 1; i >= 0; i --){
         string date = toDisplay.getDate(i);
@@ -199,18 +189,17 @@ void stockWindow::displayChart(StockRecord toDisplay){
 
 
     // Create a chartview to display the chart, and dispay the chart in the correct location
-    QChartView *chartView = new QChartView(chart);
-    chartView->setRenderHint(QPainter::Antialiasing);
-    chartView->setParent(ui->chartFrame);
-    chartView->repaint();
-
+    if(chartView == NULL){
+        delete chartView;
+    }
+    chartView = new QChartView(chart);
 }
 
 void stockWindow::on_searchBar_returnPressed()
 {
     category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
     r = new StockRecord(category.getRecords()[category.getRecords().size()-1]);          //Accesses the first weatherrecord in the category's records vector.
-    displayChart(*r);
+    updateChart(*r);
     updateDisplay();                                        //Updates the data on display
 
     // Enable all of the disabled buttons now that there is some data to work with
@@ -227,6 +216,7 @@ void stockWindow::on_searchBar_returnPressed()
     ui->pastMonth->setEnabled(true);
     ui->pastMonth2->setEnabled(true);
     ui->pastMonth3->setEnabled(true);
+    ui->viewChart->setEnabled(true);
 
     ui->stocksList->addItem(ui->searchBar->text());
     stockIndex = category.getRecords().size()-1;    // sets the correct stock index, meaning that the dropdown displays the correct city
@@ -239,50 +229,58 @@ void stockWindow::on_searchBar_returnPressed()
 void stockWindow::on_openButton_clicked()
 {
     this->chartPrice = 0;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_highButton_clicked()
 {
     this->chartPrice = 1;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_lowButton_clicked()
 {
     this->chartPrice = 2;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_closeButton_clicked()
 {
     this->chartPrice = 3;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_pastWeek_clicked()
 {
     this->chartTime = 0;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_pastMonth_clicked()
 {
     this->chartTime = 1;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_pastMonth2_clicked()
 {
     this->chartTime = 2;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 
 }
 
 void stockWindow::on_pastMonth3_clicked()
 {
     this->chartTime = 3;
-    updateDisplay();
+    // Update the chart based on the options
+    updateChart(*r);
 }
 
 void stockWindow::on_alphaButton_clicked()
@@ -309,36 +307,13 @@ void stockWindow::on_descButton_clicked()
     updateDisplay();
 }
 
-
-
-
-void stockWindow::on_stockView_clicked()
+void stockWindow::on_stocksList_currentIndexChanged(int index)
 {
-    ui->sortStocks->hide();
-    ui->compInfo->hide();
-    ui->chartFrameBox->show();
-    ui->chartOptions->show();
-    ui->listOptions->hide();
-}
+    r = new StockRecord(category.getRecords()[index]);
+    updateDisplay();
+    updateChart(*r);
 
-void stockWindow::on_listView_clicked()
-{
-    ui->sortStocks->show();
-    ui->compInfo->hide();
-    ui->chartFrameBox->hide();
-    ui->chartOptions->hide();
-    ui->listOptions->show();
 }
-
-void stockWindow::on_companyView_clicked()
-{
-    ui->sortStocks->hide();
-    ui->compInfo->show();
-    ui->chartFrameBox->hide();
-    ui->chartOptions->hide();
-    ui->listOptions->hide();
-}
-
 
 bool stockWindow::sortAlpha(StockRecord a,StockRecord b){
     if(a.getTicker().compare(b.getTicker()) <= 0){
@@ -353,8 +328,14 @@ bool stockWindow::sortMCap(StockRecord a,StockRecord b){
     return a.getMarketCap() < b.getMarketCap();
 }
 
-void stockWindow::on_stocksList_currentIndexChanged(int index)
+
+
+
+
+void stockWindow::on_viewChart_clicked()
 {
-    r = new StockRecord(category.getRecords()[index]);
-    updateDisplay();
+    StockChart* w = new StockChart(nullptr, chartView); //initializes the weather window
+    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
+    w->setFont(font);
+    w->show();
 }
