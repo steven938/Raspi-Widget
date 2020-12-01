@@ -9,88 +9,85 @@ Date: 2020-11-04
 
 using namespace std;
 
-/*
-Name: Constructor
-Description: Constructs the daily stock record with information on stock price, volume on given day
-Parameter Descriptions: open price, closing price, high price, low price, trade volume, string representing the date 
-Return Description: N/A
-*/
-DailyStock::DailyStock(float open, float close, float high, float low, long long int volume, Date date){
-	this->open = open;
-	this->close = close;
-	this->high = high;
-	this->low = low;
-	this->volume = volume;
-	this->date = date;
+
+/*!
+ * \brief DailyStock::DailyStock constructor
+ *
+ * Constructs a DailyStock, assigning stock prices, volume, and Date
+ *
+ * \param OPEN const, the opening price of the stock
+ * \param CLOSE const, the closing price of the stock
+ * \param HIGH const, the high price of the stock for the day
+ * \param LOW const, the low price of the stock for the day
+ * \param VOLUME const, the volume of trades for the stock for that day
+ * \param DATE const, the date of the DailyStock
+ */
+DailyStock::DailyStock(const float OPEN, const float CLOSE, const float HIGH,const float LOW, const long long int VOLUME,const Date DATE){
+    this->open = OPEN;
+    this->close = CLOSE;
+    this->high = HIGH;
+    this->low = LOW;
+    this->volume = VOLUME;
+    this->date = DATE;
 }
-/*
-Name: getOpen
-Description: gets the opening price of stock on this date
-Parameter Descriptions: 
-Return Description: opening price
-*/
+
+/*!
+ * \brief DailyStock::getOpen getter for open
+ * \return the open price for the stock on this Date
+ */
 float DailyStock::getOpen() const{
 	return this->open;
 }
 
 
-/*
-Name: getClose
-Description: gets the closing price of stock on this date
-Parameter Descriptions: 
-Return Description: 
-*/
+/*!
+ * \brief DailyStock::getClose getter for close
+ * \return the close price for the stock on this Date
+ */
 float DailyStock::getClose() const{
 	return this->close;
 }
 
-/*
-Name: getHigh
-Description: gets the high price of stock on this date
-Parameter Descriptions: 
-Return Description: 
-*/
+/*!
+ * \brief DailyStock::getHigh getter for high
+ * \return the high price of the stock on this Date
+ */
 float DailyStock::getHigh() const{
 	return this->high;
 }
 
-/*
-Name: getLow
-Description: gets the low price of the stock on this date
-Parameter Descriptions: 
-Return Description: 
-*/
+
+/*!
+ * \brief DailyStock::getLow getter for low
+ * \return the low price of the stock on this Date
+ */
 float DailyStock::getLow() const{
 	return this->low;
 }
 
-/*
-Name: getVolume
-Description: gets the volume of trades for the stock on this date
-Parameter Descriptions:
-Return Description: volume
-*/
+/*!
+ * \brief DailyStock::getVolume getter for volume
+ * \return the volume of trades for this stock on this Date
+ */
 long long int DailyStock::getVolume() const{
 	return this->volume;
 }
 
-/*
-Name: getDate
-Description: gets the volume of trades for the stock on this date
-Parameter Descriptions:
-Return Description: volume
-*/
+
+/*!
+ * \brief DailyStock::getDate getss a string representation of the date of the stock
+ * \return the date, in DD/MM/YYYY format, as a string
+ */
 string DailyStock::getDate() const{
     return this->date.getStr2();
 }
 
-
-/*
-Name: Destructor
-Description: Destroys the object
-Parameter Descriptions: 
-Return Description: 
-*/
+/*!
+ * \brief DailyStock::~DailyStock destructor
+ *
+ * doesn't do anything, because DailyStock does not allocate dynamic memory
+ *
+ */
 DailyStock::~DailyStock(){
 	;
 }

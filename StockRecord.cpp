@@ -19,168 +19,182 @@ Date: 2020-11-04
 #include <iostream>
 using namespace std;
 
-/*
-Name: constructor
-Description: initializes query to the stock API to initialize stock information
-Parameter Descriptions: 
-Return Description: 
-*/
-StockRecord::StockRecord(string ticker){
-    this->ticker = ticker;
-    requestCompanyInfo();
-    requestStockPrices();
-    requestFinancials();
+
+/*!
+ * \brief StockRecord::StockRecord constructor
+ *
+ * Given a ticker symbol, creates a StockRecord and processes three API calls to get financial information
+ *
+ * \param ticker the ticker symbol for the stock
+ */
+StockRecord::StockRecord(const string TICKER){
+    this->ticker = TICKER;
+    try{                            //encapsulated in a try-catch block because all three calls need to work for the StockRecord to be successfully initialized. If any fail, then the StockRecord cannot be initailized
+        requestCompanyInfo();       //gets information such as company name
+        requestStockPrices();       //gets stock price
+        requestFinancials();        //gets non-stock financial information, like gross margin
+    }catch(...){
+        throw "No stock with this ticker exists";
+    }
 }
 
-/*
-Name: getTicker
-Description: 
-Parameter Descriptions: get the ticker name of the stock
-Return Description: ticker
-*/
-string StockRecord::getTicker(){
+/*!
+ * \brief StockRecord::getTicker getter for ticker
+ *
+ * returns the ticker symbol for the stock
+ *
+ * \return the ticker, a string
+ */
+string StockRecord::getTicker() const{
     return ticker;
 }
 
-/*
-Name: getCompanyName
-Description: gets the company name
-Parameter Descriptions: 
-Return Description: company name
-*/
-string StockRecord::getCompanyName(){
+
+/*!
+ * \brief StockRecord::getCompanyName getter for company name
+ *
+ * returns the company name, a string
+ *
+ * \return companyName, a string
+ */
+string StockRecord::getCompanyName()const{
     return companyName;
 }
 
-/*
-Name: getExchange
-Description: gets the exchange on which stock is traded on
-Parameter Descriptions:
-Return Description:
-*/
-string StockRecord::getExchange(){
+/*!
+ * \brief StockRecord::getExchange getter for the exchange
+ * \return the exchange where the stock is traded
+ */
+string StockRecord::getExchange()const{
     return exchange;
 }
 
-/*
-Name: getMarketCap
-Description: gets market capitalization of the stock
-Parameter Descriptions: 
-Return Description: market cap
-*/
-double StockRecord::getMarketCap(){
+/*!
+ * \brief StockRecord::getMarketCap getter for market cap
+ *
+ *
+ * \return the market capitalization of the stock, defined as (num shares * stock price)
+ */
+double StockRecord::getMarketCap() const{
     return this->marketCap;
 }
 
-/*
-Name: getOpen
-Description: gets the open price some number of days ago
-Parameter Descriptions: the number days to look back
-Return Description: open price
-*/
-float StockRecord::getOpen(int daysAgo){
-    return days[daysAgo].getOpen();
+/*!
+ * \brief StockRecord::getOpen getter of the open price of the stock x days ago
+ * \param DAYS_AGO the number of days before the current day to look
+ * \return the open price DAYS_AGO days ago, from the DailyStock for DAYS_AGO days
+ */
+float StockRecord::getOpen(const int DAYS_AGO) const{
+    return days[DAYS_AGO].getOpen();
 }
 
-/*
-Name: getLow
-Description: gets the low price some number of days ago
-Parameter Descriptions: the number days to look back
-Return Description: low price
-*/
-float StockRecord::getLow(int daysAgo){
-    return days[daysAgo].getLow();
+/*!
+ * \brief StockRecord::getLow gets the low price some number of days ago
+ *
+ * Gets the low price of the DailyStock representing DAYS_AGO days ago
+ *
+ * \param DAYS_AGO the number of days before the current day to look
+ * \return the low price DAYS_AGO days ago, from the DailyStock for that day
+ */
+float StockRecord::getLow(const int DAYS_AGO) const{
+    return days[DAYS_AGO].getLow();
 }
 
-/*
-Name: getHigh
-Description: gets the high price some number of days ago
-Parameter Descriptions: the number days to look back
-Return Description: high price
-*/
-float StockRecord::getHigh(int daysAgo){
-    return days[daysAgo].getHigh();
+/*!
+ * \brief StockRecord::getHigh gets the high price some number of days ago
+ *
+ *
+ * Gets the high price of the DailyStock representing DAYS_AGO days ago
+ *
+ * \param DAYS_AGO the number of days before the current day to look
+ * \return the high price DAYS_AGO days ago, from the DailyStock for that day
+ */
+float StockRecord::getHigh(const int DAYS_AGO)const{
+    return days[DAYS_AGO].getHigh();
 }
 
-/*
-Name: getClose
-Description: gets the closing price some number of days ago
-Parameter Descriptions: the number days to look back
-Return Description: closing price
-*/
-float StockRecord::getClose(int daysAgo){
-    return days[daysAgo].getClose();
+
+/*!
+ * \brief StockRecord::getLow gets the low price some number of days ago
+ *
+ *
+ * Gets the low price of the DailyStock representing DAYS_AGO days ago
+ *
+ * \param DAYS_AGO the number of days before the current day to look
+ * \return the low price DAYS_AGO days ago, from the DailyStock for that day
+ */
+float StockRecord::getClose(const int DAYS_AGO) const{
+    return days[DAYS_AGO].getClose();
 }
 
-/*
-Name: getVolume
-Description: gets the volume of trades on certain day
-Parameter Descriptions: the number days to look back
-Return Description: the volume of trades
-*/
-long long int StockRecord::getVolume(int daysAgo){
-    return days[daysAgo].getVolume();
+/*!
+ * \brief StockRecord::getVolume gets the volume of trades of the stock on a given day
+ *
+ * Gets the number of trades that occured for a given stock on a given day (represented by a DailyStock)
+ *
+ * \param DAYS_AGO  the number of days before the current day to look
+ * \return the volume of trades DAYS_AGO days
+ */
+long long int StockRecord::getVolume(const int DAYS_AGO) const{
+    return days[DAYS_AGO].getVolume();
 }
 
-/*
-Name: getDate
-Description: gets the Date on certain day
-Parameter Descriptions: the number days to look back
-Return Description: Date object with the date
-*/
-string StockRecord::getDate(int daysAgo){
-    return this->days[daysAgo].getDate();
+
+
+/*!
+ * \brief StockRecord::getDate gets the date DAYS_AGO days ago
+ * \param DAYS_AGO the number of days before the current day to look
+ * \return the date DAYS_AGO days ago
+ */
+string StockRecord::getDate(const int DAYS_AGO) const{
+    return this->days[DAYS_AGO].getDate();
 }
 
-/*
-Name: getEBITShare
-Description: gets EBIT/Share of the stock
-Parameter Descriptions:
-Return Description: EBIT/Share
-*/
-float StockRecord::getEBITShare(){
+/*!
+ * \brief StockRecord::getEBITShare getter for the EBIT/Share of the stock
+ * \return the EBIT/Share of the stock (Earnings before interest and tax)
+ */
+float StockRecord::getEBITShare()const{
     return this->ebitShare;
 }
 
-/*
-Name: getPayoutRatio
-Description: gets Payout Ratio of the stock
-Parameter Descriptions:
-Return Description: Payout Ratio
-*/
-float StockRecord::getPayoutRatio(){
+/*!
+ * \brief StockRecord::getPayoutRatio getter for the payout ratio (divided/earnings) of the stock
+ * \return the payout ratio of the stock
+ */
+float StockRecord::getPayoutRatio()const{
     return this->payoutRatio;
 }
 
-/*
-Name: getCurrentRatio
-Description: gets Current Ratio of the stock
-Parameter Descriptions:
-Return Description: Current Ratio
-*/
-float StockRecord::getCurrentRatio(){
+/*!
+ * \brief StockRecord::getCurrentRatio getter for the current ratio (current assets/current liabilities) of the stock
+ * \return the current ratio of the stock
+ */
+float StockRecord::getCurrentRatio()const{
     return this->currentRatio;
 }
 
-/*
-Name: getGrossMargin
-Description: gets Gross Margin of the stock
-Parameter Descriptions:
-Return Description: Gross Margin
-*/
-float StockRecord::getGrossMargin(){
+/*!
+ * \brief StockRecord::getGrossMargin getter for the gross margin (gross profits/revenues) of the stock
+ * \return the gross margin of the stock
+ */
+float StockRecord::getGrossMargin()const{
     return this->grossMargin;
 }
 
-
+/*!
+ * \brief StockRecord::requestStockPrices API call to get stock prices
+ *
+ * Private helper function that makes an API call to determine stock price information, such as open, close, high, and low.
+ *
+ */
 void StockRecord::requestStockPrices(){
     QNetworkRequest request;
+    //set up the API call
     QString endpoint = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=" + QString::fromStdString(this->ticker) + "&apikey=AI83R8IOLM46LIP2";
-
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setSslConfiguration(QSslConfiguration::defaultConfiguration());
     request.setUrl(QUrl(endpoint));
-
     QJsonObject json;
     QNetworkAccessManager nam;
     QNetworkReply *reply = nam.get(request);
@@ -221,10 +235,18 @@ void StockRecord::requestStockPrices(){
     {
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
+        throw "API Call Failed - no stock with this ticker";
     }
     reply->deleteLater();
 }
-
+/*!
+ * \brief StockRecord::requestCompanyInfo API call to get Company info
+ *
+ *
+ *
+ * Private helper function that makes an API call to determine company information, such as name and exchange
+ *
+ */
 void StockRecord::requestCompanyInfo(){
     QNetworkRequest request;
     QString endpoint = "https://finnhub.io/api/v1/stock/profile2?symbol=" + QString::fromStdString(this->ticker) + "&token=bulhelv48v6p4m01r9jg";
@@ -256,9 +278,18 @@ void StockRecord::requestCompanyInfo(){
     {
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
+        throw "API Call Failed - no stock with this ticker";
+
     }
     reply->deleteLater();
 }
+/*!
+ * \brief StockRecord::requestFinancials API call to get financial information
+ *
+ * Private helper function that makes an API call to determine financials, such as EBIT per share, gross margin, and payout ratio
+ *
+ */
+
 
 void StockRecord::requestFinancials(){
     QNetworkRequest request;
@@ -294,16 +325,18 @@ void StockRecord::requestFinancials(){
     {
         qDebug() << "Json File Failed to Parse : " << endpoint;
         qDebug() << "Error : " << reply->errorString();
+        throw "API Call Failed - no stock with this ticker";
+
     }
     reply->deleteLater();
 }
 
-/*
-Name: destructor
-Description:
-Parameter Descriptions: 
-Return Description: open price
-*/
+/*!
+ * \brief StockRecord::~StockRecord desctructor
+ *
+ * Does not do anything, since StockRecord does not manage dynamic memory
+ *
+ */
 StockRecord::~StockRecord(){
     ;
 }
