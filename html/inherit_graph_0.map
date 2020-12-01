@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="5,56,113,83"/>
-<area shape="rect" id="node2" href="$classNewsCategory.html" title=" " alt="" coords="170,5,287,32"/>
-<area shape="rect" id="node3" href="$classStockCategory.html" title=" " alt="" coords="170,56,287,83"/>
+<area shape="rect" id="node2" href="$classNewsCategory.html" title="The NewsCategory class holds news records for each query." alt="" coords="170,5,287,32"/>
+<area shape="rect" id="node3" href="$classStockCategory.html" title="The StockCategory class is a singleton that creates and accesses records." alt="" coords="170,56,287,83"/>
 <area shape="rect" id="node4" href="$classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location." alt="" coords="161,107,296,133"/>
 </map>

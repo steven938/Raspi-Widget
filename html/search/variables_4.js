@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parentwindow_145',['parentWindow',['../classWeatherWindow.html#abef91658d33f01bd70f2716918dee7a4',1,'WeatherWindow']]]
+  ['grossmargin_249',['grossMargin',['../classStockRecord.html#a54da2c61b0be09b043e498f7e768f4a4',1,'StockRecord']]]
 ];

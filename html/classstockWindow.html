@@ -66,6 +66,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classstockWindow-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -86,10 +87,14 @@ Collaboration diagram for stockWindow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstockWindow__coll__graph.png" border="0" usemap="#stockWindow_coll__map" alt="Collaboration graph"/></div>
 <map name="stockWindow_coll__map" id="stockWindow_coll__map">
-<area shape="rect" title=" " alt="" coords="11,171,121,197"/>
+<area shape="rect" title=" " alt="" coords="179,171,289,197"/>
 <area shape="rect" title=" " alt="" coords="5,81,84,108"/>
-<area shape="rect" href="classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="109,81,215,108"/>
-<area shape="rect" title=" " alt="" coords="104,5,220,32"/>
+<area shape="rect" href="classStockCategory.html" title="The StockCategory class is a singleton that creates and accesses records." alt="" coords="109,81,226,108"/>
+<area shape="rect" href="classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="113,5,221,32"/>
+<area shape="rect" href="classStockRecord.html" title="The StockRecord class describes an individual stock." alt="" coords="251,81,353,108"/>
+<area shape="rect" href="classRecord.html" title="The Record class represents one record in any data category." alt="" coords="269,5,335,32"/>
+<area shape="rect" href="classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="378,81,485,108"/>
+<area shape="rect" title=" " alt="" coords="373,5,489,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -104,22 +109,349 @@ Private Slots</h2></td></tr>
 <tr class="memitem:abed535565c9778535bc8ac5218fe5580"><td class="memItemLeft" align="right" valign="top"><a id="abed535565c9778535bc8ac5218fe5580"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on_BackButton_clicked</b> ()</td></tr>
 <tr class="separator:abed535565c9778535bc8ac5218fe5580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf6b23734817dd64d4f971ddc5a08b7"><td class="memItemLeft" align="right" valign="top"><a id="a0cf6b23734817dd64d4f971ddc5a08b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_searchBar_returnPressed</b> ()</td></tr>
+<tr class="separator:a0cf6b23734817dd64d4f971ddc5a08b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44480a0864cb11a2458129e945ebd64"><td class="memItemLeft" align="right" valign="top"><a id="ae44480a0864cb11a2458129e945ebd64"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_openButton_clicked</b> ()</td></tr>
+<tr class="separator:ae44480a0864cb11a2458129e945ebd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f817438646c98bf74fbc7f9db26f0e5"><td class="memItemLeft" align="right" valign="top"><a id="a2f817438646c98bf74fbc7f9db26f0e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_highButton_clicked</b> ()</td></tr>
+<tr class="separator:a2f817438646c98bf74fbc7f9db26f0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02f18b3386e4dece2b5e6e960957a1f"><td class="memItemLeft" align="right" valign="top"><a id="aa02f18b3386e4dece2b5e6e960957a1f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_lowButton_clicked</b> ()</td></tr>
+<tr class="separator:aa02f18b3386e4dece2b5e6e960957a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1807ce45ab986486a3625956dad558cf"><td class="memItemLeft" align="right" valign="top"><a id="a1807ce45ab986486a3625956dad558cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_closeButton_clicked</b> ()</td></tr>
+<tr class="separator:a1807ce45ab986486a3625956dad558cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9daf118a70cac035cdd5c894cd349538"><td class="memItemLeft" align="right" valign="top"><a id="a9daf118a70cac035cdd5c894cd349538"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_pastWeek_clicked</b> ()</td></tr>
+<tr class="separator:a9daf118a70cac035cdd5c894cd349538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e694ab0a37dd86ef63eecc17d5d5e42"><td class="memItemLeft" align="right" valign="top"><a id="a8e694ab0a37dd86ef63eecc17d5d5e42"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_pastMonth_clicked</b> ()</td></tr>
+<tr class="separator:a8e694ab0a37dd86ef63eecc17d5d5e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10df65a97f00729aadb1f44adef772aa"><td class="memItemLeft" align="right" valign="top"><a id="a10df65a97f00729aadb1f44adef772aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_alphaButton_clicked</b> ()</td></tr>
+<tr class="separator:a10df65a97f00729aadb1f44adef772aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa181a595f208642e53e41f081af1d112"><td class="memItemLeft" align="right" valign="top"><a id="aa181a595f208642e53e41f081af1d112"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_mCapButton_clicked</b> ()</td></tr>
+<tr class="separator:aa181a595f208642e53e41f081af1d112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1168cac2c47156be35963ea0e79dcf"><td class="memItemLeft" align="right" valign="top"><a id="a5c1168cac2c47156be35963ea0e79dcf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_ascdButton_clicked</b> ()</td></tr>
+<tr class="separator:a5c1168cac2c47156be35963ea0e79dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb67fa7cddddd57fca4e81dfacb8722"><td class="memItemLeft" align="right" valign="top"><a id="a2fb67fa7cddddd57fca4e81dfacb8722"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_descButton_clicked</b> ()</td></tr>
+<tr class="separator:a2fb67fa7cddddd57fca4e81dfacb8722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2af9abfadd0784ec3825fa2946bf39e"><td class="memItemLeft" align="right" valign="top"><a id="ab2af9abfadd0784ec3825fa2946bf39e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_pastMonth2_clicked</b> ()</td></tr>
+<tr class="separator:ab2af9abfadd0784ec3825fa2946bf39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116d607782a40d2d1df93293087a5d0e"><td class="memItemLeft" align="right" valign="top"><a id="a116d607782a40d2d1df93293087a5d0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_pastMonth3_clicked</b> ()</td></tr>
+<tr class="separator:a116d607782a40d2d1df93293087a5d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa6792f32fa7cecc3842eaab7c3843d"><td class="memItemLeft" align="right" valign="top"><a id="a6aa6792f32fa7cecc3842eaab7c3843d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_stocksList_currentIndexChanged</b> (int index)</td></tr>
+<tr class="separator:a6aa6792f32fa7cecc3842eaab7c3843d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849c01ab32492b2d6525dabb30af47c7"><td class="memItemLeft" align="right" valign="top"><a id="a849c01ab32492b2d6525dabb30af47c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_viewChart_clicked</b> ()</td></tr>
+<tr class="separator:a849c01ab32492b2d6525dabb30af47c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4b96759d2ca478586c68f26d606df421"><td class="memItemLeft" align="right" valign="top"><a id="a4b96759d2ca478586c68f26d606df421"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayChart</b> (std::vector&lt; <a class="el" href="classStockRecord.html">StockRecord</a> &gt;)</td></tr>
-<tr class="separator:a4b96759d2ca478586c68f26d606df421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2293a66baf1ebf022efdede9296c1d3"><td class="memItemLeft" align="right" valign="top"><a id="ae2293a66baf1ebf022efdede9296c1d3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateChart</b> (<a class="el" href="classStockRecord.html">StockRecord</a>)</td></tr>
+<tr class="separator:ae2293a66baf1ebf022efdede9296c1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac218a399e15f1dd66d71c02f260d245a"><td class="memItemLeft" align="right" valign="top"><a id="ac218a399e15f1dd66d71c02f260d245a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateDisplay</b> ()</td></tr>
+<tr class="separator:ac218a399e15f1dd66d71c02f260d245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a9b5721d5bbe691d3e94dbbb2c69daf7b"><td class="memItemLeft" align="right" valign="top"><a id="a9b5721d5bbe691d3e94dbbb2c69daf7b"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>sortAlpha</b> (<a class="el" href="classStockRecord.html">StockRecord</a>, <a class="el" href="classStockRecord.html">StockRecord</a>)</td></tr>
+<tr class="separator:a9b5721d5bbe691d3e94dbbb2c69daf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d0afecaba229c9bde6c1b763af62e8"><td class="memItemLeft" align="right" valign="top"><a id="a31d0afecaba229c9bde6c1b763af62e8"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>sortMCap</b> (<a class="el" href="classStockRecord.html">StockRecord</a>, <a class="el" href="classStockRecord.html">StockRecord</a>)</td></tr>
+<tr class="separator:a31d0afecaba229c9bde6c1b763af62e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a3e45d24ab2d8f4ebfb2256442806fe75"><td class="memItemLeft" align="right" valign="top"><a id="a3e45d24ab2d8f4ebfb2256442806fe75"></a>
-Ui::stockWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
+<tr class="memitem:a3e45d24ab2d8f4ebfb2256442806fe75"><td class="memItemLeft" align="right" valign="top">Ui::stockWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a3e45d24ab2d8f4ebfb2256442806fe75">ui</a></td></tr>
 <tr class="separator:a3e45d24ab2d8f4ebfb2256442806fe75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4381af7bdf9c5546f8ffbf69a269d74"><td class="memItemLeft" align="right" valign="top"><a id="ae4381af7bdf9c5546f8ffbf69a269d74"></a>
-<a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parentWindow</b></td></tr>
+<tr class="memitem:ae4381af7bdf9c5546f8ffbf69a269d74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#ae4381af7bdf9c5546f8ffbf69a269d74">parentWindow</a></td></tr>
 <tr class="separator:ae4381af7bdf9c5546f8ffbf69a269d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade156507afad4e792c9327153bb6e107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStockCategory.html">StockCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#ade156507afad4e792c9327153bb6e107">category</a></td></tr>
+<tr class="separator:ade156507afad4e792c9327153bb6e107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042a5166f62d9deb5ccc9938a0b04b69"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classStockRecord.html">StockRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a042a5166f62d9deb5ccc9938a0b04b69">sorted</a></td></tr>
+<tr class="separator:a042a5166f62d9deb5ccc9938a0b04b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7805ca295c55217495e5ffab24fb90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStockRecord.html">StockRecord</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a1a7805ca295c55217495e5ffab24fb90">r</a></td></tr>
+<tr class="separator:a1a7805ca295c55217495e5ffab24fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba24451b7ecccf4cf7c707ff9c88a02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a6ba24451b7ecccf4cf7c707ff9c88a02">stockIndex</a></td></tr>
+<tr class="separator:a6ba24451b7ecccf4cf7c707ff9c88a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2028a467260295aeb7f76e2c125b45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a8d2028a467260295aeb7f76e2c125b45">chartPrice</a></td></tr>
+<tr class="separator:a8d2028a467260295aeb7f76e2c125b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30821ac09edbcc21e47b7843a53f14a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a30821ac09edbcc21e47b7843a53f14a8">chartTime</a></td></tr>
+<tr class="separator:a30821ac09edbcc21e47b7843a53f14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f22089a487caeef574fe4039b7c6e5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a3f22089a487caeef574fe4039b7c6e5e">sortOption</a></td></tr>
+<tr class="separator:a3f22089a487caeef574fe4039b7c6e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafed45b704bbe44bbe03e316c20fe90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#adafed45b704bbe44bbe03e316c20fe90">sortOrder</a></td></tr>
+<tr class="separator:adafed45b704bbe44bbe03e316c20fe90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ba064cd655745c61aa8245de102d1f"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstockWindow.html#a28ba064cd655745c61aa8245de102d1f">chartView</a></td></tr>
+<tr class="separator:a28ba064cd655745c61aa8245de102d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ade156507afad4e792c9327153bb6e107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade156507afad4e792c9327153bb6e107">&#9670;&nbsp;</a></span>category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStockCategory.html">StockCategory</a> stockWindow::category</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the stock category (singleton) that is being used </p>
+
+</div>
+</div>
+<a id="a8d2028a467260295aeb7f76e2c125b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d2028a467260295aeb7f76e2c125b45">&#9670;&nbsp;</a></span>chartPrice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stockWindow::chartPrice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates what the price displayed on the chart should be; 0 = open, 1 = high, 2 = low, 3 = close </p>
+
+</div>
+</div>
+<a id="a30821ac09edbcc21e47b7843a53f14a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30821ac09edbcc21e47b7843a53f14a8">&#9670;&nbsp;</a></span>chartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stockWindow::chartTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates what the timeline for the chart should be; 0 = past week, 1 = past month, 2 = past 2 months, 3 = past 3 months </p>
+
+</div>
+</div>
+<a id="a28ba064cd655745c61aa8245de102d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ba064cd655745c61aa8245de102d1f">&#9670;&nbsp;</a></span>chartView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChartView* stockWindow::chartView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates the chart that needs to be created </p>
+
+</div>
+</div>
+<a id="ae4381af7bdf9c5546f8ffbf69a269d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4381af7bdf9c5546f8ffbf69a269d74">&#9670;&nbsp;</a></span>parentWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMainWindow.html">MainWindow</a>* stockWindow::parentWindow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the window that created this window </p>
+
+</div>
+</div>
+<a id="a1a7805ca295c55217495e5ffab24fb90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7805ca295c55217495e5ffab24fb90">&#9670;&nbsp;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStockRecord.html">StockRecord</a>* stockWindow::r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the stock record that is currently being used </p>
+
+</div>
+</div>
+<a id="a042a5166f62d9deb5ccc9938a0b04b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042a5166f62d9deb5ccc9938a0b04b69">&#9670;&nbsp;</a></span>sorted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classStockRecord.html">StockRecord</a>&gt; stockWindow::sorted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the sorted records vector </p>
+
+</div>
+</div>
+<a id="a3f22089a487caeef574fe4039b7c6e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f22089a487caeef574fe4039b7c6e5e">&#9670;&nbsp;</a></span>sortOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stockWindow::sortOption</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates what the stocks need to sorted by; 0 = Alphabetical (ticker), 1 = Market Capitalization </p>
+
+</div>
+</div>
+<a id="adafed45b704bbe44bbe03e316c20fe90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafed45b704bbe44bbe03e316c20fe90">&#9670;&nbsp;</a></span>sortOrder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stockWindow::sortOrder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates what the order of the sort type should be, 0 = Ascending, 1 = Descending </p>
+
+</div>
+</div>
+<a id="a6ba24451b7ecccf4cf7c707ff9c88a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba24451b7ecccf4cf7c707ff9c88a02">&#9670;&nbsp;</a></span>stockIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stockWindow::stockIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>indicates which stock is currently being displayed </p>
+
+</div>
+</div>
+<a id="a3e45d24ab2d8f4ebfb2256442806fe75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e45d24ab2d8f4ebfb2256442806fe75">&#9670;&nbsp;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::stockWindow* stockWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>a qt-created pointer that represents the window itself </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="stockwindow_8h_source.html">stockwindow.h</a></li>
 <li>stockwindow.cpp</li>

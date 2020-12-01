@@ -11,7 +11,8 @@ Inheritance diagram for News\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for News\+Window\+:\nopagebreak
+Collaboration diagram for News\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,40 +22,144 @@ Collaboration diagram for News\+Window\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}\label{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}} 
-{\bfseries News\+Window} (\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$window, Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}{News\+Window}} (\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$window, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}{News\+Window\+::\+News\+Window}} constructor to create an instance of the \mbox{\hyperlink{classNewsWindow}{News\+Window}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNewsWindow_af4ac4071d0c0bea2c0fb72f695eccea5}{$\sim$\+News\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_af4ac4071d0c0bea2c0fb72f695eccea5}{News\+Window\+::$\sim$\+News\+Window}} destructor destroys a \mbox{\hyperlink{classNewsWindow}{News\+Window}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsWindow_aa82e2963b165caac4a385fe456386642}\label{classNewsWindow_aa82e2963b165caac4a385fe456386642}} 
-void {\bfseries on\+\_\+\+Back\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}\label{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}} 
-void {\bfseries on\+\_\+\+Search\+By\+Word\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}\label{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}} 
-void {\bfseries on\+\_\+\+Search\+By\+Topic\+Button\+\_\+clicked} ()
-\item 
-\mbox{\Hypertarget{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}\label{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}} 
-void {\bfseries clear\+Results} ()
-\item 
-\mbox{\Hypertarget{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}\label{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}} 
-void {\bfseries display\+Articles} (std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ records, \mbox{\hyperlink{classNewsCategory}{News\+Category}} $\ast$news\+Category)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classNewsWindow_aa82e2963b165caac4a385fe456386642}{on\+\_\+\+Back\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_aa82e2963b165caac4a385fe456386642}{News\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} returns to the main page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}{on\+\_\+\+Search\+By\+Word\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}{News\+Window\+::on\+\_\+\+Search\+By\+Word\+Button\+\_\+clicked}} finds articles related to the provided words and displays them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}{on\+\_\+\+Search\+By\+Topic\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}{News\+Window\+::on\+\_\+\+Search\+By\+Topic\+Button\+\_\+clicked}} finds articles related to the provided topic and displays them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}{clear\+Results}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}{News\+Window\+::clear\+Results}} clears the article results found by the A\+PI from the form view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}{display\+Articles}} (std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ records, \mbox{\hyperlink{classNewsCategory}{News\+Category}} $\ast$news\+Category)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}{News\+Window\+::display\+Articles}} show the articles found by the A\+PI based on user input to the form. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsWindow_a5e74490ff8fde7f6adb8dca60938dc25}\label{classNewsWindow_a5e74490ff8fde7f6adb8dca60938dc25}} 
-Ui\+::\+News\+Window $\ast$ {\bfseries ui}
+Ui\+::\+News\+Window $\ast$ \mbox{\hyperlink{classNewsWindow_a5e74490ff8fde7f6adb8dca60938dc25}{ui}}
 \item 
-\mbox{\Hypertarget{classNewsWindow_aacd3cfd97f4a98222a531654360b41d4}\label{classNewsWindow_aacd3cfd97f4a98222a531654360b41d4}} 
-\mbox{\hyperlink{classNewsCategory}{News\+Category}} {\bfseries category}
+\mbox{\hyperlink{classNewsCategory}{News\+Category}} \mbox{\hyperlink{classNewsWindow_aacd3cfd97f4a98222a531654360b41d4}{category}}
 \item 
-\mbox{\Hypertarget{classNewsWindow_aea5baf844b9a1c1ac88c5bbee987ae4c}\label{classNewsWindow_aea5baf844b9a1c1ac88c5bbee987ae4c}} 
-\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$ {\bfseries parent\+Window}
+\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$ \mbox{\hyperlink{classNewsWindow_aea5baf844b9a1c1ac88c5bbee987ae4c}{parent\+Window}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}\label{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}} 
+\index{NewsWindow@{NewsWindow}!NewsWindow@{NewsWindow}}
+\index{NewsWindow@{NewsWindow}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{NewsWindow()}{NewsWindow()}}
+{\footnotesize\ttfamily News\+Window\+::\+News\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMainWindow}{Main\+Window}} $\ast$}]{Window,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_ac22b81e1434d96990344adaf5c29a7a3}{News\+Window\+::\+News\+Window}} constructor to create an instance of the \mbox{\hyperlink{classNewsWindow}{News\+Window}} class. 
+
+constructor creates a \mbox{\hyperlink{classNewsWindow}{News\+Window}} object. 
+\begin{DoxyParams}{Parameters}
+{\em Window} & is a reference to the main window. \\
+\hline
+{\em parent} & is a reference to get the associated widgets. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNewsWindow_af4ac4071d0c0bea2c0fb72f695eccea5}\label{classNewsWindow_af4ac4071d0c0bea2c0fb72f695eccea5}} 
+\index{NewsWindow@{NewsWindow}!````~NewsWindow@{$\sim$NewsWindow}}
+\index{````~NewsWindow@{$\sim$NewsWindow}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$NewsWindow()}{~NewsWindow()}}
+{\footnotesize\ttfamily News\+Window\+::$\sim$\+News\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classNewsWindow_af4ac4071d0c0bea2c0fb72f695eccea5}{News\+Window\+::$\sim$\+News\+Window}} destructor destroys a \mbox{\hyperlink{classNewsWindow}{News\+Window}} object. 
+
+Deletes the ui created in the constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}\label{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}} 
+\index{NewsWindow@{NewsWindow}!clearResults@{clearResults}}
+\index{clearResults@{clearResults}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{clearResults}{clearResults}}
+{\footnotesize\ttfamily void News\+Window\+::clear\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_a420b4f2679c355784c0c4c87afceccf4}{News\+Window\+::clear\+Results}} clears the article results found by the A\+PI from the form view. 
+
+Sets the values of article title/links, author names, and news sources to nothing, thereby clearing them from view. \mbox{\Hypertarget{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}\label{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}} 
+\index{NewsWindow@{NewsWindow}!displayArticles@{displayArticles}}
+\index{displayArticles@{displayArticles}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{displayArticles}{displayArticles}}
+{\footnotesize\ttfamily void News\+Window\+::display\+Articles (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$}]{records,  }\item[{\mbox{\hyperlink{classNewsCategory}{News\+Category}} $\ast$}]{news\+Category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_a3ce6dba0cae1c93b9e0b3cb5cd2ace62}{News\+Window\+::display\+Articles}} show the articles found by the A\+PI based on user input to the form. 
+
+Visually show to the user the article names, author names, news sources, and create a hyperlink to the article. 
+\begin{DoxyParams}{Parameters}
+{\em records} & is a vector of News\+Records representing all the articles that the user searched for. \\
+\hline
+{\em news\+Category} & is the \mbox{\hyperlink{classNewsCategory}{News\+Category}} object that stores the vector of records \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNewsWindow_aa82e2963b165caac4a385fe456386642}\label{classNewsWindow_aa82e2963b165caac4a385fe456386642}} 
+\index{NewsWindow@{NewsWindow}!on\_BackButton\_clicked@{on\_BackButton\_clicked}}
+\index{on\_BackButton\_clicked@{on\_BackButton\_clicked}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{on\_BackButton\_clicked}{on\_BackButton\_clicked}}
+{\footnotesize\ttfamily void News\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_aa82e2963b165caac4a385fe456386642}{News\+Window\+::on\+\_\+\+Back\+Button\+\_\+clicked}} returns to the main page. 
+
+When Back\+Button is pressed the newswindow closes. \mbox{\Hypertarget{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}\label{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}} 
+\index{NewsWindow@{NewsWindow}!on\_SearchByTopicButton\_clicked@{on\_SearchByTopicButton\_clicked}}
+\index{on\_SearchByTopicButton\_clicked@{on\_SearchByTopicButton\_clicked}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{on\_SearchByTopicButton\_clicked}{on\_SearchByTopicButton\_clicked}}
+{\footnotesize\ttfamily void News\+Window\+::on\+\_\+\+Search\+By\+Topic\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_af611244a653a5e17dfcb187e92fa1f84}{News\+Window\+::on\+\_\+\+Search\+By\+Topic\+Button\+\_\+clicked}} finds articles related to the provided topic and displays them. 
+
+Finds the relevant News\+Records based on category selected and shows the information about them on the form \mbox{\Hypertarget{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}\label{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}} 
+\index{NewsWindow@{NewsWindow}!on\_SearchByWordButton\_clicked@{on\_SearchByWordButton\_clicked}}
+\index{on\_SearchByWordButton\_clicked@{on\_SearchByWordButton\_clicked}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{on\_SearchByWordButton\_clicked}{on\_SearchByWordButton\_clicked}}
+{\footnotesize\ttfamily void News\+Window\+::on\+\_\+\+Search\+By\+Word\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{classNewsWindow_ac7777b20a98cb44a7a3d8df8cb6df424}{News\+Window\+::on\+\_\+\+Search\+By\+Word\+Button\+\_\+clicked}} finds articles related to the provided words and displays them. 
+
+Finds the relevant News\+Records based on user input to the text box and shows the information about them on the form 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNewsWindow_aacd3cfd97f4a98222a531654360b41d4}\label{classNewsWindow_aacd3cfd97f4a98222a531654360b41d4}} 
+\index{NewsWindow@{NewsWindow}!category@{category}}
+\index{category@{category}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNewsCategory}{News\+Category}} News\+Window\+::category\hspace{0.3cm}{\ttfamily [private]}}
+
+the news category (singleton) that is being used \mbox{\Hypertarget{classNewsWindow_aea5baf844b9a1c1ac88c5bbee987ae4c}\label{classNewsWindow_aea5baf844b9a1c1ac88c5bbee987ae4c}} 
+\index{NewsWindow@{NewsWindow}!parentWindow@{parentWindow}}
+\index{parentWindow@{parentWindow}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{parentWindow}{parentWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMainWindow}{Main\+Window}}$\ast$ News\+Window\+::parent\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+the window that created this window \mbox{\Hypertarget{classNewsWindow_a5e74490ff8fde7f6adb8dca60938dc25}\label{classNewsWindow_a5e74490ff8fde7f6adb8dca60938dc25}} 
+\index{NewsWindow@{NewsWindow}!ui@{ui}}
+\index{ui@{ui}!NewsWindow@{NewsWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+News\+Window$\ast$ News\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+a qt-\/created pointer that represents the window itself 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

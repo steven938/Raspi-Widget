@@ -1,7 +1,7 @@
 <map id="NewsWindow" name="NewsWindow">
 <area shape="rect" id="node1" title=" " alt="" coords="112,171,223,197"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,81,84,108"/>
-<area shape="rect" id="node3" href="$classNewsCategory.html" title=" " alt="" coords="109,81,226,108"/>
+<area shape="rect" id="node3" href="$classNewsCategory.html" title="The NewsCategory class holds news records for each query." alt="" coords="109,81,226,108"/>
 <area shape="rect" id="node4" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="113,5,221,32"/>
 <area shape="rect" id="node5" href="$classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="250,81,357,108"/>
 <area shape="rect" id="node6" title=" " alt="" coords="245,5,361,32"/>

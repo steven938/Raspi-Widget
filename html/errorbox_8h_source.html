@@ -74,23 +74,26 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Ui {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classErrorBox.html">ErrorBox</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classErrorBox.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classErrorBox.html">ErrorBox</a> : <span class="keyword">public</span> QDialog</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classErrorBox.html">ErrorBox</a>(QWidget *parent = <span class="keyword">nullptr</span>); <span class="comment">// Constructor</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~<a class="code" href="classErrorBox.html">ErrorBox</a>(); <span class="comment">// Destructor</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> error(std::string message); <span class="comment">// Function to return a message to the user on the error that was thrown</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classErrorBox.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classErrorBox.html">ErrorBox</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Ui::ErrorBox *ui; <span class="comment">// The user interface for error box to interact with</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif // ERRORBOX_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classErrorBox.html#a97a39cb8eb18063584bb1a3db2c0800e">ErrorBox</a>(QWidget *parent = <span class="keyword">nullptr</span>); <span class="comment">// Constructor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classErrorBox.html#a45aabfc49b58174c690560c6fc3e2082">~ErrorBox</a>(); <span class="comment">// Destructor</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classErrorBox.html#a0120c4c38026855c0512a156c8046d7e">error</a>(<span class="keyword">const</span> std::string MESSAGE); <span class="comment">// Function to return a message to the user on the error that was thrown</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classErrorBox.html#a7f4f44c57b9f417ba10eadf003e2ee1a">   25</a></span>&#160;    Ui::ErrorBox *<a class="code" href="classErrorBox.html#a7f4f44c57b9f417ba10eadf003e2ee1a">ui</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // ERRORBOX_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassErrorBox_html"><div class="ttname"><a href="classErrorBox.html">ErrorBox</a></div><div class="ttdef"><b>Definition:</b> errorbox.h:10</div></div>
+<div class="ttc" id="aclassErrorBox_html_a0120c4c38026855c0512a156c8046d7e"><div class="ttname"><a href="classErrorBox.html#a0120c4c38026855c0512a156c8046d7e">ErrorBox::error</a></div><div class="ttdeci">void error(const std::string MESSAGE)</div><div class="ttdoc">ErrorBox::error displays an error message.</div><div class="ttdef"><b>Definition:</b> errorbox.cpp:36</div></div>
+<div class="ttc" id="aclassErrorBox_html"><div class="ttname"><a href="classErrorBox.html">ErrorBox</a></div><div class="ttdoc">The ErrorBox class displays an &quot;error&quot; message if the user tries to do something illegal....</div><div class="ttdef"><b>Definition:</b> errorbox.h:15</div></div>
+<div class="ttc" id="aclassErrorBox_html_a7f4f44c57b9f417ba10eadf003e2ee1a"><div class="ttname"><a href="classErrorBox.html#a7f4f44c57b9f417ba10eadf003e2ee1a">ErrorBox::ui</a></div><div class="ttdeci">Ui::ErrorBox * ui</div><div class="ttdef"><b>Definition:</b> errorbox.h:25</div></div>
+<div class="ttc" id="aclassErrorBox_html_a97a39cb8eb18063584bb1a3db2c0800e"><div class="ttname"><a href="classErrorBox.html#a97a39cb8eb18063584bb1a3db2c0800e">ErrorBox::ErrorBox</a></div><div class="ttdeci">ErrorBox(QWidget *parent=nullptr)</div><div class="ttdoc">ErrorBox::ErrorBox constructor.</div><div class="ttdef"><b>Definition:</b> errorbox.cpp:11</div></div>
+<div class="ttc" id="aclassErrorBox_html_a45aabfc49b58174c690560c6fc3e2082"><div class="ttname"><a href="classErrorBox.html#a45aabfc49b58174c690560c6fc3e2082">ErrorBox::~ErrorBox</a></div><div class="ttdeci">~ErrorBox()</div><div class="ttdoc">ErrorBox::~ErrorBox destructor.</div><div class="ttdef"><b>Definition:</b> errorbox.cpp:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

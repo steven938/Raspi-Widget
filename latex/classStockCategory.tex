@@ -2,7 +2,17 @@
 \label{classStockCategory}\index{StockCategory@{StockCategory}}
 
 
-Inheritance diagram for Stock\+Category\+:\nopagebreak
+The \mbox{\hyperlink{classStockCategory}{Stock\+Category}} class is a singleton that creates and accesses records.  
+
+
+
+
+{\ttfamily \#include $<$Stock\+Category.\+h$>$}
+
+
+
+Inheritance diagram for Stock\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Stock\+Category\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Stock\+Category\+:\nopagebreak
+Collaboration diagram for Stock\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,14 +32,14 @@ Collaboration diagram for Stock\+Category\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockCategory_a90986c68779c33173c29f8c462281ccc}\label{classStockCategory_a90986c68779c33173c29f8c462281ccc}} 
-std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$ {\bfseries get\+Records} ()
-\item 
+\mbox{\hyperlink{classStockCategory_a0c8f1af807f2182d4b2b8c2d47b40405}{Stock\+Category}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockCategory_a0c8f1af807f2182d4b2b8c2d47b40405}{Stock\+Category\+::\+Stock\+Category}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStockCategory_a3c4422d9cf71e2f2810ddccf21233c88}{$\sim$\+Stock\+Category}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockCategory_a3c4422d9cf71e2f2810ddccf21233c88}{Stock\+Category\+::$\sim$\+Stock\+Category}} destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classStockRecord}{Stock\+Record}} $>$ \mbox{\hyperlink{classStockCategory_aede657581d272059e12b347446963149}{get\+Records}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockCategory_aede657581d272059e12b347446963149}{Stock\+Category\+::get\+Records}} getter for the vector of records. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}{search}} (std\+::string search\+String)
-\begin{DoxyCompactList}\small\item\em search creates and returns a record based on a given search string \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classStockCategory_abdedf0fead5a4cd607a699627b252987}\label{classStockCategory_abdedf0fead5a4cd607a699627b252987}} 
-void {\bfseries sort} (int type, bool ascend)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}{Stock\+Category\+::search}} creates and returns a \mbox{\hyperlink{classStockRecord}{Stock\+Record}} given a search string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,30 +49,94 @@ void {\bfseries display\+Records} (std\+::vector$<$ \mbox{\hyperlink{classStockR
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockCategory_a154576449721d3739f073b09faa6c586}\label{classStockCategory_a154576449721d3739f073b09faa6c586}} 
-std\+::vector$<$ \mbox{\hyperlink{classStockRecord}{Stock\+Record}} $>$ {\bfseries records}
+std\+::vector$<$ \mbox{\hyperlink{classStockRecord}{Stock\+Record}} $>$ \mbox{\hyperlink{classStockCategory_a154576449721d3739f073b09faa6c586}{records}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classStockCategory}{Stock\+Category}} class is a singleton that creates and accesses records. 
+
+A class with ways to access and create Stock\+Records
+
+\begin{DoxyAuthor}{Author}
+Dhyey Patel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/11-\/04 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStockCategory_a0c8f1af807f2182d4b2b8c2d47b40405}\label{classStockCategory_a0c8f1af807f2182d4b2b8c2d47b40405}} 
+\index{StockCategory@{StockCategory}!StockCategory@{StockCategory}}
+\index{StockCategory@{StockCategory}!StockCategory@{StockCategory}}
+\doxysubsubsection{\texorpdfstring{StockCategory()}{StockCategory()}}
+{\footnotesize\ttfamily Stock\+Category\+::\+Stock\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStockCategory_a0c8f1af807f2182d4b2b8c2d47b40405}{Stock\+Category\+::\+Stock\+Category}} constructor. 
+
+Doesn\textquotesingle{}t do anything in particular, as there is nothing to initialize \mbox{\Hypertarget{classStockCategory_a3c4422d9cf71e2f2810ddccf21233c88}\label{classStockCategory_a3c4422d9cf71e2f2810ddccf21233c88}} 
+\index{StockCategory@{StockCategory}!````~StockCategory@{$\sim$StockCategory}}
+\index{````~StockCategory@{$\sim$StockCategory}!StockCategory@{StockCategory}}
+\doxysubsubsection{\texorpdfstring{$\sim$StockCategory()}{~StockCategory()}}
+{\footnotesize\ttfamily Stock\+Category\+::$\sim$\+Stock\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStockCategory_a3c4422d9cf71e2f2810ddccf21233c88}{Stock\+Category\+::$\sim$\+Stock\+Category}} destructor. 
+
+Doesn\textquotesingle{}t do anything in particular, as there is no dynamic memory 
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStockCategory_aede657581d272059e12b347446963149}\label{classStockCategory_aede657581d272059e12b347446963149}} 
+\index{StockCategory@{StockCategory}!getRecords@{getRecords}}
+\index{getRecords@{getRecords}!StockCategory@{StockCategory}}
+\doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classStockRecord}{Stock\+Record}} $>$ Stock\+Category\+::get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStockCategory_aede657581d272059e12b347446963149}{Stock\+Category\+::get\+Records}} getter for the vector of records. 
+
+\begin{DoxyReturn}{Returns}
+records, the vector of \mbox{\hyperlink{classStockRecord}{Stock\+Record}} s 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}\label{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}} 
 \index{StockCategory@{StockCategory}!search@{search}}
 \index{search@{search}!StockCategory@{StockCategory}}
 \doxysubsubsection{\texorpdfstring{search()}{search()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} Stock\+Category\+::search (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRecord}{Record}} Stock\+Category\+::search (\begin{DoxyParamCaption}\item[{std\+::string}]{search\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-search creates and returns a record based on a given search string 
+\mbox{\hyperlink{classStockCategory_a674f9b4e2310c1537d21b42283fe57bf}{Stock\+Category\+::search}} creates and returns a \mbox{\hyperlink{classStockRecord}{Stock\+Record}} given a search string. 
 
+Given a search string (the ticker of the stock), creates a \mbox{\hyperlink{classStockRecord}{Stock\+Record}}, pushes it to records, and returns it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+R\+I\+NG} & the ticker for the stock to be searched \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a \mbox{\hyperlink{classRecord}{Record}} based on the search string 
+the \mbox{\hyperlink{classStockRecord}{Stock\+Record}} for the company with ticker S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+R\+I\+NG 
 \end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{Category\+A\+DT}}.
 
 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classStockCategory_a154576449721d3739f073b09faa6c586}\label{classStockCategory_a154576449721d3739f073b09faa6c586}} 
+\index{StockCategory@{StockCategory}!records@{records}}
+\index{records@{records}!StockCategory@{StockCategory}}
+\doxysubsubsection{\texorpdfstring{records}{records}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classStockRecord}{Stock\+Record}}$>$ Stock\+Category\+::records\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector to store all the stock records 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

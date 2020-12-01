@@ -1,60 +1,452 @@
 \hypertarget{classStockRecord}{}\doxysection{Stock\+Record Class Reference}
 \label{classStockRecord}\index{StockRecord@{StockRecord}}
+
+
+The \mbox{\hyperlink{classStockRecord}{Stock\+Record}} class describes an individual stock.  
+
+
+
+
+{\ttfamily \#include $<$Stock\+Record.\+h$>$}
+
+
+
+Inheritance diagram for Stock\+Record\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classStockRecord__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stock\+Record\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classStockRecord__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockRecord_adf13e41fc2228a3b91a6b1ab18fd883d}\label{classStockRecord_adf13e41fc2228a3b91a6b1ab18fd883d}} 
-{\bfseries Stock\+Record} (std\+::string ticker)
+\mbox{\hyperlink{classStockRecord_ac6706df7b2c3f08468f840635d23c993}{Stock\+Record}} (const std\+::string T\+I\+C\+K\+ER)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_ac6706df7b2c3f08468f840635d23c993}{Stock\+Record\+::\+Stock\+Record}} constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classStockRecord_a97bc314787fa3063542b8010451a0e12}{get\+Ticker}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a97bc314787fa3063542b8010451a0e12}{Stock\+Record\+::get\+Ticker}} getter for ticker. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classStockRecord_a37f6b408a8fd581762b12f27c25fb37e}{get\+Company\+Name}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a37f6b408a8fd581762b12f27c25fb37e}{Stock\+Record\+::get\+Company\+Name}} getter for company name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classStockRecord_afdfe1539d59ff862bdf5d1e1e0624758}{get\+Exchange}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_afdfe1539d59ff862bdf5d1e1e0624758}{Stock\+Record\+::get\+Exchange}} getter for the exchange. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classStockRecord_a1419e24fee31a6caa9e0be8353218c3d}{get\+Market\+Cap}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a1419e24fee31a6caa9e0be8353218c3d}{Stock\+Record\+::get\+Market\+Cap}} getter for market cap. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_a31520abdf7b45b94105beddd3efb3d82}{get\+Open}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a31520abdf7b45b94105beddd3efb3d82}{Stock\+Record\+::get\+Open}} getter of the open price of the stock x days ago. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}{get\+Low}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}{Stock\+Record\+::get\+Low}} gets the low price some number of days ago. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_a31ebffe8041680def7573046aa56e12a}{get\+High}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a31ebffe8041680def7573046aa56e12a}{Stock\+Record\+::get\+High}} gets the high price some number of days ago. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_af46ac0f8710e7d2927d20c52a92dc40b}{get\+Close}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}{Stock\+Record\+::get\+Low}} gets the low price some number of days ago. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_adba71c7f7a285a255e28737113adc38f}{get\+E\+B\+I\+T\+Share}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_adba71c7f7a285a255e28737113adc38f}{Stock\+Record\+::get\+E\+B\+I\+T\+Share}} getter for the E\+B\+I\+T/\+Share of the stock. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_a6999fb0317844e32a7dc35e5328ff8bb}{get\+Payout\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a6999fb0317844e32a7dc35e5328ff8bb}{Stock\+Record\+::get\+Payout\+Ratio}} getter for the payout ratio (divided/earnings) of the stock. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_ac0aa0a7f5727ea691b4cb97dee18171e}{get\+Current\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_ac0aa0a7f5727ea691b4cb97dee18171e}{Stock\+Record\+::get\+Current\+Ratio}} getter for the current ratio (current assets/current liabilities) of the stock. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStockRecord_ac555eb1f961930e6d2db03e9956bac2c}{get\+Gross\+Margin}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_ac555eb1f961930e6d2db03e9956bac2c}{Stock\+Record\+::get\+Gross\+Margin}} getter for the gross margin (gross profits/revenues) of the stock. \end{DoxyCompactList}\item 
+long long int \mbox{\hyperlink{classStockRecord_a9c9607b66eb1928a05397cd5edc43bb9}{get\+Volume}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a9c9607b66eb1928a05397cd5edc43bb9}{Stock\+Record\+::get\+Volume}} gets the volume of trades of the stock on a given day. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classStockRecord_a3fa99677c74ba54983df5bb25486d6f3}{get\+Date}} (const int D\+A\+Y\+S\+\_\+\+A\+GO) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a3fa99677c74ba54983df5bb25486d6f3}{Stock\+Record\+::get\+Date}} gets the date D\+A\+Y\+S\+\_\+\+A\+GO days ago. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStockRecord_a7e800da03151f4e71d8cfa0167aa222e}{$\sim$\+Stock\+Record}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a7e800da03151f4e71d8cfa0167aa222e}{Stock\+Record\+::$\sim$\+Stock\+Record}} desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockRecord_a53eb2b0cbb1a281e52c6524f596a97f5}\label{classStockRecord_a53eb2b0cbb1a281e52c6524f596a97f5}} 
-std\+::string {\bfseries get\+Ticker} ()
-\item 
-\mbox{\Hypertarget{classStockRecord_aa7746cdb04c0b9625e1e94398efbe3be}\label{classStockRecord_aa7746cdb04c0b9625e1e94398efbe3be}} 
-std\+::string {\bfseries get\+Company\+Name} ()
-\item 
-\mbox{\Hypertarget{classStockRecord_ab71c88980ce97eed0217a081f94a4fcf}\label{classStockRecord_ab71c88980ce97eed0217a081f94a4fcf}} 
-std\+::string {\bfseries get\+Exchange} ()
-\item 
-\mbox{\Hypertarget{classStockRecord_a43ac5e941835339a1c9b9797563cb25a}\label{classStockRecord_a43ac5e941835339a1c9b9797563cb25a}} 
-std\+::string {\bfseries get\+Market\+Cap} ()
-\item 
-\mbox{\Hypertarget{classStockRecord_a5b247b1d45c342d4991da82daaef3c06}\label{classStockRecord_a5b247b1d45c342d4991da82daaef3c06}} 
-float {\bfseries get\+Open} (int days\+Ago)
-\item 
-\mbox{\Hypertarget{classStockRecord_afaf914a1550ce6dbbe7cebaf85ac8eb8}\label{classStockRecord_afaf914a1550ce6dbbe7cebaf85ac8eb8}} 
-float {\bfseries get\+Low} (int days\+Ago)
-\item 
-\mbox{\Hypertarget{classStockRecord_a6c88a3e7e99e24de05b9f8bbf58c351a}\label{classStockRecord_a6c88a3e7e99e24de05b9f8bbf58c351a}} 
-float {\bfseries get\+High} (int days\+Ago)
-\item 
-\mbox{\Hypertarget{classStockRecord_a965a3981f1c50902b1dcc764ec5cc71f}\label{classStockRecord_a965a3981f1c50902b1dcc764ec5cc71f}} 
-float {\bfseries get\+Close} (int days\+Ago)
-\item 
-\mbox{\Hypertarget{classStockRecord_ad47abbff7390bb1b369622beb02fc254}\label{classStockRecord_ad47abbff7390bb1b369622beb02fc254}} 
-long long int {\bfseries get\+Volume} (int days\+Ago)
-\item 
-\mbox{\Hypertarget{classStockRecord_ad68eecf1368e5adbb932d42588c1a710}\label{classStockRecord_ad68eecf1368e5adbb932d42588c1a710}} 
-std\+::string {\bfseries get\+Date} (int days\+Ago)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classStockRecord_a74f7bd38414e54b2d79ff07182ed55e9}{request\+Stock\+Prices}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_a74f7bd38414e54b2d79ff07182ed55e9}{Stock\+Record\+::request\+Stock\+Prices}} A\+PI call to get stock prices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStockRecord_ab4c27d415704e9a8f97f60d88159a1e5}{request\+Company\+Info}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_ab4c27d415704e9a8f97f60d88159a1e5}{Stock\+Record\+::request\+Company\+Info}} A\+PI call to get Company info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStockRecord_ab3984cfb287316f4f9262406cdbac5f3}{request\+Financials}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStockRecord_ab3984cfb287316f4f9262406cdbac5f3}{Stock\+Record\+::request\+Financials}} A\+PI call to get financial information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classStockRecord_a894d6e551226b959a135b9fdbd9f647e}\label{classStockRecord_a894d6e551226b959a135b9fdbd9f647e}} 
-std\+::string {\bfseries ticker}
+std\+::string \mbox{\hyperlink{classStockRecord_a894d6e551226b959a135b9fdbd9f647e}{ticker}}
 \item 
-\mbox{\Hypertarget{classStockRecord_aa8736b7e731b6a8f964056067e59e574}\label{classStockRecord_aa8736b7e731b6a8f964056067e59e574}} 
-std\+::string {\bfseries company\+Name}
+std\+::string \mbox{\hyperlink{classStockRecord_aa8736b7e731b6a8f964056067e59e574}{company\+Name}}
 \item 
-\mbox{\Hypertarget{classStockRecord_ab23abc06fb321ed10d95e91a60b69fac}\label{classStockRecord_ab23abc06fb321ed10d95e91a60b69fac}} 
-std\+::string {\bfseries market\+Cap}
+double \mbox{\hyperlink{classStockRecord_af58d1a854c2d6d62a7d0ee9fd974a0c8}{market\+Cap}}
 \item 
-\mbox{\Hypertarget{classStockRecord_ac2ff0813837262876e677c185c6dacfa}\label{classStockRecord_ac2ff0813837262876e677c185c6dacfa}} 
-std\+::string {\bfseries exchange}
+std\+::string \mbox{\hyperlink{classStockRecord_ac2ff0813837262876e677c185c6dacfa}{exchange}}
 \item 
-\mbox{\Hypertarget{classStockRecord_a5bf08c7a84bcd7da956b6f42de43b006}\label{classStockRecord_a5bf08c7a84bcd7da956b6f42de43b006}} 
-std\+::vector$<$ \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} $>$ {\bfseries days}
+float \mbox{\hyperlink{classStockRecord_a9503b1c526f251cdf71f815745b10ff7}{ebit\+Share}}
+\item 
+float \mbox{\hyperlink{classStockRecord_adc7be7e3bb558c54a46aed149066edd0}{payout\+Ratio}}
+\item 
+float \mbox{\hyperlink{classStockRecord_a607a4df235464c06c396ebaba8a2ebab}{current\+Ratio}}
+\item 
+float \mbox{\hyperlink{classStockRecord_a54da2c61b0be09b043e498f7e768f4a4}{gross\+Margin}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} $>$ \mbox{\hyperlink{classStockRecord_a5bf08c7a84bcd7da956b6f42de43b006}{days}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classStockRecord}{Stock\+Record}} class describes an individual stock. 
+
+Describes an individual stock, including stock information over time (each day is stored as a \mbox{\hyperlink{classDailyStock}{Daily\+Stock}}), as well as financial information for the company \begin{DoxyAuthor}{Author}
+Steven Chen @\+Date 2020-\/11-\/04 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStockRecord_ac6706df7b2c3f08468f840635d23c993}\label{classStockRecord_ac6706df7b2c3f08468f840635d23c993}} 
+\index{StockRecord@{StockRecord}!StockRecord@{StockRecord}}
+\index{StockRecord@{StockRecord}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{StockRecord()}{StockRecord()}}
+{\footnotesize\ttfamily Stock\+Record\+::\+Stock\+Record (\begin{DoxyParamCaption}\item[{const std\+::string}]{T\+I\+C\+K\+ER }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStockRecord_ac6706df7b2c3f08468f840635d23c993}{Stock\+Record\+::\+Stock\+Record}} constructor. 
+
+Given a ticker symbol, creates a \mbox{\hyperlink{classStockRecord}{Stock\+Record}} and processes three A\+PI calls to get financial information
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & the ticker symbol for the stock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStockRecord_a7e800da03151f4e71d8cfa0167aa222e}\label{classStockRecord_a7e800da03151f4e71d8cfa0167aa222e}} 
+\index{StockRecord@{StockRecord}!````~StockRecord@{$\sim$StockRecord}}
+\index{````~StockRecord@{$\sim$StockRecord}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{$\sim$StockRecord()}{~StockRecord()}}
+{\footnotesize\ttfamily Stock\+Record\+::$\sim$\+Stock\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStockRecord_a7e800da03151f4e71d8cfa0167aa222e}{Stock\+Record\+::$\sim$\+Stock\+Record}} desctructor. 
+
+Does not do anything, since \mbox{\hyperlink{classStockRecord}{Stock\+Record}} does not manage dynamic memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStockRecord_af46ac0f8710e7d2927d20c52a92dc40b}\label{classStockRecord_af46ac0f8710e7d2927d20c52a92dc40b}} 
+\index{StockRecord@{StockRecord}!getClose@{getClose}}
+\index{getClose@{getClose}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getClose()}{getClose()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Close (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}{Stock\+Record\+::get\+Low}} gets the low price some number of days ago. 
+
+Gets the low price of the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} representing D\+A\+Y\+S\+\_\+\+A\+GO days ago
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the low price D\+A\+Y\+S\+\_\+\+A\+GO days ago, from the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} for that day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a37f6b408a8fd581762b12f27c25fb37e}\label{classStockRecord_a37f6b408a8fd581762b12f27c25fb37e}} 
+\index{StockRecord@{StockRecord}!getCompanyName@{getCompanyName}}
+\index{getCompanyName@{getCompanyName}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getCompanyName()}{getCompanyName()}}
+{\footnotesize\ttfamily string Stock\+Record\+::get\+Company\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a37f6b408a8fd581762b12f27c25fb37e}{Stock\+Record\+::get\+Company\+Name}} getter for company name. 
+
+returns the company name, a string
+
+\begin{DoxyReturn}{Returns}
+company\+Name, a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_ac0aa0a7f5727ea691b4cb97dee18171e}\label{classStockRecord_ac0aa0a7f5727ea691b4cb97dee18171e}} 
+\index{StockRecord@{StockRecord}!getCurrentRatio@{getCurrentRatio}}
+\index{getCurrentRatio@{getCurrentRatio}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getCurrentRatio()}{getCurrentRatio()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Current\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_ac0aa0a7f5727ea691b4cb97dee18171e}{Stock\+Record\+::get\+Current\+Ratio}} getter for the current ratio (current assets/current liabilities) of the stock. 
+
+\begin{DoxyReturn}{Returns}
+the current ratio of the stock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a3fa99677c74ba54983df5bb25486d6f3}\label{classStockRecord_a3fa99677c74ba54983df5bb25486d6f3}} 
+\index{StockRecord@{StockRecord}!getDate@{getDate}}
+\index{getDate@{getDate}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily string Stock\+Record\+::get\+Date (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a3fa99677c74ba54983df5bb25486d6f3}{Stock\+Record\+::get\+Date}} gets the date D\+A\+Y\+S\+\_\+\+A\+GO days ago. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the date D\+A\+Y\+S\+\_\+\+A\+GO days ago 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_adba71c7f7a285a255e28737113adc38f}\label{classStockRecord_adba71c7f7a285a255e28737113adc38f}} 
+\index{StockRecord@{StockRecord}!getEBITShare@{getEBITShare}}
+\index{getEBITShare@{getEBITShare}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getEBITShare()}{getEBITShare()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+E\+B\+I\+T\+Share (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_adba71c7f7a285a255e28737113adc38f}{Stock\+Record\+::get\+E\+B\+I\+T\+Share}} getter for the E\+B\+I\+T/\+Share of the stock. 
+
+\begin{DoxyReturn}{Returns}
+the E\+B\+I\+T/\+Share of the stock (Earnings before interest and tax) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_afdfe1539d59ff862bdf5d1e1e0624758}\label{classStockRecord_afdfe1539d59ff862bdf5d1e1e0624758}} 
+\index{StockRecord@{StockRecord}!getExchange@{getExchange}}
+\index{getExchange@{getExchange}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getExchange()}{getExchange()}}
+{\footnotesize\ttfamily string Stock\+Record\+::get\+Exchange (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_afdfe1539d59ff862bdf5d1e1e0624758}{Stock\+Record\+::get\+Exchange}} getter for the exchange. 
+
+\begin{DoxyReturn}{Returns}
+the exchange where the stock is traded 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_ac555eb1f961930e6d2db03e9956bac2c}\label{classStockRecord_ac555eb1f961930e6d2db03e9956bac2c}} 
+\index{StockRecord@{StockRecord}!getGrossMargin@{getGrossMargin}}
+\index{getGrossMargin@{getGrossMargin}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getGrossMargin()}{getGrossMargin()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Gross\+Margin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_ac555eb1f961930e6d2db03e9956bac2c}{Stock\+Record\+::get\+Gross\+Margin}} getter for the gross margin (gross profits/revenues) of the stock. 
+
+\begin{DoxyReturn}{Returns}
+the gross margin of the stock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a31ebffe8041680def7573046aa56e12a}\label{classStockRecord_a31ebffe8041680def7573046aa56e12a}} 
+\index{StockRecord@{StockRecord}!getHigh@{getHigh}}
+\index{getHigh@{getHigh}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getHigh()}{getHigh()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+High (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a31ebffe8041680def7573046aa56e12a}{Stock\+Record\+::get\+High}} gets the high price some number of days ago. 
+
+Gets the high price of the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} representing D\+A\+Y\+S\+\_\+\+A\+GO days ago
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the high price D\+A\+Y\+S\+\_\+\+A\+GO days ago, from the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} for that day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}\label{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}} 
+\index{StockRecord@{StockRecord}!getLow@{getLow}}
+\index{getLow@{getLow}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getLow()}{getLow()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Low (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a5b86102feb6ff6bd8ca794717fd8f860}{Stock\+Record\+::get\+Low}} gets the low price some number of days ago. 
+
+Gets the low price of the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} representing D\+A\+Y\+S\+\_\+\+A\+GO days ago
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the low price D\+A\+Y\+S\+\_\+\+A\+GO days ago, from the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} for that day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a1419e24fee31a6caa9e0be8353218c3d}\label{classStockRecord_a1419e24fee31a6caa9e0be8353218c3d}} 
+\index{StockRecord@{StockRecord}!getMarketCap@{getMarketCap}}
+\index{getMarketCap@{getMarketCap}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getMarketCap()}{getMarketCap()}}
+{\footnotesize\ttfamily double Stock\+Record\+::get\+Market\+Cap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a1419e24fee31a6caa9e0be8353218c3d}{Stock\+Record\+::get\+Market\+Cap}} getter for market cap. 
+
+\begin{DoxyReturn}{Returns}
+the market capitalization of the stock, defined as (num shares $\ast$ stock price) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a31520abdf7b45b94105beddd3efb3d82}\label{classStockRecord_a31520abdf7b45b94105beddd3efb3d82}} 
+\index{StockRecord@{StockRecord}!getOpen@{getOpen}}
+\index{getOpen@{getOpen}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getOpen()}{getOpen()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Open (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a31520abdf7b45b94105beddd3efb3d82}{Stock\+Record\+::get\+Open}} getter of the open price of the stock x days ago. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the open price D\+A\+Y\+S\+\_\+\+A\+GO days ago, from the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} for D\+A\+Y\+S\+\_\+\+A\+GO days 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a6999fb0317844e32a7dc35e5328ff8bb}\label{classStockRecord_a6999fb0317844e32a7dc35e5328ff8bb}} 
+\index{StockRecord@{StockRecord}!getPayoutRatio@{getPayoutRatio}}
+\index{getPayoutRatio@{getPayoutRatio}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getPayoutRatio()}{getPayoutRatio()}}
+{\footnotesize\ttfamily float Stock\+Record\+::get\+Payout\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a6999fb0317844e32a7dc35e5328ff8bb}{Stock\+Record\+::get\+Payout\+Ratio}} getter for the payout ratio (divided/earnings) of the stock. 
+
+\begin{DoxyReturn}{Returns}
+the payout ratio of the stock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a97bc314787fa3063542b8010451a0e12}\label{classStockRecord_a97bc314787fa3063542b8010451a0e12}} 
+\index{StockRecord@{StockRecord}!getTicker@{getTicker}}
+\index{getTicker@{getTicker}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getTicker()}{getTicker()}}
+{\footnotesize\ttfamily string Stock\+Record\+::get\+Ticker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a97bc314787fa3063542b8010451a0e12}{Stock\+Record\+::get\+Ticker}} getter for ticker. 
+
+returns the ticker symbol for the stock
+
+\begin{DoxyReturn}{Returns}
+the ticker, a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_a9c9607b66eb1928a05397cd5edc43bb9}\label{classStockRecord_a9c9607b66eb1928a05397cd5edc43bb9}} 
+\index{StockRecord@{StockRecord}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily long long int Stock\+Record\+::get\+Volume (\begin{DoxyParamCaption}\item[{const int}]{D\+A\+Y\+S\+\_\+\+A\+GO }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classStockRecord_a9c9607b66eb1928a05397cd5edc43bb9}{Stock\+Record\+::get\+Volume}} gets the volume of trades of the stock on a given day. 
+
+Gets the number of trades that occured for a given stock on a given day (represented by a \mbox{\hyperlink{classDailyStock}{Daily\+Stock}})
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+A\+Y\+S\+\_\+\+A\+GO} & the number of days before the current day to look \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the volume of trades D\+A\+Y\+S\+\_\+\+A\+GO days 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStockRecord_ab4c27d415704e9a8f97f60d88159a1e5}\label{classStockRecord_ab4c27d415704e9a8f97f60d88159a1e5}} 
+\index{StockRecord@{StockRecord}!requestCompanyInfo@{requestCompanyInfo}}
+\index{requestCompanyInfo@{requestCompanyInfo}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{requestCompanyInfo()}{requestCompanyInfo()}}
+{\footnotesize\ttfamily void Stock\+Record\+::request\+Company\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classStockRecord_ab4c27d415704e9a8f97f60d88159a1e5}{Stock\+Record\+::request\+Company\+Info}} A\+PI call to get Company info. 
+
+Private helper function that makes an A\+PI call to determine company information, such as name and exchange \mbox{\Hypertarget{classStockRecord_ab3984cfb287316f4f9262406cdbac5f3}\label{classStockRecord_ab3984cfb287316f4f9262406cdbac5f3}} 
+\index{StockRecord@{StockRecord}!requestFinancials@{requestFinancials}}
+\index{requestFinancials@{requestFinancials}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{requestFinancials()}{requestFinancials()}}
+{\footnotesize\ttfamily void Stock\+Record\+::request\+Financials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classStockRecord_ab3984cfb287316f4f9262406cdbac5f3}{Stock\+Record\+::request\+Financials}} A\+PI call to get financial information. 
+
+Private helper function that makes an A\+PI call to determine financials, such as E\+B\+IT per share, gross margin, and payout ratio \mbox{\Hypertarget{classStockRecord_a74f7bd38414e54b2d79ff07182ed55e9}\label{classStockRecord_a74f7bd38414e54b2d79ff07182ed55e9}} 
+\index{StockRecord@{StockRecord}!requestStockPrices@{requestStockPrices}}
+\index{requestStockPrices@{requestStockPrices}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{requestStockPrices()}{requestStockPrices()}}
+{\footnotesize\ttfamily void Stock\+Record\+::request\+Stock\+Prices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classStockRecord_a74f7bd38414e54b2d79ff07182ed55e9}{Stock\+Record\+::request\+Stock\+Prices}} A\+PI call to get stock prices. 
+
+Private helper function that makes an A\+PI call to determine stock price information, such as open, close, high, and low. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classStockRecord_aa8736b7e731b6a8f964056067e59e574}\label{classStockRecord_aa8736b7e731b6a8f964056067e59e574}} 
+\index{StockRecord@{StockRecord}!companyName@{companyName}}
+\index{companyName@{companyName}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{companyName}{companyName}}
+{\footnotesize\ttfamily std\+::string Stock\+Record\+::company\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+name of company e.\+g. \char`\"{}\+Ford Motor Co.\char`\"{} \mbox{\Hypertarget{classStockRecord_a607a4df235464c06c396ebaba8a2ebab}\label{classStockRecord_a607a4df235464c06c396ebaba8a2ebab}} 
+\index{StockRecord@{StockRecord}!currentRatio@{currentRatio}}
+\index{currentRatio@{currentRatio}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{currentRatio}{currentRatio}}
+{\footnotesize\ttfamily float Stock\+Record\+::current\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+Current ratio = current assets/current liabilities \mbox{\Hypertarget{classStockRecord_a5bf08c7a84bcd7da956b6f42de43b006}\label{classStockRecord_a5bf08c7a84bcd7da956b6f42de43b006}} 
+\index{StockRecord@{StockRecord}!days@{days}}
+\index{days@{days}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{days}{days}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classDailyStock}{Daily\+Stock}}$>$ Stock\+Record\+::days\hspace{0.3cm}{\ttfamily [private]}}
+
+vector of information on stock price on several dates \mbox{\Hypertarget{classStockRecord_a9503b1c526f251cdf71f815745b10ff7}\label{classStockRecord_a9503b1c526f251cdf71f815745b10ff7}} 
+\index{StockRecord@{StockRecord}!ebitShare@{ebitShare}}
+\index{ebitShare@{ebitShare}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{ebitShare}{ebitShare}}
+{\footnotesize\ttfamily float Stock\+Record\+::ebit\+Share\hspace{0.3cm}{\ttfamily [private]}}
+
+Earnings Before Interest and Tax (E\+B\+IT) divided by number of shares \mbox{\Hypertarget{classStockRecord_ac2ff0813837262876e677c185c6dacfa}\label{classStockRecord_ac2ff0813837262876e677c185c6dacfa}} 
+\index{StockRecord@{StockRecord}!exchange@{exchange}}
+\index{exchange@{exchange}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{exchange}{exchange}}
+{\footnotesize\ttfamily std\+::string Stock\+Record\+::exchange\hspace{0.3cm}{\ttfamily [private]}}
+
+the exchange that the stock is traded on \mbox{\Hypertarget{classStockRecord_a54da2c61b0be09b043e498f7e768f4a4}\label{classStockRecord_a54da2c61b0be09b043e498f7e768f4a4}} 
+\index{StockRecord@{StockRecord}!grossMargin@{grossMargin}}
+\index{grossMargin@{grossMargin}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{grossMargin}{grossMargin}}
+{\footnotesize\ttfamily float Stock\+Record\+::gross\+Margin\hspace{0.3cm}{\ttfamily [private]}}
+
+Gross margin = gross profit divided by revenue \mbox{\Hypertarget{classStockRecord_af58d1a854c2d6d62a7d0ee9fd974a0c8}\label{classStockRecord_af58d1a854c2d6d62a7d0ee9fd974a0c8}} 
+\index{StockRecord@{StockRecord}!marketCap@{marketCap}}
+\index{marketCap@{marketCap}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{marketCap}{marketCap}}
+{\footnotesize\ttfamily double Stock\+Record\+::market\+Cap\hspace{0.3cm}{\ttfamily [private]}}
+
+market capitalization of the company, equal to number of shares $\ast$ stock pice \mbox{\Hypertarget{classStockRecord_adc7be7e3bb558c54a46aed149066edd0}\label{classStockRecord_adc7be7e3bb558c54a46aed149066edd0}} 
+\index{StockRecord@{StockRecord}!payoutRatio@{payoutRatio}}
+\index{payoutRatio@{payoutRatio}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{payoutRatio}{payoutRatio}}
+{\footnotesize\ttfamily float Stock\+Record\+::payout\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+Payout ratio = dividend/share divided by earnings/share \mbox{\Hypertarget{classStockRecord_a894d6e551226b959a135b9fdbd9f647e}\label{classStockRecord_a894d6e551226b959a135b9fdbd9f647e}} 
+\index{StockRecord@{StockRecord}!ticker@{ticker}}
+\index{ticker@{ticker}!StockRecord@{StockRecord}}
+\doxysubsubsection{\texorpdfstring{ticker}{ticker}}
+{\footnotesize\ttfamily std\+::string Stock\+Record\+::ticker\hspace{0.3cm}{\ttfamily [private]}}
+
+up to 4 letter ticker 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

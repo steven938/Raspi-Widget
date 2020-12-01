@@ -1,10 +1,10 @@
 <map id="WeatherWindow" name="WeatherWindow">
-<area shape="rect" id="node1" title="The WeatherWindow class displays weather data." alt="" coords="186,285,314,312"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,196,84,223"/>
-<area shape="rect" id="node3" href="$classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city." alt="" coords="108,196,229,223"/>
-<area shape="rect" id="node4" href="$classRecord.html" title=" " alt="" coords="147,95,214,121"/>
-<area shape="rect" id="node5" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="165,5,273,32"/>
-<area shape="rect" id="node6" href="$classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location." alt="" coords="200,145,335,172"/>
-<area shape="rect" id="node7" href="$classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="363,196,470,223"/>
-<area shape="rect" id="node8" title=" " alt="" coords="359,95,475,121"/>
+<area shape="rect" id="node1" title="The WeatherWindow class displays weather data." alt="" coords="179,171,307,197"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,84,108"/>
+<area shape="rect" id="node3" href="$classWeatherRecord.html" title="The WeatherRecord class holds weather data for one city." alt="" coords="108,81,229,108"/>
+<area shape="rect" id="node4" href="$classRecord.html" title="The Record class represents one record in any data category." alt="" coords="135,5,202,32"/>
+<area shape="rect" id="node5" href="$classWeatherCategory.html" title="The WeatherCategory class holds weather records for each location." alt="" coords="253,81,388,108"/>
+<area shape="rect" id="node6" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="267,5,375,32"/>
+<area shape="rect" id="node7" href="$classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="413,81,519,108"/>
+<area shape="rect" id="node8" title=" " alt="" coords="408,5,524,32"/>
 </map>

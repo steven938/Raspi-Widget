@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['month_143',['month',['../classDate.html#a533843e07c6ac8d19fee9b16f5336ba2',1,'Date']]],
-  ['monthname_144',['monthName',['../classDate.html#a34a9aa9cd6b4d1ba9196ea2ce199cd5c',1,'Date']]]
+  ['ebitshare_247',['ebitShare',['../classStockRecord.html#a9503b1c526f251cdf71f815745b10ff7',1,'StockRecord']]],
+  ['exchange_248',['exchange',['../classStockRecord.html#ac2ff0813837262876e677c185c6dacfa',1,'StockRecord']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['stockcategory_83',['StockCategory',['../classStockCategory.html',1,'']]],
-  ['stockrecord_84',['StockRecord',['../classStockRecord.html',1,'']]],
-  ['stockwindow_85',['stockWindow',['../classstockWindow.html',1,'']]]
+  ['stockcategory_140',['StockCategory',['../classStockCategory.html',1,'']]],
+  ['stockchart_141',['StockChart',['../classStockChart.html',1,'']]],
+  ['stockrecord_142',['StockRecord',['../classStockRecord.html',1,'']]],
+  ['stockwindow_143',['stockWindow',['../classstockWindow.html',1,'']]]
 ];

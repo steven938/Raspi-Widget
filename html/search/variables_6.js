@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tempcelsius_148',['tempCelsius',['../classDailyWeather.html#a21e4e2bece27e85ef1c356eab21c7ecf',1,'DailyWeather']]],
-  ['tempfaren_149',['tempFaren',['../classDailyWeather.html#a9993e2015eb9cbef4cd406707e9c3583',1,'DailyWeather']]]
+  ['location_251',['location',['../classWeatherRecord.html#af81fb45b0ad190d4ef7bc6abfe337856',1,'WeatherRecord']]],
+  ['low_252',['low',['../classDailyStock.html#a414af10feb638f70d199857ff001e21a',1,'DailyStock']]]
 ];

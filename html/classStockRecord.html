@@ -64,67 +64,793 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classStockRecord-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">StockRecord Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classStockRecord.html" title="The StockRecord class describes an individual stock.">StockRecord</a> class describes an individual stock.  
+ <a href="classStockRecord.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="StockRecord_8h_source.html">StockRecord.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for StockRecord:</div>
+<div class="dyncontent">
+<div class="center"><img src="classStockRecord__inherit__graph.png" border="0" usemap="#StockRecord_inherit__map" alt="Inheritance graph"/></div>
+<map name="StockRecord_inherit__map" id="StockRecord_inherit__map">
+<area shape="rect" title="The StockRecord class describes an individual stock." alt="" coords="5,80,108,107"/>
+<area shape="rect" href="classRecord.html" title="The Record class represents one record in any data category." alt="" coords="23,5,90,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for StockRecord:</div>
+<div class="dyncontent">
+<div class="center"><img src="classStockRecord__coll__graph.png" border="0" usemap="#StockRecord_coll__map" alt="Collaboration graph"/></div>
+<map name="StockRecord_coll__map" id="StockRecord_coll__map">
+<area shape="rect" title="The StockRecord class describes an individual stock." alt="" coords="5,80,108,107"/>
+<area shape="rect" href="classRecord.html" title="The Record class represents one record in any data category." alt="" coords="23,5,90,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf13e41fc2228a3b91a6b1ab18fd883d"><td class="memItemLeft" align="right" valign="top"><a id="adf13e41fc2228a3b91a6b1ab18fd883d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StockRecord</b> (std::string ticker)</td></tr>
-<tr class="separator:adf13e41fc2228a3b91a6b1ab18fd883d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53eb2b0cbb1a281e52c6524f596a97f5"><td class="memItemLeft" align="right" valign="top"><a id="a53eb2b0cbb1a281e52c6524f596a97f5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getTicker</b> ()</td></tr>
-<tr class="separator:a53eb2b0cbb1a281e52c6524f596a97f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7746cdb04c0b9625e1e94398efbe3be"><td class="memItemLeft" align="right" valign="top"><a id="aa7746cdb04c0b9625e1e94398efbe3be"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getCompanyName</b> ()</td></tr>
-<tr class="separator:aa7746cdb04c0b9625e1e94398efbe3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab71c88980ce97eed0217a081f94a4fcf"><td class="memItemLeft" align="right" valign="top"><a id="ab71c88980ce97eed0217a081f94a4fcf"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getExchange</b> ()</td></tr>
-<tr class="separator:ab71c88980ce97eed0217a081f94a4fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43ac5e941835339a1c9b9797563cb25a"><td class="memItemLeft" align="right" valign="top"><a id="a43ac5e941835339a1c9b9797563cb25a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getMarketCap</b> ()</td></tr>
-<tr class="separator:a43ac5e941835339a1c9b9797563cb25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b247b1d45c342d4991da82daaef3c06"><td class="memItemLeft" align="right" valign="top"><a id="a5b247b1d45c342d4991da82daaef3c06"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getOpen</b> (int daysAgo)</td></tr>
-<tr class="separator:a5b247b1d45c342d4991da82daaef3c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf914a1550ce6dbbe7cebaf85ac8eb8"><td class="memItemLeft" align="right" valign="top"><a id="afaf914a1550ce6dbbe7cebaf85ac8eb8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getLow</b> (int daysAgo)</td></tr>
-<tr class="separator:afaf914a1550ce6dbbe7cebaf85ac8eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c88a3e7e99e24de05b9f8bbf58c351a"><td class="memItemLeft" align="right" valign="top"><a id="a6c88a3e7e99e24de05b9f8bbf58c351a"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getHigh</b> (int daysAgo)</td></tr>
-<tr class="separator:a6c88a3e7e99e24de05b9f8bbf58c351a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a965a3981f1c50902b1dcc764ec5cc71f"><td class="memItemLeft" align="right" valign="top"><a id="a965a3981f1c50902b1dcc764ec5cc71f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getClose</b> (int daysAgo)</td></tr>
-<tr class="separator:a965a3981f1c50902b1dcc764ec5cc71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47abbff7390bb1b369622beb02fc254"><td class="memItemLeft" align="right" valign="top"><a id="ad47abbff7390bb1b369622beb02fc254"></a>
-long long int&#160;</td><td class="memItemRight" valign="bottom"><b>getVolume</b> (int daysAgo)</td></tr>
-<tr class="separator:ad47abbff7390bb1b369622beb02fc254"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68eecf1368e5adbb932d42588c1a710"><td class="memItemLeft" align="right" valign="top"><a id="ad68eecf1368e5adbb932d42588c1a710"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getDate</b> (int daysAgo)</td></tr>
-<tr class="separator:ad68eecf1368e5adbb932d42588c1a710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6706df7b2c3f08468f840635d23c993"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ac6706df7b2c3f08468f840635d23c993">StockRecord</a> (const std::string TICKER)</td></tr>
+<tr class="memdesc:ac6706df7b2c3f08468f840635d23c993"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#ac6706df7b2c3f08468f840635d23c993" title="StockRecord::StockRecord constructor.">StockRecord::StockRecord</a> constructor.  <a href="classStockRecord.html#ac6706df7b2c3f08468f840635d23c993">More...</a><br /></td></tr>
+<tr class="separator:ac6706df7b2c3f08468f840635d23c993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bc314787fa3063542b8010451a0e12"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a97bc314787fa3063542b8010451a0e12">getTicker</a> () const</td></tr>
+<tr class="memdesc:a97bc314787fa3063542b8010451a0e12"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a97bc314787fa3063542b8010451a0e12" title="StockRecord::getTicker getter for ticker.">StockRecord::getTicker</a> getter for ticker.  <a href="classStockRecord.html#a97bc314787fa3063542b8010451a0e12">More...</a><br /></td></tr>
+<tr class="separator:a97bc314787fa3063542b8010451a0e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f6b408a8fd581762b12f27c25fb37e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a37f6b408a8fd581762b12f27c25fb37e">getCompanyName</a> () const</td></tr>
+<tr class="memdesc:a37f6b408a8fd581762b12f27c25fb37e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a37f6b408a8fd581762b12f27c25fb37e" title="StockRecord::getCompanyName getter for company name.">StockRecord::getCompanyName</a> getter for company name.  <a href="classStockRecord.html#a37f6b408a8fd581762b12f27c25fb37e">More...</a><br /></td></tr>
+<tr class="separator:a37f6b408a8fd581762b12f27c25fb37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdfe1539d59ff862bdf5d1e1e0624758"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#afdfe1539d59ff862bdf5d1e1e0624758">getExchange</a> () const</td></tr>
+<tr class="memdesc:afdfe1539d59ff862bdf5d1e1e0624758"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#afdfe1539d59ff862bdf5d1e1e0624758" title="StockRecord::getExchange getter for the exchange.">StockRecord::getExchange</a> getter for the exchange.  <a href="classStockRecord.html#afdfe1539d59ff862bdf5d1e1e0624758">More...</a><br /></td></tr>
+<tr class="separator:afdfe1539d59ff862bdf5d1e1e0624758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1419e24fee31a6caa9e0be8353218c3d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a1419e24fee31a6caa9e0be8353218c3d">getMarketCap</a> () const</td></tr>
+<tr class="memdesc:a1419e24fee31a6caa9e0be8353218c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a1419e24fee31a6caa9e0be8353218c3d" title="StockRecord::getMarketCap getter for market cap.">StockRecord::getMarketCap</a> getter for market cap.  <a href="classStockRecord.html#a1419e24fee31a6caa9e0be8353218c3d">More...</a><br /></td></tr>
+<tr class="separator:a1419e24fee31a6caa9e0be8353218c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31520abdf7b45b94105beddd3efb3d82"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a31520abdf7b45b94105beddd3efb3d82">getOpen</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:a31520abdf7b45b94105beddd3efb3d82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a31520abdf7b45b94105beddd3efb3d82" title="StockRecord::getOpen getter of the open price of the stock x days ago.">StockRecord::getOpen</a> getter of the open price of the stock x days ago.  <a href="classStockRecord.html#a31520abdf7b45b94105beddd3efb3d82">More...</a><br /></td></tr>
+<tr class="separator:a31520abdf7b45b94105beddd3efb3d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b86102feb6ff6bd8ca794717fd8f860"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860">getLow</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:a5b86102feb6ff6bd8ca794717fd8f860"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860" title="StockRecord::getLow gets the low price some number of days ago.">StockRecord::getLow</a> gets the low price some number of days ago.  <a href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860">More...</a><br /></td></tr>
+<tr class="separator:a5b86102feb6ff6bd8ca794717fd8f860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ebffe8041680def7573046aa56e12a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a31ebffe8041680def7573046aa56e12a">getHigh</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:a31ebffe8041680def7573046aa56e12a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a31ebffe8041680def7573046aa56e12a" title="StockRecord::getHigh gets the high price some number of days ago.">StockRecord::getHigh</a> gets the high price some number of days ago.  <a href="classStockRecord.html#a31ebffe8041680def7573046aa56e12a">More...</a><br /></td></tr>
+<tr class="separator:a31ebffe8041680def7573046aa56e12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46ac0f8710e7d2927d20c52a92dc40b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#af46ac0f8710e7d2927d20c52a92dc40b">getClose</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:af46ac0f8710e7d2927d20c52a92dc40b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860" title="StockRecord::getLow gets the low price some number of days ago.">StockRecord::getLow</a> gets the low price some number of days ago.  <a href="classStockRecord.html#af46ac0f8710e7d2927d20c52a92dc40b">More...</a><br /></td></tr>
+<tr class="separator:af46ac0f8710e7d2927d20c52a92dc40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba71c7f7a285a255e28737113adc38f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#adba71c7f7a285a255e28737113adc38f">getEBITShare</a> () const</td></tr>
+<tr class="memdesc:adba71c7f7a285a255e28737113adc38f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#adba71c7f7a285a255e28737113adc38f" title="StockRecord::getEBITShare getter for the EBIT/Share of the stock.">StockRecord::getEBITShare</a> getter for the EBIT/Share of the stock.  <a href="classStockRecord.html#adba71c7f7a285a255e28737113adc38f">More...</a><br /></td></tr>
+<tr class="separator:adba71c7f7a285a255e28737113adc38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6999fb0317844e32a7dc35e5328ff8bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a6999fb0317844e32a7dc35e5328ff8bb">getPayoutRatio</a> () const</td></tr>
+<tr class="memdesc:a6999fb0317844e32a7dc35e5328ff8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a6999fb0317844e32a7dc35e5328ff8bb" title="StockRecord::getPayoutRatio getter for the payout ratio (divided/earnings) of the stock.">StockRecord::getPayoutRatio</a> getter for the payout ratio (divided/earnings) of the stock.  <a href="classStockRecord.html#a6999fb0317844e32a7dc35e5328ff8bb">More...</a><br /></td></tr>
+<tr class="separator:a6999fb0317844e32a7dc35e5328ff8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0aa0a7f5727ea691b4cb97dee18171e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ac0aa0a7f5727ea691b4cb97dee18171e">getCurrentRatio</a> () const</td></tr>
+<tr class="memdesc:ac0aa0a7f5727ea691b4cb97dee18171e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#ac0aa0a7f5727ea691b4cb97dee18171e" title="StockRecord::getCurrentRatio getter for the current ratio (current assets/current liabilities) of the...">StockRecord::getCurrentRatio</a> getter for the current ratio (current assets/current liabilities) of the stock.  <a href="classStockRecord.html#ac0aa0a7f5727ea691b4cb97dee18171e">More...</a><br /></td></tr>
+<tr class="separator:ac0aa0a7f5727ea691b4cb97dee18171e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac555eb1f961930e6d2db03e9956bac2c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ac555eb1f961930e6d2db03e9956bac2c">getGrossMargin</a> () const</td></tr>
+<tr class="memdesc:ac555eb1f961930e6d2db03e9956bac2c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#ac555eb1f961930e6d2db03e9956bac2c" title="StockRecord::getGrossMargin getter for the gross margin (gross profits/revenues) of the stock.">StockRecord::getGrossMargin</a> getter for the gross margin (gross profits/revenues) of the stock.  <a href="classStockRecord.html#ac555eb1f961930e6d2db03e9956bac2c">More...</a><br /></td></tr>
+<tr class="separator:ac555eb1f961930e6d2db03e9956bac2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9607b66eb1928a05397cd5edc43bb9"><td class="memItemLeft" align="right" valign="top">long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a9c9607b66eb1928a05397cd5edc43bb9">getVolume</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:a9c9607b66eb1928a05397cd5edc43bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a9c9607b66eb1928a05397cd5edc43bb9" title="StockRecord::getVolume gets the volume of trades of the stock on a given day.">StockRecord::getVolume</a> gets the volume of trades of the stock on a given day.  <a href="classStockRecord.html#a9c9607b66eb1928a05397cd5edc43bb9">More...</a><br /></td></tr>
+<tr class="separator:a9c9607b66eb1928a05397cd5edc43bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa99677c74ba54983df5bb25486d6f3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a3fa99677c74ba54983df5bb25486d6f3">getDate</a> (const int DAYS_AGO) const</td></tr>
+<tr class="memdesc:a3fa99677c74ba54983df5bb25486d6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a3fa99677c74ba54983df5bb25486d6f3" title="StockRecord::getDate gets the date DAYS_AGO days ago.">StockRecord::getDate</a> gets the date DAYS_AGO days ago.  <a href="classStockRecord.html#a3fa99677c74ba54983df5bb25486d6f3">More...</a><br /></td></tr>
+<tr class="separator:a3fa99677c74ba54983df5bb25486d6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e800da03151f4e71d8cfa0167aa222e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a7e800da03151f4e71d8cfa0167aa222e">~StockRecord</a> ()</td></tr>
+<tr class="memdesc:a7e800da03151f4e71d8cfa0167aa222e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a7e800da03151f4e71d8cfa0167aa222e" title="StockRecord::~StockRecord desctructor.">StockRecord::~StockRecord</a> desctructor.  <a href="classStockRecord.html#a7e800da03151f4e71d8cfa0167aa222e">More...</a><br /></td></tr>
+<tr class="separator:a7e800da03151f4e71d8cfa0167aa222e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a74f7bd38414e54b2d79ff07182ed55e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a74f7bd38414e54b2d79ff07182ed55e9">requestStockPrices</a> ()</td></tr>
+<tr class="memdesc:a74f7bd38414e54b2d79ff07182ed55e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#a74f7bd38414e54b2d79ff07182ed55e9" title="StockRecord::requestStockPrices API call to get stock prices.">StockRecord::requestStockPrices</a> API call to get stock prices.  <a href="classStockRecord.html#a74f7bd38414e54b2d79ff07182ed55e9">More...</a><br /></td></tr>
+<tr class="separator:a74f7bd38414e54b2d79ff07182ed55e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c27d415704e9a8f97f60d88159a1e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ab4c27d415704e9a8f97f60d88159a1e5">requestCompanyInfo</a> ()</td></tr>
+<tr class="memdesc:ab4c27d415704e9a8f97f60d88159a1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#ab4c27d415704e9a8f97f60d88159a1e5" title="StockRecord::requestCompanyInfo API call to get Company info.">StockRecord::requestCompanyInfo</a> API call to get Company info.  <a href="classStockRecord.html#ab4c27d415704e9a8f97f60d88159a1e5">More...</a><br /></td></tr>
+<tr class="separator:ab4c27d415704e9a8f97f60d88159a1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3984cfb287316f4f9262406cdbac5f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ab3984cfb287316f4f9262406cdbac5f3">requestFinancials</a> ()</td></tr>
+<tr class="memdesc:ab3984cfb287316f4f9262406cdbac5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStockRecord.html#ab3984cfb287316f4f9262406cdbac5f3" title="StockRecord::requestFinancials API call to get financial information.">StockRecord::requestFinancials</a> API call to get financial information.  <a href="classStockRecord.html#ab3984cfb287316f4f9262406cdbac5f3">More...</a><br /></td></tr>
+<tr class="separator:ab3984cfb287316f4f9262406cdbac5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a894d6e551226b959a135b9fdbd9f647e"><td class="memItemLeft" align="right" valign="top"><a id="a894d6e551226b959a135b9fdbd9f647e"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ticker</b></td></tr>
+<tr class="memitem:a894d6e551226b959a135b9fdbd9f647e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a894d6e551226b959a135b9fdbd9f647e">ticker</a></td></tr>
 <tr class="separator:a894d6e551226b959a135b9fdbd9f647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8736b7e731b6a8f964056067e59e574"><td class="memItemLeft" align="right" valign="top"><a id="aa8736b7e731b6a8f964056067e59e574"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>companyName</b></td></tr>
+<tr class="memitem:aa8736b7e731b6a8f964056067e59e574"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#aa8736b7e731b6a8f964056067e59e574">companyName</a></td></tr>
 <tr class="separator:aa8736b7e731b6a8f964056067e59e574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23abc06fb321ed10d95e91a60b69fac"><td class="memItemLeft" align="right" valign="top"><a id="ab23abc06fb321ed10d95e91a60b69fac"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>marketCap</b></td></tr>
-<tr class="separator:ab23abc06fb321ed10d95e91a60b69fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ff0813837262876e677c185c6dacfa"><td class="memItemLeft" align="right" valign="top"><a id="ac2ff0813837262876e677c185c6dacfa"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>exchange</b></td></tr>
+<tr class="memitem:af58d1a854c2d6d62a7d0ee9fd974a0c8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#af58d1a854c2d6d62a7d0ee9fd974a0c8">marketCap</a></td></tr>
+<tr class="separator:af58d1a854c2d6d62a7d0ee9fd974a0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ff0813837262876e677c185c6dacfa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#ac2ff0813837262876e677c185c6dacfa">exchange</a></td></tr>
 <tr class="separator:ac2ff0813837262876e677c185c6dacfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf08c7a84bcd7da956b6f42de43b006"><td class="memItemLeft" align="right" valign="top"><a id="a5bf08c7a84bcd7da956b6f42de43b006"></a>
-std::vector&lt; <a class="el" href="classDailyStock.html">DailyStock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>days</b></td></tr>
+<tr class="memitem:a9503b1c526f251cdf71f815745b10ff7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a9503b1c526f251cdf71f815745b10ff7">ebitShare</a></td></tr>
+<tr class="separator:a9503b1c526f251cdf71f815745b10ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7be7e3bb558c54a46aed149066edd0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#adc7be7e3bb558c54a46aed149066edd0">payoutRatio</a></td></tr>
+<tr class="separator:adc7be7e3bb558c54a46aed149066edd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607a4df235464c06c396ebaba8a2ebab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a607a4df235464c06c396ebaba8a2ebab">currentRatio</a></td></tr>
+<tr class="separator:a607a4df235464c06c396ebaba8a2ebab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54da2c61b0be09b043e498f7e768f4a4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a54da2c61b0be09b043e498f7e768f4a4">grossMargin</a></td></tr>
+<tr class="separator:a54da2c61b0be09b043e498f7e768f4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf08c7a84bcd7da956b6f42de43b006"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classDailyStock.html">DailyStock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStockRecord.html#a5bf08c7a84bcd7da956b6f42de43b006">days</a></td></tr>
 <tr class="separator:a5bf08c7a84bcd7da956b6f42de43b006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classStockRecord.html" title="The StockRecord class describes an individual stock.">StockRecord</a> class describes an individual stock. </p>
+<p>Describes an individual stock, including stock information over time (each day is stored as a <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a>), as well as financial information for the company </p><dl class="section author"><dt>Author</dt><dd>Steven Chen @Date 2020-11-04 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac6706df7b2c3f08468f840635d23c993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6706df7b2c3f08468f840635d23c993">&#9670;&nbsp;</a></span>StockRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StockRecord::StockRecord </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>TICKER</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#ac6706df7b2c3f08468f840635d23c993" title="StockRecord::StockRecord constructor.">StockRecord::StockRecord</a> constructor. </p>
+<p>Given a ticker symbol, creates a <a class="el" href="classStockRecord.html" title="The StockRecord class describes an individual stock.">StockRecord</a> and processes three API calls to get financial information</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticker</td><td>the ticker symbol for the stock </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7e800da03151f4e71d8cfa0167aa222e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e800da03151f4e71d8cfa0167aa222e">&#9670;&nbsp;</a></span>~StockRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StockRecord::~StockRecord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a7e800da03151f4e71d8cfa0167aa222e" title="StockRecord::~StockRecord desctructor.">StockRecord::~StockRecord</a> desctructor. </p>
+<p>Does not do anything, since <a class="el" href="classStockRecord.html" title="The StockRecord class describes an individual stock.">StockRecord</a> does not manage dynamic memory </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af46ac0f8710e7d2927d20c52a92dc40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46ac0f8710e7d2927d20c52a92dc40b">&#9670;&nbsp;</a></span>getClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getClose </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860" title="StockRecord::getLow gets the low price some number of days ago.">StockRecord::getLow</a> gets the low price some number of days ago. </p>
+<p>Gets the low price of the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> representing DAYS_AGO days ago</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the low price DAYS_AGO days ago, from the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> for that day </dd></dl>
+
+</div>
+</div>
+<a id="a37f6b408a8fd581762b12f27c25fb37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f6b408a8fd581762b12f27c25fb37e">&#9670;&nbsp;</a></span>getCompanyName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StockRecord::getCompanyName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a37f6b408a8fd581762b12f27c25fb37e" title="StockRecord::getCompanyName getter for company name.">StockRecord::getCompanyName</a> getter for company name. </p>
+<p>returns the company name, a string</p>
+<dl class="section return"><dt>Returns</dt><dd>companyName, a string </dd></dl>
+
+</div>
+</div>
+<a id="ac0aa0a7f5727ea691b4cb97dee18171e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aa0a7f5727ea691b4cb97dee18171e">&#9670;&nbsp;</a></span>getCurrentRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getCurrentRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#ac0aa0a7f5727ea691b4cb97dee18171e" title="StockRecord::getCurrentRatio getter for the current ratio (current assets/current liabilities) of the...">StockRecord::getCurrentRatio</a> getter for the current ratio (current assets/current liabilities) of the stock. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current ratio of the stock </dd></dl>
+
+</div>
+</div>
+<a id="a3fa99677c74ba54983df5bb25486d6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa99677c74ba54983df5bb25486d6f3">&#9670;&nbsp;</a></span>getDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StockRecord::getDate </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a3fa99677c74ba54983df5bb25486d6f3" title="StockRecord::getDate gets the date DAYS_AGO days ago.">StockRecord::getDate</a> gets the date DAYS_AGO days ago. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the date DAYS_AGO days ago </dd></dl>
+
+</div>
+</div>
+<a id="adba71c7f7a285a255e28737113adc38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba71c7f7a285a255e28737113adc38f">&#9670;&nbsp;</a></span>getEBITShare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getEBITShare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#adba71c7f7a285a255e28737113adc38f" title="StockRecord::getEBITShare getter for the EBIT/Share of the stock.">StockRecord::getEBITShare</a> getter for the EBIT/Share of the stock. </p>
+<dl class="section return"><dt>Returns</dt><dd>the EBIT/Share of the stock (Earnings before interest and tax) </dd></dl>
+
+</div>
+</div>
+<a id="afdfe1539d59ff862bdf5d1e1e0624758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdfe1539d59ff862bdf5d1e1e0624758">&#9670;&nbsp;</a></span>getExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StockRecord::getExchange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#afdfe1539d59ff862bdf5d1e1e0624758" title="StockRecord::getExchange getter for the exchange.">StockRecord::getExchange</a> getter for the exchange. </p>
+<dl class="section return"><dt>Returns</dt><dd>the exchange where the stock is traded </dd></dl>
+
+</div>
+</div>
+<a id="ac555eb1f961930e6d2db03e9956bac2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac555eb1f961930e6d2db03e9956bac2c">&#9670;&nbsp;</a></span>getGrossMargin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getGrossMargin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#ac555eb1f961930e6d2db03e9956bac2c" title="StockRecord::getGrossMargin getter for the gross margin (gross profits/revenues) of the stock.">StockRecord::getGrossMargin</a> getter for the gross margin (gross profits/revenues) of the stock. </p>
+<dl class="section return"><dt>Returns</dt><dd>the gross margin of the stock </dd></dl>
+
+</div>
+</div>
+<a id="a31ebffe8041680def7573046aa56e12a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ebffe8041680def7573046aa56e12a">&#9670;&nbsp;</a></span>getHigh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getHigh </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a31ebffe8041680def7573046aa56e12a" title="StockRecord::getHigh gets the high price some number of days ago.">StockRecord::getHigh</a> gets the high price some number of days ago. </p>
+<p>Gets the high price of the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> representing DAYS_AGO days ago</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the high price DAYS_AGO days ago, from the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> for that day </dd></dl>
+
+</div>
+</div>
+<a id="a5b86102feb6ff6bd8ca794717fd8f860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b86102feb6ff6bd8ca794717fd8f860">&#9670;&nbsp;</a></span>getLow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getLow </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a5b86102feb6ff6bd8ca794717fd8f860" title="StockRecord::getLow gets the low price some number of days ago.">StockRecord::getLow</a> gets the low price some number of days ago. </p>
+<p>Gets the low price of the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> representing DAYS_AGO days ago</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the low price DAYS_AGO days ago, from the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> for that day </dd></dl>
+
+</div>
+</div>
+<a id="a1419e24fee31a6caa9e0be8353218c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1419e24fee31a6caa9e0be8353218c3d">&#9670;&nbsp;</a></span>getMarketCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StockRecord::getMarketCap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a1419e24fee31a6caa9e0be8353218c3d" title="StockRecord::getMarketCap getter for market cap.">StockRecord::getMarketCap</a> getter for market cap. </p>
+<dl class="section return"><dt>Returns</dt><dd>the market capitalization of the stock, defined as (num shares * stock price) </dd></dl>
+
+</div>
+</div>
+<a id="a31520abdf7b45b94105beddd3efb3d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31520abdf7b45b94105beddd3efb3d82">&#9670;&nbsp;</a></span>getOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getOpen </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a31520abdf7b45b94105beddd3efb3d82" title="StockRecord::getOpen getter of the open price of the stock x days ago.">StockRecord::getOpen</a> getter of the open price of the stock x days ago. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the open price DAYS_AGO days ago, from the <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a> for DAYS_AGO days </dd></dl>
+
+</div>
+</div>
+<a id="a6999fb0317844e32a7dc35e5328ff8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6999fb0317844e32a7dc35e5328ff8bb">&#9670;&nbsp;</a></span>getPayoutRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::getPayoutRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a6999fb0317844e32a7dc35e5328ff8bb" title="StockRecord::getPayoutRatio getter for the payout ratio (divided/earnings) of the stock.">StockRecord::getPayoutRatio</a> getter for the payout ratio (divided/earnings) of the stock. </p>
+<dl class="section return"><dt>Returns</dt><dd>the payout ratio of the stock </dd></dl>
+
+</div>
+</div>
+<a id="a97bc314787fa3063542b8010451a0e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97bc314787fa3063542b8010451a0e12">&#9670;&nbsp;</a></span>getTicker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string StockRecord::getTicker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a97bc314787fa3063542b8010451a0e12" title="StockRecord::getTicker getter for ticker.">StockRecord::getTicker</a> getter for ticker. </p>
+<p>returns the ticker symbol for the stock</p>
+<dl class="section return"><dt>Returns</dt><dd>the ticker, a string </dd></dl>
+
+</div>
+</div>
+<a id="a9c9607b66eb1928a05397cd5edc43bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9607b66eb1928a05397cd5edc43bb9">&#9670;&nbsp;</a></span>getVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long int StockRecord::getVolume </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>DAYS_AGO</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a9c9607b66eb1928a05397cd5edc43bb9" title="StockRecord::getVolume gets the volume of trades of the stock on a given day.">StockRecord::getVolume</a> gets the volume of trades of the stock on a given day. </p>
+<p>Gets the number of trades that occured for a given stock on a given day (represented by a <a class="el" href="classDailyStock.html" title="The DailyStock class describes the stock price and volume of a given stock on a given day.">DailyStock</a>)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DAYS_AGO</td><td>the number of days before the current day to look </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the volume of trades DAYS_AGO days </dd></dl>
+
+</div>
+</div>
+<a id="ab4c27d415704e9a8f97f60d88159a1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c27d415704e9a8f97f60d88159a1e5">&#9670;&nbsp;</a></span>requestCompanyInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StockRecord::requestCompanyInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#ab4c27d415704e9a8f97f60d88159a1e5" title="StockRecord::requestCompanyInfo API call to get Company info.">StockRecord::requestCompanyInfo</a> API call to get Company info. </p>
+<p>Private helper function that makes an API call to determine company information, such as name and exchange </p>
+
+</div>
+</div>
+<a id="ab3984cfb287316f4f9262406cdbac5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3984cfb287316f4f9262406cdbac5f3">&#9670;&nbsp;</a></span>requestFinancials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StockRecord::requestFinancials </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#ab3984cfb287316f4f9262406cdbac5f3" title="StockRecord::requestFinancials API call to get financial information.">StockRecord::requestFinancials</a> API call to get financial information. </p>
+<p>Private helper function that makes an API call to determine financials, such as EBIT per share, gross margin, and payout ratio </p>
+
+</div>
+</div>
+<a id="a74f7bd38414e54b2d79ff07182ed55e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f7bd38414e54b2d79ff07182ed55e9">&#9670;&nbsp;</a></span>requestStockPrices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StockRecord::requestStockPrices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStockRecord.html#a74f7bd38414e54b2d79ff07182ed55e9" title="StockRecord::requestStockPrices API call to get stock prices.">StockRecord::requestStockPrices</a> API call to get stock prices. </p>
+<p>Private helper function that makes an API call to determine stock price information, such as open, close, high, and low. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa8736b7e731b6a8f964056067e59e574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8736b7e731b6a8f964056067e59e574">&#9670;&nbsp;</a></span>companyName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StockRecord::companyName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>name of company e.g. "Ford Motor Co." </p>
+
+</div>
+</div>
+<a id="a607a4df235464c06c396ebaba8a2ebab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607a4df235464c06c396ebaba8a2ebab">&#9670;&nbsp;</a></span>currentRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::currentRatio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Current ratio = current assets/current liabilities </p>
+
+</div>
+</div>
+<a id="a5bf08c7a84bcd7da956b6f42de43b006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf08c7a84bcd7da956b6f42de43b006">&#9670;&nbsp;</a></span>days</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classDailyStock.html">DailyStock</a>&gt; StockRecord::days</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>vector of information on stock price on several dates </p>
+
+</div>
+</div>
+<a id="a9503b1c526f251cdf71f815745b10ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9503b1c526f251cdf71f815745b10ff7">&#9670;&nbsp;</a></span>ebitShare</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::ebitShare</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Earnings Before Interest and Tax (EBIT) divided by number of shares </p>
+
+</div>
+</div>
+<a id="ac2ff0813837262876e677c185c6dacfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ff0813837262876e677c185c6dacfa">&#9670;&nbsp;</a></span>exchange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StockRecord::exchange</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the exchange that the stock is traded on </p>
+
+</div>
+</div>
+<a id="a54da2c61b0be09b043e498f7e768f4a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54da2c61b0be09b043e498f7e768f4a4">&#9670;&nbsp;</a></span>grossMargin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::grossMargin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gross margin = gross profit divided by revenue </p>
+
+</div>
+</div>
+<a id="af58d1a854c2d6d62a7d0ee9fd974a0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58d1a854c2d6d62a7d0ee9fd974a0c8">&#9670;&nbsp;</a></span>marketCap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StockRecord::marketCap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>market capitalization of the company, equal to number of shares * stock pice </p>
+
+</div>
+</div>
+<a id="adc7be7e3bb558c54a46aed149066edd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7be7e3bb558c54a46aed149066edd0">&#9670;&nbsp;</a></span>payoutRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StockRecord::payoutRatio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Payout ratio = dividend/share divided by earnings/share </p>
+
+</div>
+</div>
+<a id="a894d6e551226b959a135b9fdbd9f647e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894d6e551226b959a135b9fdbd9f647e">&#9670;&nbsp;</a></span>ticker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StockRecord::ticker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>up to 4 letter ticker </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="StockRecord_8h_source.html">StockRecord.h</a></li>
 <li>StockRecord.cpp</li>

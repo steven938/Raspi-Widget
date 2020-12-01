@@ -1,5 +1,4 @@
 <map id="WeatherRecord" name="WeatherRecord">
-<area shape="rect" id="node1" title="The WeatherRecord class holds weather data for one city." alt="" coords="5,171,127,197"/>
-<area shape="rect" id="node2" href="$classRecord.html" title=" " alt="" coords="33,95,99,121"/>
-<area shape="rect" id="node3" href="$classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="12,5,120,32"/>
+<area shape="rect" id="node1" title="The WeatherRecord class holds weather data for one city." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node2" href="$classRecord.html" title="The Record class represents one record in any data category." alt="" coords="33,5,99,32"/>
 </map>

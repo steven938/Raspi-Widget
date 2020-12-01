@@ -2,7 +2,17 @@
 \label{classErrorBox}\index{ErrorBox@{ErrorBox}}
 
 
-Inheritance diagram for Error\+Box\+:\nopagebreak
+The \mbox{\hyperlink{classErrorBox}{Error\+Box}} class displays an \char`\"{}error\char`\"{} message if the user tries to do something illegal. Displays a customizable error message if the user attempts to do something illegal.  
+
+
+
+
+{\ttfamily \#include $<$errorbox.\+h$>$}
+
+
+
+Inheritance diagram for Error\+Box\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Error\+Box\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Error\+Box\+:\nopagebreak
+Collaboration diagram for Error\+Box\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,19 +32,88 @@ Collaboration diagram for Error\+Box\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}\label{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}} 
-{\bfseries Error\+Box} (Q\+Widget $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{classErrorBox_a22e44f3a5b0f66ca9bf67417a38cc020}\label{classErrorBox_a22e44f3a5b0f66ca9bf67417a38cc020}} 
-void {\bfseries error} (std\+::string message)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}{Error\+Box}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}{Error\+Box\+::\+Error\+Box}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classErrorBox_a45aabfc49b58174c690560c6fc3e2082}{$\sim$\+Error\+Box}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classErrorBox_a45aabfc49b58174c690560c6fc3e2082}{Error\+Box\+::$\sim$\+Error\+Box}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classErrorBox_a0120c4c38026855c0512a156c8046d7e}{error}} (const std\+::string M\+E\+S\+S\+A\+GE)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classErrorBox_a0120c4c38026855c0512a156c8046d7e}{Error\+Box\+::error}} displays an error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classErrorBox_a7f4f44c57b9f417ba10eadf003e2ee1a}\label{classErrorBox_a7f4f44c57b9f417ba10eadf003e2ee1a}} 
-Ui\+::\+Error\+Box $\ast$ {\bfseries ui}
+Ui\+::\+Error\+Box $\ast$ \mbox{\hyperlink{classErrorBox_a7f4f44c57b9f417ba10eadf003e2ee1a}{ui}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classErrorBox}{Error\+Box}} class displays an \char`\"{}error\char`\"{} message if the user tries to do something illegal. Displays a customizable error message if the user attempts to do something illegal. 
+
+\begin{DoxyAuthor}{Author}
+Adam Miller 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/11-\/29 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}\label{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}} 
+\index{ErrorBox@{ErrorBox}!ErrorBox@{ErrorBox}}
+\index{ErrorBox@{ErrorBox}!ErrorBox@{ErrorBox}}
+\doxysubsubsection{\texorpdfstring{ErrorBox()}{ErrorBox()}}
+{\footnotesize\ttfamily Error\+Box\+::\+Error\+Box (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classErrorBox_a97a39cb8eb18063584bb1a3db2c0800e}{Error\+Box\+::\+Error\+Box}} constructor. 
+
+creates an errorbox
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & a nullptr, required by qt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classErrorBox_a45aabfc49b58174c690560c6fc3e2082}\label{classErrorBox_a45aabfc49b58174c690560c6fc3e2082}} 
+\index{ErrorBox@{ErrorBox}!````~ErrorBox@{$\sim$ErrorBox}}
+\index{````~ErrorBox@{$\sim$ErrorBox}!ErrorBox@{ErrorBox}}
+\doxysubsubsection{\texorpdfstring{$\sim$ErrorBox()}{~ErrorBox()}}
+{\footnotesize\ttfamily Error\+Box\+::$\sim$\+Error\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classErrorBox_a45aabfc49b58174c690560c6fc3e2082}{Error\+Box\+::$\sim$\+Error\+Box}} destructor. 
+
+Destroys the object, deallocating memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrorBox_a0120c4c38026855c0512a156c8046d7e}\label{classErrorBox_a0120c4c38026855c0512a156c8046d7e}} 
+\index{ErrorBox@{ErrorBox}!error@{error}}
+\index{error@{error}!ErrorBox@{ErrorBox}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Error\+Box\+::error (\begin{DoxyParamCaption}\item[{const std\+::string}]{M\+E\+S\+S\+A\+GE }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classErrorBox_a0120c4c38026855c0512a156c8046d7e}{Error\+Box\+::error}} displays an error message. 
+
+Displays an error message. Should be called B\+E\+F\+O\+RE the show() method is called!
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & A message to the user on the error that was thrown \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classErrorBox_a7f4f44c57b9f417ba10eadf003e2ee1a}\label{classErrorBox_a7f4f44c57b9f417ba10eadf003e2ee1a}} 
+\index{ErrorBox@{ErrorBox}!ui@{ui}}
+\index{ui@{ui}!ErrorBox@{ErrorBox}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Error\+Box$\ast$ Error\+Box\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+The user interface for error box to interact with 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

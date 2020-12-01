@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['search_55',['search',['../classCategoryADT.html#ad8cc5206c724e932fc8b7dc31e95e4a3',1,'CategoryADT::search()'],['../classNewsCategory.html#aea41ac2f24e01e323733c4d9f32979fb',1,'NewsCategory::search()'],['../classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf',1,'StockCategory::search()'],['../classWeatherCategory.html#a28384c696e8755309941260fcfee70b7',1,'WeatherCategory::search()']]],
-  ['stockcategory_56',['StockCategory',['../classStockCategory.html',1,'']]],
-  ['stockrecord_57',['StockRecord',['../classStockRecord.html',1,'']]],
-  ['stockwindow_58',['stockWindow',['../classstockWindow.html',1,'']]]
+  ['parentwindow_84',['parentWindow',['../classNewsWindow.html#aea5baf844b9a1c1ac88c5bbee987ae4c',1,'NewsWindow::parentWindow()'],['../classstockWindow.html#ae4381af7bdf9c5546f8ffbf69a269d74',1,'stockWindow::parentWindow()'],['../classWeatherWindow.html#abef91658d33f01bd70f2716918dee7a4',1,'WeatherWindow::parentWindow()']]],
+  ['parsearticles_85',['parseArticles',['../classNewsCategory.html#aa8ea0ba788979996cd4956d51e90adb1',1,'NewsCategory']]],
+  ['payoutratio_86',['payoutRatio',['../classStockRecord.html#adc7be7e3bb558c54a46aed149066edd0',1,'StockRecord']]]
 ];

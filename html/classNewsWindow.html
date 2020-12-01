@@ -87,7 +87,7 @@ Collaboration diagram for NewsWindow:</div>
 <map name="NewsWindow_coll__map" id="NewsWindow_coll__map">
 <area shape="rect" title=" " alt="" coords="112,171,223,197"/>
 <area shape="rect" title=" " alt="" coords="5,81,84,108"/>
-<area shape="rect" href="classNewsCategory.html" title=" " alt="" coords="109,81,226,108"/>
+<area shape="rect" href="classNewsCategory.html" title="The NewsCategory class holds news records for each query." alt="" coords="109,81,226,108"/>
 <area shape="rect" href="classCategoryADT.html" title="The CategoryADT class describes a category of information. Abstract class." alt="" coords="113,5,221,32"/>
 <area shape="rect" href="classMainWindow.html" title="The MainWindow class is the primary window of the application." alt="" coords="250,81,357,108"/>
 <area shape="rect" title=" " alt="" coords="245,5,361,32"/>
@@ -96,40 +96,334 @@ Collaboration diagram for NewsWindow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac22b81e1434d96990344adaf5c29a7a3"><td class="memItemLeft" align="right" valign="top"><a id="ac22b81e1434d96990344adaf5c29a7a3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NewsWindow</b> (<a class="el" href="classMainWindow.html">MainWindow</a> *window, QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:ac22b81e1434d96990344adaf5c29a7a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#ac22b81e1434d96990344adaf5c29a7a3">NewsWindow</a> (<a class="el" href="classMainWindow.html">MainWindow</a> *window, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:ac22b81e1434d96990344adaf5c29a7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#ac22b81e1434d96990344adaf5c29a7a3" title="NewsWindow::NewsWindow constructor to create an instance of the NewsWindow class.">NewsWindow::NewsWindow</a> constructor to create an instance of the <a class="el" href="classNewsWindow.html">NewsWindow</a> class.  <a href="classNewsWindow.html#ac22b81e1434d96990344adaf5c29a7a3">More...</a><br /></td></tr>
 <tr class="separator:ac22b81e1434d96990344adaf5c29a7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ac4071d0c0bea2c0fb72f695eccea5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#af4ac4071d0c0bea2c0fb72f695eccea5">~NewsWindow</a> ()</td></tr>
+<tr class="memdesc:af4ac4071d0c0bea2c0fb72f695eccea5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#af4ac4071d0c0bea2c0fb72f695eccea5" title="NewsWindow::~NewsWindow destructor destroys a NewsWindow object.">NewsWindow::~NewsWindow</a> destructor destroys a <a class="el" href="classNewsWindow.html">NewsWindow</a> object.  <a href="classNewsWindow.html#af4ac4071d0c0bea2c0fb72f695eccea5">More...</a><br /></td></tr>
+<tr class="separator:af4ac4071d0c0bea2c0fb72f695eccea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
 Private Slots</h2></td></tr>
-<tr class="memitem:aa82e2963b165caac4a385fe456386642"><td class="memItemLeft" align="right" valign="top"><a id="aa82e2963b165caac4a385fe456386642"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>on_BackButton_clicked</b> ()</td></tr>
+<tr class="memitem:aa82e2963b165caac4a385fe456386642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#aa82e2963b165caac4a385fe456386642">on_BackButton_clicked</a> ()</td></tr>
+<tr class="memdesc:aa82e2963b165caac4a385fe456386642"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#aa82e2963b165caac4a385fe456386642" title="NewsWindow::on_BackButton_clicked returns to the main page.">NewsWindow::on_BackButton_clicked</a> returns to the main page.  <a href="classNewsWindow.html#aa82e2963b165caac4a385fe456386642">More...</a><br /></td></tr>
 <tr class="separator:aa82e2963b165caac4a385fe456386642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7777b20a98cb44a7a3d8df8cb6df424"><td class="memItemLeft" align="right" valign="top"><a id="ac7777b20a98cb44a7a3d8df8cb6df424"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>on_SearchByWordButton_clicked</b> ()</td></tr>
+<tr class="memitem:ac7777b20a98cb44a7a3d8df8cb6df424"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#ac7777b20a98cb44a7a3d8df8cb6df424">on_SearchByWordButton_clicked</a> ()</td></tr>
+<tr class="memdesc:ac7777b20a98cb44a7a3d8df8cb6df424"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#ac7777b20a98cb44a7a3d8df8cb6df424" title="NewsWindow::on_SearchByWordButton_clicked finds articles related to the provided words and displays t...">NewsWindow::on_SearchByWordButton_clicked</a> finds articles related to the provided words and displays them.  <a href="classNewsWindow.html#ac7777b20a98cb44a7a3d8df8cb6df424">More...</a><br /></td></tr>
 <tr class="separator:ac7777b20a98cb44a7a3d8df8cb6df424"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af611244a653a5e17dfcb187e92fa1f84"><td class="memItemLeft" align="right" valign="top"><a id="af611244a653a5e17dfcb187e92fa1f84"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>on_SearchByTopicButton_clicked</b> ()</td></tr>
+<tr class="memitem:af611244a653a5e17dfcb187e92fa1f84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#af611244a653a5e17dfcb187e92fa1f84">on_SearchByTopicButton_clicked</a> ()</td></tr>
+<tr class="memdesc:af611244a653a5e17dfcb187e92fa1f84"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#af611244a653a5e17dfcb187e92fa1f84" title="NewsWindow::on_SearchByTopicButton_clicked finds articles related to the provided topic and displays ...">NewsWindow::on_SearchByTopicButton_clicked</a> finds articles related to the provided topic and displays them.  <a href="classNewsWindow.html#af611244a653a5e17dfcb187e92fa1f84">More...</a><br /></td></tr>
 <tr class="separator:af611244a653a5e17dfcb187e92fa1f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a420b4f2679c355784c0c4c87afceccf4"><td class="memItemLeft" align="right" valign="top"><a id="a420b4f2679c355784c0c4c87afceccf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clearResults</b> ()</td></tr>
+<tr class="memitem:a420b4f2679c355784c0c4c87afceccf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#a420b4f2679c355784c0c4c87afceccf4">clearResults</a> ()</td></tr>
+<tr class="memdesc:a420b4f2679c355784c0c4c87afceccf4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#a420b4f2679c355784c0c4c87afceccf4" title="NewsWindow::clearResults clears the article results found by the API from the form view.">NewsWindow::clearResults</a> clears the article results found by the API from the form view.  <a href="classNewsWindow.html#a420b4f2679c355784c0c4c87afceccf4">More...</a><br /></td></tr>
 <tr class="separator:a420b4f2679c355784c0c4c87afceccf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce6dba0cae1c93b9e0b3cb5cd2ace62"><td class="memItemLeft" align="right" valign="top"><a id="a3ce6dba0cae1c93b9e0b3cb5cd2ace62"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayArticles</b> (std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt; records, <a class="el" href="classNewsCategory.html">NewsCategory</a> *newsCategory)</td></tr>
+<tr class="memitem:a3ce6dba0cae1c93b9e0b3cb5cd2ace62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#a3ce6dba0cae1c93b9e0b3cb5cd2ace62">displayArticles</a> (std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt; records, <a class="el" href="classNewsCategory.html">NewsCategory</a> *newsCategory)</td></tr>
+<tr class="memdesc:a3ce6dba0cae1c93b9e0b3cb5cd2ace62"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNewsWindow.html#a3ce6dba0cae1c93b9e0b3cb5cd2ace62" title="NewsWindow::displayArticles show the articles found by the API based on user input to the form.">NewsWindow::displayArticles</a> show the articles found by the API based on user input to the form.  <a href="classNewsWindow.html#a3ce6dba0cae1c93b9e0b3cb5cd2ace62">More...</a><br /></td></tr>
 <tr class="separator:a3ce6dba0cae1c93b9e0b3cb5cd2ace62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5e74490ff8fde7f6adb8dca60938dc25"><td class="memItemLeft" align="right" valign="top"><a id="a5e74490ff8fde7f6adb8dca60938dc25"></a>
-Ui::NewsWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
+<tr class="memitem:a5e74490ff8fde7f6adb8dca60938dc25"><td class="memItemLeft" align="right" valign="top">Ui::NewsWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#a5e74490ff8fde7f6adb8dca60938dc25">ui</a></td></tr>
 <tr class="separator:a5e74490ff8fde7f6adb8dca60938dc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd3cfd97f4a98222a531654360b41d4"><td class="memItemLeft" align="right" valign="top"><a id="aacd3cfd97f4a98222a531654360b41d4"></a>
-<a class="el" href="classNewsCategory.html">NewsCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>category</b></td></tr>
+<tr class="memitem:aacd3cfd97f4a98222a531654360b41d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNewsCategory.html">NewsCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#aacd3cfd97f4a98222a531654360b41d4">category</a></td></tr>
 <tr class="separator:aacd3cfd97f4a98222a531654360b41d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5baf844b9a1c1ac88c5bbee987ae4c"><td class="memItemLeft" align="right" valign="top"><a id="aea5baf844b9a1c1ac88c5bbee987ae4c"></a>
-<a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parentWindow</b></td></tr>
+<tr class="memitem:aea5baf844b9a1c1ac88c5bbee987ae4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewsWindow.html#aea5baf844b9a1c1ac88c5bbee987ae4c">parentWindow</a></td></tr>
 <tr class="separator:aea5baf844b9a1c1ac88c5bbee987ae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac22b81e1434d96990344adaf5c29a7a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22b81e1434d96990344adaf5c29a7a3">&#9670;&nbsp;</a></span>NewsWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewsWindow::NewsWindow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td>
+          <td class="paramname"><em>Window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#ac22b81e1434d96990344adaf5c29a7a3" title="NewsWindow::NewsWindow constructor to create an instance of the NewsWindow class.">NewsWindow::NewsWindow</a> constructor to create an instance of the <a class="el" href="classNewsWindow.html">NewsWindow</a> class. </p>
+<p>constructor creates a <a class="el" href="classNewsWindow.html">NewsWindow</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Window</td><td>is a reference to the main window. </td></tr>
+    <tr><td class="paramname">parent</td><td>is a reference to get the associated widgets. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af4ac4071d0c0bea2c0fb72f695eccea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ac4071d0c0bea2c0fb72f695eccea5">&#9670;&nbsp;</a></span>~NewsWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NewsWindow::~NewsWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#af4ac4071d0c0bea2c0fb72f695eccea5" title="NewsWindow::~NewsWindow destructor destroys a NewsWindow object.">NewsWindow::~NewsWindow</a> destructor destroys a <a class="el" href="classNewsWindow.html">NewsWindow</a> object. </p>
+<p>Deletes the ui created in the constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a420b4f2679c355784c0c4c87afceccf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420b4f2679c355784c0c4c87afceccf4">&#9670;&nbsp;</a></span>clearResults</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NewsWindow::clearResults </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#a420b4f2679c355784c0c4c87afceccf4" title="NewsWindow::clearResults clears the article results found by the API from the form view.">NewsWindow::clearResults</a> clears the article results found by the API from the form view. </p>
+<p>Sets the values of article title/links, author names, and news sources to nothing, thereby clearing them from view. </p>
+
+</div>
+</div>
+<a id="a3ce6dba0cae1c93b9e0b3cb5cd2ace62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce6dba0cae1c93b9e0b3cb5cd2ace62">&#9670;&nbsp;</a></span>displayArticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NewsWindow::displayArticles </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNewsRecord.html">NewsRecord</a> &gt;&#160;</td>
+          <td class="paramname"><em>records</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classNewsCategory.html">NewsCategory</a> *&#160;</td>
+          <td class="paramname"><em>newsCategory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#a3ce6dba0cae1c93b9e0b3cb5cd2ace62" title="NewsWindow::displayArticles show the articles found by the API based on user input to the form.">NewsWindow::displayArticles</a> show the articles found by the API based on user input to the form. </p>
+<p>Visually show to the user the article names, author names, news sources, and create a hyperlink to the article. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">records</td><td>is a vector of NewsRecords representing all the articles that the user searched for. </td></tr>
+    <tr><td class="paramname">newsCategory</td><td>is the <a class="el" href="classNewsCategory.html" title="The NewsCategory class holds news records for each query.">NewsCategory</a> object that stores the vector of records </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa82e2963b165caac4a385fe456386642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82e2963b165caac4a385fe456386642">&#9670;&nbsp;</a></span>on_BackButton_clicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NewsWindow::on_BackButton_clicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#aa82e2963b165caac4a385fe456386642" title="NewsWindow::on_BackButton_clicked returns to the main page.">NewsWindow::on_BackButton_clicked</a> returns to the main page. </p>
+<p>When BackButton is pressed the newswindow closes. </p>
+
+</div>
+</div>
+<a id="af611244a653a5e17dfcb187e92fa1f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af611244a653a5e17dfcb187e92fa1f84">&#9670;&nbsp;</a></span>on_SearchByTopicButton_clicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NewsWindow::on_SearchByTopicButton_clicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#af611244a653a5e17dfcb187e92fa1f84" title="NewsWindow::on_SearchByTopicButton_clicked finds articles related to the provided topic and displays ...">NewsWindow::on_SearchByTopicButton_clicked</a> finds articles related to the provided topic and displays them. </p>
+<p>Finds the relevant NewsRecords based on category selected and shows the information about them on the form </p>
+
+</div>
+</div>
+<a id="ac7777b20a98cb44a7a3d8df8cb6df424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7777b20a98cb44a7a3d8df8cb6df424">&#9670;&nbsp;</a></span>on_SearchByWordButton_clicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NewsWindow::on_SearchByWordButton_clicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classNewsWindow.html#ac7777b20a98cb44a7a3d8df8cb6df424" title="NewsWindow::on_SearchByWordButton_clicked finds articles related to the provided words and displays t...">NewsWindow::on_SearchByWordButton_clicked</a> finds articles related to the provided words and displays them. </p>
+<p>Finds the relevant NewsRecords based on user input to the text box and shows the information about them on the form </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aacd3cfd97f4a98222a531654360b41d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd3cfd97f4a98222a531654360b41d4">&#9670;&nbsp;</a></span>category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNewsCategory.html">NewsCategory</a> NewsWindow::category</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the news category (singleton) that is being used </p>
+
+</div>
+</div>
+<a id="aea5baf844b9a1c1ac88c5bbee987ae4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5baf844b9a1c1ac88c5bbee987ae4c">&#9670;&nbsp;</a></span>parentWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMainWindow.html">MainWindow</a>* NewsWindow::parentWindow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>the window that created this window </p>
+
+</div>
+</div>
+<a id="a5e74490ff8fde7f6adb8dca60938dc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e74490ff8fde7f6adb8dca60938dc25">&#9670;&nbsp;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::NewsWindow* NewsWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>a qt-created pointer that represents the window itself </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="newswindow_8h_source.html">newswindow.h</a></li>
 <li>newswindow.cpp</li>

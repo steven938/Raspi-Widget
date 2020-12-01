@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['dailystock_5',['DailyStock',['../classDailyStock.html',1,'']]],
-  ['dailyweather_6',['DailyWeather',['../classDailyWeather.html',1,'DailyWeather'],['../classDailyWeather.html#a74287bf60b74409e13cd4953d1fb4d13',1,'DailyWeather::DailyWeather()']]],
-  ['date_7',['Date',['../classDate.html',1,'Date'],['../classDate.html#a4e59ed4ba66eec61c27460c5d09fa1bd',1,'Date::Date()'],['../classDate.html#af3efa227a00ac2ae993c424ca62c340c',1,'Date::Date(const int, const int, const int)'],['../classDailyWeather.html#a377bf6919c9471de16bf49e45a36846e',1,'DailyWeather::date()']]],
-  ['daycounter_8',['dayCounter',['../classWeatherWindow.html#adb307a411b7ca1495ad8474e24ae7a19',1,'WeatherWindow']]],
-  ['days_9',['days',['../classWeatherRecord.html#a598ae862c4d0196c16ae34cd2443a1a5',1,'WeatherRecord']]],
-  ['description_10',['description',['../classDailyWeather.html#ab1c37aebae263b5f7cc3a8d8e0b70807',1,'DailyWeather']]]
+  ['category_1',['category',['../classNewsWindow.html#aacd3cfd97f4a98222a531654360b41d4',1,'NewsWindow::category()'],['../classstockWindow.html#ade156507afad4e792c9327153bb6e107',1,'stockWindow::category()'],['../classWeatherWindow.html#a20b1dee71e2a4ac199e02ae4057170cb',1,'WeatherWindow::category()']]],
+  ['categoryadt_2',['CategoryADT',['../classCategoryADT.html',1,'']]],
+  ['chartprice_3',['chartPrice',['../classstockWindow.html#a8d2028a467260295aeb7f76e2c125b45',1,'stockWindow']]],
+  ['charttime_4',['chartTime',['../classstockWindow.html#a30821ac09edbcc21e47b7843a53f14a8',1,'stockWindow']]],
+  ['chartview_5',['chartView',['../classstockWindow.html#a28ba064cd655745c61aa8245de102d1f',1,'stockWindow']]],
+  ['cityindex_6',['cityIndex',['../classWeatherWindow.html#a346ad9d86942f88f37c1db2a72b4d285',1,'WeatherWindow']]],
+  ['clearresults_7',['clearResults',['../classNewsWindow.html#a420b4f2679c355784c0c4c87afceccf4',1,'NewsWindow']]],
+  ['close_8',['close',['../classDailyStock.html#a112ecc66ce34a48d41e3fc5fb010fbc8',1,'DailyStock']]],
+  ['companyname_9',['companyName',['../classStockRecord.html#aa8736b7e731b6a8f964056067e59e574',1,'StockRecord']]],
+  ['converttemp_10',['convertTemp',['../classWeatherRecord.html#aac603868abb540c69bfb38288d28d1a0',1,'WeatherRecord']]],
+  ['corf_11',['cORf',['../classWeatherWindow.html#ab3d351e40ee7e1d84b1f07f608d0e55a',1,'WeatherWindow']]],
+  ['currentratio_12',['currentRatio',['../classStockRecord.html#a607a4df235464c06c396ebaba8a2ebab',1,'StockRecord']]]
 ];

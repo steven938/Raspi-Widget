@@ -2,6 +2,15 @@
 \label{classDailyStock}\index{DailyStock@{DailyStock}}
 
 
+The \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} class describes the stock price and volume of a given stock on a given day.  
+
+
+
+
+{\ttfamily \#include $<$Daily\+Stock.\+h$>$}
+
+
+
 Collaboration diagram for Daily\+Stock\+:
 \nopagebreak
 \begin{figure}[H]
@@ -13,49 +22,203 @@ Collaboration diagram for Daily\+Stock\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDailyStock_a7ee8396824c794a6a1f804159ade5594}\label{classDailyStock_a7ee8396824c794a6a1f804159ade5594}} 
-{\bfseries Daily\+Stock} (float open, float close, float high, float low, long long int volume, \mbox{\hyperlink{classDate}{Date}} date)
-\item 
-\mbox{\Hypertarget{classDailyStock_af1e687aea07757c77ce2a3a0d4ebdc79}\label{classDailyStock_af1e687aea07757c77ce2a3a0d4ebdc79}} 
-float {\bfseries get\+Open} ()
-\item 
-\mbox{\Hypertarget{classDailyStock_aacde4a266dad9fb6b55366628e12bc70}\label{classDailyStock_aacde4a266dad9fb6b55366628e12bc70}} 
-float {\bfseries get\+Close} ()
-\item 
-\mbox{\Hypertarget{classDailyStock_a4a192db3e15e0f66057b8837c454be94}\label{classDailyStock_a4a192db3e15e0f66057b8837c454be94}} 
-float {\bfseries get\+High} ()
-\item 
-\mbox{\Hypertarget{classDailyStock_a3f6d639670e15e31f9421c59edb5561f}\label{classDailyStock_a3f6d639670e15e31f9421c59edb5561f}} 
-float {\bfseries get\+Low} ()
-\item 
-\mbox{\Hypertarget{classDailyStock_a8c3479b86b690dbf0d819983ca0c85ad}\label{classDailyStock_a8c3479b86b690dbf0d819983ca0c85ad}} 
-std\+::string {\bfseries get\+Date} ()
-\item 
-\mbox{\Hypertarget{classDailyStock_ae4b05e8059e523465f7ad9a5f2e4c412}\label{classDailyStock_ae4b05e8059e523465f7ad9a5f2e4c412}} 
-long long int {\bfseries get\+Volume} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classDailyStock_a0af343d0150c3889a28a55882233285e}{Daily\+Stock}} (const float O\+P\+EN, const float C\+L\+O\+SE, const float H\+I\+GH, const float L\+OW, const long long int V\+O\+L\+U\+ME, const \mbox{\hyperlink{classDate}{Date}} D\+A\+TE)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a0af343d0150c3889a28a55882233285e}{Daily\+Stock\+::\+Daily\+Stock}} constructor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDailyStock_a87bb7e529e60247b2e272bbc19e63967}{get\+Open}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a87bb7e529e60247b2e272bbc19e63967}{Daily\+Stock\+::get\+Open}} getter for open. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDailyStock_a975095530bccbe853979a7e1cc3e1980}{get\+Close}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a975095530bccbe853979a7e1cc3e1980}{Daily\+Stock\+::get\+Close}} getter for close. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDailyStock_a9f1afbe50dbf39924c870ba7d1c9fe92}{get\+High}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a9f1afbe50dbf39924c870ba7d1c9fe92}{Daily\+Stock\+::get\+High}} getter for high. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDailyStock_a3ebd2ab30d220972ef3288ec420efa2c}{get\+Low}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a3ebd2ab30d220972ef3288ec420efa2c}{Daily\+Stock\+::get\+Low}} getter for low. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDailyStock_a7f6b988741ec006075748e7c6b2fabaf}{get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a7f6b988741ec006075748e7c6b2fabaf}{Daily\+Stock\+::get\+Date}} getss a string representation of the date of the stock. \end{DoxyCompactList}\item 
+long long int \mbox{\hyperlink{classDailyStock_a9e5e226bd70325ae2fabcd20bfadec39}{get\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_a9e5e226bd70325ae2fabcd20bfadec39}{Daily\+Stock\+::get\+Volume}} getter for volume. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDailyStock_aa3fd0284d25118208cbb7ede7e285811}{$\sim$\+Daily\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDailyStock_aa3fd0284d25118208cbb7ede7e285811}{Daily\+Stock\+::$\sim$\+Daily\+Stock}} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDailyStock_a850e69f065b99c35eb4f764b23986f57}\label{classDailyStock_a850e69f065b99c35eb4f764b23986f57}} 
-float {\bfseries open}
+float \mbox{\hyperlink{classDailyStock_a850e69f065b99c35eb4f764b23986f57}{open}}
 \item 
-\mbox{\Hypertarget{classDailyStock_a414af10feb638f70d199857ff001e21a}\label{classDailyStock_a414af10feb638f70d199857ff001e21a}} 
-float {\bfseries low}
+float \mbox{\hyperlink{classDailyStock_a414af10feb638f70d199857ff001e21a}{low}}
 \item 
-\mbox{\Hypertarget{classDailyStock_ac46cd30ec8af86c188bb91b55eb5a2a4}\label{classDailyStock_ac46cd30ec8af86c188bb91b55eb5a2a4}} 
-float {\bfseries high}
+float \mbox{\hyperlink{classDailyStock_ac46cd30ec8af86c188bb91b55eb5a2a4}{high}}
 \item 
-\mbox{\Hypertarget{classDailyStock_a112ecc66ce34a48d41e3fc5fb010fbc8}\label{classDailyStock_a112ecc66ce34a48d41e3fc5fb010fbc8}} 
-float {\bfseries close}
+float \mbox{\hyperlink{classDailyStock_a112ecc66ce34a48d41e3fc5fb010fbc8}{close}}
 \item 
-\mbox{\Hypertarget{classDailyStock_a9466f53c6dabd2ab8f579328816bbe4c}\label{classDailyStock_a9466f53c6dabd2ab8f579328816bbe4c}} 
-long long int {\bfseries volume}
+long long int \mbox{\hyperlink{classDailyStock_a9466f53c6dabd2ab8f579328816bbe4c}{volume}}
 \item 
-\mbox{\Hypertarget{classDailyStock_ae0e66894a322c6c40f0208a81449bafd}\label{classDailyStock_ae0e66894a322c6c40f0208a81449bafd}} 
-\mbox{\hyperlink{classDate}{Date}} {\bfseries date}
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classDailyStock_ae0e66894a322c6c40f0208a81449bafd}{date}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} class describes the stock price and volume of a given stock on a given day. 
+
+describes one day of stock price (high low open and close) for a given stock 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDailyStock_a0af343d0150c3889a28a55882233285e}\label{classDailyStock_a0af343d0150c3889a28a55882233285e}} 
+\index{DailyStock@{DailyStock}!DailyStock@{DailyStock}}
+\index{DailyStock@{DailyStock}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{DailyStock()}{DailyStock()}}
+{\footnotesize\ttfamily Daily\+Stock\+::\+Daily\+Stock (\begin{DoxyParamCaption}\item[{const float}]{O\+P\+EN,  }\item[{const float}]{C\+L\+O\+SE,  }\item[{const float}]{H\+I\+GH,  }\item[{const float}]{L\+OW,  }\item[{const long long int}]{V\+O\+L\+U\+ME,  }\item[{const \mbox{\hyperlink{classDate}{Date}}}]{D\+A\+TE }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDailyStock_a0af343d0150c3889a28a55882233285e}{Daily\+Stock\+::\+Daily\+Stock}} constructor. 
+
+Constructs a \mbox{\hyperlink{classDailyStock}{Daily\+Stock}}, assigning stock prices, volume, and \mbox{\hyperlink{classDate}{Date}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em O\+P\+EN} & const, the opening price of the stock \\
+\hline
+{\em C\+L\+O\+SE} & const, the closing price of the stock \\
+\hline
+{\em H\+I\+GH} & const, the high price of the stock for the day \\
+\hline
+{\em L\+OW} & const, the low price of the stock for the day \\
+\hline
+{\em V\+O\+L\+U\+ME} & const, the volume of trades for the stock for that day \\
+\hline
+{\em D\+A\+TE} & const, the date of the \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDailyStock_aa3fd0284d25118208cbb7ede7e285811}\label{classDailyStock_aa3fd0284d25118208cbb7ede7e285811}} 
+\index{DailyStock@{DailyStock}!````~DailyStock@{$\sim$DailyStock}}
+\index{````~DailyStock@{$\sim$DailyStock}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{$\sim$DailyStock()}{~DailyStock()}}
+{\footnotesize\ttfamily Daily\+Stock\+::$\sim$\+Daily\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDailyStock_aa3fd0284d25118208cbb7ede7e285811}{Daily\+Stock\+::$\sim$\+Daily\+Stock}} destructor. 
+
+doesn\textquotesingle{}t do anything, because \mbox{\hyperlink{classDailyStock}{Daily\+Stock}} does not allocate dynamic memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDailyStock_a975095530bccbe853979a7e1cc3e1980}\label{classDailyStock_a975095530bccbe853979a7e1cc3e1980}} 
+\index{DailyStock@{DailyStock}!getClose@{getClose}}
+\index{getClose@{getClose}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getClose()}{getClose()}}
+{\footnotesize\ttfamily float Daily\+Stock\+::get\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a975095530bccbe853979a7e1cc3e1980}{Daily\+Stock\+::get\+Close}} getter for close. 
+
+\begin{DoxyReturn}{Returns}
+the close price for the stock on this \mbox{\hyperlink{classDate}{Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDailyStock_a7f6b988741ec006075748e7c6b2fabaf}\label{classDailyStock_a7f6b988741ec006075748e7c6b2fabaf}} 
+\index{DailyStock@{DailyStock}!getDate@{getDate}}
+\index{getDate@{getDate}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily string Daily\+Stock\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a7f6b988741ec006075748e7c6b2fabaf}{Daily\+Stock\+::get\+Date}} getss a string representation of the date of the stock. 
+
+\begin{DoxyReturn}{Returns}
+the date, in D\+D/\+M\+M/\+Y\+Y\+YY format, as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDailyStock_a9f1afbe50dbf39924c870ba7d1c9fe92}\label{classDailyStock_a9f1afbe50dbf39924c870ba7d1c9fe92}} 
+\index{DailyStock@{DailyStock}!getHigh@{getHigh}}
+\index{getHigh@{getHigh}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getHigh()}{getHigh()}}
+{\footnotesize\ttfamily float Daily\+Stock\+::get\+High (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a9f1afbe50dbf39924c870ba7d1c9fe92}{Daily\+Stock\+::get\+High}} getter for high. 
+
+\begin{DoxyReturn}{Returns}
+the high price of the stock on this \mbox{\hyperlink{classDate}{Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDailyStock_a3ebd2ab30d220972ef3288ec420efa2c}\label{classDailyStock_a3ebd2ab30d220972ef3288ec420efa2c}} 
+\index{DailyStock@{DailyStock}!getLow@{getLow}}
+\index{getLow@{getLow}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getLow()}{getLow()}}
+{\footnotesize\ttfamily float Daily\+Stock\+::get\+Low (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a3ebd2ab30d220972ef3288ec420efa2c}{Daily\+Stock\+::get\+Low}} getter for low. 
+
+\begin{DoxyReturn}{Returns}
+the low price of the stock on this \mbox{\hyperlink{classDate}{Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDailyStock_a87bb7e529e60247b2e272bbc19e63967}\label{classDailyStock_a87bb7e529e60247b2e272bbc19e63967}} 
+\index{DailyStock@{DailyStock}!getOpen@{getOpen}}
+\index{getOpen@{getOpen}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getOpen()}{getOpen()}}
+{\footnotesize\ttfamily float Daily\+Stock\+::get\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a87bb7e529e60247b2e272bbc19e63967}{Daily\+Stock\+::get\+Open}} getter for open. 
+
+\begin{DoxyReturn}{Returns}
+the open price for the stock on this \mbox{\hyperlink{classDate}{Date}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDailyStock_a9e5e226bd70325ae2fabcd20bfadec39}\label{classDailyStock_a9e5e226bd70325ae2fabcd20bfadec39}} 
+\index{DailyStock@{DailyStock}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily long long int Daily\+Stock\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classDailyStock_a9e5e226bd70325ae2fabcd20bfadec39}{Daily\+Stock\+::get\+Volume}} getter for volume. 
+
+\begin{DoxyReturn}{Returns}
+the volume of trades for this stock on this \mbox{\hyperlink{classDate}{Date}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDailyStock_a112ecc66ce34a48d41e3fc5fb010fbc8}\label{classDailyStock_a112ecc66ce34a48d41e3fc5fb010fbc8}} 
+\index{DailyStock@{DailyStock}!close@{close}}
+\index{close@{close}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily float Daily\+Stock\+::close\hspace{0.3cm}{\ttfamily [private]}}
+
+closing price on that date \mbox{\Hypertarget{classDailyStock_ae0e66894a322c6c40f0208a81449bafd}\label{classDailyStock_ae0e66894a322c6c40f0208a81449bafd}} 
+\index{DailyStock@{DailyStock}!date@{date}}
+\index{date@{date}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDate}{Date}} Daily\+Stock\+::date\hspace{0.3cm}{\ttfamily [private]}}
+
+the \mbox{\hyperlink{classDate}{Date}} \mbox{\Hypertarget{classDailyStock_ac46cd30ec8af86c188bb91b55eb5a2a4}\label{classDailyStock_ac46cd30ec8af86c188bb91b55eb5a2a4}} 
+\index{DailyStock@{DailyStock}!high@{high}}
+\index{high@{high}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{high}{high}}
+{\footnotesize\ttfamily float Daily\+Stock\+::high\hspace{0.3cm}{\ttfamily [private]}}
+
+high price on that date \mbox{\Hypertarget{classDailyStock_a414af10feb638f70d199857ff001e21a}\label{classDailyStock_a414af10feb638f70d199857ff001e21a}} 
+\index{DailyStock@{DailyStock}!low@{low}}
+\index{low@{low}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{low}{low}}
+{\footnotesize\ttfamily float Daily\+Stock\+::low\hspace{0.3cm}{\ttfamily [private]}}
+
+low price on that date \mbox{\Hypertarget{classDailyStock_a850e69f065b99c35eb4f764b23986f57}\label{classDailyStock_a850e69f065b99c35eb4f764b23986f57}} 
+\index{DailyStock@{DailyStock}!open@{open}}
+\index{open@{open}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily float Daily\+Stock\+::open\hspace{0.3cm}{\ttfamily [private]}}
+
+open price on that date \mbox{\Hypertarget{classDailyStock_a9466f53c6dabd2ab8f579328816bbe4c}\label{classDailyStock_a9466f53c6dabd2ab8f579328816bbe4c}} 
+\index{DailyStock@{DailyStock}!volume@{volume}}
+\index{volume@{volume}!DailyStock@{DailyStock}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily long long int Daily\+Stock\+::volume\hspace{0.3cm}{\ttfamily [private]}}
+
+volume of trades on that date 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

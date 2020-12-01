@@ -2,7 +2,17 @@
 \label{classNewsCategory}\index{NewsCategory@{NewsCategory}}
 
 
-Inheritance diagram for News\+Category\+:\nopagebreak
+The \mbox{\hyperlink{classNewsCategory}{News\+Category}} class holds news records for each query.  
+
+
+
+
+{\ttfamily \#include $<$News\+Category.\+h$>$}
+
+
+
+Inheritance diagram for News\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for News\+Category\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for News\+Category\+:\nopagebreak
+Collaboration diagram for News\+Category\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,23 +32,14 @@ Collaboration diagram for News\+Category\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}\label{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}} 
-std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries get\+Records} ()
-\item 
+\mbox{\hyperlink{classNewsCategory_a887c0b00263f704585c9493d560dfca8}{News\+Category}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_a887c0b00263f704585c9493d560dfca8}{News\+Category\+::\+News\+Category}} constructor creates a \mbox{\hyperlink{classNewsCategory}{News\+Category}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNewsCategory_adee87ebb719bef68447676e9472f6ed0}{$\sim$\+News\+Category}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_adee87ebb719bef68447676e9472f6ed0}{News\+Category\+::$\sim$\+News\+Category}} destructor destroys a \mbox{\hyperlink{classNewsCategory}{News\+Category}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ \mbox{\hyperlink{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}{get\+Records}} ()
+\begin{DoxyCompactList}\small\item\em get\+Records, getter for the vector of \mbox{\hyperlink{classRecord}{Record}} s \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classRecord}{Record}} \mbox{\hyperlink{classNewsCategory_aea41ac2f24e01e323733c4d9f32979fb}{search}} (std\+::string)
-\begin{DoxyCompactList}\small\item\em search creates and returns a record based on a given search string \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}\label{classNewsCategory_a48f8e3defaaef0ecc696c83a84998253}} 
-void {\bfseries sort} (int, bool)
-\item 
-\mbox{\Hypertarget{classNewsCategory_a280e21d2971df18daff29b630ea6e097}\label{classNewsCategory_a280e21d2971df18daff29b630ea6e097}} 
-std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+Time} (int)
-\item 
-\mbox{\Hypertarget{classNewsCategory_a7571dc6e4675c9eb0f936bd8bc1905a2}\label{classNewsCategory_a7571dc6e4675c9eb0f936bd8bc1905a2}} 
-std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+Topic} (int)
-\item 
-\mbox{\Hypertarget{classNewsCategory_a10c45e51c3f4c04c442c22d9fbde7047}\label{classNewsCategory_a10c45e51c3f4c04c442c22d9fbde7047}} 
-std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries change\+News\+Source} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em search\+: returns a desired news record representing articles for a given query \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}{request\+Articles\+By\+Sector}} (std\+::string sector)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_a76dea2a28fe339ac39c41b4cfad6b476}{News\+Category\+::request\+Articles\+By\+Sector}} function takes in a string representing a sector/category and retreives articles from A\+PI. The articles are loaded into this-\/$>$record. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}{request\+Articles}} (std\+::string search\+String)
@@ -45,20 +47,62 @@ void \mbox{\hyperlink{classNewsCategory_aaf4df241e4ebb78c1a4529278fc15149}{reque
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsCategory_ab698c6e80d4de3202cfeaa82a658202c}\label{classNewsCategory_ab698c6e80d4de3202cfeaa82a658202c}} 
-void {\bfseries display\+Records} (std\+::vector$<$ \mbox{\hyperlink{classRecord}{Record}} $>$)
-\item 
 void \mbox{\hyperlink{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}{parse\+Articles}} (Q\+Json\+Array \&, int num\+Articles)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}{News\+Category\+::parse\+Articles}} helper function for parsing news articles in J\+S\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classNewsCategory_a255e0c553f668aca40954663a9475efd}\label{classNewsCategory_a255e0c553f668aca40954663a9475efd}} 
-std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries records}
+std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ \mbox{\hyperlink{classNewsCategory_a255e0c553f668aca40954663a9475efd}{records}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classNewsCategory}{News\+Category}} class holds news records for each query. 
+
+The \mbox{\hyperlink{classNewsCategory}{News\+Category}} class is a singleton that holds news records for each query
+
+\begin{DoxyAuthor}{Author}
+Leland Conn 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNewsCategory_a887c0b00263f704585c9493d560dfca8}\label{classNewsCategory_a887c0b00263f704585c9493d560dfca8}} 
+\index{NewsCategory@{NewsCategory}!NewsCategory@{NewsCategory}}
+\index{NewsCategory@{NewsCategory}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{NewsCategory()}{NewsCategory()}}
+{\footnotesize\ttfamily News\+Category\+::\+News\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classNewsCategory_a887c0b00263f704585c9493d560dfca8}{News\+Category\+::\+News\+Category}} constructor creates a \mbox{\hyperlink{classNewsCategory}{News\+Category}} object. 
+
+This is a constructor to create an instance of the \mbox{\hyperlink{classNewsCategory}{News\+Category}} class. Included for completeness, does not perform operations \mbox{\Hypertarget{classNewsCategory_adee87ebb719bef68447676e9472f6ed0}\label{classNewsCategory_adee87ebb719bef68447676e9472f6ed0}} 
+\index{NewsCategory@{NewsCategory}!````~NewsCategory@{$\sim$NewsCategory}}
+\index{````~NewsCategory@{$\sim$NewsCategory}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{$\sim$NewsCategory()}{~NewsCategory()}}
+{\footnotesize\ttfamily News\+Category\+::$\sim$\+News\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classNewsCategory_adee87ebb719bef68447676e9472f6ed0}{News\+Category\+::$\sim$\+News\+Category}} destructor destroys a \mbox{\hyperlink{classNewsCategory}{News\+Category}} object. 
+
+Since \mbox{\hyperlink{classNewsCategory}{News\+Category}} has no dynamically allocated memory, this does not do anything. Included for completeness. 
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}\label{classNewsCategory_a03d52c4c37edf424615f39f38c866e59}} 
+\index{NewsCategory@{NewsCategory}!getRecords@{getRecords}}
+\index{getRecords@{getRecords}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ News\+Category\+::get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Records, getter for the vector of \mbox{\hyperlink{classRecord}{Record}} s 
+
+returns the records vector \begin{DoxyReturn}{Returns}
+records, the vector holding \mbox{\hyperlink{classWeatherRecord}{Weather\+Record}} s 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}\label{classNewsCategory_aa8ea0ba788979996cd4956d51e90adb1}} 
 \index{NewsCategory@{NewsCategory}!parseArticles@{parseArticles}}
 \index{parseArticles@{parseArticles}!NewsCategory@{NewsCategory}}
@@ -114,16 +158,30 @@ std\+::vector$<$ \mbox{\hyperlink{classNewsRecord}{News\+Record}} $>$ {\bfseries
 
 
 
-search creates and returns a record based on a given search string 
+search\+: returns a desired news record representing articles for a given query 
 
+Creates a news record, passing the search string from the search bar to the new news record. This will call the news A\+PI and find articles related to the query 
+\begin{DoxyParams}{Parameters}
+{\em search\+String} & a string that represents the articles being searched for \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a \mbox{\hyperlink{classRecord}{Record}} based on the search string 
+a news record with the articles for the search query 
 \end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classCategoryADT_ad8cc5206c724e932fc8b7dc31e95e4a3}{Category\+A\+DT}}.
 
 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNewsCategory_a255e0c553f668aca40954663a9475efd}\label{classNewsCategory_a255e0c553f668aca40954663a9475efd}} 
+\index{NewsCategory@{NewsCategory}!records@{records}}
+\index{records@{records}!NewsCategory@{NewsCategory}}
+\doxysubsubsection{\texorpdfstring{records}{records}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classNewsRecord}{News\+Record}}$>$ News\+Category\+::records\hspace{0.3cm}{\ttfamily [private]}}
+
+A vector to store all the news records 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -67,7 +67,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Author: Leland Conn</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Author: Dhyey Patel</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Description: Header file that defines a stock category, which holds stock records for each company and can act on that set of data</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Date: 2020-11-04</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
@@ -77,36 +77,38 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;StockRecord.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;CategoryADT.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classStockCategory.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStockCategory.html">StockCategory</a>: <span class="keyword">public</span> <a class="code" href="classCategoryADT.html">CategoryADT</a>{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::vector&lt;StockRecord&gt; records; <span class="comment">// A vector to store all the weather records</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">// Print the specified records to the screen</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> displayRecords(std::vector&lt;StockRecord&gt; toDisplay);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// Constructor to make instances of StockCategory class</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classStockCategory.html">StockCategory</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// Destructor</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="classStockCategory.html">StockCategory</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// Function to get the records of the class </span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::vector&lt;Record&gt; getRecords();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// Function to find a record of a specific company (specified by searchString)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classRecord.html">Record</a> <a class="code" href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">search</a>(std::string searchString);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// Sort the weather records currently stored in the private vector</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> sort(<span class="keywordtype">int</span> type, <span class="keywordtype">bool</span> ascend);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classStockCategory.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStockCategory.html">StockCategory</a>: <span class="keyword">public</span> <a class="code" href="classCategoryADT.html">CategoryADT</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classStockCategory.html#a154576449721d3739f073b09faa6c586">   23</a></span>&#160;        std::vector&lt;StockRecord&gt; <a class="code" href="classStockCategory.html#a154576449721d3739f073b09faa6c586">records</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// Print the specified records to the screen</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> displayRecords(std::vector&lt;StockRecord&gt; toDisplay);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Constructor to make instances of StockCategory class</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classStockCategory.html#a0c8f1af807f2182d4b2b8c2d47b40405">StockCategory</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// Destructor</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classStockCategory.html#a3c4422d9cf71e2f2810ddccf21233c88">~StockCategory</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// Function to get the records of the class </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::vector&lt;StockRecord&gt; <a class="code" href="classStockCategory.html#aede657581d272059e12b347446963149">getRecords</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// Function to find a record of a specific company (specified by searchString)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classRecord.html">Record</a> <a class="code" href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">search</a>(std::string searchString);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassStockCategory_html"><div class="ttname"><a href="classStockCategory.html">StockCategory</a></div><div class="ttdef"><b>Definition:</b> StockCategory.h:12</div></div>
+<div class="ttc" id="aclassStockCategory_html"><div class="ttname"><a href="classStockCategory.html">StockCategory</a></div><div class="ttdoc">The StockCategory class is a singleton that creates and accesses records.</div><div class="ttdef"><b>Definition:</b> StockCategory.h:21</div></div>
+<div class="ttc" id="aclassStockCategory_html_a3c4422d9cf71e2f2810ddccf21233c88"><div class="ttname"><a href="classStockCategory.html#a3c4422d9cf71e2f2810ddccf21233c88">StockCategory::~StockCategory</a></div><div class="ttdeci">~StockCategory()</div><div class="ttdoc">StockCategory::~StockCategory destructor.</div><div class="ttdef"><b>Definition:</b> StockCategory.cpp:29</div></div>
+<div class="ttc" id="aclassStockCategory_html_a0c8f1af807f2182d4b2b8c2d47b40405"><div class="ttname"><a href="classStockCategory.html#a0c8f1af807f2182d4b2b8c2d47b40405">StockCategory::StockCategory</a></div><div class="ttdeci">StockCategory()</div><div class="ttdoc">StockCategory::StockCategory constructor.</div><div class="ttdef"><b>Definition:</b> StockCategory.cpp:20</div></div>
 <div class="ttc" id="aclassCategoryADT_html"><div class="ttname"><a href="classCategoryADT.html">CategoryADT</a></div><div class="ttdoc">The CategoryADT class describes a category of information. Abstract class.</div><div class="ttdef"><b>Definition:</b> CategoryADT.h:20</div></div>
-<div class="ttc" id="aclassStockCategory_html_a674f9b4e2310c1537d21b42283fe57bf"><div class="ttname"><a href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">StockCategory::search</a></div><div class="ttdeci">Record search(std::string searchString)</div><div class="ttdoc">search creates and returns a record based on a given search string</div><div class="ttdef"><b>Definition:</b> StockCategory.cpp:44</div></div>
-<div class="ttc" id="aclassRecord_html"><div class="ttname"><a href="classRecord.html">Record</a></div><div class="ttdef"><b>Definition:</b> Record.h:6</div></div>
+<div class="ttc" id="aclassStockCategory_html_aede657581d272059e12b347446963149"><div class="ttname"><a href="classStockCategory.html#aede657581d272059e12b347446963149">StockCategory::getRecords</a></div><div class="ttdeci">std::vector&lt; StockRecord &gt; getRecords()</div><div class="ttdoc">StockCategory::getRecords getter for the vector of records.</div><div class="ttdef"><b>Definition:</b> StockCategory.cpp:37</div></div>
+<div class="ttc" id="aclassStockCategory_html_a674f9b4e2310c1537d21b42283fe57bf"><div class="ttname"><a href="classStockCategory.html#a674f9b4e2310c1537d21b42283fe57bf">StockCategory::search</a></div><div class="ttdeci">Record search(std::string searchString)</div><div class="ttdoc">StockCategory::search creates and returns a StockRecord given a search string.</div><div class="ttdef"><b>Definition:</b> StockCategory.cpp:51</div></div>
+<div class="ttc" id="aclassRecord_html"><div class="ttname"><a href="classRecord.html">Record</a></div><div class="ttdoc">The Record class represents one record in any data category.</div><div class="ttdef"><b>Definition:</b> Record.h:15</div></div>
+<div class="ttc" id="aclassStockCategory_html_a154576449721d3739f073b09faa6c586"><div class="ttname"><a href="classStockCategory.html#a154576449721d3739f073b09faa6c586">StockCategory::records</a></div><div class="ttdeci">std::vector&lt; StockRecord &gt; records</div><div class="ttdef"><b>Definition:</b> StockCategory.h:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

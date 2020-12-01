@@ -1,8 +1,20 @@
 var searchData=
 [
-  ['r_50',['r',['../classWeatherWindow.html#a9d299ab70df147c0e4023645725da649',1,'WeatherWindow']]],
-  ['record_51',['Record',['../classRecord.html',1,'']]],
-  ['records_52',['records',['../classCategoryADT.html#a11504f4f26098803fed3c42a8f24c57e',1,'CategoryADT::records()'],['../classWeatherCategory.html#a08f7eeea9f8a2c388fb09e4b45d797c6',1,'WeatherCategory::records()']]],
-  ['requestarticles_53',['requestArticles',['../classNewsCategory.html#aaf4df241e4ebb78c1a4529278fc15149',1,'NewsCategory']]],
-  ['requestarticlesbysector_54',['requestArticlesBySector',['../classNewsCategory.html#a76dea2a28fe339ac39c41b4cfad6b476',1,'NewsCategory']]]
+  ['on_5fbackbutton_5fclicked_67',['on_BackButton_clicked',['../classNewsWindow.html#aa82e2963b165caac4a385fe456386642',1,'NewsWindow::on_BackButton_clicked()'],['../classWeatherWindow.html#aa6fc21e33c0df542c3d89463dde2f5aa',1,'WeatherWindow::on_BackButton_clicked()']]],
+  ['on_5fcelcbutton_5fclicked_68',['on_celcButton_clicked',['../classWeatherWindow.html#ac6c762f3f4702ad7c58962870ab6f7af',1,'WeatherWindow']]],
+  ['on_5fcitiesbox_5fcurrentindexchanged_69',['on_citiesBox_currentIndexChanged',['../classWeatherWindow.html#a87962d906aceabc6cc911353a9341bed',1,'WeatherWindow']]],
+  ['on_5fdailybutton_5fclicked_70',['on_dailyButton_clicked',['../classWeatherWindow.html#a011dcad5834b3b59b0a4580e616d45cd',1,'WeatherWindow']]],
+  ['on_5ffarenbutton_5fclicked_71',['on_farenButton_clicked',['../classWeatherWindow.html#a5b2b7206172886374691bfe2fc18e3a4',1,'WeatherWindow']]],
+  ['on_5fnewsbutton_5fclicked_72',['on_newsButton_clicked',['../classMainWindow.html#a216b91ef3d74736dbad4c1d035a3d780',1,'MainWindow']]],
+  ['on_5fnextbutton_5fclicked_73',['on_nextButton_clicked',['../classWeatherWindow.html#af0e2459f9e29a676521390861535a118',1,'WeatherWindow']]],
+  ['on_5fprevbutton_5fclicked_74',['on_prevButton_clicked',['../classWeatherWindow.html#a8a8b495c39990d43b8cc3b8b38fae247',1,'WeatherWindow']]],
+  ['on_5fsearchbar_5freturnpressed_75',['on_searchBar_returnPressed',['../classWeatherWindow.html#a11a34a20711c55063b8f5cf7aa001687',1,'WeatherWindow']]],
+  ['on_5fsearchbytopicbutton_5fclicked_76',['on_SearchByTopicButton_clicked',['../classNewsWindow.html#af611244a653a5e17dfcb187e92fa1f84',1,'NewsWindow']]],
+  ['on_5fsearchbywordbutton_5fclicked_77',['on_SearchByWordButton_clicked',['../classNewsWindow.html#ac7777b20a98cb44a7a3d8df8cb6df424',1,'NewsWindow']]],
+  ['on_5fstockbutton_5fclicked_78',['on_stockButton_clicked',['../classMainWindow.html#ac62ca491115d97f4ee6e5bd6f64abe18',1,'MainWindow']]],
+  ['on_5fweatherbutton_5fclicked_79',['on_weatherButton_clicked',['../classMainWindow.html#ad0b354c95e345cee8e2dc8ba42261328',1,'MainWindow']]],
+  ['on_5fweekbutton_5fclicked_80',['on_weekButton_clicked',['../classWeatherWindow.html#a342ea67c95b8db74207f25a8227d4be4',1,'WeatherWindow']]],
+  ['open_81',['open',['../classDailyStock.html#a850e69f065b99c35eb4f764b23986f57',1,'DailyStock']]],
+  ['operator_21_3d_82',['operator!=',['../classDate.html#a2d9cc2faa8fedf1cc29d078c8c330424',1,'Date']]],
+  ['operator_3d_3d_83',['operator==',['../classDate.html#ab5b9f0682e6285af51521159e7b65fdc',1,'Date']]]
 ];
