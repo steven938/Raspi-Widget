@@ -12,12 +12,12 @@ private:
 	Date date; // the date
 public:
     DailyStock(float open, float close, float high, float low, long long int volume, Date date);
-	float getOpen();
-	float getClose();
-	float getHigh();
-	float getLow();
-    std::string getDate();
-	long long int getVolume();
+    float getOpen() const;
+    float getClose() const;
+    float getHigh() const;
+    float getLow() const;
+    std::string getDate() const;
+    long long int getVolume() const;
 	~DailyStock();
 };
 
