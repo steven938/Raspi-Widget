@@ -8,12 +8,13 @@ Date: 2020-11-11
 #include "newswindow.h"
 #include "ui_newswindow.h"
 
-/*
-Name: NewsWindow THIS ENTIRE CLASS NEEDS TO BE COMPLETED- JUST A TEMPLATE IS BUILD SO FAR
-Description: This is a constructor to create an instance of the NewsWindow class
-Parameter Descriptions: It needs a reference to the main window, and needs to get its widgets
-Return Description: N/A
-*/
+/*!
+ * \brief NewsWindow::NewsWindow constructor to create an instance of the NewsWindow class.
+ *
+ * constructor creates a NewsWindow object.
+ * \param Window is a reference to the main window.
+ * \param parent is a reference to get the associated widgets.
+ */
 NewsWindow::NewsWindow(MainWindow * Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::NewsWindow)
@@ -23,24 +24,21 @@ NewsWindow::NewsWindow(MainWindow * Window, QWidget *parent) :
 
 }
 
-/*
-Name: ~NewsWindow
-Description: This is a deconstructor to destroy the instance of the NewsWindow class
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+/*!
+ * \brief NewsWindow::~NewsWindow destructor destroys a NewsWindow object.
+ *
+ * Deletes the ui created in the constructor
+ */
 NewsWindow::~NewsWindow()
 {
-    // Delete the ui created in the constructor
     delete ui;
 }
 
-/*
-Name: on_BackButton_clicked
-Description: Method will execute when the back button is clicked
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+/*!
+ * \brief NewsWindow::on_BackButton_clicked returns to the main page.
+ *
+ * When BackButton is pressed the newswindow closes.
+ */
 void NewsWindow::on_BackButton_clicked(){
     parentWindow->close();
     parentWindow = new MainWindow();
@@ -52,6 +50,12 @@ void NewsWindow::on_BackButton_clicked(){
 
 }
 
+/*!
+ * \brief NewsWindow::clearResults clears the article results found by the API from the form view.
+ *
+ * Sets the values of article title/links, author names, and news sources to nothing, thereby
+ * clearing them from view.
+ */
 void NewsWindow::clearResults() {
     QList<QLabel*> list = this->findChildren<QLabel *>();
     foreach(QLabel *w, list) {
@@ -61,6 +65,13 @@ void NewsWindow::clearResults() {
     }
 }
 
+/*!
+ * \brief NewsWindow::displayArticles show the articles found by the API based on user input to the form
+ *
+ * Visually show to the user the article names, author names, news sources, and create a hyperlink to the article.
+ * \param records is a vector of NewsRecords representing all the articles that the user searched for.
+ * \param newsCategory is the NewsCategory object that stores the vector of records
+ */
 void NewsWindow::displayArticles(std::vector<NewsRecord> records, NewsCategory *newsCategory) {
     int y = 0;
     QLabel *url;
@@ -112,6 +123,11 @@ void NewsWindow::displayArticles(std::vector<NewsRecord> records, NewsCategory *
     }
 }
 
+/*!
+ * \brief NewsWindow::on_SearchByWordButton_clicked finds articles related to the provided words and displays them
+ *
+ * Finds the relevant NewsRecords based on user input to the text box and shows the information about them on the form
+ */
 void NewsWindow::on_SearchByWordButton_clicked(){
     clearResults();
     NewsCategory *newsCat = new NewsCategory();
@@ -124,6 +140,11 @@ void NewsWindow::on_SearchByWordButton_clicked(){
     displayArticles(tempRec, newsCat);
 }
 
+/*!
+ * \brief NewsWindow::on_SearchByTopicButton_clicked finds articles related to the provided topic and displays them
+ *
+ *  Finds the relevant NewsRecords based on category selected and shows the information about them on the form
+ */
 void NewsWindow::on_SearchByTopicButton_clicked(){
     clearResults();
     NewsCategory *newsCat = new NewsCategory();
