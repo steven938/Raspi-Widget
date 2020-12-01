@@ -46,11 +46,8 @@ private slots:
     void on_descButton_clicked();
     void on_pastMonth2_clicked();
     void on_pastMonth3_clicked();
-    void on_stockView_clicked();
-    void on_listView_clicked();
-    void on_companyView_clicked();
-
     void on_stocksList_currentIndexChanged(int index);
+    void on_viewChart_clicked();
 
 private:
     Ui::stockWindow *ui;            /*!< a qt-created pointer that represents the window itself*/
@@ -63,12 +60,14 @@ private:
     int chartTime;                  /*!< indicates what the timeline for the chart should be; 0 = past week, 1 = past month, 2 = past 2 months, 3 = past 3 months*/
     int sortOption;                 /*!< indicates what the stocks need to sorted by; 0 = Alphabetical (ticker), 1 = Market Capitalization*/
     int sortOrder;                  /*!< indicates what the order of the sort type should be, 0 = Ascending, 1 = Descending*/
+    QChartView *chartView;          /*!< indicates the chart that needs to be created*/
 
 
-
-    void displayChart(StockRecord);
+    // Private Display functions
+    void updateChart(StockRecord);
     void updateDisplay();
 
+    // Private sorting functions
     static bool sortAlpha(StockRecord,StockRecord);
     static bool sortMCap(StockRecord,StockRecord);
 };
