@@ -14,6 +14,10 @@ StockChart::StockChart(QWidget *parent, QChartView *chartView) :
 {
     ui->setupUi(this);
     chartView->setRenderHint(QPainter::Antialiasing);
+    chartView->setMinimumHeight(ui->chartFrame->height());
+    chartView->setMinimumWidth(ui->chartFrame->width());
+    QFont font = QFont("FreeSans",10,1);
+    chartView->setFont(font);
     chartView->setParent(ui->chartFrame);
 }
 

@@ -28,8 +28,8 @@
    <widget class="QFrame" name="chartFrame">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>40</y>
+      <x>10</x>
+      <y>10</y>
       <width>901</width>
       <height>581</height>
      </rect>

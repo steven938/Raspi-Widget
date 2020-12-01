@@ -185,12 +185,18 @@ void stockWindow::updateChart(StockRecord toDisplay){
 
     // Create and set the X axis, which will be all the dates
     QCategoryAxis *axisX = new QCategoryAxis();
+    QFont font = QFont("FreeSans",5,1);
+
     for (int i = displayDays - 1; i >= 0; i --){
         string date = toDisplay.getDate(i);
         QString qdate = QString::fromStdString(date);
         axisX->append(qdate,displayDays - i - 1);
     }
+
+    axisX->setLabelsFont(font);
+
     chart->setAxisX(axisX, series);
+                    //embeds the font into the window
 
 
     // Create a chartview to display the chart, and dispay the chart in the correct location
@@ -342,9 +348,6 @@ bool stockWindow::sortAlpha(StockRecord a,StockRecord b){
 bool stockWindow::sortMCap(StockRecord a,StockRecord b){
     return a.getMarketCap() < b.getMarketCap();
 }
-
-
-
 
 
 void stockWindow::on_viewChart_clicked()
