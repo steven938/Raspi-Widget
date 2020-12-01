@@ -464,17 +464,6 @@ bool stockWindow::sortMCap(StockRecord a,StockRecord b){
 }
 
 
-<<<<<<< HEAD
 
 
 
-
-=======
-void stockWindow::on_viewChart_clicked()
-{
-    StockChart* w = new StockChart(nullptr, chartView); //initializes the weather window
-    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
-    w->setFont(font);
-    w->show();
-}
->>>>>>> ada3ff850447ceafff265e3b4adb641d855ef785

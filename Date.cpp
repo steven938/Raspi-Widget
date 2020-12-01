@@ -13,9 +13,9 @@ using namespace std;
  *
  * Constructs a Date object given a day, month, and year. Throws an exception if the date is invalid
  *
- * \param day a day between 0-31
- * \param month a month betwee 1-12;
- * \param year a year >0
+ * \param DAY a day between 0-31
+ * \param MONTH a month betwee 1-12;
+ * \param YEAR a year >0
  */
 Date::Date(const int DAY, const int MONTH, const int YEAR) {
     // check that days, month, and year are not too small and that months is not greater than 12
