@@ -1,3 +1,9 @@
+/*
+Author: Dhyey Patel
+Description: CPP for StockChart, the window that displays the stock chart
+Date: 2020-11-11
+*/
+
 #include "stockchart.h"
 #include "ui_stockchart.h"
 /*!
@@ -21,6 +27,11 @@ StockChart::StockChart(QWidget *parent, QChartView *chartView) :
     chartView->setParent(ui->chartFrame);
 }
 
+/*!
+ * \brief stockWindow::~StockChart
+ *
+ * Deallocates dynamically allocated memory, destroying the object
+ */
 StockChart::~StockChart()
 {
     delete ui;
