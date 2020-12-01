@@ -15,102 +15,48 @@ Date: 2020-11-04
 #include <QApplication>
 
 using namespace std;
-/*
-Name: NewsCategory
-Description: It will do nothing but create an instance of that class
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+
+
+/*!
+ * \brief NewsCategory::NewsCategory constructor creates a NewsCategory object.
+ *
+ * This is a constructor to create an instance of the NewsCategory class. Included for completeness, does not perform operations
+ */
 NewsCategory::NewsCategory(){
     //NewsCategory::requestArticlesBySector("business"); // sample request articles by sector
     //NewsCategory::requestArticles("Covid vaccine"); // sample request articles by subject
     //NewsCategory::requestArticles("Trump CNN"); // sample request articles by topic and source
 }
-/*
-Name: Destructor
-Description: Destroys the object
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+/*!
+ * \brief NewsCategory::~NewsCategory destructor destroys a NewsCategory object
+ *
+ * Since NewsCategory has no dynamically allocated memory, this does not do anything. Included for completeness.
+ */
 NewsCategory::~NewsCategory(){
 
 }
-/*
-Name: getRecords
-Description: Getter for collection of NewsRecords
-Parameter Descriptions: N/A
-Return Description: Returns the vector of NewsRecords
+/*!
+* \brief getRecords, getter for the vector of Record s
+*
+* returns the records vector
+*  @return records, the vector holding WeatherRecord s
 */
 vector<NewsRecord> NewsCategory::getRecords(){
     return this->records;
 }
 
-/*
-Name: search
-Description: Searches articles related to the requested search
-Parameter Descriptions: Topic to search 
-Return Description: NewsRecords related to the search
+/*!
+* \brief search: returns a desired news record representing articles for a given query
+*
+* Creates a news record, passing the search string from the search bar to the new news record. This will call the news API and find articles related to the query
+* @param searchString a string that represents the articles being searched for
+* @return a news record with the articles for the search query
+*
 */
 Record NewsCategory::search(string searchString){
     searchString = "";
     Record r;
     return r;
-}
-
-
-/*
-Name: sort
-Description: sort the NewsRecords in the requested order
-Parameter Descriptions: type is what to sort by, and asend is if we should sort in ascending order
-Return Description: N/A
-*/
-void NewsCategory::sort(int type, bool asend){
-    type = 0;
-    asend = false;
-}
-
-
-/*
-Name: changeTime
-Description: Change the time period for NewsRecords in the vector, do another search if necessary
-Parameter Descriptions: The timeframe you would like to change it to, prelist of timeframes represented by ints (1 = last week)
-Return Description: the vector with the NewsRecords that follow the time period
-*/
-vector<NewsRecord> NewsCategory::changeTime(int time){
-    time = 0;
-    return this->records;
-}
-
-/*
-Name: changeTopic
-Description: Change the topic for NewsRecords in the vector, do another search if necessary
-Parameter Descriptions: The topic you would like to change it to, prelist of topics represented by ints (1 = sports)
-Return Description: the vector with the NewsRecords that follow the topic
-*/
-vector<NewsRecord> NewsCategory::changeTopic(int time){
-    time = 0;
-    return this->records;
-}
-
-/*
-Name: changeNewsSource
-Description: Change the news source for NewsRecords in the vector, do another search if necessary
-Parameter Descriptions: The topic you would like to change it to, prelist of news sources represented by ints (1 = CNN)
-Return Description: the vector with the NewsRecords that are from the given news source
-*/
-vector<NewsRecord> NewsCategory::changeNewsSource(int source){
-    source = 0;
-    return this->records;
-}
-
-/*
-Name: displayRecords
-Description: Helper function that will display the NewsRecords on the screen (called inside every function)
-Parameter Descriptions: A vector with the NewsRecords to be displayed
-Return Description: N/A
-*/
-void NewsCategory::displayRecords(vector<Record> toDisplay){
-    toDisplay = {};
 }
 
 
