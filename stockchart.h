@@ -1,3 +1,8 @@
+/*
+Author: Dhyey Patel
+Description: Header file that defines a StockChart. This is the UI that will display the stock chart
+Date: 2020-11-04
+*/
 #ifndef STOCKCHART_H
 #define STOCKCHART_H
 
@@ -21,7 +26,7 @@ public:
     ~StockChart();
 
 private:
-    Ui::StockChart *ui;
+    Ui::StockChart *ui;     /*!< a qt-created pointer that represents the window itself*/
 };
 
 #endif // STOCKCHART_H

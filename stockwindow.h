@@ -1,7 +1,7 @@
 /*
 Author: Dhyey Patel
-Description: Header for stockWindow, the window that displays information about the stocks
-Date: 2020-11-11
+Description: Header file that defines a stockWindow. This is the UI with which the user will interact
+Date: 2020-11-04
 */
 
 #ifndef STOCKWINDOW_H

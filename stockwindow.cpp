@@ -10,12 +10,16 @@ Date: 2020-11-11
 
 using namespace std;
 
-/*
-Name: stockWindow
-Description: This is a constructor to create an instance of the stockWindow class
-Parameter Descriptions: It needs a reference to the main window, and needs to get its widgets
-Return Description: N/A
-*/
+/*!
+ * \brief stockWindow::stockWindow
+ *
+ * Initializes the stock window
+ * Disables all the buttons to prevent user from being able to perform data operations prior to API Calls
+ * Sets Buttons to a default value
+ *
+ * \param Window: Link back to the main window so that the back button can access it
+ * \param parent: always nullptr it is required by QT
+ */
 stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::stockWindow)
@@ -52,40 +56,26 @@ stockWindow::stockWindow(MainWindow * Window, QWidget *parent) :
 
 }
 
-/*
-Name: ~stockWindow
-Description: This is a deconstructor to destroy the instance of the stockWindow class
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+/*!
+ * \brief stockWindow::~stockWindow
+ *
+ * Deallocates dynamically allocated memory, destroying the object
+ */
 stockWindow::~stockWindow()
 {
-    // Delete the ui created in the constructor
     delete ui;
+    delete parentWindow;
+    delete r;
 }
 
 
-/*
-Name: on_BackButton_clicked
-Description: Method will execute when the back button is clicked
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
-void stockWindow::on_BackButton_clicked(){
-    parentWindow->close();
-    parentWindow = new MainWindow();
-    QFont font = QFont("FreeSans",10,1);
-    parentWindow->setFont(font);
-
-    parentWindow->show();
-    close();
-}
-
-
+/*!
+ * \brief stockWindow::updateDisplay
+ *
+ * Based on the changes made to the options (sortOrder, sortOption) it will redo the sort
+ * Based on the stock clicked it will update the Financial Metrics of that stock
+ */
 void stockWindow::updateDisplay(){
-
-
-
 
     // Update the company information section
 
@@ -128,12 +118,13 @@ void stockWindow::updateDisplay(){
 
 }
 
-/*
-Name: on_BackButton_clicked
-Description: Internal method that will display a stock chart given a vector of stock records (NEED TO FINISH IMPLEMENTATION, JUST CREATED AS PART OF THE SPIKE API TO LEARN ABOUT CHARTS IN QT)
-Parameter Descriptions: vector of stock records that will be displayed 
-Return Description: N/A, displays the chart 
-*/
+/*!
+ * \brief stockWindow::updateChart
+ *
+ * Based on the stock options clicked (chartTime, chartPrice), it will update chartView, which then will be passed to stockchart to be displayed
+ *
+ * \param toDisplay: the stock record to display
+ */
 void stockWindow::updateChart(StockRecord toDisplay){
     int displayDays = 0;
     if(this->chartTime == 0){
@@ -153,7 +144,6 @@ void stockWindow::updateChart(StockRecord toDisplay){
     
     // add the data from toDisplay into the line series
     for (int i = displayDays; i >= 0; i --){
-        qDebug() << toDisplay.getClose(displayDays+1 - i);
         if(this->chartPrice == 0){
             series->append(i,toDisplay.getOpen((displayDays+1 - i)));
         }
@@ -195,6 +185,27 @@ void stockWindow::updateChart(StockRecord toDisplay){
     chartView = new QChartView(chart);
 }
 
+/*!
+ * \brief stockWindow::on_BackButton_clicked
+ *
+ * When the back button is clicked close the current window and go back to the parent window
+ */
+void stockWindow::on_BackButton_clicked(){
+    parentWindow->close();
+    parentWindow = new MainWindow();
+    QFont font = QFont("FreeSans",10,1);
+    parentWindow->setFont(font);
+
+    parentWindow->show();
+    close();
+}
+
+/*!
+ * \brief stockWindow::on_searchBar_returnPressed
+ *
+ * When a user searches for the stock it will create a new stock record, and then add it to the stock category
+ * After the first search is executed it will enable all the buttons so the user can play around with the data
+ */
 void stockWindow::on_searchBar_returnPressed()
 {
     category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
@@ -225,7 +236,11 @@ void stockWindow::on_searchBar_returnPressed()
 
 
 
-
+/*!
+ * \brief stockWindow::on_openButton_clicked
+ *
+ * When the open option is clicked change chartPrice to 0 which represents daily open price
+ */
 void stockWindow::on_openButton_clicked()
 {
     this->chartPrice = 0;
@@ -233,6 +248,11 @@ void stockWindow::on_openButton_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_highButton_clicked
+ *
+ * When the high option is clicked change chartPrice to 1 which represents the daily high price
+ */
 void stockWindow::on_highButton_clicked()
 {
     this->chartPrice = 1;
@@ -240,6 +260,11 @@ void stockWindow::on_highButton_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_lowButton_clicked
+ *
+ * When the low option is clicked change chartPrice to 2 which represents the daily low price
+ */
 void stockWindow::on_lowButton_clicked()
 {
     this->chartPrice = 2;
@@ -247,6 +272,11 @@ void stockWindow::on_lowButton_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_closeButton_clicked
+ *
+ * When the close option is clicked change chartPrice to 2 which represents the daily close price
+ */
 void stockWindow::on_closeButton_clicked()
 {
     this->chartPrice = 3;
@@ -254,6 +284,11 @@ void stockWindow::on_closeButton_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_pastWeek_clicked
+ *
+ * When the Past Week option is clicked change chartTime to 0 which represents 1 week
+ */
 void stockWindow::on_pastWeek_clicked()
 {
     this->chartTime = 0;
@@ -261,6 +296,11 @@ void stockWindow::on_pastWeek_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_pastMonth_clicked
+ *
+ * When the Past Month option is clicked change chartTime to 1 which represents 1 month
+ */
 void stockWindow::on_pastMonth_clicked()
 {
     this->chartTime = 1;
@@ -268,6 +308,11 @@ void stockWindow::on_pastMonth_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_pastMonth2_clicked
+ *
+ * When the Past 2 Months option is clicked change chartTime to 2 which represents 2 months
+ */
 void stockWindow::on_pastMonth2_clicked()
 {
     this->chartTime = 2;
@@ -276,6 +321,11 @@ void stockWindow::on_pastMonth2_clicked()
 
 }
 
+/*!
+ * \brief stockWindow::on_pastMonth3_clicked
+ *
+ * When the Past 3 Months option is clicked change chartTime to 3 which represents 2 months
+ */
 void stockWindow::on_pastMonth3_clicked()
 {
     this->chartTime = 3;
@@ -283,30 +333,58 @@ void stockWindow::on_pastMonth3_clicked()
     updateChart(*r);
 }
 
+/*!
+ * \brief stockWindow::on_alphaButton_clicked
+ *
+ * When the Alphabetic button is clicked change sortOption to 0, which represents sorting alphabetically
+ */
 void stockWindow::on_alphaButton_clicked()
 {
     this->sortOption = 0;
     updateDisplay();
 }
 
+/*!
+ * \brief stockWindow::on_mCapButton_clicked
+ *
+ * When the Market Capitilization button is clicked change sortOption to 1, which represents sorting by the market capitalization
+ */
 void stockWindow::on_mCapButton_clicked()
 {
     this->sortOption = 1;
     updateDisplay();
 }
 
+/*!
+ * \brief stockWindow::on_ascdButton_clicked
+ *
+ * When the Ascending button is clicked change sortOrder to 0, which represents sort in an ascending manner
+ */
 void stockWindow::on_ascdButton_clicked()
 {
     this->sortOrder = 0;
     updateDisplay();
 }
 
+/*!
+ * \brief stockWindow::on_descButton_clicked
+ *
+ * When the Descending button is clicked change sortOrder to 1, which represents sort in an descending manner
+ */
 void stockWindow::on_descButton_clicked()
 {
     this->sortOrder = 1;
     updateDisplay();
 }
 
+/*!
+ * \brief stockWindow::on_stocksList_currentIndexChanged
+ *
+ * When the company is changed using the drop down menu we need to change the data accordingly
+ * They should have the same index as the records vector in category, so we can just set r to that record[index]
+ *
+ * \param index
+ */
 void stockWindow::on_stocksList_currentIndexChanged(int index)
 {
     r = new StockRecord(category.getRecords()[index]);
@@ -315,6 +393,30 @@ void stockWindow::on_stocksList_currentIndexChanged(int index)
 
 }
 
+/*!
+ * \brief stockWindow::on_viewChart_clicked
+ *
+ * When the View Stock Chart button is clicked create a stock window in which the stock chart will be displayed
+ */
+void stockWindow::on_viewChart_clicked()
+{
+    StockChart* w = new StockChart(nullptr, chartView); //initializes the weather window
+    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
+    w->setFont(font);
+    w->show();
+}
+
+/*!
+ * \brief stockWindow::sortAlpha
+ *
+ * This function is passed as a parameter for the sort function
+ * This function tells the sort function how to sort the data
+ * In here it will search for the record that comes first alphabetically
+ *
+ * \param a: StockRecord that will be compared to b
+ * \param b: StockRecord that will be compared to a
+ * \return: returns true is StockRecord a comes before StockRecord b Alphabetically
+ */
 bool stockWindow::sortAlpha(StockRecord a,StockRecord b){
     if(a.getTicker().compare(b.getTicker()) <= 0){
         return true;
@@ -324,6 +426,18 @@ bool stockWindow::sortAlpha(StockRecord a,StockRecord b){
     }
 }
 
+
+/*!
+ * \brief stockWindow::sortAlpha
+ *
+ * This function is passed as a parameter for the sort function
+ * This function tells the sort function how to sort the data
+ * In here it will search for the record that comes first based on the market capitalization
+ *
+ * \param a: StockRecord that will be compared to b
+ * \param b: StockRecord that will be compared to a
+ * \return: returns true is StockRecord a's market capitalization is smaller than StockRecord b's market capitalization
+ */
 bool stockWindow::sortMCap(StockRecord a,StockRecord b){
     return a.getMarketCap() < b.getMarketCap();
 }
@@ -332,10 +446,4 @@ bool stockWindow::sortMCap(StockRecord a,StockRecord b){
 
 
 
-void stockWindow::on_viewChart_clicked()
-{
-    StockChart* w = new StockChart(nullptr, chartView); //initializes the weather window
-    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
-    w->setFont(font);
-    w->show();
-}
+
