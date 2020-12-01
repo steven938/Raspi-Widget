@@ -29,7 +29,7 @@ Description: gets the opening price of stock on this date
 Parameter Descriptions: 
 Return Description: opening price
 */
-float DailyStock::getOpen(){
+float DailyStock::getOpen() const{
 	return this->open;
 }
 
@@ -40,7 +40,7 @@ Description: gets the closing price of stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-float DailyStock::getClose(){
+float DailyStock::getClose() const{
 	return this->close;
 }
 
@@ -50,7 +50,7 @@ Description: gets the high price of stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-float DailyStock::getHigh(){
+float DailyStock::getHigh() const{
 	return this->high;
 }
 
@@ -60,7 +60,7 @@ Description: gets the low price of the stock on this date
 Parameter Descriptions: 
 Return Description: 
 */
-float DailyStock::getLow(){
+float DailyStock::getLow() const{
 	return this->low;
 }
 
@@ -70,7 +70,7 @@ Description: gets the volume of trades for the stock on this date
 Parameter Descriptions:
 Return Description: volume
 */
-long long int DailyStock::getVolume(){
+long long int DailyStock::getVolume() const{
 	return this->volume;
 }
 
@@ -80,7 +80,7 @@ Description: gets the volume of trades for the stock on this date
 Parameter Descriptions:
 Return Description: volume
 */
-string DailyStock::getDate(){
+string DailyStock::getDate() const{
     return this->date.getStr2();
 }
 
