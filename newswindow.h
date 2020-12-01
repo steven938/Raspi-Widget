@@ -36,7 +36,7 @@ private slots:
     void on_SearchByWordButton_clicked();
     void on_SearchByTopicButton_clicked();
     void clearResults();
-    void displayArticles(std::vector<NewsRecord> records, NewsCategory *newsCategory);
+    void displayArticles(std::vector<NewsRecord> records);
 
 private:
     Ui::NewsWindow *ui;         /*!< a qt-created pointer that represents the window itself*/
