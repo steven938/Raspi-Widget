@@ -1,5 +1,5 @@
 /*
-Author: Leland Conn
+Author: Dhyey Patel
 Description: Header file that defines a stock category, which holds stock records for each company and can act on that set of data
 Date: 2020-11-04
 */
@@ -9,10 +9,18 @@ Date: 2020-11-04
 #include <vector>
 #include "StockRecord.h"
 #include "CategoryADT.h"
+/*!
+ * \brief The StockCategory class is a singleton that creates and accesses records
+ *
+ * A class with ways to access and create StockRecords
+ *
+ * @author Dhyey Patel
+ * @date 2020-11-04
+ *
+ */
 class StockCategory: public CategoryADT{
     private:
-        std::vector<StockRecord> records; // A vector to store all the stock records
-
+        std::vector<StockRecord> records; /*!< A vector to store all the stock records*/
         // Print the specified records to the screen
         void displayRecords(std::vector<StockRecord> toDisplay);
         
@@ -30,7 +38,6 @@ class StockCategory: public CategoryADT{
         // Function to find a record of a specific company (specified by searchString)
         Record search(std::string searchString);
 
-        // Sort the weather records currently stored in the private vector
-        void sort(int type, bool ascend);
+
 };
 #endif

@@ -33,9 +33,9 @@ private slots:
     void displayArticles(std::vector<NewsRecord> records, NewsCategory *newsCategory);
 
 private:
-    Ui::NewsWindow *ui;
-    NewsCategory category;
-    MainWindow * parentWindow;
+    Ui::NewsWindow *ui;         /*!< a qt-created pointer that represents the window itself*/
+    NewsCategory category;      /*!< the news category (singleton) that is being used*/
+    MainWindow * parentWindow;  /*!< the window that created this window*/
 
 };
 

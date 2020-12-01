@@ -1,5 +1,5 @@
 /*
-Author: Leland Conn
+Author: Dhyey Patel
 Description: Code file that define an individual stock category
 Date: 2020-11-04
 */
@@ -9,58 +9,47 @@ Date: 2020-11-04
 #include <vector>
 
 using namespace std;
-/*
-Name: StockCategory
-Description: This is a constructor to create an instance of the StockCategory class
-Parameter Descriptions: TBD
-Return Description: N/A
-*/
+
+
+/*!
+ * \brief StockCategory::StockCategory constructor
+ *
+ * Doesn't do anything in particular, as there is nothing to initialize
+ *
+ */
 StockCategory::StockCategory(){
     
     
 }
-/*
-Name: Destructor
-Description: Destroys the object
-Parameter Descriptions: N/A
-Return Description: N/A
-*/
+/*!
+ * \brief StockCategory::~StockCategory destructor
+ *
+ * Doesn't do anything in particular, as there is no dynamic memory
+ */
 StockCategory::~StockCategory(){
 
 }
 
-
-/*
-Name: getRecords 
-Description: Getter for the vector of records
-Parameter Descriptions: N/A
-Return Description: records, the vector holding stock records
-*/
+/*!
+ * \brief StockCategory::getRecords getter for the vector of records
+ * \return records, the vector of StockRecord s
+ */
 vector<StockRecord> StockCategory::getRecords(){
    return this->records;
 }
 
 
-/*
-Name: search 
-Description: Returns a desired stock record
-Parameter Descriptions: N/A
-Return Description: A StockRecord object or 0 if not found
-*/
+
+/*!
+ * \brief StockCategory::search creates and returns a StockRecord given a search string
+ *
+ *Given a search string (the ticker of the stock), creates a StockRecord, pushes it to records, and returns it.
+ *
+ * \param SEARCH_STRING the ticker for the stock to be searched
+ * \return the StockRecord for the company with ticker SEARCH_STRING
+ */
 Record StockCategory::search(const string SEARCH_STRING){
-    StockRecord *r = new StockRecord(SEARCH_STRING);
-    records.push_back(*r);
-    return *r;
+    StockRecord r(SEARCH_STRING);
+    records.push_back(r);
+    return r;
 }
-
-
-/*
-Name: sort 
-Description: sort the stock records stored in vector records
-Parameter Descriptions: integer type to identify the basis of the sort and boolean of ascending to know the order
-Return Description: N/A
-*/
-void StockCategory::sort(int type, bool ascending){
-    // code to sort the records
-}
-

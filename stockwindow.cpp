@@ -3,10 +3,15 @@ Author: Dhyey Patel
 Description: CPP for stockWindow, the window that displays information about the stocks
 Date: 2020-11-11
 */
+
+#include <iostream>
+
+
 #include "stockwindow.h"
 #include "ui_stockwindow.h"
 #include "stockchart.h"
-#include <iostream>
+#include "errorbox.h"
+
 
 using namespace std;
 
@@ -170,12 +175,18 @@ void stockWindow::updateChart(StockRecord toDisplay){
 
     // Create and set the X axis, which will be all the dates
     QCategoryAxis *axisX = new QCategoryAxis();
+    QFont font = QFont("FreeSans",5,1);
+
     for (int i = displayDays - 1; i >= 0; i --){
         string date = toDisplay.getDate(i);
         QString qdate = QString::fromStdString(date);
         axisX->append(qdate,displayDays - i - 1);
     }
+
+    axisX->setLabelsFont(font);
+
     chart->setAxisX(axisX, series);
+                    //embeds the font into the window
 
 
     // Create a chartview to display the chart, and dispay the chart in the correct location
@@ -208,7 +219,7 @@ void stockWindow::on_BackButton_clicked(){
  */
 void stockWindow::on_searchBar_returnPressed()
 {
-    category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
+    try{category.search(ui->searchBar->text().toStdString());   //calls the search function of the WeatherCategory to call the API
     r = new StockRecord(category.getRecords()[category.getRecords().size()-1]);          //Accesses the first weatherrecord in the category's records vector.
     updateChart(*r);
     updateDisplay();                                        //Updates the data on display
@@ -232,6 +243,16 @@ void stockWindow::on_searchBar_returnPressed()
     ui->stocksList->addItem(ui->searchBar->text());
     stockIndex = category.getRecords().size()-1;    // sets the correct stock index, meaning that the dropdown displays the correct city
     ui->stocksList->setCurrentIndex(stockIndex);
+    }
+    catch(...){
+        ErrorBox * error = new ErrorBox();
+        QFont font = QFont("FreeSans",10,1);
+        error->setFont(font);
+        error->setWindowTitle("Error");
+        error->error(ui->searchBar->text().toStdString()+" is not a valid stock!");
+        error->setAttribute(Qt::WA_DeleteOnClose,true);
+        error->show();
+    }
 }
 
 
@@ -443,7 +464,17 @@ bool stockWindow::sortMCap(StockRecord a,StockRecord b){
 }
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+void stockWindow::on_viewChart_clicked()
+{
+    StockChart* w = new StockChart(nullptr, chartView); //initializes the weather window
+    QFont font = QFont("FreeSans",10,1);                 //embeds the font into the window
+    w->setFont(font);
+    w->show();
+}
+>>>>>>> ada3ff850447ceafff265e3b4adb641d855ef785

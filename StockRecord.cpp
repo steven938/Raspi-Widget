@@ -319,6 +319,9 @@ void StockRecord::requestFinancials(){
         this->currentRatio = metrics["currentRatioAnnual"].toDouble();
         this->grossMargin = metrics["grossMarginTTM"].toDouble();
         this->payoutRatio = metrics["payoutRatioTTM"].toDouble();
+        if (ebitShare == 0 && currentRatio == 0 && grossMargin == 0 && payoutRatio ==0){
+            throw "API Call failed - no stock with this ticker";
+        }
         qDebug() << "Financials: " << ebitShare << "   " << currentRatio << "   " << grossMargin << "    " << payoutRatio << "\n";
     }
     else // something went wrong
