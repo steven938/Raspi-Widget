@@ -30,9 +30,6 @@ StockCategory::~StockCategory(){
 
 }
 
-
-
-
 /*!
  * \brief StockCategory::getRecords getter for the vector of records
  * \return records, the vector of StockRecord s
@@ -56,6 +53,3 @@ Record StockCategory::search(const string SEARCH_STRING){
     records.push_back(r);
     return r;
 }
-
-
-
