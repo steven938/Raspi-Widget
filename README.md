@@ -1,4 +1,3 @@
-# Group 32 Project: Habari
 
 Widget for weather, stocks, and news. Made with passion using QT and C++.
 
